@@ -1,0 +1,58 @@
+C:\Users\Uriel\source\repos\Pantalla Contraseña\bin\Debug\Pantalla Contraseña.exe.config
+C:\Users\Uriel\source\repos\Pantalla Contraseña\bin\Debug\Pantalla Contraseña.exe
+C:\Users\Uriel\source\repos\Pantalla Contraseña\bin\Debug\Pantalla Contraseña.pdb
+C:\Users\Uriel\source\repos\Pantalla Contraseña\obj\Debug\Pantalla Contraseña.csprojAssemblyReference.cache
+C:\Users\Uriel\source\repos\Pantalla Contraseña\obj\Debug\Pantalla_Contraseña.Form1.resources
+C:\Users\Uriel\source\repos\Pantalla Contraseña\obj\Debug\Pantalla_Contraseña.Properties.Resources.resources
+C:\Users\Uriel\source\repos\Pantalla Contraseña\obj\Debug\Pantalla Contraseña.csproj.GenerateResource.cache
+C:\Users\Uriel\source\repos\Pantalla Contraseña\obj\Debug\Pantalla Contraseña.csproj.CoreCompileInputs.cache
+C:\Users\Uriel\source\repos\Pantalla Contraseña\obj\Debug\Pantalla Contraseña.exe
+C:\Users\Uriel\source\repos\Pantalla Contraseña\obj\Debug\Pantalla Contraseña.pdb
+C:\Users\Uriel\Downloads\Pantalla Contraseña-20211003T185607Z-001\Pantalla Contraseña\bin\Debug\Pantalla Contraseña.exe.config
+C:\Users\Uriel\Downloads\Pantalla Contraseña-20211003T185607Z-001\Pantalla Contraseña\bin\Debug\Pantalla Contraseña.exe
+C:\Users\Uriel\Downloads\Pantalla Contraseña-20211003T185607Z-001\Pantalla Contraseña\bin\Debug\Pantalla Contraseña.pdb
+C:\Users\Uriel\Downloads\Pantalla Contraseña-20211003T185607Z-001\Pantalla Contraseña\obj\Debug\Pantalla Contraseña.csprojAssemblyReference.cache
+C:\Users\Uriel\Downloads\Pantalla Contraseña-20211003T185607Z-001\Pantalla Contraseña\obj\Debug\Pantalla_Contraseña.Form1.resources
+C:\Users\Uriel\Downloads\Pantalla Contraseña-20211003T185607Z-001\Pantalla Contraseña\obj\Debug\Pantalla_Contraseña.Properties.Resources.resources
+C:\Users\Uriel\Downloads\Pantalla Contraseña-20211003T185607Z-001\Pantalla Contraseña\obj\Debug\Pantalla Contraseña.csproj.GenerateResource.cache
+C:\Users\Uriel\Downloads\Pantalla Contraseña-20211003T185607Z-001\Pantalla Contraseña\obj\Debug\Pantalla Contraseña.csproj.CoreCompileInputs.cache
+C:\Users\Uriel\Downloads\Pantalla Contraseña-20211003T185607Z-001\Pantalla Contraseña\obj\Debug\Pantalla Contraseña.exe
+C:\Users\Uriel\Downloads\Pantalla Contraseña-20211003T185607Z-001\Pantalla Contraseña\obj\Debug\Pantalla Contraseña.pdb
+C:\Users\46919295\Downloads\Pantalla Contraseña\bin\Debug\Pantalla Contraseña.exe.config
+C:\Users\46919295\Downloads\Pantalla Contraseña\bin\Debug\Pantalla Contraseña.exe
+C:\Users\46919295\Downloads\Pantalla Contraseña\bin\Debug\Pantalla Contraseña.pdb
+C:\Users\46919295\Downloads\Pantalla Contraseña\obj\Debug\Pantalla Contraseña.csprojAssemblyReference.cache
+C:\Users\46919295\Downloads\Pantalla Contraseña\obj\Debug\Pantalla_Contraseña.Form1.resources
+C:\Users\46919295\Downloads\Pantalla Contraseña\obj\Debug\Pantalla_Contraseña.Properties.Resources.resources
+C:\Users\46919295\Downloads\Pantalla Contraseña\obj\Debug\Pantalla Contraseña.csproj.GenerateResource.cache
+C:\Users\46919295\Downloads\Pantalla Contraseña\obj\Debug\Pantalla Contraseña.csproj.CoreCompileInputs.cache
+C:\Users\46919295\Downloads\Pantalla Contraseña\obj\Debug\Pantalla Contraseña.exe
+C:\Users\46919295\Downloads\Pantalla Contraseña\obj\Debug\Pantalla Contraseña.pdb
+C:\Users\guido\Desktop\Pantalla Contraseña Actualizado (Guido)\bin\Debug\Pantalla Contraseña.exe.config
+C:\Users\guido\Desktop\Pantalla Contraseña Actualizado (Guido)\bin\Debug\Pantalla Contraseña.exe
+C:\Users\guido\Desktop\Pantalla Contraseña Actualizado (Guido)\bin\Debug\Pantalla Contraseña.pdb
+C:\Users\guido\Desktop\Pantalla Contraseña Actualizado (Guido)\obj\Debug\Pantalla Contraseña.csprojAssemblyReference.cache
+C:\Users\guido\Desktop\Pantalla Contraseña Actualizado (Guido)\obj\Debug\Pantalla_Contraseña.Form1.resources
+C:\Users\guido\Desktop\Pantalla Contraseña Actualizado (Guido)\obj\Debug\Pantalla_Contraseña.Properties.Resources.resources
+C:\Users\guido\Desktop\Pantalla Contraseña Actualizado (Guido)\obj\Debug\Pantalla Contraseña.csproj.GenerateResource.cache
+C:\Users\guido\Desktop\Pantalla Contraseña Actualizado (Guido)\obj\Debug\Pantalla Contraseña.csproj.CoreCompileInputs.cache
+C:\Users\guido\Desktop\Pantalla Contraseña Actualizado (Guido)\obj\Debug\Pantalla Contraseña.exe
+C:\Users\guido\Desktop\Pantalla Contraseña Actualizado (Guido)\obj\Debug\Pantalla Contraseña.pdb
+C:\Users\guido\Desktop\Pantalla Contraseña Actualizado (Guido)\obj\Debug\Pantalla_Contraseña.FormNuevaContra.resources
+C:\Users\guido\Desktop\Todas las Pantallas\Pantalla Contraseña Actualizado (Guido)\obj\Debug\Pantalla Contraseña.csprojAssemblyReference.cache
+C:\Users\guido\Desktop\Todas las Pantallas\Pantalla Contraseña Actualizado (Guido)\obj\Debug\Pantalla_Contraseña.FormNuevaContra.resources
+C:\Users\guido\Desktop\Todas las Pantallas\Pantalla Contraseña Actualizado (Guido)\obj\Debug\Pantalla_Contraseña.Properties.Resources.resources
+C:\Users\guido\Desktop\Todas las Pantallas\Pantalla Contraseña Actualizado (Guido)\obj\Debug\Pantalla Contraseña.csproj.GenerateResource.cache
+C:\Users\guido\Desktop\Todas las Pantallas\Pantalla Contraseña Actualizado (Guido)\obj\Debug\Pantalla Contraseña.csproj.CoreCompileInputs.cache
+C:\Users\guido\Desktop\Todas las Pantallas\Pantalla Contraseña Actualizado (Guido)\obj\Debug\Pantalla Contraseña.exe
+C:\Users\guido\Desktop\Todas las Pantallas\Pantalla Contraseña Actualizado (Guido)\obj\Debug\Pantalla Contraseña.pdb
+C:\Users\guido\Desktop\Todas las Pantallas\Pantalla Contraseña Actualizado (Guido)\bin\Debug\Pantalla Contraseña.exe.config
+C:\Users\guido\Desktop\Todas las Pantallas\Pantalla Contraseña Actualizado (Guido)\bin\Debug\Pantalla Contraseña.exe
+C:\Users\guido\Desktop\Todas las Pantallas\Pantalla Contraseña Actualizado (Guido)\bin\Debug\Pantalla Contraseña.pdb
+C:\Users\guido\Desktop\Todas las Pantallas\Pantalla Contraseña Actualizado (Guido)\bin\Debug\Foto administrador registro.exe
+C:\Users\guido\Desktop\Todas las Pantallas\Pantalla Contraseña Actualizado (Guido)\bin\Debug\Foto administrador registro.pdb
+C:\Users\guido\Desktop\Todas las Pantallas\Pantalla Contraseña Actualizado (Guido)\bin\Debug\Foto administrador registro.exe.config
+C:\Users\guido\Desktop\Todas las Pantallas\Pantalla Contraseña Actualizado (Guido)\obj\Debug\Pantalla Contraseña.csproj.CopyComplete
+C:\Users\guido\Desktop\Todas las Pantallas\Pantalla Contraseña Actualizado (Guido)\bin\Debug\Pantalla de Crear Usuario de Paciente.exe
+C:\Users\guido\Desktop\Todas las Pantallas\Pantalla Contraseña Actualizado (Guido)\bin\Debug\Pantalla de Crear Usuario de Paciente.pdb
+C:\Users\guido\Desktop\Todas las Pantallas\Pantalla Contraseña Actualizado (Guido)\bin\Debug\Pantalla de Crear Usuario de Paciente.exe.config

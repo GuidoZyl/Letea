@@ -1,0 +1,34 @@
+C:\Users\guido\Desktop\Todas las Pantallas\Pantalla Contraseña Actualizado (Guido)\obj\Debug\Pantalla_Contraseña.FormFotoAdmin.resources
+C:\Users\guido\Desktop\Todas las Pantallas\Pantalla Contraseña Actualizado (Guido)\obj\Debug\Pantalla_Contraseña.FormNuevaContra.resources
+C:\Users\guido\Desktop\Todas las Pantallas\Pantalla Contraseña Actualizado (Guido)\obj\Debug\Pantalla_Contraseña.Properties.Resources.resources
+C:\Users\guido\Desktop\Todas las Pantallas\Pantalla Contraseña Actualizado (Guido)\obj\Debug\Letea.csproj.GenerateResource.cache
+C:\Users\guido\Desktop\Todas las Pantallas\Pantalla Contraseña Actualizado (Guido)\obj\Debug\Letea.csproj.CoreCompileInputs.cache
+C:\Users\guido\Desktop\Todas las Pantallas\Pantalla Contraseña Actualizado (Guido)\obj\Debug\Pantalla Contraseña.exe
+C:\Users\guido\Desktop\Todas las Pantallas\Pantalla Contraseña Actualizado (Guido)\obj\Debug\Pantalla Contraseña.pdb
+C:\Users\guido\Desktop\Todas las Pantallas\Pantalla Contraseña Actualizado (Guido)\bin\Debug\Pantalla Contraseña.exe.config
+C:\Users\guido\Desktop\Todas las Pantallas\Pantalla Contraseña Actualizado (Guido)\bin\Debug\Pantalla Contraseña.exe
+C:\Users\guido\Desktop\Todas las Pantallas\Pantalla Contraseña Actualizado (Guido)\bin\Debug\Pantalla Contraseña.pdb
+C:\Users\guido\Desktop\Todas las Pantallas\Pantalla Contraseña Actualizado (Guido)\obj\Debug\Pantalla_Contraseña.FormCrearPaciente.resources
+C:\Users\guido\Desktop\Letea Pantallas Juntas\bin\Debug\Pantalla Contraseña.exe.config
+C:\Users\guido\Desktop\Letea Pantallas Juntas\bin\Debug\Pantalla Contraseña.exe
+C:\Users\guido\Desktop\Letea Pantallas Juntas\bin\Debug\Pantalla Contraseña.pdb
+C:\Users\guido\Desktop\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.FormCrearPaciente.resources
+C:\Users\guido\Desktop\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.FormFotoAdmin.resources
+C:\Users\guido\Desktop\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.FormNuevaContra.resources
+C:\Users\guido\Desktop\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.Properties.Resources.resources
+C:\Users\guido\Desktop\Letea Pantallas Juntas\obj\Debug\Letea.csproj.GenerateResource.cache
+C:\Users\guido\Desktop\Letea Pantallas Juntas\obj\Debug\Letea.csproj.CoreCompileInputs.cache
+C:\Users\guido\Desktop\Letea Pantallas Juntas\obj\Debug\Pantalla Contraseña.exe
+C:\Users\guido\Desktop\Letea Pantallas Juntas\obj\Debug\Pantalla Contraseña.pdb
+C:\Users\Uriel\Downloads\Letea Pantallas Juntas-20211017T191830Z-001\Letea Pantallas Juntas\obj\Debug\Letea.csprojAssemblyReference.cache
+C:\Users\Uriel\Downloads\Letea Pantallas Juntas-20211017T191830Z-001\Letea Pantallas Juntas\obj\Debug\Pantalla Contraseña.exe
+C:\Users\Uriel\Downloads\Letea Pantallas Juntas-20211017T191830Z-001\Letea Pantallas Juntas\obj\Debug\Pantalla Contraseña.pdb
+C:\Users\Uriel\Downloads\Letea Pantallas Juntas-20211017T191830Z-001\Letea Pantallas Juntas\bin\Debug\Pantalla Contraseña.exe.config
+C:\Users\Uriel\Downloads\Letea Pantallas Juntas-20211017T191830Z-001\Letea Pantallas Juntas\bin\Debug\Pantalla Contraseña.exe
+C:\Users\Uriel\Downloads\Letea Pantallas Juntas-20211017T191830Z-001\Letea Pantallas Juntas\bin\Debug\Pantalla Contraseña.pdb
+C:\Users\Uriel\Downloads\Letea Pantallas Juntas-20211017T191830Z-001\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.FormCrearPaciente.resources
+C:\Users\Uriel\Downloads\Letea Pantallas Juntas-20211017T191830Z-001\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.FormFotoAdmin.resources
+C:\Users\Uriel\Downloads\Letea Pantallas Juntas-20211017T191830Z-001\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.FormNuevaContra.resources
+C:\Users\Uriel\Downloads\Letea Pantallas Juntas-20211017T191830Z-001\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.Properties.Resources.resources
+C:\Users\Uriel\Downloads\Letea Pantallas Juntas-20211017T191830Z-001\Letea Pantallas Juntas\obj\Debug\Letea.csproj.GenerateResource.cache
+C:\Users\Uriel\Downloads\Letea Pantallas Juntas-20211017T191830Z-001\Letea Pantallas Juntas\obj\Debug\Letea.csproj.CoreCompileInputs.cache

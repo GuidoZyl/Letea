@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Letea", "Letea.csproj", "{645B9686-510D-4AC2-AD1F-AC54684A4660}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{645B9686-510D-4AC2-AD1F-AC54684A4660}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{645B9686-510D-4AC2-AD1F-AC54684A4660}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{645B9686-510D-4AC2-AD1F-AC54684A4660}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{645B9686-510D-4AC2-AD1F-AC54684A4660}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8E72FEF6-331D-4389-BD30-C0AB5830D278}
+	EndGlobalSection
+EndGlobal
