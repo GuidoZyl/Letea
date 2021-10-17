@@ -45,3 +45,16 @@ C:\Users\Uriel\Downloads\Letea Pantallas Juntas\Letea Pantallas Juntas\obj\Debug
 C:\Users\Uriel\Downloads\Letea Pantallas Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla Contraseña.exe
 C:\Users\Uriel\Downloads\Letea Pantallas Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla Contraseña.pdb
 C:\Users\Uriel\Downloads\Letea Pantallas Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.FormFotoUsuarioRegistro.resources
+E:\Guido\Documentos\Programación\Letea-Pantallas-Juntas\Letea Pantallas Juntas\bin\Debug\Pantalla Contraseña.exe.config
+E:\Guido\Documentos\Programación\Letea-Pantallas-Juntas\Letea Pantallas Juntas\bin\Debug\Pantalla Contraseña.exe
+E:\Guido\Documentos\Programación\Letea-Pantallas-Juntas\Letea Pantallas Juntas\bin\Debug\Pantalla Contraseña.pdb
+E:\Guido\Documentos\Programación\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Letea.csprojAssemblyReference.cache
+E:\Guido\Documentos\Programación\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.FormCrearPaciente.resources
+E:\Guido\Documentos\Programación\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.FormFotoAdmin.resources
+E:\Guido\Documentos\Programación\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.FormFotoUsuarioRegistro.resources
+E:\Guido\Documentos\Programación\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.FormNuevaContra.resources
+E:\Guido\Documentos\Programación\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.Properties.Resources.resources
+E:\Guido\Documentos\Programación\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Letea.csproj.GenerateResource.cache
+E:\Guido\Documentos\Programación\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Letea.csproj.CoreCompileInputs.cache
+E:\Guido\Documentos\Programación\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla Contraseña.exe
+E:\Guido\Documentos\Programación\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla Contraseña.pdb

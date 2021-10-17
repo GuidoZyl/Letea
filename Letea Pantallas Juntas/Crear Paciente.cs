@@ -41,6 +41,7 @@ namespace Pantalla_Contraseña
             FormFotoUsuarioRegistro form = new FormFotoUsuarioRegistro();
             form.Show();
             this.Hide();
+            //jolo gay
         }
     }
 }
