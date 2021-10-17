@@ -12,7 +12,6 @@ namespace Pantalla_Contraseña
 {
     public partial class FormPantallaLogIn : Form
     {
-        Color Color_Fondo = new Color();
         public FormPantallaLogIn()
         {
             InitializeComponent();
@@ -21,8 +20,7 @@ namespace Pantalla_Contraseña
 
         private void FormPantallaLogIn_Load(object sender, EventArgs e)
         {
-            Color_Fondo = Color.FromArgb(208, 208, 208);
-            this.BackColor = Color_Fondo;
+
         }
 
         private void click_vercontraseña(object sender, EventArgs e)

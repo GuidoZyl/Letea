@@ -15,8 +15,6 @@ namespace Pantalla_Contraseña
     public partial class FormNuevaContra : Form
     {
         OleDbConnection conexion = new OleDbConnection();
-        Color Color_Fondo = new Color();
-        
 
         public FormNuevaContra()
         {
@@ -88,9 +86,6 @@ namespace Pantalla_Contraseña
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Color_Fondo = Color.FromArgb(208, 208, 208);
-            this.BackColor = Color_Fondo;
-
             txtbox_confirmarcontraseña.UseSystemPasswordChar = true;
             txtbox_nuevacontraseña.UseSystemPasswordChar = true;
 

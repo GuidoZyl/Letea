@@ -12,7 +12,6 @@ namespace Pantalla_Contraseña
 {
     public partial class FormFotoUsuarioRegistro : Form
     {
-        Color Color_Fondo = new Color();
         public FormFotoUsuarioRegistro()
         {
             InitializeComponent();
@@ -20,8 +19,7 @@ namespace Pantalla_Contraseña
 
         private void Foto_Usuario_registro_Load(object sender, EventArgs e)
         {
-            Color_Fondo = Color.FromArgb(208, 208, 208);
-            this.BackColor = Color_Fondo;
+
         }
 
         private void click_agregarfoto(object sender, EventArgs e)

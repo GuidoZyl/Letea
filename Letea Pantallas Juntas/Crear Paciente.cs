@@ -14,7 +14,6 @@ namespace Pantalla_Contraseña
 {
     public partial class FormCrearPaciente : Form
     {
-        Color Color_Fondo = new Color();
         OleDbConnection conexion = new OleDbConnection();
 
         public FormCrearPaciente()
@@ -24,9 +23,6 @@ namespace Pantalla_Contraseña
 
         private void FormCrearPaciente_Load(object sender, EventArgs e)
         {
-            Color_Fondo = Color.FromArgb(208, 208, 208);
-            this.BackColor = Color_Fondo;
-
             conexion.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=.\Base de Datos 4.accdb;";
             conexion.Open();
         }

@@ -12,8 +12,6 @@ namespace Pantalla_Contraseña
 {
     public partial class FormFotoAdmin : Form
     {
-        Color Color_Fondo = new Color();
-
         public FormFotoAdmin()
         {
             InitializeComponent();
@@ -21,8 +19,7 @@ namespace Pantalla_Contraseña
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Color_Fondo = Color.FromArgb(208, 208, 208);
-            this.BackColor = Color_Fondo;
+
         }
 
         private void click_agregarfoto(object sender, EventArgs e)
