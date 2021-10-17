@@ -52,6 +52,7 @@ namespace Pantalla_Contraseña
                 FormFotoAdmin FotoAdmin = new FormFotoAdmin();
                 FotoAdmin.Show();
                 this.Hide();
+                
             }
 
             else if (txtbox_confirmarcontraseña.Text == "" || txtbox_nuevacontraseña.Text == "")

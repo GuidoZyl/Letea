@@ -32,8 +32,9 @@ namespace Pantalla_Contraseña
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCrearPaciente));
             this.pic_ParteSuperior = new System.Windows.Forms.PictureBox();
             this.pic_nombrecompleto = new System.Windows.Forms.PictureBox();
-            this.txtbox_nombreusuario = new System.Windows.Forms.TextBox();
+            this.txtbox_NombreUsuario = new System.Windows.Forms.TextBox();
             this.btn_siguiente = new System.Windows.Forms.PictureBox();
+            this.lbl_IngreseNombre = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pic_ParteSuperior)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_nombrecompleto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_siguiente)).BeginInit();
@@ -59,14 +60,14 @@ namespace Pantalla_Contraseña
             this.pic_nombrecompleto.TabIndex = 3;
             this.pic_nombrecompleto.TabStop = false;
             // 
-            // txtbox_nombreusuario
+            // txtbox_NombreUsuario
             // 
-            this.txtbox_nombreusuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtbox_nombreusuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 82F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbox_nombreusuario.Location = new System.Drawing.Point(461, 500);
-            this.txtbox_nombreusuario.Name = "txtbox_nombreusuario";
-            this.txtbox_nombreusuario.Size = new System.Drawing.Size(998, 124);
-            this.txtbox_nombreusuario.TabIndex = 4;
+            this.txtbox_NombreUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtbox_NombreUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 82F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbox_NombreUsuario.Location = new System.Drawing.Point(461, 500);
+            this.txtbox_NombreUsuario.Name = "txtbox_NombreUsuario";
+            this.txtbox_NombreUsuario.Size = new System.Drawing.Size(998, 124);
+            this.txtbox_NombreUsuario.TabIndex = 4;
             // 
             // btn_siguiente
             // 
@@ -80,19 +81,34 @@ namespace Pantalla_Contraseña
             this.btn_siguiente.TabStop = false;
             this.btn_siguiente.Click += new System.EventHandler(this.btn_siguiente_Click);
             // 
+            // lbl_IngreseNombre
+            // 
+            this.lbl_IngreseNombre.AutoSize = true;
+            this.lbl_IngreseNombre.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_IngreseNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_IngreseNombre.ForeColor = System.Drawing.Color.Red;
+            this.lbl_IngreseNombre.Location = new System.Drawing.Point(749, 677);
+            this.lbl_IngreseNombre.Name = "lbl_IngreseNombre";
+            this.lbl_IngreseNombre.Size = new System.Drawing.Size(415, 54);
+            this.lbl_IngreseNombre.TabIndex = 15;
+            this.lbl_IngreseNombre.Text = "Ingrese un nombre";
+            this.lbl_IngreseNombre.Visible = false;
+            // 
             // FormCrearPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Fondo;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.lbl_IngreseNombre);
             this.Controls.Add(this.btn_siguiente);
-            this.Controls.Add(this.txtbox_nombreusuario);
+            this.Controls.Add(this.txtbox_NombreUsuario);
             this.Controls.Add(this.pic_nombrecompleto);
             this.Controls.Add(this.pic_ParteSuperior);
             this.Name = "FormCrearPaciente";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FormCrearPaciente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pic_ParteSuperior)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_nombrecompleto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_siguiente)).EndInit();
@@ -105,7 +121,8 @@ namespace Pantalla_Contraseña
 
         private System.Windows.Forms.PictureBox pic_ParteSuperior;
         private System.Windows.Forms.PictureBox pic_nombrecompleto;
-        private System.Windows.Forms.TextBox txtbox_nombreusuario;
+        private System.Windows.Forms.TextBox txtbox_NombreUsuario;
         private System.Windows.Forms.PictureBox btn_siguiente;
+        private System.Windows.Forms.Label lbl_IngreseNombre;
     }
 }

@@ -97,6 +97,7 @@ namespace Pantalla_Contraseña
             this.Name = "FormFotoAdmin";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_text_agregarfotodeperfil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_agregarfoto)).EndInit();
