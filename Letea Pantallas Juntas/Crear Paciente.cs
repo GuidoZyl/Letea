@@ -35,5 +35,12 @@ namespace Pantalla_Contraseña
             this.BackColor = Color_Fondo;
             
         }
+
+        private void btn_siguiente_Click(object sender, EventArgs e)
+        {
+            FormFotoUsuarioRegistro form = new FormFotoUsuarioRegistro();
+            form.Show();
+            this.Hide();
+        }
     }
 }

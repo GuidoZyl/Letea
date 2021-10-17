@@ -78,6 +78,7 @@ namespace Pantalla_Contraseña
             this.btn_siguiente.Size = new System.Drawing.Size(368, 110);
             this.btn_siguiente.TabIndex = 5;
             this.btn_siguiente.TabStop = false;
+            this.btn_siguiente.Click += new System.EventHandler(this.btn_siguiente_Click);
             // 
             // FormCrearPaciente
             // 

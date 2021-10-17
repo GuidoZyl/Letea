@@ -59,6 +59,12 @@
     <Compile Include="Foto Admin.Designer.cs">
       <DependentUpon>Foto Admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Foto Usuario Registro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Foto Usuario Registro.Designer.cs">
+      <DependentUpon>Foto Usuario Registro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Nueva Contraseña.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +81,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Foto Admin.resx">
       <DependentUpon>Foto Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Foto Usuario Registro.resx">
+      <DependentUpon>Foto Usuario Registro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Nueva Contraseña.resx">
       <DependentUpon>Nueva Contraseña.cs</DependentUpon>
@@ -122,6 +131,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Vector %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Parte Superior2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Agregar foto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Agregar Imagen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Siguiente1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
