@@ -53,6 +53,12 @@
     <Compile Include="Crear Paciente.Designer.cs">
       <DependentUpon>Crear Paciente.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormPantallaLogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPantallaLogIn.Designer.cs">
+      <DependentUpon>FormPantallaLogIn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Foto Admin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Crear Paciente.resx">
       <DependentUpon>Crear Paciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPantallaLogIn.resx">
+      <DependentUpon>FormPantallaLogIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Foto Admin.resx">
       <DependentUpon>Foto Admin.cs</DependentUpon>
@@ -143,6 +152,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Siguiente1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Circulo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Administrador.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Contraseña.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Crear admin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ingresar como paciente.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
