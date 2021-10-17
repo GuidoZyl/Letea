@@ -33,6 +33,7 @@ namespace Pantalla_Contraseña
         {
             Color_Fondo = Color.FromArgb(208, 208, 208);
             this.BackColor = Color_Fondo;
+            // guido puto
         }
     }
 }
