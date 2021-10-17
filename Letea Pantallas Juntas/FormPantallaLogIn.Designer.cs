@@ -116,9 +116,9 @@ namespace Pantalla_Contraseña
             this.btn_NoVercontraseña.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Vector__1_;
             this.btn_NoVercontraseña.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_NoVercontraseña.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_NoVercontraseña.Location = new System.Drawing.Point(758, 643);
+            this.btn_NoVercontraseña.Location = new System.Drawing.Point(754, 633);
             this.btn_NoVercontraseña.Name = "btn_NoVercontraseña";
-            this.btn_NoVercontraseña.Size = new System.Drawing.Size(85, 55);
+            this.btn_NoVercontraseña.Size = new System.Drawing.Size(86, 73);
             this.btn_NoVercontraseña.TabIndex = 6;
             this.btn_NoVercontraseña.TabStop = false;
             this.btn_NoVercontraseña.Visible = false;
