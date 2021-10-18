@@ -45,6 +45,8 @@ namespace Pantalla_Contraseña
                 OleDbCommand cmd = new OleDbCommand(sql, conexion);
                 cmd.ExecuteNonQuery();
 
+                conexion.Close();
+
                 MessageBox.Show("Listo");
 
                 FormFotoAdmin FotoAdmin = new FormFotoAdmin();

@@ -31,11 +31,17 @@ namespace Pantalla_Contraseña
 
             data.Fill(ds, "nombre completo");
             int ultimo = Convert.ToInt32(ds.Tables["nombre completo"].Rows.Count) - 1;
-            for (int i = 0; i<= ultimo; i++)
+            for (int i = 0; i <= ultimo; i++)
             {
                 string[] nombrecompleto = new string[ultimo];
                 nombrecompleto[i] = ds.Tables["nombre completo"].Rows[i].ToString();
 
+                Label temp = new Label();
+
+                if (i % 4 == 0) {
+                    temp.Height =
+                    temp.Width =
+                }
             }
             
         }
