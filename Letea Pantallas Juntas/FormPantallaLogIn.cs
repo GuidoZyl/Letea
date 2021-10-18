@@ -60,5 +60,10 @@ namespace Pantalla_Contraseña
 
             }
         }
+
+        private void txtbox_Contraseña_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

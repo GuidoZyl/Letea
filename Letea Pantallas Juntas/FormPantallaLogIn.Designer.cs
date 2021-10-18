@@ -85,6 +85,7 @@ namespace Pantalla_Contraseña
             this.txtbox_Contraseña.Name = "txtbox_Contraseña";
             this.txtbox_Contraseña.Size = new System.Drawing.Size(475, 67);
             this.txtbox_Contraseña.TabIndex = 3;
+            this.txtbox_Contraseña.TextChanged += new System.EventHandler(this.txtbox_Contraseña_TextChanged);
             // 
             // btn_ingresaradmin
             // 
