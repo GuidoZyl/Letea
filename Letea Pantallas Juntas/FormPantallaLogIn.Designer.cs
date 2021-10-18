@@ -37,6 +37,7 @@ namespace Pantalla_Contraseña
             this.btn_Vercontraseña = new System.Windows.Forms.PictureBox();
             this.btn_NoVercontraseña = new System.Windows.Forms.PictureBox();
             this.btn_IngresoPaciente = new System.Windows.Forms.PictureBox();
+            this.lbl_ContraseñaIncorrecta = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Administrador)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Administrador)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Contraseña)).BeginInit();
@@ -90,7 +91,7 @@ namespace Pantalla_Contraseña
             this.btn_ingresaradmin.BackColor = System.Drawing.Color.Transparent;
             this.btn_ingresaradmin.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Crear_admin;
             this.btn_ingresaradmin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_ingresaradmin.Location = new System.Drawing.Point(408, 744);
+            this.btn_ingresaradmin.Location = new System.Drawing.Point(408, 783);
             this.btn_ingresaradmin.Name = "btn_ingresaradmin";
             this.btn_ingresaradmin.Size = new System.Drawing.Size(208, 98);
             this.btn_ingresaradmin.TabIndex = 4;
@@ -136,6 +137,19 @@ namespace Pantalla_Contraseña
             this.btn_IngresoPaciente.TabIndex = 7;
             this.btn_IngresoPaciente.TabStop = false;
             // 
+            // lbl_ContraseñaIncorrecta
+            // 
+            this.lbl_ContraseñaIncorrecta.AutoSize = true;
+            this.lbl_ContraseñaIncorrecta.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_ContraseñaIncorrecta.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ContraseñaIncorrecta.ForeColor = System.Drawing.Color.Red;
+            this.lbl_ContraseñaIncorrecta.Location = new System.Drawing.Point(269, 715);
+            this.lbl_ContraseñaIncorrecta.Name = "lbl_ContraseñaIncorrecta";
+            this.lbl_ContraseñaIncorrecta.Size = new System.Drawing.Size(485, 54);
+            this.lbl_ContraseñaIncorrecta.TabIndex = 16;
+            this.lbl_ContraseñaIncorrecta.Text = "Contraseña incorrecta";
+            this.lbl_ContraseñaIncorrecta.Visible = false;
+            // 
             // FormPantallaLogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -143,6 +157,7 @@ namespace Pantalla_Contraseña
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Fondo;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.lbl_ContraseñaIncorrecta);
             this.Controls.Add(this.btn_IngresoPaciente);
             this.Controls.Add(this.btn_NoVercontraseña);
             this.Controls.Add(this.btn_Vercontraseña);
@@ -177,5 +192,6 @@ namespace Pantalla_Contraseña
         private System.Windows.Forms.PictureBox btn_Vercontraseña;
         private System.Windows.Forms.PictureBox btn_NoVercontraseña;
         private System.Windows.Forms.PictureBox btn_IngresoPaciente;
+        private System.Windows.Forms.Label lbl_ContraseñaIncorrecta;
     }
 }
