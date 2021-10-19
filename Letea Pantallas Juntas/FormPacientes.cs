@@ -50,23 +50,23 @@ namespace Pantalla_Contraseña
                     if (i % 4 == 0)
                     {
                         temp.Text = "pepe argentoiiiiiiiiiiiii";
-                        temp.Location = new Point(650 - (temp.Width / 2), 425 - (temp.Height / 2));
+                        temp.Location = new Point(650 , 425 );
                     }
                     if ((i - 1) % 4 == 0)
                     {
                         temp.Text = "Ariel Ricardo Alejandro Alzogaray Flores";
-                        temp.Location = new Point(1100 - (temp.Width / 2), 425 - (temp.Height / 2));
+                        temp.Location = new Point(1100, 425);
                     }
                     if ((i - 2) % 4 == 0)
                     {
                         temp.Text = "carlos";
-                        temp.Location = new Point(650 - (temp.Width / 2), 825 - (temp.Height / 2));
+                        temp.Location = new Point(650 , 825 );
 
                     }
                     if ((i - 3) % 4 == 0)
                     {
                         temp.Text = "andres";
-                        temp.Location = new Point(1100 - (temp.Width / 2), 825 - (temp.Height / 2));
+                        temp.Location = new Point(1100, 825);
                     }
                     Controls.Add(temp);
                 }
@@ -76,7 +76,8 @@ namespace Pantalla_Contraseña
             {
                 Label nombre_ultimo = new Label();
                 nombre_ultimo.Text = nombrecompleto[ultimo,0];
-                nombre_ultimo.Location = new Point(950 - (nombre_ultimo.Height / 2), 475 - (nombre_ultimo.Width / 2));
+                Controls.Add(nombre_ultimo);
+                nombre_ultimo.Location = new Point(950, 475);
                 for (int j=0; j<=ultimo - 1;j++)
                 {
                     Label temp = new Label();
@@ -84,23 +85,23 @@ namespace Pantalla_Contraseña
                     if (j % 4 == 0)
                     {
                         temp.Text = nombrecompleto[j,0];
-                        temp.Location = new Point(650 - (temp.Height / 2), 425 - (temp.Width / 2));
+                        temp.Location = new Point(650 , 425 );
                     }
                     if ((j - 1) % 4 == 0)
                     {
                         temp.Text = nombrecompleto[j,0];
-                        temp.Location = new Point(1100 - (temp.Height / 2), 425 - (temp.Width / 2));
+                        temp.Location = new Point(1100, 425);
                     }
                     if ((j - 2) % 4 == 0)
                     {
                         temp.Text = nombrecompleto[j,0];
-                        temp.Location = new Point(650 - (temp.Height / 2), 825 - (temp.Width / 2));
+                        temp.Location = new Point(650 , 825 );
 
                     }
                     if ((j - 3) % 4 == 0)
                     {
                         temp.Text = nombrecompleto[j,0];
-                        temp.Location = new Point(1100 - (temp.Height / 2), 825 - (temp.Width / 2));
+                        temp.Location = new Point(1100, 825 );
                     }
                     Controls.Add(temp);
                 }
@@ -109,10 +110,12 @@ namespace Pantalla_Contraseña
             {
                 Label nombre_ultimo = new Label();
                 nombre_ultimo.Text = nombrecompleto[ultimo,0];
-                nombre_ultimo.Location = new Point(650 - (nombre_ultimo.Height / 2), 475 - (nombre_ultimo.Width / 2));
+                nombre_ultimo.Location = new Point(650, 475);
                 Label nombre_anteultimo = new Label();
                 nombre_anteultimo.Text = nombrecompleto[ultimo - 1,0];
-                nombre_anteultimo.Location = new Point(1100 - (nombre_ultimo.Height / 2), 475 - (nombre_ultimo.Width / 2));
+                Controls.Add(nombre_ultimo);
+                Controls.Add(nombre_anteultimo);
+                nombre_anteultimo.Location = new Point(1100, 475);
                 for (int k = 0; k <= ultimo - 2; k++)
                 {
                     Label temp = new Label();
@@ -120,23 +123,23 @@ namespace Pantalla_Contraseña
                     if (k % 4 == 0)
                     {
                         temp.Text = nombrecompleto[k,0];
-                        temp.Location = new Point(650 - (temp.Height / 2), 425 - (temp.Width / 2));
+                        temp.Location = new Point(650 , 425 );
                     }
                     if ((k - 1) % 4 == 0)
                     {
                         temp.Text = nombrecompleto[k,0];
-                        temp.Location = new Point(1100 - (temp.Height / 2), 425 - (temp.Width / 2));
+                        temp.Location = new Point(1100, 425 );
                     }
                     if ((k - 2) % 4 == 0)
                     {
                         temp.Text = nombrecompleto[k,0];
-                        temp.Location = new Point(650 - (temp.Height / 2), 825 - (temp.Width / 2));
+                        temp.Location = new Point(650, 825 );
 
                     }
                     if ((k - 3) % 4 == 0)
                     {
                         temp.Text = nombrecompleto[k,0];
-                        temp.Location = new Point(1100 - (temp.Height / 2), 825 - (temp.Width / 2));
+                        temp.Location = new Point(1100 , 825);
                     }
                     Controls.Add(temp);
                 }
@@ -146,45 +149,48 @@ namespace Pantalla_Contraseña
             {
                 Label nombre_ultimo = new Label();
                 nombre_ultimo.Text = nombrecompleto[ultimo,0];
-                nombre_ultimo.Location = new Point(550 - (nombre_ultimo.Height / 2), 475 - (nombre_ultimo.Width / 2));
+                nombre_ultimo.Location = new Point(550 , 475);
                 Label nombre_anteultimo = new Label();
                 nombre_anteultimo.Text = nombrecompleto[ultimo - 1,0];
-                nombre_anteultimo.Location = new Point(1050 - (nombre_ultimo.Height / 2), 475 - (nombre_ultimo.Width / 2));
+                nombre_anteultimo.Location = new Point(1050 , 475);
                 Label nombre_antepenultimo = new Label();
                 nombre_antepenultimo.Text = nombrecompleto[ultimo - 2,0];
-                nombre_antepenultimo.Location = new Point(1550 - (nombre_ultimo.Height / 2), 475 - (nombre_ultimo.Width / 2));
+                nombre_antepenultimo.Location = new Point(1550 , 475);
+                Controls.Add(nombre_ultimo);
+                Controls.Add(nombre_anteultimo);
+                Controls.Add(nombre_antepenultimo);
+                
 
                 for (int k = 0; k <= ultimo - 3; k++)
                 {
                     Label temp = new Label();
                     temp.AutoSize = true;
+                    temp.TextAlign = CenterToParent;
                     if (k % 4 == 0)
                     {
                         temp.Text = nombrecompleto[k,0];
-                        temp.Location = new Point(650 - (temp.Height / 2), 425 - (temp.Width / 2));
+                        temp.Location = new Point(650 , 425 );
                     }
                     if ((k - 1) % 4 == 0)
                     {
                         temp.Text = nombrecompleto[k,0];
-                        temp.Location = new Point(1100 - (temp.Height / 2), 425 - (temp.Width / 2));
+                        temp.Location = new Point(1100 , 425);
                     }
                     if ((k - 2) % 4 == 0)
                     {
                         temp.Text = nombrecompleto[k,0];
-                        temp.Location = new Point(650 - (temp.Height / 2), 825 - (temp.Width / 2));
+                        temp.Location = new Point(650 , 825);
 
                     }
                     if ((k - 3) % 4 == 0)
                     {
                         temp.Text = nombrecompleto[k,0];
-                        temp.Location = new Point(1100 - (temp.Height / 2), 825 - (temp.Width / 2));
+                        temp.Location = new Point(1100 , 825 );
                     }
                     Controls.Add(temp);
                 }
-                Controls.Add(nombre_ultimo);
-                Controls.Add(nombre_anteultimo);
-                Controls.Add(nombre_antepenultimo);
-                    
+                
+                
                     
                     
                     
