@@ -61,3 +61,18 @@ E:\Guido\Documentos\Programación\Letea-Pantallas-Juntas\Letea Pantallas Juntas\
 C:\Users\Uriel\Downloads\Letea Pantallas Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.FormPantallaLogIn.resources
 E:\Guido\Documentos\Programación\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.FormPantallaLogIn.resources
 C:\Users\Uriel\Downloads\Letea Pantallas Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.FormPacientes.resources
+C:\Users\46960341\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Letea.csprojAssemblyReference.cache
+C:\Users\46960341\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.FormCrearPaciente.resources
+C:\Users\46960341\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.FormPacientes.resources
+C:\Users\46960341\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.FormPantallaLogIn.resources
+C:\Users\46960341\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.FormFotoAdmin.resources
+C:\Users\46960341\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.FormFotoUsuarioRegistro.resources
+C:\Users\46960341\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.FormNuevaContra.resources
+C:\Users\46960341\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.Properties.Resources.resources
+C:\Users\46960341\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Letea.csproj.GenerateResource.cache
+C:\Users\46960341\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Letea.csproj.CoreCompileInputs.cache
+C:\Users\46960341\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla Contraseña.exe
+C:\Users\46960341\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla Contraseña.pdb
+C:\Users\46960341\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas\bin\Debug\Pantalla Contraseña.exe.config
+C:\Users\46960341\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas\bin\Debug\Pantalla Contraseña.exe
+C:\Users\46960341\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas\bin\Debug\Pantalla Contraseña.pdb

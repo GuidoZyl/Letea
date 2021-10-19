@@ -34,11 +34,10 @@ namespace Pantalla_Contraseña
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(500, 400);
+            this.label1.Location = new System.Drawing.Point(708, 252);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(365, 54);
+            this.label1.Size = new System.Drawing.Size(443, 54);
             this.label1.TabIndex = 0;
             this.label1.Text = "Uriel Jolodovsky";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -54,7 +53,6 @@ namespace Pantalla_Contraseña
             this.Text = "FormPacientes";
             this.Load += new System.EventHandler(this.FormPacientes_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
