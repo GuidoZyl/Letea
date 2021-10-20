@@ -42,7 +42,9 @@ namespace Pantalla_Contraseña
 
         private void click_crearfotousuario(object sender, EventArgs e)
         {
-
+            FormPantallaLogIn PantallaLogIn = new FormPantallaLogIn();
+            PantallaLogIn.Show();
+            this.Hide();
         }
     }
 }
