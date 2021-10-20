@@ -31,7 +31,7 @@ namespace Pantalla_Contraseña
         {
             if (txtbox_NombreUsuario.Text != "")
             {
-                string sql = "Insert into Usuario (Nombre completo) values ('" + txtbox_NombreUsuario.Text + "')";
+                string sql = "Insert into Usuario (NombreCompleto) values ('" + txtbox_NombreUsuario.Text + "')";
                 OleDbCommand cmd = new OleDbCommand(sql, conexion);
                 cmd.ExecuteNonQuery();
 

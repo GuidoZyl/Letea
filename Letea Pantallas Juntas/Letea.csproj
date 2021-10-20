@@ -69,17 +69,17 @@
     <Compile Include="Crear Paciente.Designer.cs">
       <DependentUpon>Crear Paciente.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormPacientes.cs">
+    <Compile Include="Elegir Paciente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormPacientes.Designer.cs">
-      <DependentUpon>FormPacientes.cs</DependentUpon>
+    <Compile Include="Elegir Paciente.Designer.cs">
+      <DependentUpon>Elegir Paciente.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormPantallaLogIn.cs">
+    <Compile Include="Pantalla Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormPantallaLogIn.Designer.cs">
-      <DependentUpon>FormPantallaLogIn.cs</DependentUpon>
+    <Compile Include="Pantalla Login.Designer.cs">
+      <DependentUpon>Pantalla Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Foto Admin.cs">
       <SubType>Form</SubType>
@@ -107,11 +107,11 @@
     <EmbeddedResource Include="Crear Paciente.resx">
       <DependentUpon>Crear Paciente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormPacientes.resx">
-      <DependentUpon>FormPacientes.cs</DependentUpon>
+    <EmbeddedResource Include="Elegir Paciente.resx">
+      <DependentUpon>Elegir Paciente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormPantallaLogIn.resx">
-      <DependentUpon>FormPantallaLogIn.cs</DependentUpon>
+    <EmbeddedResource Include="Pantalla Login.resx">
+      <DependentUpon>Pantalla Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Foto Admin.resx">
       <DependentUpon>Foto Admin.cs</DependentUpon>
