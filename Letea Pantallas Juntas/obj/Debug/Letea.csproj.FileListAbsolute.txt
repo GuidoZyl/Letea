@@ -76,3 +76,4 @@ C:\Users\46960341\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas
 C:\Users\46960341\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas\bin\Debug\Pantalla Contraseña.exe.config
 C:\Users\46960341\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas\bin\Debug\Pantalla Contraseña.exe
 C:\Users\46960341\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas\bin\Debug\Pantalla Contraseña.pdb
+E:\Guido\Documentos\Programación\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.FormPacientes.resources

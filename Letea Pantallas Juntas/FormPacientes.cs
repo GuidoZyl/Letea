@@ -45,34 +45,34 @@ namespace Pantalla_Contraseña
 
                     Label temp = new Label();
                     temp.AutoSize = true;
+                    temp.TextAlign = ContentAlignment.MiddleCenter;
 
                     temp.Font = new Font("Serif", 35);
                     if (i % 4 == 0)
                     {
                         temp.Text = "pepe argentoiiiiiiiiiiiii";
-                        temp.Location = new Point(650 , 425 );
+                        temp.Location = new Point(650 - temp.Width, 425 - temp.Height);
                     }
                     if ((i - 1) % 4 == 0)
                     {
                         temp.Text = "Ariel Ricardo Alejandro Alzogaray Flores";
-                        temp.Location = new Point(1100, 425);
+                        temp.Location = new Point(1100 - temp.Width, 425 - temp.Height);
                     }
                     if ((i - 2) % 4 == 0)
                     {
                         temp.Text = "carlos";
-                        temp.Location = new Point(650 , 825 );
-
+                        temp.Location = new Point(650 - temp.Width, 825 - temp.Height);
                     }
                     if ((i - 3) % 4 == 0)
                     {
                         temp.Text = "andres";
-                        temp.Location = new Point(1100, 825);
+                        temp.Location = new Point(1100 - temp.Width, 825 - temp.Height);
                     }
                     Controls.Add(temp);
                 }
             }
             
-            if ((ultimo) % 4 == 0)
+            /*if ((ultimo) % 4 == 0)
             {
                 Label nombre_ultimo = new Label();
                 nombre_ultimo.Text = nombrecompleto[ultimo,0];
@@ -165,7 +165,7 @@ namespace Pantalla_Contraseña
                 {
                     Label temp = new Label();
                     temp.AutoSize = true;
-                    temp.TextAlign = CenterToParent;
+                    temp.TextAlign = ContentAlignment.MiddleCenter;
                     if (k % 4 == 0)
                     {
                         temp.Text = nombrecompleto[k,0];
@@ -194,7 +194,7 @@ namespace Pantalla_Contraseña
                     
                     
                     
-            }
+            }*/
             
         }
     }
