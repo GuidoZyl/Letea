@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace Pantalla_Contraseña
 {
     public partial class FormFotoUsuarioRegistro : Form
     {
+        OleDbConnection conexion = new OleDbConnection();
         public FormFotoUsuarioRegistro()
         {
             InitializeComponent();
@@ -19,7 +21,8 @@ namespace Pantalla_Contraseña
 
         private void Foto_Usuario_registro_Load(object sender, EventArgs e)
         {
-
+            conexion.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=.\Base de Datos 4.accdb;";
+            conexion.Open();
         }
 
         private void click_agregarfoto(object sender, EventArgs e)
@@ -42,6 +45,14 @@ namespace Pantalla_Contraseña
 
         private void click_crearfotousuario(object sender, EventArgs e)
         {
+            string ConsultaSql = "INSERT INTO Usuario (Foto) values (@foto)";
+            System.IO.MemoryStream ms = new System.IO.MemoryStream();
+            btn_agregarfoto.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+            OleDbCommand cmd = new OleDbCommand(ConsultaSql, conexion);
+            cmd.Parameters.Add("@foto", OleDbType.VarBinary).Value = ms.GetBuffer();
+            cmd.ExecuteNonQuery();
+
+
             FormPantallaLogIn PantallaLogIn = new FormPantallaLogIn();
             PantallaLogIn.Show();
             this.Hide();
