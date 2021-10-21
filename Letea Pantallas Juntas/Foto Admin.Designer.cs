@@ -96,7 +96,7 @@ namespace Pantalla_Contraseña
             this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
             this.Name = "FormFotoAdmin";
-            this.Text = "Form1";
+            this.Text = "Foto Admin";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using System.IO;
 
 namespace Pantalla_Contraseña
 {
@@ -25,6 +26,16 @@ namespace Pantalla_Contraseña
         {
             conexion.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=.\Base de Datos 4.accdb;";
             conexion.Open();
+            string sql = "SELECT Foto FROM Admin";
+            OleDbCommand cmd = new OleDbCommand(sql, conexion);
+            OleDbDataAdapter data = new OleDbDataAdapter(cmd);
+
+            data.Fill(ds, "foto");
+
+            MemoryStream ms = new MemoryStream((byte[])ds.Tables["foto"].Rows[0]["Foto"]);
+
+            Bitmap bm = new Bitmap(ms);
+            pic_Administrador.BackgroundImage = bm;
         }
 
         private void click_vercontraseña(object sender, EventArgs e)
