@@ -32,6 +32,7 @@
             this.pic_text_fotodeperfil = new System.Windows.Forms.PictureBox();
             this.btn_agregarfoto = new System.Windows.Forms.PictureBox();
             this.btn_crearfotousuario = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pic_usuariofoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_text_fotodeperfil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_agregarfoto)).BeginInit();
@@ -82,6 +83,16 @@
             this.btn_crearfotousuario.TabStop = false;
             this.btn_crearfotousuario.Click += new System.EventHandler(this.click_crearfotousuario);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(374, 480);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FormFotoUsuarioRegistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -89,6 +100,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Fondo;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_crearfotousuario);
             this.Controls.Add(this.btn_agregarfoto);
             this.Controls.Add(this.pic_text_fotodeperfil);
@@ -111,5 +123,6 @@
         private System.Windows.Forms.PictureBox pic_text_fotodeperfil;
         private System.Windows.Forms.PictureBox btn_agregarfoto;
         private System.Windows.Forms.PictureBox btn_crearfotousuario;
+        private System.Windows.Forms.Button button1;
     }
 }
