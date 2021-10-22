@@ -62,14 +62,7 @@ namespace Pantalla_Contraseña
             data.Fill(ds, "contraseña");
             string contraseña = ds.Tables["contraseña"].Rows[0]["Contraseña"].ToString();
             if (txtbox_Contraseña.Text == contraseña)
-            {
-                conexion.Close();
-                FormPacientes form = new FormPacientes();
-
-                form.Show();
-                this.Hide();
-            }            
-            
+            { }
             else
             {
                 this.Cursor = default;

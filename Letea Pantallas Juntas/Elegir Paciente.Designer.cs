@@ -66,7 +66,6 @@ namespace Pantalla_Contraseña
             this.Controls.Add(this.label1);
             this.Name = "FormPacientes";
             this.Text = "FormPacientes";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormPacientes_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
