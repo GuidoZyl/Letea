@@ -63,6 +63,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Componentes\FormRedondeado.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Configuración.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuración.Designer.cs">
+      <DependentUpon>Configuración.cs</DependentUpon>
+    </Compile>
     <Compile Include="Crear Paciente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,11 +108,20 @@
     <Compile Include="Nueva Contraseña.Designer.cs">
       <DependentUpon>Nueva Contraseña.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pantalla Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantalla Principal.Designer.cs">
+      <DependentUpon>Pantalla Principal.cs</DependentUpon>
+    </Compile>
     <Compile Include="PictureBoxCircular.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Configuración.resx">
+      <DependentUpon>Configuración.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Crear Paciente.resx">
       <DependentUpon>Crear Paciente.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,6 +139,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Nueva Contraseña.resx">
       <DependentUpon>Nueva Contraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantalla Principal.resx">
+      <DependentUpon>Pantalla Principal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -204,6 +225,15 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fondo Principal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Crear paciente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Configuración.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

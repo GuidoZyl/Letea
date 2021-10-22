@@ -103,6 +103,16 @@ namespace Pantalla_Contraseña.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Configuración {
+            get {
+                object obj = ResourceManager.GetObject("Configuración", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Confirmar_contraseña {
             get {
                 object obj = ResourceManager.GetObject("Confirmar contraseña", resourceCulture);
@@ -133,9 +143,29 @@ namespace Pantalla_Contraseña.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Crear_paciente {
+            get {
+                object obj = ResourceManager.GetObject("Crear paciente", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Fondo {
             get {
                 object obj = ResourceManager.GetObject("Fondo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Fondo_Principal {
+            get {
+                object obj = ResourceManager.GetObject("Fondo Principal", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
