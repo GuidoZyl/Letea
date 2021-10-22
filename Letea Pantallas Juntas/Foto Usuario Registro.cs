@@ -57,8 +57,6 @@ namespace Pantalla_Contraseña
             consulta.Parameters.AddWithValue("Foto", aByte);
             consulta.ExecuteNonQuery();
 
-            btn_agregarfoto.Image = null;
-
             FormPantallaLogIn form = new FormPantallaLogIn();
             form.Show();
             this.Hide();

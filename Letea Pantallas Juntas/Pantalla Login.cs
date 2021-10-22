@@ -35,7 +35,8 @@ namespace Pantalla_Contraseña
             MemoryStream ms = new MemoryStream((byte[])ds.Tables["foto"].Rows[0]["Foto"]);
 
             Bitmap bm = new Bitmap(ms);
-            pic_Administrador.BackgroundImage = bm;
+
+            pic_Administrador.Image = bm;
         }
 
         private void click_vercontraseña(object sender, EventArgs e)

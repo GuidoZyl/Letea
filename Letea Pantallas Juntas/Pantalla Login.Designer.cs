@@ -53,7 +53,8 @@ namespace Pantalla_Contraseña
             this.pic_Administrador.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Circulo;
             this.pic_Administrador.Location = new System.Drawing.Point(360, 134);
             this.pic_Administrador.Name = "pic_Administrador";
-            this.pic_Administrador.Size = new System.Drawing.Size(301, 300);
+            this.pic_Administrador.Size = new System.Drawing.Size(300, 300);
+            this.pic_Administrador.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_Administrador.TabIndex = 0;
             this.pic_Administrador.TabStop = false;
             // 
