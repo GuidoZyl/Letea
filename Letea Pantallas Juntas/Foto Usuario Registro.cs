@@ -77,4 +77,5 @@ namespace Pantalla_Contraseña
             btn_agregarfoto.Image = bm;
         }
     }
+    
 }
