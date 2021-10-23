@@ -181,8 +181,8 @@ namespace Pantalla_Contraseña
                         string sqlFoto2 = "Select Foto from Usuario where NombreCompleto = '" + nombrecompleto[i, 0] + "'";
                         OleDbCommand cmd2 = new OleDbCommand(sqlFoto2, conexion);
                         OleDbDataAdapter dataPic2 = new OleDbDataAdapter(cmd2);
-                        dataPic2.Fill(ds, "foto");
-                        MemoryStream ms2 = new MemoryStream((byte[])ds.Tables["foto"].Rows[0]["Foto"]);
+                        dataPic2.Fill(ds, "foto2");
+                        MemoryStream ms2 = new MemoryStream((byte[])ds.Tables["foto2"].Rows[0]["Foto"]);
                         Bitmap bm2 = new Bitmap(ms2);
 
                         tmp.Image = bm2;
@@ -198,8 +198,8 @@ namespace Pantalla_Contraseña
                         string sqlFoto2 = "Select Foto from Usuario where NombreCompleto = '" + nombrecompleto[i, 0] + "'";
                         OleDbCommand cmd2 = new OleDbCommand(sqlFoto2, conexion);
                         OleDbDataAdapter dataPic2 = new OleDbDataAdapter(cmd2);
-                        dataPic2.Fill(ds, "foto");
-                        MemoryStream ms2 = new MemoryStream((byte[])ds.Tables["foto"].Rows[0]["Foto"]);
+                        dataPic2.Fill(ds, "foto3");
+                        MemoryStream ms2 = new MemoryStream((byte[])ds.Tables["foto3"].Rows[0]["Foto"]);
                         Bitmap bm2 = new Bitmap(ms2);
 
                         tmp.Image = bm2;
@@ -215,8 +215,8 @@ namespace Pantalla_Contraseña
                         string sqlFoto2 = "Select Foto from Usuario where NombreCompleto = '" + nombrecompleto[i, 0] + "'";
                         OleDbCommand cmd2 = new OleDbCommand(sqlFoto2, conexion);
                         OleDbDataAdapter dataPic2 = new OleDbDataAdapter(cmd2);
-                        dataPic2.Fill(ds, "foto");
-                        MemoryStream ms2 = new MemoryStream((byte[])ds.Tables["foto"].Rows[0]["Foto"]);
+                        dataPic2.Fill(ds, "foto4");
+                        MemoryStream ms2 = new MemoryStream((byte[])ds.Tables["foto4"].Rows[0]["Foto"]);
                         Bitmap bm2 = new Bitmap(ms2);
 
                         tmp.Image = bm2;
@@ -232,8 +232,8 @@ namespace Pantalla_Contraseña
                         string sqlFoto2 = "Select Foto from Usuario where NombreCompleto = '" + nombrecompleto[i, 0] + "'";
                         OleDbCommand cmd2 = new OleDbCommand(sqlFoto2, conexion);
                         OleDbDataAdapter dataPic2 = new OleDbDataAdapter(cmd2);
-                        dataPic2.Fill(ds, "foto");
-                        MemoryStream ms2 = new MemoryStream((byte[])ds.Tables["foto"].Rows[0]["Foto"]);
+                        dataPic2.Fill(ds, "foto5");
+                        MemoryStream ms2 = new MemoryStream((byte[])ds.Tables["foto5"].Rows[0]["Foto"]);
                         Bitmap bm2 = new Bitmap(ms2);
 
                         tmp.Image = bm2;
@@ -319,8 +319,8 @@ namespace Pantalla_Contraseña
                         string sqlFoto3 = "Select Foto from Usuario where NombreCompleto = '" + nombrecompleto[i, 0] + "'";
                         OleDbCommand cmd3 = new OleDbCommand(sqlFoto3, conexion);
                         OleDbDataAdapter dataPic3 = new OleDbDataAdapter(cmd3);
-                        dataPic3.Fill(ds, "foto");
-                        MemoryStream ms3 = new MemoryStream((byte[])ds.Tables["foto"].Rows[0]["Foto"]);
+                        dataPic3.Fill(ds, "foto3");
+                        MemoryStream ms3 = new MemoryStream((byte[])ds.Tables["foto3"].Rows[0]["Foto"]);
                         Bitmap bm3 = new Bitmap(ms3);
 
                         tmp.Image = bm3;
@@ -336,8 +336,8 @@ namespace Pantalla_Contraseña
                         string sqlFoto3 = "Select Foto from Usuario where NombreCompleto = '" + nombrecompleto[i, 0] + "'";
                         OleDbCommand cmd3 = new OleDbCommand(sqlFoto3, conexion);
                         OleDbDataAdapter dataPic3 = new OleDbDataAdapter(cmd3);
-                        dataPic3.Fill(ds, "foto");
-                        MemoryStream ms3 = new MemoryStream((byte[])ds.Tables["foto"].Rows[0]["Foto"]);
+                        dataPic3.Fill(ds, "foto4");
+                        MemoryStream ms3 = new MemoryStream((byte[])ds.Tables["foto4"].Rows[0]["Foto"]);
                         Bitmap bm3 = new Bitmap(ms3);
 
                         tmp.Image = bm3;
@@ -353,8 +353,8 @@ namespace Pantalla_Contraseña
                         string sqlFoto3 = "Select Foto from Usuario where NombreCompleto = '" + nombrecompleto[i, 0] + "'";
                         OleDbCommand cmd3 = new OleDbCommand(sqlFoto3, conexion);
                         OleDbDataAdapter dataPic3 = new OleDbDataAdapter(cmd3);
-                        dataPic3.Fill(ds, "foto");
-                        MemoryStream ms3 = new MemoryStream((byte[])ds.Tables["foto"].Rows[0]["Foto"]);
+                        dataPic3.Fill(ds, "foto5");
+                        MemoryStream ms3 = new MemoryStream((byte[])ds.Tables["foto5"].Rows[0]["Foto"]);
                         Bitmap bm3 = new Bitmap(ms3);
 
                         tmp.Image = bm3;
@@ -370,8 +370,8 @@ namespace Pantalla_Contraseña
                         string sqlFoto3 = "Select Foto from Usuario where NombreCompleto = '" + nombrecompleto[i, 0] + "'";
                         OleDbCommand cmd3 = new OleDbCommand(sqlFoto3, conexion);
                         OleDbDataAdapter dataPic3 = new OleDbDataAdapter(cmd3);
-                        dataPic3.Fill(ds, "foto");
-                        MemoryStream ms3 = new MemoryStream((byte[])ds.Tables["foto"].Rows[0]["Foto"]);
+                        dataPic3.Fill(ds, "foto6");
+                        MemoryStream ms3 = new MemoryStream((byte[])ds.Tables["foto6"].Rows[0]["Foto"]);
                         Bitmap bm3 = new Bitmap(ms3);
 
                         tmp.Image = bm3;
@@ -442,8 +442,8 @@ namespace Pantalla_Contraseña
                 string sqlFoto3 = "SELECT Foto FROM Usuario WHERE [NombreCompleto] = '" + nombre_anteultimo.Text + "'";
                 OleDbCommand cmd3 = new OleDbCommand(sqlFoto3, conexion);
                 OleDbDataAdapter dataPic3 = new OleDbDataAdapter(cmd3);
-                dataPic2.Fill(ds, "foto2");
-                MemoryStream ms3 = new MemoryStream((byte[])ds.Tables["foto2"].Rows[0]["Foto"]);
+                dataPic2.Fill(ds, "foto3");
+                MemoryStream ms3 = new MemoryStream((byte[])ds.Tables["foto3"].Rows[0]["Foto"]);
                 Bitmap bm3 = new Bitmap(ms3);
 
                 foto_anteultimo.Image = bm3;
@@ -478,8 +478,8 @@ namespace Pantalla_Contraseña
                         string sqlFoto4 = "Select Foto from Usuario where NombreCompleto = '" + nombrecompleto[i, 0] + "'";
                         OleDbCommand cmd4 = new OleDbCommand(sqlFoto4, conexion);
                         OleDbDataAdapter dataPic4 = new OleDbDataAdapter(cmd4);
-                        dataPic4.Fill(ds, "foto");
-                        MemoryStream ms4 = new MemoryStream((byte[])ds.Tables["foto"].Rows[0]["Foto"]);
+                        dataPic4.Fill(ds, "foto4");
+                        MemoryStream ms4 = new MemoryStream((byte[])ds.Tables["foto4"].Rows[0]["Foto"]);
                         Bitmap bm4 = new Bitmap(ms4);
 
                         tmp.Image = bm4;
@@ -495,8 +495,8 @@ namespace Pantalla_Contraseña
                         string sqlFoto4 = "Select Foto from Usuario where NombreCompleto = '" + nombrecompleto[i, 0] + "'";
                         OleDbCommand cmd4 = new OleDbCommand(sqlFoto4, conexion);
                         OleDbDataAdapter dataPic4 = new OleDbDataAdapter(cmd4);
-                        dataPic4.Fill(ds, "foto");
-                        MemoryStream ms4 = new MemoryStream((byte[])ds.Tables["foto"].Rows[0]["Foto"]);
+                        dataPic4.Fill(ds, "foto5");
+                        MemoryStream ms4 = new MemoryStream((byte[])ds.Tables["foto5"].Rows[0]["Foto"]);
                         Bitmap bm4 = new Bitmap(ms4);
 
                         tmp.Image = bm4;
@@ -512,8 +512,8 @@ namespace Pantalla_Contraseña
                         string sqlFoto4 = "Select Foto from Usuario where NombreCompleto = '" + nombrecompleto[i, 0] + "'";
                         OleDbCommand cmd4 = new OleDbCommand(sqlFoto4, conexion);
                         OleDbDataAdapter dataPic4 = new OleDbDataAdapter(cmd4);
-                        dataPic4.Fill(ds, "foto");
-                        MemoryStream ms4 = new MemoryStream((byte[])ds.Tables["foto"].Rows[0]["Foto"]);
+                        dataPic4.Fill(ds, "foto6");
+                        MemoryStream ms4 = new MemoryStream((byte[])ds.Tables["foto6"].Rows[0]["Foto"]);
                         Bitmap bm4 = new Bitmap(ms4);
 
                         tmp.Image = bm4;
@@ -529,8 +529,8 @@ namespace Pantalla_Contraseña
                         string sqlFoto4 = "Select Foto from Usuario where NombreCompleto = '" + nombrecompleto[i, 0] + "'";
                         OleDbCommand cmd4 = new OleDbCommand(sqlFoto4, conexion);
                         OleDbDataAdapter dataPic4 = new OleDbDataAdapter(cmd4);
-                        dataPic4.Fill(ds, "foto");
-                        MemoryStream ms4 = new MemoryStream((byte[])ds.Tables["foto"].Rows[0]["Foto"]);
+                        dataPic4.Fill(ds, "foto7");
+                        MemoryStream ms4 = new MemoryStream((byte[])ds.Tables["foto7"].Rows[0]["Foto"]);
                         Bitmap bm4 = new Bitmap(ms4);
 
                         tmp.Image = bm4;
