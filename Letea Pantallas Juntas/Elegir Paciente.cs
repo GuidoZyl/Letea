@@ -558,14 +558,14 @@ OleDbConnection conexion = new OleDbConnection();
                 MemoryStream ms3 = new MemoryStream((byte[])ds.Tables["foto3"].Rows[0]["Foto"]);
                 Bitmap bm3 = new Bitmap(ms3);
 
-                foto_anteultimo.Image = bm3;
-                foto_anteultimo.Location = new Point(825, 550);
-                foto_anteultimo.Size = new Size(300, 300);
-                foto_anteultimo.SizeMode = PictureBoxSizeMode.StretchImage;
+                foto_antepenultimo.Image = bm3;
+                foto_antepenultimo.Location = new Point(825, 550);
+                foto_antepenultimo.Size = new Size(300, 300);
+                foto_antepenultimo.SizeMode = PictureBoxSizeMode.StretchImage;
+                
                 foto_anteultimo.Tag = ultimo - 1;
                 foto_antepenultimo.Tag = ultimo - 2;
                 foto_ultimo.Tag = ultimo;
-                // faltan cosas de foto_ultimo IMPORTANTE
 
                 Controls.Add(nombre_ultimo);
                 Controls.Add(nombre_anteultimo);
