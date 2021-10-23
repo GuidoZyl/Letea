@@ -44,29 +44,32 @@ namespace Pantalla_Contraseña
 
 
                     Label temp = new Label();
-                    temp.AutoSize = true;
+                    temp.AutoSize = false;
+                    temp.Width = 600;
+                    temp.Height = 108;
+                    temp.BackColor = Color.Transparent;
                     temp.TextAlign = ContentAlignment.MiddleCenter;
 
                     temp.Font = new Font("Serif", 35);
                     if (i % 4 == 0)
                     {
                         temp.Text = "pepe argentoiiiiiiiiiiiii";
-                        temp.Location = new Point(650 - temp.Width, 425 - temp.Height);
+                        temp.Location = new Point(350, 371);
                     }
                     if ((i - 1) % 4 == 0)
                     {
                         temp.Text = "Ariel Ricardo Alejandro Alzogaray Flores";
-                        temp.Location = new Point(1100 - temp.Width, 425 - temp.Height);
+                        temp.Location = new Point(1000, 371);
                     }
                     if ((i - 2) % 4 == 0)
                     {
                         temp.Text = "carlos";
-                        temp.Location = new Point(650 - temp.Width, 825 - temp.Height);
+                        temp.Location = new Point(350, 771);
                     }
                     if ((i - 3) % 4 == 0)
                     {
                         temp.Text = "andres";
-                        temp.Location = new Point(1100 - temp.Width, 825 - temp.Height);
+                        temp.Location = new Point(1000, 771);
                     }
                     Controls.Add(temp);
                 }
