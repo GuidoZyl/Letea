@@ -29,19 +29,7 @@ namespace Pantalla_Contraseña
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(721, 145);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(600, 108);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Uriel Jolodovsky hola hola holaholahoahlohlahol";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormPacientes
             // 
@@ -50,7 +38,6 @@ namespace Pantalla_Contraseña
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Fondo;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
-            this.Controls.Add(this.label1);
             this.Name = "FormPacientes";
             this.Text = "FormPacientes";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -60,7 +47,5 @@ namespace Pantalla_Contraseña
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
     }
 }
