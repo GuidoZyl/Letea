@@ -503,6 +503,11 @@ namespace Pantalla_Contraseña
                 MemoryStream ms = new MemoryStream((byte[])ds.Tables["foto"].Rows[0]["Foto"]);
                 Bitmap bm = new Bitmap(ms);
 
+                foto_ultimo.Image = bm;
+                foto_ultimo.Location = new Point(500, 71);
+                foto_ultimo.Size = new Size(300, 300);
+                foto_ultimo.SizeMode = PictureBoxSizeMode.StretchImage;
+
                 Label nombre_anteultimo = new Label();
                 nombre_anteultimo.Tag = ultimo - 1;
                 nombre_anteultimo.AutoSize = false;
