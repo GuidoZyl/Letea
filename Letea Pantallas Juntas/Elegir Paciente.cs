@@ -14,9 +14,11 @@ namespace Pantalla_Contraseña
 {
     public partial class FormPacientes : Form
     {
-        OleDbConnection conexion = new OleDbConnection();
-        DataSet ds = new DataSet();
         
+        
+OleDbConnection conexion = new OleDbConnection();
+        DataSet ds = new DataSet();
+        Label[] NombresPacientes = new Label[10000];
         public FormPacientes()
         {
             InitializeComponent();
@@ -35,6 +37,8 @@ namespace Pantalla_Contraseña
             string[,] nombrecompleto = new string[ultimo + 1,1];
 
             byte[,] foto = new byte[ultimo + 1, 1];
+
+            
 
             int i = 0;
 
@@ -56,6 +60,7 @@ namespace Pantalla_Contraseña
                     temp.BackColor = Color.Transparent;
                     temp.TextAlign = ContentAlignment.MiddleCenter;
                     temp.Font = new Font("Serif", 35);
+                    NombresPacientes[i] = temp;
 
                     PictureBox tmp = new PictureBox();
                     tmp.Tag = i;
@@ -164,7 +169,7 @@ namespace Pantalla_Contraseña
                 nombre_ultimo.Font = new Font("Serif", 35);
                 nombre_ultimo.Text = nombrecompleto[ultimo, 0];
                 nombre_ultimo.Location = new Point(650, 550);
-
+                NombresPacientes[ultimo] = nombre_ultimo;
                 PictureBox foto_ultimo = new PictureBox();
                 string sqlFoto = "Select Foto from Usuario where NombreCompleto = '" + nombre_ultimo.Text + "'";
                 OleDbCommand cmd = new OleDbCommand(sqlFoto, conexion);
@@ -192,7 +197,7 @@ namespace Pantalla_Contraseña
                     temp.BackColor = Color.Transparent;
                     temp.TextAlign = ContentAlignment.MiddleCenter;
                     temp.Font = new Font("Serif", 35);
-
+                    NombresPacientes[j] = temp;
                     PictureBox tmp = new PictureBox();
                     tmp.Tag = j;
 
@@ -284,19 +289,19 @@ namespace Pantalla_Contraseña
                     }
                     for (int x = 0; x <= ultimo; x++)
                     {
-                        if (Convert.ToInt32(tmp.Tag) == x) { tmp.Visible = false; }
+                    NombresPacientes[x].Visible = false; 
                     }
                     for (int y = 0; y <= 3; y++)
                     {
-                        if (Convert.ToInt32(tmp.Tag) == y) { tmp.Visible = true; }
+                      NombresPacientes[y].Visible = true; 
                     }
-                    if (ultimo == 2)
+                    if (ultimo == 0)
                     {
-                        foto_ultimo.Visible = true;
+                        NombresPacientes[ultimo].Visible = true;
                     }
-                    if (ultimo > 2)
+                    if (ultimo > 0)
                     {
-                        foto_ultimo.Visible = false;
+                        NombresPacientes[ultimo].Visible = false;
                     }
                 }
             }
@@ -313,7 +318,7 @@ namespace Pantalla_Contraseña
                 nombre_ultimo.Font = new Font("Serif", 35);
                 nombre_ultimo.Text = nombrecompleto[ultimo,0];
                 nombre_ultimo.Location = new Point(300, 550);
-
+                NombresPacientes[ultimo] = nombre_ultimo;
                 PictureBox foto_ultimo = new PictureBox();
                 string sqlFoto = "SELECT Foto FROM Usuario WHERE [NombreCompleto] = '" + nombre_ultimo.Text + "'";
                 OleDbCommand cmd = new OleDbCommand(sqlFoto, conexion);
@@ -338,7 +343,7 @@ namespace Pantalla_Contraseña
                 nombre_anteultimo.Font = new Font("Serif", 35);
                 nombre_anteultimo.Text = nombrecompleto[ultimo - 1, 0];
                 nombre_anteultimo.Location = new Point(1050, 550);
-
+                NombresPacientes[ultimo - 1] = nombre_anteultimo;
                 PictureBox foto_anteultimo = new PictureBox();
                 string sqlFoto2 = "SELECT Foto FROM Usuario WHERE [NombreCompleto] = '" + nombre_anteultimo.Text + "'";
                 OleDbCommand cmd2 = new OleDbCommand(sqlFoto2, conexion);
@@ -368,7 +373,7 @@ namespace Pantalla_Contraseña
                     temp.BackColor = Color.Transparent;
                     temp.TextAlign = ContentAlignment.MiddleCenter;
                     temp.Font = new Font("Serif", 35);
-
+                    NombresPacientes[k] = temp;
                     PictureBox tmp = new PictureBox();
                     tmp.Tag = k;
 
@@ -462,21 +467,21 @@ namespace Pantalla_Contraseña
                     }
                     for (int x = 0; x <= ultimo; x++)
                     {
-                        if (Convert.ToInt32(tmp.Tag) == x) { tmp.Visible = false; }
+                    NombresPacientes[x].Visible = false; 
                     }
                     for (int y = 0; y <= 3; y++)
                     {
-                        if (Convert.ToInt32(tmp.Tag) == y) { tmp.Visible = true; }
+                      NombresPacientes[y].Visible = true; 
                     }
-                    if (ultimo == 2)
+                    if (ultimo == 1)
                     {
-                        foto_ultimo.Visible = true;
-                        foto_anteultimo.Visible = true;
+                        NombresPacientes[ultimo].Visible = true;
+                        NombresPacientes[ultimo - 1].Visible = true;
                     }
-                    if (ultimo > 2)
+                    if (ultimo > 1)
                     {
-                        foto_ultimo.Visible = false;
-                        foto_anteultimo.Visible = false;
+                        NombresPacientes[ultimo].Visible = false;
+                        NombresPacientes[ultimo - 1].Visible = false;
                     }
                 }
             }
@@ -494,7 +499,7 @@ namespace Pantalla_Contraseña
                 nombre_ultimo.Font = new Font("Serif", 35);
                 nombre_ultimo.Text = nombrecompleto[ultimo,0];
                 nombre_ultimo.Location = new Point(350 , 371);
-
+                NombresPacientes[ultimo] = nombre_ultimo;
                 PictureBox foto_ultimo = new PictureBox();
                 string sqlFoto = "SELECT Foto FROM Usuario WHERE [NombreCompleto] = '" + nombre_ultimo.Text + "'";
                 OleDbCommand cmd = new OleDbCommand(sqlFoto, conexion);
@@ -518,7 +523,7 @@ namespace Pantalla_Contraseña
                 nombre_anteultimo.Font = new Font("Serif", 35);
                 nombre_anteultimo.Text = nombrecompleto[ultimo - 1,0];
                 nombre_anteultimo.Location = new Point(1000 , 371);
-
+                NombresPacientes[ultimo - 1] = nombre_anteultimo;
                 PictureBox foto_anteultimo = new PictureBox();
                 string sqlFoto2 = "SELECT Foto FROM Usuario WHERE [NombreCompleto] = '" + nombre_anteultimo.Text + "'";
                 OleDbCommand cmd2 = new OleDbCommand(sqlFoto2, conexion);
@@ -543,7 +548,7 @@ namespace Pantalla_Contraseña
                 nombre_antepenultimo.Font = new Font("Serif", 35);
                 nombre_antepenultimo.Text = nombrecompleto[ultimo - 2,0];
                 nombre_antepenultimo.Location = new Point(675 , 850);
-            
+                NombresPacientes[ultimo - 2] = nombre_antepenultimo;
 
                 PictureBox foto_antepenultimo = new PictureBox();
                 string sqlFoto3 = "SELECT Foto FROM Usuario WHERE [NombreCompleto] = '" + nombre_anteultimo.Text + "'";
@@ -579,7 +584,7 @@ namespace Pantalla_Contraseña
                     temp.BackColor = Color.Transparent;
                     temp.TextAlign = ContentAlignment.MiddleCenter;
                     temp.Font = new Font("Serif", 35);
-
+                    NombresPacientes[k] = temp;
                     PictureBox tmp = new PictureBox();
                     tmp.Tag = k;
 
@@ -677,27 +682,34 @@ namespace Pantalla_Contraseña
                     }
                     for (int v = 0; v <= ultimo; v++)
                     {
-                        if (Convert.ToInt32(temp.Tag) == v) { temp.Visible = false; }
+                        NombresPacientes[v].Visible = false;
                     }
                     for (int w = 0; w <= 3; w++)
                     {
-                        if (Convert.ToInt32(temp.Tag) == w) { temp.Visible = true; }
+                      NombresPacientes[w].Visible = true; 
                     }
                     if (ultimo == 2)
                     {
-                        nombre_ultimo.Visible = true;
-                        nombre_anteultimo.Visible = true;
-                        nombre_antepenultimo.Visible = true;
+                        NombresPacientes[ultimo].Visible = true;
+                        NombresPacientes[ultimo - 1].Visible = true;
+                        NombresPacientes[ultimo - 2].Visible = true;
                     }
                     if (ultimo > 2)
                     {
-                        nombre_ultimo.Visible = false;
-                        nombre_anteultimo.Visible = false;
-                        nombre_antepenultimo.Visible = false;
+                        NombresPacientes[ultimo].Visible = false;
+                        NombresPacientes[ultimo - 1].Visible = false;
+                        NombresPacientes[ultimo - 2].Visible = false;
                     }
 
                 }
             }           
+        }
+
+        private void flechaizquierda_click(object sender, EventArgs e)
+        {
+            if (NombresPacientes[0].Visible == true) 
+            { btn_FlechaIzq.Visible = false; }
+            else { btn_FlechaIzq.Visible = true; }
         }
     }
 }

@@ -235,5 +235,11 @@
   <ItemGroup>
     <None Include="Resources\Configuración.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FLECHA IZQUIERDA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FLECHA DERECHA.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

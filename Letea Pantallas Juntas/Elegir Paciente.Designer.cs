@@ -29,16 +29,30 @@ namespace Pantalla_Contraseña
         /// </summary>
         private void InitializeComponent()
         {
+            this.btn_FlechaIzq = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_FlechaIzq)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
+            // btn_FlechaIzq
+            // 
+            this.btn_FlechaIzq.BackColor = System.Drawing.Color.Transparent;
+            this.btn_FlechaIzq.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.FLECHA_IZQUIERDA;
+            this.btn_FlechaIzq.Location = new System.Drawing.Point(79, 500);
+            this.btn_FlechaIzq.Name = "btn_FlechaIzq";
+            this.btn_FlechaIzq.Size = new System.Drawing.Size(63, 98);
+            this.btn_FlechaIzq.TabIndex = 0;
+            this.btn_FlechaIzq.TabStop = false;
+            this.btn_FlechaIzq.Click += new System.EventHandler(this.flechaizquierda_click);
+            // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 441);
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.FLECHA_DERECHA;
+            this.pictureBox1.Location = new System.Drawing.Point(1778, 500);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(300, 300);
+            this.pictureBox1.Size = new System.Drawing.Size(63, 98);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
@@ -50,16 +64,20 @@ namespace Pantalla_Contraseña
             this.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Fondo;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btn_FlechaIzq);
             this.Name = "FormPacientes";
             this.Text = "FormPacientes";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormPacientes_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.btn_FlechaIzq)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.PictureBox btn_FlechaIzq;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
