@@ -138,6 +138,7 @@ namespace Pantalla_Contraseña
             this.btn_IngresoPaciente.Size = new System.Drawing.Size(759, 136);
             this.btn_IngresoPaciente.TabIndex = 7;
             this.btn_IngresoPaciente.TabStop = false;
+            this.btn_IngresoPaciente.Click += new System.EventHandler(this.btn_IngresoPaciente_Click);
             // 
             // lbl_ContraseñaIncorrecta
             // 

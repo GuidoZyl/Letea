@@ -31,7 +31,7 @@ namespace Pantalla_Contraseña
         private void click_agregarfoto(object sender, EventArgs e)
         {
             OpenFileDialog BuscarImagen = new OpenFileDialog(); BuscarImagen.Filter = "Archivos de Imagen |*.jpg;*.jpeg";
-            //Aquí incluiremos los filtros que queramos.
+
             BuscarImagen.FileName = "";
             BuscarImagen.Title = "Titulo del Dialogo";
         

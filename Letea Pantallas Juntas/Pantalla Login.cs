@@ -22,6 +22,8 @@ namespace Pantalla_Contraseña
             txtbox_Contraseña.UseSystemPasswordChar = true;
         }
 
+        public bool ModoAdmin = false;
+
         private void FormPantallaLogIn_Load(object sender, EventArgs e)
         {
             conexion.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=.\Base de Datos 4.accdb;";
@@ -62,7 +64,12 @@ namespace Pantalla_Contraseña
             data.Fill(ds, "contraseña");
             string contraseña = ds.Tables["contraseña"].Rows[0]["Contraseña"].ToString();
             if (txtbox_Contraseña.Text == contraseña)
-            { }
+            {
+                ModoAdmin = true;
+                FormPacientes form = new FormPacientes();
+                form.Show();
+                this.Hide();
+            }
             else
             {
                 this.Cursor = default;
@@ -76,6 +83,13 @@ namespace Pantalla_Contraseña
         private void txtbox_Contraseña_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_IngresoPaciente_Click(object sender, EventArgs e)
+        {
+            FormPacientes form = new FormPacientes();
+            form.Show();
+            this.Hide();
         }
     }
 }
