@@ -43,6 +43,7 @@ namespace Pantalla_Contraseña
                 nombrecompleto[canti, 0] = ds.Tables["NombreCompleto"].Rows[canti][0].ToString();
             }           
 
+            //Para 4
             if ((ultimo-3) % 4 == 0)
             {
                 for (i = 0; i <= ultimo; i++)
@@ -55,9 +56,7 @@ namespace Pantalla_Contraseña
                     temp.TextAlign = ContentAlignment.MiddleCenter;
                     temp.Font = new Font("Serif", 35);
 
-                    PictureBox tmp = new PictureBox();
-
-                                                        
+                    PictureBox tmp = new PictureBox();                                                       
 
                     if (i % 4 == 0)
                     {
@@ -85,8 +84,8 @@ namespace Pantalla_Contraseña
                         string sqlFoto = "Select Foto from Usuario where NombreCompleto = '" + nombrecompleto[i, 0] + "'";
                         OleDbCommand cmd = new OleDbCommand(sqlFoto, conexion);
                         OleDbDataAdapter dataPic = new OleDbDataAdapter(cmd);
-                        dataPic.Fill(ds, "foto");
-                        MemoryStream ms = new MemoryStream((byte[])ds.Tables["foto"].Rows[0]["Foto"]);
+                        dataPic.Fill(ds, "foto2");
+                        MemoryStream ms = new MemoryStream((byte[])ds.Tables["foto2"].Rows[0]["Foto"]);
                         Bitmap bm = new Bitmap(ms);
 
                         tmp.Image = bm;
@@ -102,8 +101,8 @@ namespace Pantalla_Contraseña
                         string sqlFoto = "Select Foto from Usuario where NombreCompleto = '" + nombrecompleto[i, 0] + "'";
                         OleDbCommand cmd = new OleDbCommand(sqlFoto, conexion);
                         OleDbDataAdapter dataPic = new OleDbDataAdapter(cmd);
-                        dataPic.Fill(ds, "foto");
-                        MemoryStream ms = new MemoryStream((byte[])ds.Tables["foto"].Rows[0]["Foto"]);
+                        dataPic.Fill(ds, "foto3");
+                        MemoryStream ms = new MemoryStream((byte[])ds.Tables["foto3"].Rows[0]["Foto"]);
                         Bitmap bm = new Bitmap(ms);
 
                         tmp.Image = bm;
@@ -119,8 +118,8 @@ namespace Pantalla_Contraseña
                         string sqlFoto = "Select Foto from Usuario where NombreCompleto = '" + nombrecompleto[i, 0] + "'";
                         OleDbCommand cmd = new OleDbCommand(sqlFoto, conexion);
                         OleDbDataAdapter dataPic = new OleDbDataAdapter(cmd);
-                        dataPic.Fill(ds, "foto");
-                        MemoryStream ms = new MemoryStream((byte[])ds.Tables["foto"].Rows[0]["Foto"]);
+                        dataPic.Fill(ds, "foto4");
+                        MemoryStream ms = new MemoryStream((byte[])ds.Tables["foto4"].Rows[0]["Foto"]);
                         Bitmap bm = new Bitmap(ms);
 
                         tmp.Image = bm;
@@ -133,6 +132,7 @@ namespace Pantalla_Contraseña
                 }
             }
             
+            //Para 1 o 5
             if ((ultimo) % 4 == 0)
             {
                 Label nombre_ultimo = new Label();
@@ -171,31 +171,81 @@ namespace Pantalla_Contraseña
                     temp.TextAlign = ContentAlignment.MiddleCenter;
                     temp.Font = new Font("Serif", 35);
 
+                    PictureBox tmp = new PictureBox();
+
                     if (j % 4 == 0)
                     {
                         temp.Text = nombrecompleto[j,0];
                         temp.Location = new Point(350 , 371 );
+
+                        string sqlFoto2 = "Select Foto from Usuario where NombreCompleto = '" + nombrecompleto[i, 0] + "'";
+                        OleDbCommand cmd2 = new OleDbCommand(sqlFoto2, conexion);
+                        OleDbDataAdapter dataPic2 = new OleDbDataAdapter(cmd2);
+                        dataPic2.Fill(ds, "foto");
+                        MemoryStream ms2 = new MemoryStream((byte[])ds.Tables["foto"].Rows[0]["Foto"]);
+                        Bitmap bm2 = new Bitmap(ms2);
+
+                        tmp.Image = bm2;
+                        tmp.Location = new Point(500, 71);
+                        tmp.Size = new Size(300, 300);
+                        tmp.SizeMode = PictureBoxSizeMode.StretchImage;
                     }
                     if ((j - 1) % 4 == 0)
                     {
                         temp.Text = nombrecompleto[j,0];
                         temp.Location = new Point(1000, 371);
+
+                        string sqlFoto2 = "Select Foto from Usuario where NombreCompleto = '" + nombrecompleto[i, 0] + "'";
+                        OleDbCommand cmd2 = new OleDbCommand(sqlFoto2, conexion);
+                        OleDbDataAdapter dataPic2 = new OleDbDataAdapter(cmd2);
+                        dataPic2.Fill(ds, "foto");
+                        MemoryStream ms2 = new MemoryStream((byte[])ds.Tables["foto"].Rows[0]["Foto"]);
+                        Bitmap bm2 = new Bitmap(ms2);
+
+                        tmp.Image = bm2;
+                        tmp.Location = new Point(1150, 71);
+                        tmp.Size = new Size(300, 300);
+                        tmp.SizeMode = PictureBoxSizeMode.StretchImage;
                     }
                     if ((j - 2) % 4 == 0)
                     {
                         temp.Text = nombrecompleto[j,0];
                         temp.Location = new Point(350 , 850);
 
+                        string sqlFoto2 = "Select Foto from Usuario where NombreCompleto = '" + nombrecompleto[i, 0] + "'";
+                        OleDbCommand cmd2 = new OleDbCommand(sqlFoto2, conexion);
+                        OleDbDataAdapter dataPic2 = new OleDbDataAdapter(cmd2);
+                        dataPic2.Fill(ds, "foto");
+                        MemoryStream ms2 = new MemoryStream((byte[])ds.Tables["foto"].Rows[0]["Foto"]);
+                        Bitmap bm2 = new Bitmap(ms2);
+
+                        tmp.Image = bm2;
+                        tmp.Location = new Point(500, 550);
+                        tmp.Size = new Size(300, 300);
+                        tmp.SizeMode = PictureBoxSizeMode.StretchImage;
                     }
                     if ((j - 3) % 4 == 0)
                     {
                         temp.Text = nombrecompleto[j,0];
                         temp.Location = new Point(1000, 850);
+
+                        string sqlFoto2 = "Select Foto from Usuario where NombreCompleto = '" + nombrecompleto[i, 0] + "'";
+                        OleDbCommand cmd2 = new OleDbCommand(sqlFoto2, conexion);
+                        OleDbDataAdapter dataPic2 = new OleDbDataAdapter(cmd2);
+                        dataPic2.Fill(ds, "foto");
+                        MemoryStream ms2 = new MemoryStream((byte[])ds.Tables["foto"].Rows[0]["Foto"]);
+                        Bitmap bm2 = new Bitmap(ms2);
+
+                        tmp.Image = bm2;
+                        tmp.Location = new Point(1150, 550);
+                        tmp.Size = new Size(300, 300);
+                        tmp.SizeMode = PictureBoxSizeMode.StretchImage;
                     }
                     Controls.Add(temp);
+                    Controls.Add(tmp);
                 }
             }
-
+            //Para 2 o 6
             if ((ultimo - 1)%4==0)
             {
                 Label nombre_ultimo = new Label();
@@ -208,6 +258,19 @@ namespace Pantalla_Contraseña
                 nombre_ultimo.Text = nombrecompleto[ultimo,0];
                 nombre_ultimo.Location = new Point(300, 550);
 
+                PictureBox foto_ultimo = new PictureBox();
+                string sqlFoto = "SELECT Foto FROM Usuario WHERE [NombreCompleto] = '" + nombre_ultimo.Text + "'";
+                OleDbCommand cmd = new OleDbCommand(sqlFoto, conexion);
+                OleDbDataAdapter dataPic = new OleDbDataAdapter(cmd);
+                dataPic.Fill(ds, "foto");
+                MemoryStream ms = new MemoryStream((byte[])ds.Tables["foto"].Rows[0]["Foto"]);
+                Bitmap bm = new Bitmap(ms);
+
+                foto_ultimo.Image = bm;
+                foto_ultimo.Location = new Point(450, 250);
+                foto_ultimo.Size = new Size(300, 300);
+                foto_ultimo.SizeMode = PictureBoxSizeMode.StretchImage;
+
                 Label nombre_anteultimo = new Label();
                 nombre_anteultimo.AutoSize = false;
                 nombre_anteultimo.Width = 600;
@@ -215,11 +278,26 @@ namespace Pantalla_Contraseña
                 nombre_anteultimo.BackColor = Color.Transparent;
                 nombre_anteultimo.TextAlign = ContentAlignment.MiddleCenter;
                 nombre_anteultimo.Font = new Font("Serif", 35);
-                nombre_anteultimo.Text = nombrecompleto[ultimo - 1,0];
+                nombre_anteultimo.Text = nombrecompleto[ultimo - 1, 0];
                 nombre_anteultimo.Location = new Point(1050, 550);
+
+                PictureBox foto_anteultimo = new PictureBox();
+                string sqlFoto2 = "SELECT Foto FROM Usuario WHERE [NombreCompleto] = '" + nombre_anteultimo.Text + "'";
+                OleDbCommand cmd2 = new OleDbCommand(sqlFoto2, conexion);
+                OleDbDataAdapter dataPic2 = new OleDbDataAdapter(cmd2);
+                dataPic2.Fill(ds, "foto2");
+                MemoryStream ms2 = new MemoryStream((byte[])ds.Tables["foto2"].Rows[0]["Foto"]);
+                Bitmap bm2 = new Bitmap(ms2);
+
+                foto_anteultimo.Image = bm2;
+                foto_anteultimo.Location = new Point(1200, 250);
+                foto_anteultimo.Size = new Size(300, 300);
+                foto_anteultimo.SizeMode = PictureBoxSizeMode.StretchImage;
 
                 Controls.Add(nombre_ultimo);
                 Controls.Add(nombre_anteultimo);
+                Controls.Add(foto_anteultimo);
+                Controls.Add(foto_ultimo);
 
                 for (int k = 0; k <= ultimo - 2; k++)
                 {
@@ -231,31 +309,82 @@ namespace Pantalla_Contraseña
                     temp.TextAlign = ContentAlignment.MiddleCenter;
                     temp.Font = new Font("Serif", 35);
 
+                    PictureBox tmp = new PictureBox();
+
                     if (k % 4 == 0)
                     {
                         temp.Text = nombrecompleto[k,0];
                         temp.Location = new Point(350 , 371 );
+
+                        string sqlFoto3 = "Select Foto from Usuario where NombreCompleto = '" + nombrecompleto[i, 0] + "'";
+                        OleDbCommand cmd3 = new OleDbCommand(sqlFoto3, conexion);
+                        OleDbDataAdapter dataPic3 = new OleDbDataAdapter(cmd3);
+                        dataPic3.Fill(ds, "foto");
+                        MemoryStream ms3 = new MemoryStream((byte[])ds.Tables["foto"].Rows[0]["Foto"]);
+                        Bitmap bm3 = new Bitmap(ms3);
+
+                        tmp.Image = bm3;
+                        tmp.Location = new Point(500, 71);
+                        tmp.Size = new Size(300, 300);
+                        tmp.SizeMode = PictureBoxSizeMode.StretchImage;
                     }
                     if ((k - 1) % 4 == 0)
                     {
                         temp.Text = nombrecompleto[k,0];
                         temp.Location = new Point(1000, 371 );
+
+                        string sqlFoto3 = "Select Foto from Usuario where NombreCompleto = '" + nombrecompleto[i, 0] + "'";
+                        OleDbCommand cmd3 = new OleDbCommand(sqlFoto3, conexion);
+                        OleDbDataAdapter dataPic3 = new OleDbDataAdapter(cmd3);
+                        dataPic3.Fill(ds, "foto");
+                        MemoryStream ms3 = new MemoryStream((byte[])ds.Tables["foto"].Rows[0]["Foto"]);
+                        Bitmap bm3 = new Bitmap(ms3);
+
+                        tmp.Image = bm3;
+                        tmp.Location = new Point(1150, 71);
+                        tmp.Size = new Size(300, 300);
+                        tmp.SizeMode = PictureBoxSizeMode.StretchImage;
                     }
                     if ((k - 2) % 4 == 0)
                     {
                         temp.Text = nombrecompleto[k,0];
                         temp.Location = new Point(350, 850 );
 
+                        string sqlFoto3 = "Select Foto from Usuario where NombreCompleto = '" + nombrecompleto[i, 0] + "'";
+                        OleDbCommand cmd3 = new OleDbCommand(sqlFoto3, conexion);
+                        OleDbDataAdapter dataPic3 = new OleDbDataAdapter(cmd3);
+                        dataPic3.Fill(ds, "foto");
+                        MemoryStream ms3 = new MemoryStream((byte[])ds.Tables["foto"].Rows[0]["Foto"]);
+                        Bitmap bm3 = new Bitmap(ms3);
+
+                        tmp.Image = bm3;
+                        tmp.Location = new Point(500, 550);
+                        tmp.Size = new Size(300, 300);
+                        tmp.SizeMode = PictureBoxSizeMode.StretchImage;
                     }
                     if ((k - 3) % 4 == 0)
                     {
                         temp.Text = nombrecompleto[k,0];
                         temp.Location = new Point(1000 , 850);
+
+                        string sqlFoto3 = "Select Foto from Usuario where NombreCompleto = '" + nombrecompleto[i, 0] + "'";
+                        OleDbCommand cmd3 = new OleDbCommand(sqlFoto3, conexion);
+                        OleDbDataAdapter dataPic3 = new OleDbDataAdapter(cmd3);
+                        dataPic3.Fill(ds, "foto");
+                        MemoryStream ms3 = new MemoryStream((byte[])ds.Tables["foto"].Rows[0]["Foto"]);
+                        Bitmap bm3 = new Bitmap(ms3);
+
+                        tmp.Image = bm3;
+                        tmp.Location = new Point(1150, 550);
+                        tmp.Size = new Size(300, 300);
+                        tmp.SizeMode = PictureBoxSizeMode.StretchImage;
                     }
                     Controls.Add(temp);
+                    Controls.Add(tmp);
                 }
-
             }
+
+            //Para 3 o 7
             if ((ultimo - 2)%4==0)
             {
                 Label nombre_ultimo = new Label();
@@ -268,6 +397,14 @@ namespace Pantalla_Contraseña
                 nombre_ultimo.Text = nombrecompleto[ultimo,0];
                 nombre_ultimo.Location = new Point(350 , 371);
 
+                PictureBox foto_ultimo = new PictureBox();
+                string sqlFoto = "SELECT Foto FROM Usuario WHERE [NombreCompleto] = '" + nombre_ultimo.Text + "'";
+                OleDbCommand cmd = new OleDbCommand(sqlFoto, conexion);
+                OleDbDataAdapter dataPic = new OleDbDataAdapter(cmd);
+                dataPic.Fill(ds, "foto");
+                MemoryStream ms = new MemoryStream((byte[])ds.Tables["foto"].Rows[0]["Foto"]);
+                Bitmap bm = new Bitmap(ms);
+
                 Label nombre_anteultimo = new Label();
                 nombre_anteultimo.AutoSize = false;
                 nombre_anteultimo.Width = 600;
@@ -277,6 +414,19 @@ namespace Pantalla_Contraseña
                 nombre_anteultimo.Font = new Font("Serif", 35);
                 nombre_anteultimo.Text = nombrecompleto[ultimo - 1,0];
                 nombre_anteultimo.Location = new Point(1000 , 371);
+
+                PictureBox foto_anteultimo = new PictureBox();
+                string sqlFoto2 = "SELECT Foto FROM Usuario WHERE [NombreCompleto] = '" + nombre_anteultimo.Text + "'";
+                OleDbCommand cmd2 = new OleDbCommand(sqlFoto2, conexion);
+                OleDbDataAdapter dataPic2 = new OleDbDataAdapter(cmd2);
+                dataPic2.Fill(ds, "foto2");
+                MemoryStream ms2 = new MemoryStream((byte[])ds.Tables["foto2"].Rows[0]["Foto"]);
+                Bitmap bm2 = new Bitmap(ms2);
+
+                foto_anteultimo.Image = bm2;
+                foto_anteultimo.Location = new Point(1200, 250);
+                foto_anteultimo.Size = new Size(300, 300);
+                foto_anteultimo.SizeMode = PictureBoxSizeMode.StretchImage;
 
                 Label nombre_antepenultimo = new Label();
                 nombre_antepenultimo.AutoSize = false;
@@ -288,10 +438,25 @@ namespace Pantalla_Contraseña
                 nombre_antepenultimo.Text = nombrecompleto[ultimo - 2,0];
                 nombre_antepenultimo.Location = new Point(675 , 850);
 
+                PictureBox foto_antepenultimo = new PictureBox();
+                string sqlFoto3 = "SELECT Foto FROM Usuario WHERE [NombreCompleto] = '" + nombre_anteultimo.Text + "'";
+                OleDbCommand cmd3 = new OleDbCommand(sqlFoto3, conexion);
+                OleDbDataAdapter dataPic3 = new OleDbDataAdapter(cmd3);
+                dataPic2.Fill(ds, "foto2");
+                MemoryStream ms3 = new MemoryStream((byte[])ds.Tables["foto2"].Rows[0]["Foto"]);
+                Bitmap bm3 = new Bitmap(ms3);
+
+                foto_anteultimo.Image = bm3;
+                foto_anteultimo.Location = new Point(825, 550);
+                foto_anteultimo.Size = new Size(300, 300);
+                foto_anteultimo.SizeMode = PictureBoxSizeMode.StretchImage;
+
                 Controls.Add(nombre_ultimo);
                 Controls.Add(nombre_anteultimo);
-                Controls.Add(nombre_antepenultimo);
-                
+                Controls.Add(nombre_antepenultimo); 
+                Controls.Add(foto_anteultimo);
+                Controls.Add(foto_ultimo);
+                Controls.Add(foto_antepenultimo);
 
                 for (int k = 0; k <= ultimo - 3; k++)
                 {
@@ -303,28 +468,78 @@ namespace Pantalla_Contraseña
                     temp.TextAlign = ContentAlignment.MiddleCenter;
                     temp.Font = new Font("Serif", 35);
 
+                    PictureBox tmp = new PictureBox();
+
                     if (k % 4 == 0)
                     {
                         temp.Text = nombrecompleto[k,0];
                         temp.Location = new Point(350 , 371 );
+
+                        string sqlFoto4 = "Select Foto from Usuario where NombreCompleto = '" + nombrecompleto[i, 0] + "'";
+                        OleDbCommand cmd4 = new OleDbCommand(sqlFoto4, conexion);
+                        OleDbDataAdapter dataPic4 = new OleDbDataAdapter(cmd4);
+                        dataPic4.Fill(ds, "foto");
+                        MemoryStream ms4 = new MemoryStream((byte[])ds.Tables["foto"].Rows[0]["Foto"]);
+                        Bitmap bm4 = new Bitmap(ms4);
+
+                        tmp.Image = bm4;
+                        tmp.Location = new Point(500, 71);
+                        tmp.Size = new Size(300, 300);
+                        tmp.SizeMode = PictureBoxSizeMode.StretchImage;
                     }
                     if ((k - 1) % 4 == 0)
                     {
                         temp.Text = nombrecompleto[k,0];
                         temp.Location = new Point(1000 , 371);
+
+                        string sqlFoto4 = "Select Foto from Usuario where NombreCompleto = '" + nombrecompleto[i, 0] + "'";
+                        OleDbCommand cmd4 = new OleDbCommand(sqlFoto4, conexion);
+                        OleDbDataAdapter dataPic4 = new OleDbDataAdapter(cmd4);
+                        dataPic4.Fill(ds, "foto");
+                        MemoryStream ms4 = new MemoryStream((byte[])ds.Tables["foto"].Rows[0]["Foto"]);
+                        Bitmap bm4 = new Bitmap(ms4);
+
+                        tmp.Image = bm4;
+                        tmp.Location = new Point(1150, 71);
+                        tmp.Size = new Size(300, 300);
+                        tmp.SizeMode = PictureBoxSizeMode.StretchImage;
                     }
                     if ((k - 2) % 4 == 0)
                     {
                         temp.Text = nombrecompleto[k,0];
                         temp.Location = new Point(350 , 850);
 
+                        string sqlFoto4 = "Select Foto from Usuario where NombreCompleto = '" + nombrecompleto[i, 0] + "'";
+                        OleDbCommand cmd4 = new OleDbCommand(sqlFoto4, conexion);
+                        OleDbDataAdapter dataPic4 = new OleDbDataAdapter(cmd4);
+                        dataPic4.Fill(ds, "foto");
+                        MemoryStream ms4 = new MemoryStream((byte[])ds.Tables["foto"].Rows[0]["Foto"]);
+                        Bitmap bm4 = new Bitmap(ms4);
+
+                        tmp.Image = bm4;
+                        tmp.Location = new Point(500, 550);
+                        tmp.Size = new Size(300, 300);
+                        tmp.SizeMode = PictureBoxSizeMode.StretchImage;
                     }
                     if ((k - 3) % 4 == 0)
                     {
                         temp.Text = nombrecompleto[k,0];
                         temp.Location = new Point(1000 , 850 );
+
+                        string sqlFoto4 = "Select Foto from Usuario where NombreCompleto = '" + nombrecompleto[i, 0] + "'";
+                        OleDbCommand cmd4 = new OleDbCommand(sqlFoto4, conexion);
+                        OleDbDataAdapter dataPic4 = new OleDbDataAdapter(cmd4);
+                        dataPic4.Fill(ds, "foto");
+                        MemoryStream ms4 = new MemoryStream((byte[])ds.Tables["foto"].Rows[0]["Foto"]);
+                        Bitmap bm4 = new Bitmap(ms4);
+
+                        tmp.Image = bm4;
+                        tmp.Location = new Point(1150, 550);
+                        tmp.Size = new Size(300, 300);
+                        tmp.SizeMode = PictureBoxSizeMode.StretchImage;
                     }
                     Controls.Add(temp);
+                    Controls.Add(tmp);
                 }      
             }           
         }
