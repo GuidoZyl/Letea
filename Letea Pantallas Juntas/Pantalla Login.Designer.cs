@@ -159,9 +159,10 @@ namespace Pantalla_Contraseña
             this.btn_Salir.BackColor = System.Drawing.Color.Transparent;
             this.btn_Salir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Salir.Image = global::Pantalla_Contraseña.Properties.Resources.Salir;
-            this.btn_Salir.Location = new System.Drawing.Point(1621, 25);
+            this.btn_Salir.Location = new System.Drawing.Point(1630, 25);
             this.btn_Salir.Name = "btn_Salir";
-            this.btn_Salir.Size = new System.Drawing.Size(276, 133);
+            this.btn_Salir.Size = new System.Drawing.Size(247, 112);
+            this.btn_Salir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_Salir.TabIndex = 22;
             this.btn_Salir.TabStop = false;
             this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click);

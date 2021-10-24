@@ -47,7 +47,7 @@ namespace Pantalla_Contraseña
             this.btn_AcercaDeNosotros.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_AcercaDeNosotros.Location = new System.Drawing.Point(584, 77);
             this.btn_AcercaDeNosotros.Name = "btn_AcercaDeNosotros";
-            this.btn_AcercaDeNosotros.Size = new System.Drawing.Size(482, 102);
+            this.btn_AcercaDeNosotros.Size = new System.Drawing.Size(482, 107);
             this.btn_AcercaDeNosotros.TabIndex = 0;
             this.btn_AcercaDeNosotros.TabStop = false;
             this.btn_AcercaDeNosotros.Click += new System.EventHandler(this.btn_AcercaDeNosotros_Click);
@@ -60,7 +60,7 @@ namespace Pantalla_Contraseña
             this.btn_Creditos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Creditos.Location = new System.Drawing.Point(584, 261);
             this.btn_Creditos.Name = "btn_Creditos";
-            this.btn_Creditos.Size = new System.Drawing.Size(482, 102);
+            this.btn_Creditos.Size = new System.Drawing.Size(482, 107);
             this.btn_Creditos.TabIndex = 1;
             this.btn_Creditos.TabStop = false;
             this.btn_Creditos.Click += new System.EventHandler(this.btn_Creditos_Click);
@@ -84,9 +84,9 @@ namespace Pantalla_Contraseña
             this.btn_CerrarAplicacion.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Cerrar_la_aplicación;
             this.btn_CerrarAplicacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_CerrarAplicacion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_CerrarAplicacion.Location = new System.Drawing.Point(598, 618);
+            this.btn_CerrarAplicacion.Location = new System.Drawing.Point(598, 615);
             this.btn_CerrarAplicacion.Name = "btn_CerrarAplicacion";
-            this.btn_CerrarAplicacion.Size = new System.Drawing.Size(482, 102);
+            this.btn_CerrarAplicacion.Size = new System.Drawing.Size(482, 105);
             this.btn_CerrarAplicacion.TabIndex = 3;
             this.btn_CerrarAplicacion.TabStop = false;
             this.btn_CerrarAplicacion.Click += new System.EventHandler(this.btn_CerrarAplicacion_Click);

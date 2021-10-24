@@ -32,10 +32,10 @@ namespace Pantalla_Contraseña
         private void btn_CerrarSesión_Click(object sender, EventArgs e)
         {
             FormPantallaLogIn form = new FormPantallaLogIn();
-            form.Show();
-            this.Hide();
             FormPrincipal form2 = new FormPrincipal();
+            form.Show();            
             form2.Hide();
+            this.Hide();
         }
 
         private void btn_CerrarAplicacion_Click(object sender, EventArgs e)

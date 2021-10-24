@@ -32,6 +32,11 @@ namespace Pantalla_Contraseña
         {
             IDPaciente = 0;
 
+            if (FormPantallaLogIn.ModoAdmin)
+            {
+                btn_Crear.Visible = true;
+            }
+
             lbl_Nom1.Visible = false;
             lbl_Nom2.Visible = false;
             lbl_Nom3.Visible = false;
@@ -251,43 +256,40 @@ namespace Pantalla_Contraseña
         {
 
             if (lbl_Nom1.Text != nombrecompleto[0, 0] || lbl_Nom1.Visible == false)
-            {
-                
+            {               
                 for (int i = 4; i <= ultimo; i++)
-                {
-                    
-                        if (lbl_Nom1.Text == nombrecompleto[i, 0] || lbl_Nom5.Text == nombrecompleto[i, 0] || lbl_Nom6.Text == nombrecompleto[i, 0])
-                        {
-                            lbl_Nom1.Visible = true;
-                            lbl_Nom2.Visible = true;
-                            lbl_Nom3.Visible = true;
-                            lbl_Nom4.Visible = true;
-                            lbl_Nom5.Visible = false;
-                            lbl_Nom6.Visible = false;
-                            lbl_Nom7.Visible = false;
-                            lbl_Nom8.Visible = false;
-                            pic_Nom1.Visible = true;
-                            pic_Nom2.Visible = true;
-                            pic_Nom3.Visible = true;
-                            pic_Nom4.Visible = true;
-                            pic_Nom5.Visible = false;
-                            pic_Nom6.Visible = false;
-                            pic_Nom7.Visible = false;
-                            pic_Nom8.Visible = false;
+                {                    
+                    if ((lbl_Nom1.Text == nombrecompleto[i, 0] && lbl_Nom1.Visible == true) || (lbl_Nom5.Text == nombrecompleto[i, 0] && lbl_Nom5.Visible == true) || (lbl_Nom6.Text == nombrecompleto[i, 0] && lbl_Nom6.Visible == true))
+                    {
+                        lbl_Nom1.Visible = true;
+                        lbl_Nom2.Visible = true;
+                        lbl_Nom3.Visible = true;
+                        lbl_Nom4.Visible = true;
+                        lbl_Nom5.Visible = false;
+                        lbl_Nom6.Visible = false;
+                        lbl_Nom7.Visible = false;
+                        lbl_Nom8.Visible = false;
+                        pic_Nom1.Visible = true;
+                        pic_Nom2.Visible = true;
+                        pic_Nom3.Visible = true;
+                        pic_Nom4.Visible = true;
+                        pic_Nom5.Visible = false;
+                        pic_Nom6.Visible = false;
+                        pic_Nom7.Visible = false;
+                        pic_Nom8.Visible = false;
 
-                            lbl_Nom1.Text = nombrecompleto[i - 4, 0];
-                            lbl_Nom2.Text = nombrecompleto[i - 3, 0];
-                            lbl_Nom3.Text = nombrecompleto[i - 2, 0];
-                            lbl_Nom4.Text = nombrecompleto[i - 1, 0];
+                        lbl_Nom1.Text = nombrecompleto[i - 4, 0];
+                        lbl_Nom2.Text = nombrecompleto[i - 3, 0];
+                        lbl_Nom3.Text = nombrecompleto[i - 2, 0];
+                        lbl_Nom4.Text = nombrecompleto[i - 1, 0];
 
-                            btn_Der.Visible = true;
+                        btn_Der.Visible = true;
 
                         if (lbl_Nom1.Text == nombrecompleto[0,0])
-                            {
-                                btn_Izq.Visible = false;
-                            }
+                        {
+                            btn_Izq.Visible = false;
                         }
-                    
+                    }
                 }
             }
         }

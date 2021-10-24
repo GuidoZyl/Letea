@@ -313,6 +313,16 @@ namespace Pantalla_Contraseña.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Parte_Superior_Crear_GurupoAmigos {
+            get {
+                object obj = ResourceManager.GetObject("Parte Superior Crear GurupoAmigos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Parte_Superior1 {
             get {
                 object obj = ResourceManager.GetObject("Parte Superior1", resourceCulture);
@@ -326,6 +336,16 @@ namespace Pantalla_Contraseña.Properties {
         internal static System.Drawing.Bitmap Parte_Superior2 {
             get {
                 object obj = ResourceManager.GetObject("Parte Superior2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap que_lindo_boton {
+            get {
+                object obj = ResourceManager.GetObject("que lindo boton", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -366,6 +386,26 @@ namespace Pantalla_Contraseña.Properties {
         internal static System.Drawing.Bitmap Siguiente1 {
             get {
                 object obj = ResourceManager.GetObject("Siguiente1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Texto_AcercaDe {
+            get {
+                object obj = ResourceManager.GetObject("Texto AcercaDe", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Texto_AcercaDe2 {
+            get {
+                object obj = ResourceManager.GetObject("Texto AcercaDe2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
