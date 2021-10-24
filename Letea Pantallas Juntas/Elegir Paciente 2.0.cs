@@ -14,6 +14,8 @@ namespace Pantalla_Contraseña
 {
     public partial class FormPacientes2 : Form
     {
+        public static int IDPaciente;
+
         OleDbConnection conexion = new OleDbConnection();
         DataSet ds = new DataSet();
 
@@ -28,6 +30,8 @@ namespace Pantalla_Contraseña
 
         private void Elegir_Paciente_2_Load(object sender, EventArgs e)
         {
+            IDPaciente = 0;
+
             lbl_Nom1.Visible = false;
             lbl_Nom2.Visible = false;
             lbl_Nom3.Visible = false;
@@ -269,6 +273,28 @@ namespace Pantalla_Contraseña
                     
                 }
             }
+        }
+
+        private void lbl_Clicked(object sender, EventArgs e)
+        {
+            Label LabelClicked = sender as Label;
+            string sql = "SELECT Id FROM Usuario WHERE NombreCompleto = '" + LabelClicked.Text + "'";
+            OleDbCommand cmd = new OleDbCommand(sql, conexion);
+            OleDbDataAdapter da = new OleDbDataAdapter(cmd);
+            da.Fill(ds, "IDPaciente");
+
+            IDPaciente = Convert.ToInt32(ds.Tables["IDPaciente"].Rows[0]["Id"]);
+
+            FormPrincipal form = new FormPrincipal();
+            form.Show();
+            this.Hide();
+        }
+
+        private void btn_Crear_Click(object sender, EventArgs e)
+        {
+            FormCrearPaciente form = new FormCrearPaciente();
+            form.Show();
+            this.Hide();
         }
     }
 }

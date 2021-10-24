@@ -250,5 +250,8 @@
   <ItemGroup>
     <None Include="Resources\FLECHA DERECHA.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fondo Coniguración.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

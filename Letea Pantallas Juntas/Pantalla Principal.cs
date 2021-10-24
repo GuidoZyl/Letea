@@ -19,7 +19,10 @@ namespace Pantalla_Contraseña
 
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
-
+            if (!FormPantallaLogIn.ModoAdmin) {
+                btn_Config.Visible = false;
+                btn_CrearPaciente.Visible = false;
+            }
         }
 
         private void btn_Config_Click(object sender, EventArgs e)

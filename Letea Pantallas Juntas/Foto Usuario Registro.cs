@@ -17,6 +17,8 @@ namespace Pantalla_Contraseña
     {
         OleDbConnection conexion = new OleDbConnection();
         DataSet ds = new DataSet();
+
+        public static bool PrimerPaciente = false;
         public FormFotoUsuarioRegistro()
         {
             InitializeComponent();
@@ -57,9 +59,20 @@ namespace Pantalla_Contraseña
             consulta.Parameters.AddWithValue("Foto", aByte);
             consulta.ExecuteNonQuery();
 
-            FormPantallaLogIn form = new FormPantallaLogIn();
-            form.Show();
-            this.Hide();
+            if (!PrimerPaciente)
+            {
+                PrimerPaciente = true;
+                FormPantallaLogIn form = new FormPantallaLogIn();
+                form.Show();
+                this.Hide();
+            }
+
+            else if (PrimerPaciente)
+            {
+                FormPacientes2 form = new FormPacientes2();
+                form.Show();
+                this.Hide();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -14,6 +14,8 @@ namespace Pantalla_Contraseña
 {
     public partial class FormPantallaLogIn : Form
     {
+        public static bool ModoAdmin = false;
+
         OleDbConnection conexion = new OleDbConnection();
         DataSet ds = new DataSet();
         public FormPantallaLogIn()
@@ -22,10 +24,10 @@ namespace Pantalla_Contraseña
             txtbox_Contraseña.UseSystemPasswordChar = true;
         }
 
-        public bool ModoAdmin = false;
-
         private void FormPantallaLogIn_Load(object sender, EventArgs e)
         {
+            FormFotoUsuarioRegistro.PrimerPaciente = true;
+
             conexion.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=.\Base de Datos 4.accdb;";
             conexion.Open();
             string sql = "SELECT Foto FROM Admin";
@@ -66,7 +68,7 @@ namespace Pantalla_Contraseña
             if (txtbox_Contraseña.Text == contraseña)
             {
                 ModoAdmin = true;
-                FormPacientes form = new FormPacientes();
+                FormPacientes2 form = new FormPacientes2();
                 form.Show();
                 this.Hide();
             }

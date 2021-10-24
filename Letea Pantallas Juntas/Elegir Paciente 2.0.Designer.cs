@@ -47,6 +47,7 @@ namespace Pantalla_Contraseña
             this.pic_Nom8 = new System.Windows.Forms.PictureBox();
             this.btn_Der = new System.Windows.Forms.PictureBox();
             this.btn_Izq = new System.Windows.Forms.PictureBox();
+            this.btn_Crear = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Nom1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Nom2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Nom3)).BeginInit();
@@ -57,11 +58,13 @@ namespace Pantalla_Contraseña
             ((System.ComponentModel.ISupportInitialize)(this.pic_Nom8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Der)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Izq)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Crear)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_Nom1
             // 
             this.lbl_Nom1.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Nom1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbl_Nom1.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Nom1.Location = new System.Drawing.Point(350, 370);
             this.lbl_Nom1.Name = "lbl_Nom1";
@@ -69,10 +72,12 @@ namespace Pantalla_Contraseña
             this.lbl_Nom1.TabIndex = 0;
             this.lbl_Nom1.Text = "Luis Embon Strizzi";
             this.lbl_Nom1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Nom1.Click += new System.EventHandler(this.lbl_Clicked);
             // 
             // lbl_Nom2
             // 
             this.lbl_Nom2.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Nom2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbl_Nom2.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Nom2.Location = new System.Drawing.Point(1000, 370);
             this.lbl_Nom2.Name = "lbl_Nom2";
@@ -80,10 +85,12 @@ namespace Pantalla_Contraseña
             this.lbl_Nom2.TabIndex = 1;
             this.lbl_Nom2.Text = "label1";
             this.lbl_Nom2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Nom2.Click += new System.EventHandler(this.lbl_Clicked);
             // 
             // lbl_Nom3
             // 
             this.lbl_Nom3.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Nom3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbl_Nom3.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Nom3.Location = new System.Drawing.Point(350, 850);
             this.lbl_Nom3.Name = "lbl_Nom3";
@@ -91,10 +98,12 @@ namespace Pantalla_Contraseña
             this.lbl_Nom3.TabIndex = 2;
             this.lbl_Nom3.Text = "label1";
             this.lbl_Nom3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Nom3.Click += new System.EventHandler(this.lbl_Clicked);
             // 
             // lbl_Nom4
             // 
             this.lbl_Nom4.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Nom4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbl_Nom4.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Nom4.Location = new System.Drawing.Point(1000, 850);
             this.lbl_Nom4.Name = "lbl_Nom4";
@@ -102,10 +111,12 @@ namespace Pantalla_Contraseña
             this.lbl_Nom4.TabIndex = 3;
             this.lbl_Nom4.Text = "label1";
             this.lbl_Nom4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Nom4.Click += new System.EventHandler(this.lbl_Clicked);
             // 
             // lbl_Nom5
             // 
             this.lbl_Nom5.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Nom5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbl_Nom5.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Nom5.Location = new System.Drawing.Point(650, 550);
             this.lbl_Nom5.Name = "lbl_Nom5";
@@ -113,10 +124,12 @@ namespace Pantalla_Contraseña
             this.lbl_Nom5.TabIndex = 4;
             this.lbl_Nom5.Text = "label1";
             this.lbl_Nom5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Nom5.Click += new System.EventHandler(this.lbl_Clicked);
             // 
             // lbl_Nom6
             // 
             this.lbl_Nom6.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Nom6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbl_Nom6.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Nom6.Location = new System.Drawing.Point(300, 550);
             this.lbl_Nom6.Name = "lbl_Nom6";
@@ -124,10 +137,12 @@ namespace Pantalla_Contraseña
             this.lbl_Nom6.TabIndex = 5;
             this.lbl_Nom6.Text = "label1";
             this.lbl_Nom6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Nom6.Click += new System.EventHandler(this.lbl_Clicked);
             // 
             // lbl_Nom7
             // 
             this.lbl_Nom7.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Nom7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbl_Nom7.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Nom7.Location = new System.Drawing.Point(1050, 550);
             this.lbl_Nom7.Name = "lbl_Nom7";
@@ -135,10 +150,12 @@ namespace Pantalla_Contraseña
             this.lbl_Nom7.TabIndex = 6;
             this.lbl_Nom7.Text = "label1";
             this.lbl_Nom7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Nom7.Click += new System.EventHandler(this.lbl_Clicked);
             // 
             // lbl_Nom8
             // 
             this.lbl_Nom8.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Nom8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbl_Nom8.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Nom8.Location = new System.Drawing.Point(675, 850);
             this.lbl_Nom8.Name = "lbl_Nom8";
@@ -146,9 +163,11 @@ namespace Pantalla_Contraseña
             this.lbl_Nom8.TabIndex = 7;
             this.lbl_Nom8.Text = "label1";
             this.lbl_Nom8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Nom8.Click += new System.EventHandler(this.lbl_Clicked);
             // 
             // pic_Nom1
             // 
+            this.pic_Nom1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_Nom1.Location = new System.Drawing.Point(500, 70);
             this.pic_Nom1.Name = "pic_Nom1";
             this.pic_Nom1.Size = new System.Drawing.Size(300, 300);
@@ -157,6 +176,7 @@ namespace Pantalla_Contraseña
             // 
             // pic_Nom2
             // 
+            this.pic_Nom2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_Nom2.Location = new System.Drawing.Point(1150, 70);
             this.pic_Nom2.Name = "pic_Nom2";
             this.pic_Nom2.Size = new System.Drawing.Size(300, 300);
@@ -165,6 +185,7 @@ namespace Pantalla_Contraseña
             // 
             // pic_Nom3
             // 
+            this.pic_Nom3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_Nom3.Location = new System.Drawing.Point(500, 550);
             this.pic_Nom3.Name = "pic_Nom3";
             this.pic_Nom3.Size = new System.Drawing.Size(300, 300);
@@ -173,6 +194,7 @@ namespace Pantalla_Contraseña
             // 
             // pic_Nom4
             // 
+            this.pic_Nom4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_Nom4.Location = new System.Drawing.Point(1150, 550);
             this.pic_Nom4.Name = "pic_Nom4";
             this.pic_Nom4.Size = new System.Drawing.Size(300, 300);
@@ -181,6 +203,7 @@ namespace Pantalla_Contraseña
             // 
             // pic_Nom5
             // 
+            this.pic_Nom5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_Nom5.Location = new System.Drawing.Point(800, 250);
             this.pic_Nom5.Name = "pic_Nom5";
             this.pic_Nom5.Size = new System.Drawing.Size(300, 300);
@@ -189,6 +212,7 @@ namespace Pantalla_Contraseña
             // 
             // pic_Nom6
             // 
+            this.pic_Nom6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_Nom6.Location = new System.Drawing.Point(450, 250);
             this.pic_Nom6.Name = "pic_Nom6";
             this.pic_Nom6.Size = new System.Drawing.Size(300, 300);
@@ -197,6 +221,7 @@ namespace Pantalla_Contraseña
             // 
             // pic_Nom7
             // 
+            this.pic_Nom7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_Nom7.Location = new System.Drawing.Point(1200, 250);
             this.pic_Nom7.Name = "pic_Nom7";
             this.pic_Nom7.Size = new System.Drawing.Size(300, 300);
@@ -205,6 +230,7 @@ namespace Pantalla_Contraseña
             // 
             // pic_Nom8
             // 
+            this.pic_Nom8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_Nom8.Location = new System.Drawing.Point(825, 550);
             this.pic_Nom8.Name = "pic_Nom8";
             this.pic_Nom8.Size = new System.Drawing.Size(300, 300);
@@ -215,6 +241,7 @@ namespace Pantalla_Contraseña
             // 
             this.btn_Der.BackColor = System.Drawing.Color.Transparent;
             this.btn_Der.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.FLECHA_DERECHA;
+            this.btn_Der.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Der.Location = new System.Drawing.Point(1778, 500);
             this.btn_Der.Name = "btn_Der";
             this.btn_Der.Size = new System.Drawing.Size(63, 98);
@@ -226,6 +253,7 @@ namespace Pantalla_Contraseña
             // 
             this.btn_Izq.BackColor = System.Drawing.Color.Transparent;
             this.btn_Izq.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.FLECHA_IZQUIERDA;
+            this.btn_Izq.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Izq.Location = new System.Drawing.Point(79, 500);
             this.btn_Izq.Name = "btn_Izq";
             this.btn_Izq.Size = new System.Drawing.Size(63, 98);
@@ -234,6 +262,15 @@ namespace Pantalla_Contraseña
             this.btn_Izq.Visible = false;
             this.btn_Izq.Click += new System.EventHandler(this.btn_Izq_Click);
             // 
+            // btn_Crear
+            // 
+            this.btn_Crear.Location = new System.Drawing.Point(1606, 874);
+            this.btn_Crear.Name = "btn_Crear";
+            this.btn_Crear.Size = new System.Drawing.Size(255, 112);
+            this.btn_Crear.TabIndex = 18;
+            this.btn_Crear.TabStop = false;
+            this.btn_Crear.Click += new System.EventHandler(this.btn_Crear_Click);
+            // 
             // FormPacientes2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -241,6 +278,7 @@ namespace Pantalla_Contraseña
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Fondo;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.btn_Crear);
             this.Controls.Add(this.btn_Izq);
             this.Controls.Add(this.btn_Der);
             this.Controls.Add(this.pic_Nom8);
@@ -273,6 +311,7 @@ namespace Pantalla_Contraseña
             ((System.ComponentModel.ISupportInitialize)(this.pic_Nom8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Der)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Izq)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Crear)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -297,5 +336,6 @@ namespace Pantalla_Contraseña
         private System.Windows.Forms.PictureBox pic_Nom8;
         private System.Windows.Forms.PictureBox btn_Der;
         private System.Windows.Forms.PictureBox btn_Izq;
+        private System.Windows.Forms.PictureBox btn_Crear;
     }
 }

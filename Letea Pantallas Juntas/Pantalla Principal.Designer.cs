@@ -69,6 +69,7 @@ namespace Pantalla_Contraseña
             // btn_Config
             // 
             this.btn_Config.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Config.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Config.Image = global::Pantalla_Contraseña.Properties.Resources.Configuración;
             this.btn_Config.Location = new System.Drawing.Point(1781, 29);
             this.btn_Config.Name = "btn_Config";

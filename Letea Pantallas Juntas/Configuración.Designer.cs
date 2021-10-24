@@ -35,7 +35,10 @@ namespace Pantalla_Contraseña
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Fondo_Coniguración;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1634, 761);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormConfiguración";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
