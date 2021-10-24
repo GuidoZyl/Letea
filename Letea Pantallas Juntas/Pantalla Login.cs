@@ -87,7 +87,7 @@ namespace Pantalla_Contraseña
 
         private void btn_IngresoPaciente_Click(object sender, EventArgs e)
         {
-            FormPacientes form = new FormPacientes();
+            FormPacientes2 form = new FormPacientes2();
             form.Show();
             this.Hide();
         }

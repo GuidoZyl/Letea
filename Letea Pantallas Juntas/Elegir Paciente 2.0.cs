@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Pantalla_Contraseña
 {
@@ -18,6 +19,7 @@ namespace Pantalla_Contraseña
 
         int ultimo;
         string[,] nombrecompleto;
+        byte[,] foto;
 
         public FormPacientes2()
         {
@@ -59,12 +61,27 @@ namespace Pantalla_Contraseña
                 nombrecompleto[canti, 0] = ds.Tables["NombreCompleto"].Rows[canti][0].ToString();
             }
 
+            /*string sql2 = "Select Foto from Usuario";
+            OleDbCommand comando2 = new OleDbCommand(sql2, conexion);
+            OleDbDataAdapter data2 = new OleDbDataAdapter(comando2);
+
+            data2.Fill(ds, "Fotos");
+            foto = new byte[ultimo + 1, 1];
+            for (int canti = 0; canti <= ultimo; canti++)
+            {
+                foto[canti, 0] = ds.Tables["Fotos"].Rows[canti][0];
+            }*/
+
             if (ultimo == 0)
             {
                 lbl_Nom5.Visible = true;
                 pic_Nom5.Visible = true;
 
                 lbl_Nom5.Text = nombrecompleto[0, 0];
+
+                /*MemoryStream ms = new MemoryStream(foto[0, 0]);
+                Bitmap bm = new Bitmap(ms);
+                pic_Nom5.Image = bm;*/
             }
 
             else if (ultimo == 1)
