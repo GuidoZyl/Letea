@@ -51,9 +51,11 @@ namespace Pantalla_Contraseña
 
         private void btn_Guardar_Click(object sender, EventArgs e)
         {
+            
+            
             if (txt_Nom.Text != null && txt_Nom.Text != "Introduzca el nombre del grupo")
             {
-                string sql = "INSERT into GruposdeAmigos (Nombre, IDUsuario) values ('" + txt_Nom.Text + "', " + FormPacientes2.IDPaciente + ")";
+                string sql = "INSERT into GruposdeAmigos (Nombre, IDUsuario, Foto) values ('" + txt_Nom.Text + "', " + FormPacientes2.IDPaciente + ")";
                 OleDbCommand cmd = new OleDbCommand(sql, conexion);
                 cmd.ExecuteNonQuery();
             }

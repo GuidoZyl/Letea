@@ -34,10 +34,12 @@ namespace Pantalla_Contraseña
             this.pic_text_agregarfotodeperfil = new System.Windows.Forms.PictureBox();
             this.btn_agregarfoto = new System.Windows.Forms.PictureBox();
             this.btn_crearfoto = new System.Windows.Forms.PictureBox();
+            this.pic_PerfilDefault = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_text_agregarfotodeperfil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_agregarfoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_crearfoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_PerfilDefault)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -84,6 +86,17 @@ namespace Pantalla_Contraseña
             this.btn_crearfoto.TabStop = false;
             this.btn_crearfoto.Click += new System.EventHandler(this.click_crearfoto);
             // 
+            // pic_PerfilDefault
+            // 
+            this.pic_PerfilDefault.Image = global::Pantalla_Contraseña.Properties.Resources.Vector1;
+            this.pic_PerfilDefault.Location = new System.Drawing.Point(86, 357);
+            this.pic_PerfilDefault.Name = "pic_PerfilDefault";
+            this.pic_PerfilDefault.Size = new System.Drawing.Size(300, 300);
+            this.pic_PerfilDefault.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_PerfilDefault.TabIndex = 5;
+            this.pic_PerfilDefault.TabStop = false;
+            this.pic_PerfilDefault.Visible = false;
+            // 
             // FormFotoAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -91,6 +104,7 @@ namespace Pantalla_Contraseña
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Fondo;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.pic_PerfilDefault);
             this.Controls.Add(this.btn_crearfoto);
             this.Controls.Add(this.btn_agregarfoto);
             this.Controls.Add(this.pic_text_agregarfotodeperfil);
@@ -104,6 +118,7 @@ namespace Pantalla_Contraseña
             ((System.ComponentModel.ISupportInitialize)(this.pic_text_agregarfotodeperfil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_agregarfoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_crearfoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_PerfilDefault)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -114,5 +129,6 @@ namespace Pantalla_Contraseña
         private System.Windows.Forms.PictureBox pic_text_agregarfotodeperfil;
         private System.Windows.Forms.PictureBox btn_agregarfoto;
         private System.Windows.Forms.PictureBox btn_crearfoto;
+        private System.Windows.Forms.PictureBox pic_PerfilDefault;
     }
 }
