@@ -103,10 +103,10 @@ namespace Pantalla_Contraseña
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::Pantalla_Contraseña.Properties.Resources.Siguiente;
+            this.pictureBox1.Image = global::Pantalla_Contraseña.Properties.Resources.Siguiente__1_1;
             this.pictureBox1.Location = new System.Drawing.Point(782, 858);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(378, 128);
+            this.pictureBox1.Size = new System.Drawing.Size(388, 128);
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.click_siguiente);

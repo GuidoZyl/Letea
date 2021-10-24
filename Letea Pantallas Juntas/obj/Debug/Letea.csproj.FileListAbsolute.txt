@@ -103,4 +103,24 @@ E:\Guido\Documentos\Programación\Letea-Pantallas-Juntas\Letea Pantallas Juntas\
 E:\Guido\Documentos\Programación\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.Configuracion.resources
 E:\Guido\Documentos\Programación\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.Creditos.resources
 E:\Guido\Documentos\Programación\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.FormCrearGruposAmigos.resources
-C:\Users\Uriel\Downloads\Letea Pantallas Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.FormCrearGruposAmigos.resources
+C:\Users\nico4\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas\bin\Debug\Pantalla Contraseña.exe.config
+C:\Users\nico4\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas\bin\Debug\Pantalla Contraseña.exe
+C:\Users\nico4\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas\bin\Debug\Pantalla Contraseña.pdb
+C:\Users\nico4\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Letea.csproj.AssemblyReference.cache
+C:\Users\nico4\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.AcercaDenosotros.resources
+C:\Users\nico4\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.FormCrearGruposAmigos.resources
+C:\Users\nico4\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.Configuracion.resources
+C:\Users\nico4\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.FormCrearPaciente.resources
+C:\Users\nico4\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.Creditos.resources
+C:\Users\nico4\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.FormPacientes2.resources
+C:\Users\nico4\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.FormPacientes.resources
+C:\Users\nico4\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.FormPantallaLogIn.resources
+C:\Users\nico4\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.FormFotoAdmin.resources
+C:\Users\nico4\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.FormFotoUsuarioRegistro.resources
+C:\Users\nico4\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.FormNuevaContra.resources
+C:\Users\nico4\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.FormPrincipal.resources
+C:\Users\nico4\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.Properties.Resources.resources
+C:\Users\nico4\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Letea.csproj.GenerateResource.cache
+C:\Users\nico4\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Letea.csproj.CoreCompileInputs.cache
+C:\Users\nico4\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla Contraseña.exe
+C:\Users\nico4\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla Contraseña.pdb
