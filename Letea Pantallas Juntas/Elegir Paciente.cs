@@ -16,8 +16,9 @@ namespace Pantalla_Contraseña
     {
         
         
-OleDbConnection conexion = new OleDbConnection();
+        OleDbConnection conexion = new OleDbConnection();
         DataSet ds = new DataSet();
+
         Label[] NombresPacientes = new Label[10000];
         public FormPacientes()
         {

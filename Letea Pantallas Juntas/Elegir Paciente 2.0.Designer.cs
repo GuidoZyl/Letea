@@ -45,6 +45,7 @@ namespace Pantalla_Contraseña
             this.pic_Nom6 = new System.Windows.Forms.PictureBox();
             this.pic_Nom7 = new System.Windows.Forms.PictureBox();
             this.pic_Nom8 = new System.Windows.Forms.PictureBox();
+            this.btn_Der = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Nom1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Nom2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Nom3)).BeginInit();
@@ -53,6 +54,7 @@ namespace Pantalla_Contraseña
             ((System.ComponentModel.ISupportInitialize)(this.pic_Nom6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Nom7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Nom8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Der)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_Nom1
@@ -207,6 +209,17 @@ namespace Pantalla_Contraseña
             this.pic_Nom8.TabIndex = 15;
             this.pic_Nom8.TabStop = false;
             // 
+            // btn_Der
+            // 
+            this.btn_Der.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Der.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.FLECHA_DERECHA;
+            this.btn_Der.Location = new System.Drawing.Point(1778, 500);
+            this.btn_Der.Name = "btn_Der";
+            this.btn_Der.Size = new System.Drawing.Size(63, 98);
+            this.btn_Der.TabIndex = 16;
+            this.btn_Der.TabStop = false;
+            this.btn_Der.Click += new System.EventHandler(this.btn_Der_Click);
+            // 
             // FormPacientes2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -214,6 +227,7 @@ namespace Pantalla_Contraseña
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Fondo;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.btn_Der);
             this.Controls.Add(this.pic_Nom8);
             this.Controls.Add(this.pic_Nom7);
             this.Controls.Add(this.pic_Nom6);
@@ -232,6 +246,7 @@ namespace Pantalla_Contraseña
             this.Controls.Add(this.lbl_Nom1);
             this.Name = "FormPacientes2";
             this.Text = "FormPacientes2";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Elegir_Paciente_2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pic_Nom1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Nom2)).EndInit();
@@ -241,6 +256,7 @@ namespace Pantalla_Contraseña
             ((System.ComponentModel.ISupportInitialize)(this.pic_Nom6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Nom7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Nom8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Der)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -263,5 +279,6 @@ namespace Pantalla_Contraseña
         private System.Windows.Forms.PictureBox pic_Nom6;
         private System.Windows.Forms.PictureBox pic_Nom7;
         private System.Windows.Forms.PictureBox pic_Nom8;
+        private System.Windows.Forms.PictureBox btn_Der;
     }
 }
