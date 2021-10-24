@@ -33,10 +33,14 @@ namespace Pantalla_Contraseña
             this.btn_Amigos = new System.Windows.Forms.PictureBox();
             this.btn_CrearPaciente = new System.Windows.Forms.PictureBox();
             this.btn_Config = new System.Windows.Forms.PictureBox();
+            this.btn_Volver = new System.Windows.Forms.PictureBox();
+            this.btn_Salir = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Familia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Amigos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_CrearPaciente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Config)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Volver)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Salir)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Familia
@@ -78,6 +82,32 @@ namespace Pantalla_Contraseña
             this.btn_Config.TabStop = false;
             this.btn_Config.Click += new System.EventHandler(this.btn_Config_Click);
             // 
+            // btn_Volver
+            // 
+            this.btn_Volver.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Volver.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Volver.Image = global::Pantalla_Contraseña.Properties.Resources.Boton_Volver;
+            this.btn_Volver.Location = new System.Drawing.Point(30, 27);
+            this.btn_Volver.Name = "btn_Volver";
+            this.btn_Volver.Size = new System.Drawing.Size(110, 110);
+            this.btn_Volver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_Volver.TabIndex = 20;
+            this.btn_Volver.TabStop = false;
+            this.btn_Volver.Click += new System.EventHandler(this.btn_Volver_Click);
+            // 
+            // btn_Salir
+            // 
+            this.btn_Salir.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Salir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Salir.Image = global::Pantalla_Contraseña.Properties.Resources.Salir;
+            this.btn_Salir.Location = new System.Drawing.Point(1621, 18);
+            this.btn_Salir.Name = "btn_Salir";
+            this.btn_Salir.Size = new System.Drawing.Size(276, 133);
+            this.btn_Salir.TabIndex = 21;
+            this.btn_Salir.TabStop = false;
+            this.btn_Salir.Visible = false;
+            this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click);
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -85,6 +115,8 @@ namespace Pantalla_Contraseña
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Fondo_Principal;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.btn_Salir);
+            this.Controls.Add(this.btn_Volver);
             this.Controls.Add(this.btn_Config);
             this.Controls.Add(this.btn_CrearPaciente);
             this.Controls.Add(this.btn_Amigos);
@@ -98,6 +130,8 @@ namespace Pantalla_Contraseña
             ((System.ComponentModel.ISupportInitialize)(this.btn_Amigos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_CrearPaciente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Config)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Volver)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Salir)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -108,5 +142,7 @@ namespace Pantalla_Contraseña
         private System.Windows.Forms.PictureBox btn_Amigos;
         private System.Windows.Forms.PictureBox btn_CrearPaciente;
         private System.Windows.Forms.PictureBox btn_Config;
+        private System.Windows.Forms.PictureBox btn_Volver;
+        private System.Windows.Forms.PictureBox btn_Salir;
     }
 }

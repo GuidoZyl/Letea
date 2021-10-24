@@ -94,5 +94,10 @@ namespace Pantalla_Contraseña
             form.Show();
             this.Hide();
         }
+
+        private void btn_Salir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

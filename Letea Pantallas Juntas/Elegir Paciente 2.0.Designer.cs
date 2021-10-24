@@ -48,6 +48,7 @@ namespace Pantalla_Contraseña
             this.btn_Der = new System.Windows.Forms.PictureBox();
             this.btn_Izq = new System.Windows.Forms.PictureBox();
             this.btn_Crear = new System.Windows.Forms.PictureBox();
+            this.btn_Volver = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Nom1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Nom2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Nom3)).BeginInit();
@@ -59,6 +60,7 @@ namespace Pantalla_Contraseña
             ((System.ComponentModel.ISupportInitialize)(this.btn_Der)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Izq)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Crear)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Volver)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_Nom1
@@ -274,6 +276,19 @@ namespace Pantalla_Contraseña
             this.btn_Crear.TabStop = false;
             this.btn_Crear.Click += new System.EventHandler(this.btn_Crear_Click);
             // 
+            // btn_Volver
+            // 
+            this.btn_Volver.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Volver.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Volver.Image = global::Pantalla_Contraseña.Properties.Resources.Boton_Volver;
+            this.btn_Volver.Location = new System.Drawing.Point(30, 27);
+            this.btn_Volver.Name = "btn_Volver";
+            this.btn_Volver.Size = new System.Drawing.Size(110, 110);
+            this.btn_Volver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_Volver.TabIndex = 19;
+            this.btn_Volver.TabStop = false;
+            this.btn_Volver.Click += new System.EventHandler(this.btn_Volver_Click);
+            // 
             // FormPacientes2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -281,6 +296,7 @@ namespace Pantalla_Contraseña
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Fondo;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.btn_Volver);
             this.Controls.Add(this.btn_Crear);
             this.Controls.Add(this.btn_Izq);
             this.Controls.Add(this.btn_Der);
@@ -315,6 +331,7 @@ namespace Pantalla_Contraseña
             ((System.ComponentModel.ISupportInitialize)(this.btn_Der)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Izq)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Crear)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Volver)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -340,5 +357,6 @@ namespace Pantalla_Contraseña
         private System.Windows.Forms.PictureBox btn_Der;
         private System.Windows.Forms.PictureBox btn_Izq;
         private System.Windows.Forms.PictureBox btn_Crear;
+        private System.Windows.Forms.PictureBox btn_Volver;
     }
 }

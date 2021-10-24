@@ -38,6 +38,7 @@ namespace Pantalla_Contraseña
             this.btn_NoVercontraseña = new System.Windows.Forms.PictureBox();
             this.btn_IngresoPaciente = new System.Windows.Forms.PictureBox();
             this.lbl_ContraseñaIncorrecta = new System.Windows.Forms.Label();
+            this.btn_Salir = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Administrador)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Administrador)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Contraseña)).BeginInit();
@@ -45,6 +46,7 @@ namespace Pantalla_Contraseña
             ((System.ComponentModel.ISupportInitialize)(this.btn_Vercontraseña)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_NoVercontraseña)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_IngresoPaciente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Salir)).BeginInit();
             this.SuspendLayout();
             // 
             // pic_Administrador
@@ -53,7 +55,7 @@ namespace Pantalla_Contraseña
             this.pic_Administrador.Location = new System.Drawing.Point(360, 134);
             this.pic_Administrador.Name = "pic_Administrador";
             this.pic_Administrador.Size = new System.Drawing.Size(300, 300);
-            this.pic_Administrador.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_Administrador.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_Administrador.TabIndex = 0;
             this.pic_Administrador.TabStop = false;
             // 
@@ -152,6 +154,18 @@ namespace Pantalla_Contraseña
             this.lbl_ContraseñaIncorrecta.Text = "Contraseña incorrecta";
             this.lbl_ContraseñaIncorrecta.Visible = false;
             // 
+            // btn_Salir
+            // 
+            this.btn_Salir.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Salir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Salir.Image = global::Pantalla_Contraseña.Properties.Resources.Salir;
+            this.btn_Salir.Location = new System.Drawing.Point(1621, 25);
+            this.btn_Salir.Name = "btn_Salir";
+            this.btn_Salir.Size = new System.Drawing.Size(276, 133);
+            this.btn_Salir.TabIndex = 22;
+            this.btn_Salir.TabStop = false;
+            this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click);
+            // 
             // FormPantallaLogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -159,6 +173,7 @@ namespace Pantalla_Contraseña
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Fondo;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.btn_Salir);
             this.Controls.Add(this.lbl_ContraseñaIncorrecta);
             this.Controls.Add(this.btn_IngresoPaciente);
             this.Controls.Add(this.btn_NoVercontraseña);
@@ -179,6 +194,7 @@ namespace Pantalla_Contraseña
             ((System.ComponentModel.ISupportInitialize)(this.btn_Vercontraseña)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_NoVercontraseña)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_IngresoPaciente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Salir)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,5 +211,6 @@ namespace Pantalla_Contraseña
         private System.Windows.Forms.PictureBox btn_NoVercontraseña;
         private System.Windows.Forms.PictureBox btn_IngresoPaciente;
         private System.Windows.Forms.Label lbl_ContraseñaIncorrecta;
+        private System.Windows.Forms.PictureBox btn_Salir;
     }
 }

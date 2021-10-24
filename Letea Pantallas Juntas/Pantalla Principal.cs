@@ -22,6 +22,7 @@ namespace Pantalla_Contraseña
             if (!FormPantallaLogIn.ModoAdmin) {
                 btn_Config.Visible = false;
                 btn_CrearPaciente.Visible = false;
+                btn_Salir.Visible = true;
             }
         }
 
@@ -30,6 +31,18 @@ namespace Pantalla_Contraseña
             Configuracion config = new Configuracion();
             config.Show();
             
+        }
+
+        private void btn_Volver_Click(object sender, EventArgs e)
+        {
+            FormPacientes2 form = new FormPacientes2();
+            form.Show();
+            this.Hide();
+        }
+
+        private void btn_Salir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
