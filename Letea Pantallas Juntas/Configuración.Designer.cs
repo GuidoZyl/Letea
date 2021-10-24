@@ -63,6 +63,7 @@ namespace Pantalla_Contraseña
             this.btn_Creditos.Size = new System.Drawing.Size(482, 102);
             this.btn_Creditos.TabIndex = 1;
             this.btn_Creditos.TabStop = false;
+            this.btn_Creditos.Click += new System.EventHandler(this.btn_Creditos_Click);
             // 
             // btn_CerrarSesión
             // 

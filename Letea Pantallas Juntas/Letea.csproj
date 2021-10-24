@@ -63,6 +63,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AcercaDenosotros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AcercaDenosotros.Designer.cs">
+      <DependentUpon>AcercaDenosotros.cs</DependentUpon>
+    </Compile>
     <Compile Include="Componentes\FormRedondeado.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -77,6 +83,12 @@
     </Compile>
     <Compile Include="Crear Paciente.Designer.cs">
       <DependentUpon>Crear Paciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Creditos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Creditos.Designer.cs">
+      <DependentUpon>Creditos.cs</DependentUpon>
     </Compile>
     <Compile Include="Elegir Paciente 2.0.cs">
       <SubType>Form</SubType>
@@ -125,11 +137,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AcercaDenosotros.resx">
+      <DependentUpon>AcercaDenosotros.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Configuración.resx">
       <DependentUpon>Configuración.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Crear Paciente.resx">
       <DependentUpon>Crear Paciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Creditos.resx">
+      <DependentUpon>Creditos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Elegir Paciente 2.0.resx">
       <DependentUpon>Elegir Paciente 2.0.cs</DependentUpon>
@@ -267,6 +285,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Cerrar la aplicación.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rectangle 51.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TextoAcercaDeNosotros.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boton Volver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Creditos1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

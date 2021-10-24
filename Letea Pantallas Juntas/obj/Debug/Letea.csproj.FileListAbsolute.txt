@@ -98,3 +98,5 @@ C:\Users\Uriel\Downloads\Letea Pantallas Juntas\Letea Pantallas Juntas\obj\Debug
 E:\Guido\Documentos\Programación\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.FormPacientes2.resources
 C:\Users\Uriel\Downloads\Letea Pantallas Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.FormPacientes2.resources
 C:\Users\Uriel\Downloads\Letea Pantallas Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.Configuracion.resources
+C:\Users\Uriel\Downloads\Letea Pantallas Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.AcercaDenosotros.resources
+C:\Users\Uriel\Downloads\Letea Pantallas Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.Creditos.resources

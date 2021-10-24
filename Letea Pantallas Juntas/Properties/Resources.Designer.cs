@@ -113,6 +113,26 @@ namespace Pantalla_Contraseña.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Ajustes {
+            get {
+                object obj = ResourceManager.GetObject("Ajustes", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Boton_Volver {
+            get {
+                object obj = ResourceManager.GetObject("Boton Volver", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Cerrar_la_aplicación {
             get {
                 object obj = ResourceManager.GetObject("Cerrar la aplicación", resourceCulture);
@@ -196,6 +216,16 @@ namespace Pantalla_Contraseña.Properties {
         internal static System.Drawing.Bitmap Creditos {
             get {
                 object obj = ResourceManager.GetObject("Creditos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Creditos1 {
+            get {
+                object obj = ResourceManager.GetObject("Creditos1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -303,6 +333,16 @@ namespace Pantalla_Contraseña.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Rectangle_51 {
+            get {
+                object obj = ResourceManager.GetObject("Rectangle 51", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Siguiente {
             get {
                 object obj = ResourceManager.GetObject("Siguiente", resourceCulture);
@@ -316,6 +356,16 @@ namespace Pantalla_Contraseña.Properties {
         internal static System.Drawing.Bitmap Siguiente1 {
             get {
                 object obj = ResourceManager.GetObject("Siguiente1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TextoAcercaDeNosotros {
+            get {
+                object obj = ResourceManager.GetObject("TextoAcercaDeNosotros", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

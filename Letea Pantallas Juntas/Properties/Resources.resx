@@ -121,11 +121,20 @@
   <data name="Vector" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Vector.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="TextoAcercaDeNosotros" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TextoAcercaDeNosotros.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Boton Volver" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Boton Volver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Administrador" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Administrador.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="FLECHA IZQUIERDA" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FLECHA IZQUIERDA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cerrar la aplicación" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cerrar la aplicación.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Creditos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Creditos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -147,6 +156,9 @@
   </data>
   <data name="FLECHA DERECHA" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FLECHA DERECHA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ajustes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ajustes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Nueva contraseña" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Nueva contraseña.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -199,7 +211,10 @@
   <data name="Configuración" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Configuración.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Cerrar la aplicación" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cerrar la aplicación.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Rectangle 51" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Rectangle 51.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Creditos1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Creditos1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

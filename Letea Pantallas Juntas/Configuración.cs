@@ -24,7 +24,9 @@ namespace Pantalla_Contraseña
 
         private void btn_AcercaDeNosotros_Click(object sender, EventArgs e)
         {
-
+            AcercaDenosotros form = new AcercaDenosotros();
+            form.Show();
+            this.Hide();
         }
 
         private void btn_CerrarSesión_Click(object sender, EventArgs e)
@@ -32,11 +34,19 @@ namespace Pantalla_Contraseña
             FormPantallaLogIn form = new FormPantallaLogIn();
             form.Show();
             this.Hide();
+           // FormPrincipal.Hide();
         }
 
         private void btn_CerrarAplicacion_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btn_Creditos_Click(object sender, EventArgs e)
+        {
+            Creditos form = new Creditos();
+            form.Show();
+            this.Hide();
         }
     }
 }
