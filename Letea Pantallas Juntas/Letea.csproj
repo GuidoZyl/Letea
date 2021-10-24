@@ -322,5 +322,8 @@
   <ItemGroup>
     <None Include="Resources\Parte Superior Crear GurupoAmigos.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boton Guardar.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

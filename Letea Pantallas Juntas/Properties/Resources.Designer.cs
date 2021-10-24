@@ -123,6 +123,16 @@ namespace Pantalla_Contraseña.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Boton_Guardar {
+            get {
+                object obj = ResourceManager.GetObject("Boton Guardar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Boton_Volver {
             get {
                 object obj = ResourceManager.GetObject("Boton Volver", resourceCulture);
