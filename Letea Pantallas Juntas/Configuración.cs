@@ -34,7 +34,8 @@ namespace Pantalla_Contraseña
             FormPantallaLogIn form = new FormPantallaLogIn();
             form.Show();
             this.Hide();
-           // FormPrincipal.Hide();
+            FormPrincipal form2 = new FormPrincipal();
+            form2.Hide();
         }
 
         private void btn_CerrarAplicacion_Click(object sender, EventArgs e)

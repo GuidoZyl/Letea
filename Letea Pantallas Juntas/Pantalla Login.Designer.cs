@@ -50,7 +50,6 @@ namespace Pantalla_Contraseña
             // pic_Administrador
             // 
             this.pic_Administrador.BackColor = System.Drawing.Color.Transparent;
-            this.pic_Administrador.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Circulo;
             this.pic_Administrador.Location = new System.Drawing.Point(360, 134);
             this.pic_Administrador.Name = "pic_Administrador";
             this.pic_Administrador.Size = new System.Drawing.Size(300, 300);
