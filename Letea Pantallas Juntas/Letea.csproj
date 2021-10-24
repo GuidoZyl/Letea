@@ -343,5 +343,8 @@
   <ItemGroup>
     <None Include="Resources\ingresar como páciente.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fotoperfil.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -52,11 +52,18 @@ namespace Pantalla_Contraseña
         private void btn_Guardar_Click(object sender, EventArgs e)
         {
             
-            
+            if (btn_AgregarFoto.Image == null)
+            {
+                btn_AgregarFoto.Image = pic_FotoPerfil.BackgroundImage;
+            }
             if (txt_Nom.Text != null && txt_Nom.Text != "Introduzca el nombre del grupo")
             {
-                string sql = "INSERT into GruposdeAmigos (Nombre, IDUsuario, Foto) values ('" + txt_Nom.Text + "', " + FormPacientes2.IDPaciente + ")";
+                string sql = "INSERT into GruposdeAmigos (Nombre, IDUsuario, Foto) values ('" + txt_Nom.Text + "', " + FormPacientes2.IDPaciente + ", "+btn_AgregarFoto.Image+")";
+                MemoryStream ms = new MemoryStream();
+                btn_AgregarFoto.Image.Save(ms, ImageFormat.Jpeg);
+                byte[] aByte = ms.ToArray();
                 OleDbCommand cmd = new OleDbCommand(sql, conexion);
+                cmd.Parameters.AddWithValue("Foto", aByte);
                 cmd.ExecuteNonQuery();
             }
             else
@@ -66,14 +73,6 @@ namespace Pantalla_Contraseña
                 Task.Delay(2000).Wait();
                 lbl_IngreseNombre.Visible = false;
             }
-            string sql2 = "INSERT GruposdeAmigos set Foto = (@foto)";
-            MemoryStream ms = new MemoryStream();
-            btn_AgregarFoto.Image.Save(ms, ImageFormat.Jpeg);
-            byte[] aByte = ms.ToArray();
-
-            OleDbCommand consulta = new OleDbCommand(sql2, conexion);
-            consulta.Parameters.AddWithValue("Foto", aByte);
-            consulta.ExecuteNonQuery();
         }
 
         private void btn_AgregarFoto_Click(object sender, EventArgs e)

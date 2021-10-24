@@ -35,10 +35,12 @@ namespace Pantalla_Contraseña
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_Guardar = new System.Windows.Forms.PictureBox();
             this.lbl_IngreseNombre = new System.Windows.Forms.Label();
+            this.pic_FotoPerfil = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.btn_AgregarFoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_ParteSuperior)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Guardar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_FotoPerfil)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_AgregarFoto
@@ -113,6 +115,17 @@ namespace Pantalla_Contraseña
             this.lbl_IngreseNombre.Text = "Ingrese un nombre";
             this.lbl_IngreseNombre.Visible = false;
             // 
+            // pic_FotoPerfil
+            // 
+            this.pic_FotoPerfil.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.fotoperfil;
+            this.pic_FotoPerfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pic_FotoPerfil.Location = new System.Drawing.Point(1313, 460);
+            this.pic_FotoPerfil.Name = "pic_FotoPerfil";
+            this.pic_FotoPerfil.Size = new System.Drawing.Size(102, 69);
+            this.pic_FotoPerfil.TabIndex = 16;
+            this.pic_FotoPerfil.TabStop = false;
+            this.pic_FotoPerfil.Visible = false;
+            // 
             // FormCrearGruposAmigos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -120,6 +133,7 @@ namespace Pantalla_Contraseña
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Fondo;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.pic_FotoPerfil);
             this.Controls.Add(this.lbl_IngreseNombre);
             this.Controls.Add(this.btn_Guardar);
             this.Controls.Add(this.txt_Nom);
@@ -135,6 +149,7 @@ namespace Pantalla_Contraseña
             ((System.ComponentModel.ISupportInitialize)(this.pic_ParteSuperior)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Guardar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_FotoPerfil)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -148,5 +163,6 @@ namespace Pantalla_Contraseña
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox btn_Guardar;
         private System.Windows.Forms.Label lbl_IngreseNombre;
+        private System.Windows.Forms.PictureBox pic_FotoPerfil;
     }
 }
