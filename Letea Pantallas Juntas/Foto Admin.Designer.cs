@@ -74,11 +74,12 @@ namespace Pantalla_Contraseña
             // btn_crearfoto
             // 
             this.btn_crearfoto.BackColor = System.Drawing.Color.Transparent;
-            this.btn_crearfoto.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_crearfoto.BackgroundImage")));
+            this.btn_crearfoto.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Crear;
+            this.btn_crearfoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_crearfoto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_crearfoto.Location = new System.Drawing.Point(818, 856);
             this.btn_crearfoto.Name = "btn_crearfoto";
-            this.btn_crearfoto.Size = new System.Drawing.Size(263, 109);
+            this.btn_crearfoto.Size = new System.Drawing.Size(263, 118);
             this.btn_crearfoto.TabIndex = 4;
             this.btn_crearfoto.TabStop = false;
             this.btn_crearfoto.Click += new System.EventHandler(this.click_crearfoto);

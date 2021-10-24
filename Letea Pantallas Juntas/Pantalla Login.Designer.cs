@@ -39,6 +39,7 @@ namespace Pantalla_Contraseña
             this.btn_IngresoPaciente = new System.Windows.Forms.PictureBox();
             this.lbl_ContraseñaIncorrecta = new System.Windows.Forms.Label();
             this.btn_Salir = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Administrador)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Administrador)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Contraseña)).BeginInit();
@@ -47,6 +48,7 @@ namespace Pantalla_Contraseña
             ((System.ComponentModel.ISupportInitialize)(this.btn_NoVercontraseña)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_IngresoPaciente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Salir)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pic_Administrador
@@ -92,11 +94,12 @@ namespace Pantalla_Contraseña
             // btn_ingresaradmin
             // 
             this.btn_ingresaradmin.BackColor = System.Drawing.Color.Transparent;
-            this.btn_ingresaradmin.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Crear_admin;
+            this.btn_ingresaradmin.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.ingresar;
+            this.btn_ingresaradmin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_ingresaradmin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_ingresaradmin.Location = new System.Drawing.Point(408, 783);
             this.btn_ingresaradmin.Name = "btn_ingresaradmin";
-            this.btn_ingresaradmin.Size = new System.Drawing.Size(208, 98);
+            this.btn_ingresaradmin.Size = new System.Drawing.Size(208, 105);
             this.btn_ingresaradmin.TabIndex = 4;
             this.btn_ingresaradmin.TabStop = false;
             this.btn_ingresaradmin.Click += new System.EventHandler(this.btn_ingresaradmin_Click);
@@ -131,12 +134,12 @@ namespace Pantalla_Contraseña
             // btn_IngresoPaciente
             // 
             this.btn_IngresoPaciente.BackColor = System.Drawing.Color.Transparent;
-            this.btn_IngresoPaciente.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Ingresar_como_paciente;
+            this.btn_IngresoPaciente.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.ingresar_como_páciente;
             this.btn_IngresoPaciente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_IngresoPaciente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_IngresoPaciente.Location = new System.Drawing.Point(983, 439);
+            this.btn_IngresoPaciente.Location = new System.Drawing.Point(982, 592);
             this.btn_IngresoPaciente.Name = "btn_IngresoPaciente";
-            this.btn_IngresoPaciente.Size = new System.Drawing.Size(759, 136);
+            this.btn_IngresoPaciente.Size = new System.Drawing.Size(759, 166);
             this.btn_IngresoPaciente.TabIndex = 7;
             this.btn_IngresoPaciente.TabStop = false;
             this.btn_IngresoPaciente.Click += new System.EventHandler(this.btn_IngresoPaciente_Click);
@@ -167,6 +170,17 @@ namespace Pantalla_Contraseña
             this.btn_Salir.TabStop = false;
             this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::Pantalla_Contraseña.Properties.Resources.Vector1;
+            this.pictureBox1.Location = new System.Drawing.Point(1206, 258);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(292, 270);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 23;
+            this.pictureBox1.TabStop = false;
+            // 
             // FormPantallaLogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -174,6 +188,7 @@ namespace Pantalla_Contraseña
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Fondo;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btn_Salir);
             this.Controls.Add(this.lbl_ContraseñaIncorrecta);
             this.Controls.Add(this.btn_IngresoPaciente);
@@ -196,6 +211,7 @@ namespace Pantalla_Contraseña
             ((System.ComponentModel.ISupportInitialize)(this.btn_NoVercontraseña)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_IngresoPaciente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Salir)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -213,5 +229,6 @@ namespace Pantalla_Contraseña
         private System.Windows.Forms.PictureBox btn_IngresoPaciente;
         private System.Windows.Forms.Label lbl_ContraseñaIncorrecta;
         private System.Windows.Forms.PictureBox btn_Salir;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

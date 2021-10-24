@@ -74,11 +74,12 @@
             // btn_crearfotousuario
             // 
             this.btn_crearfotousuario.BackColor = System.Drawing.Color.Transparent;
-            this.btn_crearfotousuario.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Siguiente1;
+            this.btn_crearfotousuario.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Crear1;
+            this.btn_crearfotousuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_crearfotousuario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_crearfotousuario.Location = new System.Drawing.Point(818, 856);
             this.btn_crearfotousuario.Name = "btn_crearfotousuario";
-            this.btn_crearfotousuario.Size = new System.Drawing.Size(263, 109);
+            this.btn_crearfotousuario.Size = new System.Drawing.Size(263, 119);
             this.btn_crearfotousuario.TabIndex = 3;
             this.btn_crearfotousuario.TabStop = false;
             this.btn_crearfotousuario.Click += new System.EventHandler(this.click_crearfotousuario);

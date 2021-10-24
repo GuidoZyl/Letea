@@ -203,6 +203,16 @@ namespace Pantalla_Contraseña.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Crear {
+            get {
+                object obj = ResourceManager.GetObject("Crear", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Crear_admin {
             get {
                 object obj = ResourceManager.GetObject("Crear admin", resourceCulture);
@@ -216,6 +226,16 @@ namespace Pantalla_Contraseña.Properties {
         internal static System.Drawing.Bitmap Crear_paciente {
             get {
                 object obj = ResourceManager.GetObject("Crear paciente", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Crear1 {
+            get {
+                object obj = ResourceManager.GetObject("Crear1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -293,9 +313,29 @@ namespace Pantalla_Contraseña.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ingresar {
+            get {
+                object obj = ResourceManager.GetObject("ingresar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Ingresar_como_paciente {
             get {
                 object obj = ResourceManager.GetObject("Ingresar como paciente", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ingresar_como_páciente {
+            get {
+                object obj = ResourceManager.GetObject("ingresar como páciente", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -393,6 +433,26 @@ namespace Pantalla_Contraseña.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Siguiente__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Siguiente (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Siguiente__1_1 {
+            get {
+                object obj = ResourceManager.GetObject("Siguiente (1)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Siguiente1 {
             get {
                 object obj = ResourceManager.GetObject("Siguiente1", resourceCulture);
@@ -446,6 +506,16 @@ namespace Pantalla_Contraseña.Properties {
         internal static System.Drawing.Bitmap Vector__1_ {
             get {
                 object obj = ResourceManager.GetObject("Vector (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Vector1 {
+            get {
+                object obj = ResourceManager.GetObject("Vector1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

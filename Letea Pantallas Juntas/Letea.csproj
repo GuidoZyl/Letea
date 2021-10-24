@@ -325,5 +325,23 @@
   <ItemGroup>
     <None Include="Resources\Boton Guardar.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Siguiente %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Crear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Crear1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Siguiente %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ingresar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ingresar como páciente.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

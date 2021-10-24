@@ -72,11 +72,12 @@ namespace Pantalla_Contraseña
             // btn_siguiente
             // 
             this.btn_siguiente.BackColor = System.Drawing.Color.Transparent;
-            this.btn_siguiente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_siguiente.BackgroundImage")));
+            this.btn_siguiente.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Siguiente__1_;
+            this.btn_siguiente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_siguiente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_siguiente.Location = new System.Drawing.Point(767, 788);
             this.btn_siguiente.Name = "btn_siguiente";
-            this.btn_siguiente.Size = new System.Drawing.Size(368, 110);
+            this.btn_siguiente.Size = new System.Drawing.Size(368, 119);
             this.btn_siguiente.TabIndex = 5;
             this.btn_siguiente.TabStop = false;
             this.btn_siguiente.Click += new System.EventHandler(this.btn_siguiente_Click);
