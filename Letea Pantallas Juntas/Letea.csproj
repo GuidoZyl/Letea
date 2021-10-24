@@ -78,6 +78,12 @@
     <Compile Include="Crear Paciente.Designer.cs">
       <DependentUpon>Crear Paciente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Elegir Paciente 2.0.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Elegir Paciente 2.0.Designer.cs">
+      <DependentUpon>Elegir Paciente 2.0.cs</DependentUpon>
+    </Compile>
     <Compile Include="Elegir Paciente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +130,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Crear Paciente.resx">
       <DependentUpon>Crear Paciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Elegir Paciente 2.0.resx">
+      <DependentUpon>Elegir Paciente 2.0.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Elegir Paciente.resx">
       <DependentUpon>Elegir Paciente.cs</DependentUpon>
