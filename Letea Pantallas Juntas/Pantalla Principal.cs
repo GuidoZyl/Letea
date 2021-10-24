@@ -44,5 +44,12 @@ namespace Pantalla_Contraseña
         {
             Application.Exit();
         }
+
+        private void btn_Amigos_Click(object sender, EventArgs e)
+        {
+            FormCrearGruposAmigos form = new FormCrearGruposAmigos();
+            form.Show();
+            this.Hide();
+        }
     }
 }

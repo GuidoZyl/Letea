@@ -58,6 +58,7 @@ namespace Pantalla_Contraseña
             this.btn_Amigos.Size = new System.Drawing.Size(300, 300);
             this.btn_Amigos.TabIndex = 1;
             this.btn_Amigos.TabStop = false;
+            this.btn_Amigos.Click += new System.EventHandler(this.btn_Amigos_Click);
             // 
             // btn_CrearPaciente
             // 

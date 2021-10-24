@@ -97,6 +97,7 @@ namespace Pantalla_Contraseña
             this.btn_Guardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_Guardar.TabIndex = 4;
             this.btn_Guardar.TabStop = false;
+            this.btn_Guardar.Click += new System.EventHandler(this.btn_Guardar_Click);
             // 
             // FormCrearGruposAmigos
             // 
