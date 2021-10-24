@@ -52,15 +52,15 @@ namespace Pantalla_Contraseña
         private void btn_Guardar_Click(object sender, EventArgs e)
         {
             
-            if (btn_AgregarFoto.Image == null)
+            if (btn_agregarfoto.Image == null)
             {
-                btn_AgregarFoto.Image = pic_FotoPerfil.BackgroundImage;
+                btn_agregarfoto.Image = pic_FotoPerfil.BackgroundImage;
             }
             if (txt_Nom.Text != null && txt_Nom.Text != "Introduzca el nombre del grupo")
             {
-                string sql = "INSERT into GruposdeAmigos (Nombre, IDUsuario, Foto) values ('" + txt_Nom.Text + "', " + FormPacientes2.IDPaciente + ", "+btn_AgregarFoto.Image+")";
+                string sql = "INSERT into GruposdeAmigos (Nombre, IDUsuario, Foto) values ('" + txt_Nom.Text + "', " + FormPacientes2.IDPaciente + ", " + btn_agregarfoto.Image + ")";
                 MemoryStream ms = new MemoryStream();
-                btn_AgregarFoto.Image.Save(ms, ImageFormat.Jpeg);
+                btn_agregarfoto.Image.Save(ms, ImageFormat.Jpeg);
                 byte[] aByte = ms.ToArray();
                 OleDbCommand cmd = new OleDbCommand(sql, conexion);
                 cmd.Parameters.AddWithValue("Foto", aByte);
@@ -87,9 +87,9 @@ namespace Pantalla_Contraseña
 
                 String Direccion = BuscarImagen.FileName;
 
-                btn_AgregarFoto.ImageLocation = Direccion;
+                btn_agregarfoto.ImageLocation = Direccion;
 
-                btn_AgregarFoto.SizeMode = PictureBoxSizeMode.StretchImage;
+                btn_agregarfoto.SizeMode = PictureBoxSizeMode.StretchImage;
             }
         }
     }

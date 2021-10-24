@@ -29,31 +29,32 @@ namespace Pantalla_Contraseña
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_AgregarFoto = new System.Windows.Forms.PictureBox();
+            this.btn_agregarfoto = new System.Windows.Forms.PictureBox();
             this.pic_ParteSuperior = new System.Windows.Forms.PictureBox();
             this.txt_Nom = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_Guardar = new System.Windows.Forms.PictureBox();
             this.lbl_IngreseNombre = new System.Windows.Forms.Label();
             this.pic_FotoPerfil = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_AgregarFoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_agregarfoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_ParteSuperior)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Guardar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_FotoPerfil)).BeginInit();
             this.SuspendLayout();
             // 
-            // btn_AgregarFoto
+            // btn_agregarfoto
             // 
-            this.btn_AgregarFoto.BackColor = System.Drawing.Color.Transparent;
-            this.btn_AgregarFoto.Image = global::Pantalla_Contraseña.Properties.Resources.que_lindo_boton;
-            this.btn_AgregarFoto.Location = new System.Drawing.Point(760, 299);
-            this.btn_AgregarFoto.Name = "btn_AgregarFoto";
-            this.btn_AgregarFoto.Size = new System.Drawing.Size(400, 400);
-            this.btn_AgregarFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btn_AgregarFoto.TabIndex = 0;
-            this.btn_AgregarFoto.TabStop = false;
-            this.btn_AgregarFoto.Click += new System.EventHandler(this.btn_AgregarFoto_Click);
+            this.btn_agregarfoto.BackColor = System.Drawing.Color.Transparent;
+            this.btn_agregarfoto.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.que_lindo_boton;
+            this.btn_agregarfoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_agregarfoto.Location = new System.Drawing.Point(760, 299);
+            this.btn_agregarfoto.Name = "btn_agregarfoto";
+            this.btn_agregarfoto.Size = new System.Drawing.Size(400, 400);
+            this.btn_agregarfoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_agregarfoto.TabIndex = 0;
+            this.btn_agregarfoto.TabStop = false;
+            this.btn_agregarfoto.Click += new System.EventHandler(this.btn_AgregarFoto_Click);
             // 
             // pic_ParteSuperior
             // 
@@ -117,9 +118,9 @@ namespace Pantalla_Contraseña
             // 
             // pic_FotoPerfil
             // 
-            this.pic_FotoPerfil.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.fotoperfil;
+            this.pic_FotoPerfil.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Vector1;
             this.pic_FotoPerfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic_FotoPerfil.Location = new System.Drawing.Point(1313, 460);
+            this.pic_FotoPerfil.Location = new System.Drawing.Point(1431, 376);
             this.pic_FotoPerfil.Name = "pic_FotoPerfil";
             this.pic_FotoPerfil.Size = new System.Drawing.Size(102, 69);
             this.pic_FotoPerfil.TabIndex = 16;
@@ -138,14 +139,14 @@ namespace Pantalla_Contraseña
             this.Controls.Add(this.btn_Guardar);
             this.Controls.Add(this.txt_Nom);
             this.Controls.Add(this.pic_ParteSuperior);
-            this.Controls.Add(this.btn_AgregarFoto);
+            this.Controls.Add(this.btn_agregarfoto);
             this.Controls.Add(this.pictureBox1);
             this.Name = "FormCrearGruposAmigos";
             this.Text = "Amigos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Amigos_Load);
             this.Click += new System.EventHandler(this.FormCrearGruposAmigos_Click);
-            ((System.ComponentModel.ISupportInitialize)(this.btn_AgregarFoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_agregarfoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_ParteSuperior)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Guardar)).EndInit();
@@ -157,7 +158,7 @@ namespace Pantalla_Contraseña
 
         #endregion
 
-        private System.Windows.Forms.PictureBox btn_AgregarFoto;
+        private System.Windows.Forms.PictureBox btn_agregarfoto;
         private System.Windows.Forms.PictureBox pic_ParteSuperior;
         private System.Windows.Forms.TextBox txt_Nom;
         private System.Windows.Forms.PictureBox pictureBox1;

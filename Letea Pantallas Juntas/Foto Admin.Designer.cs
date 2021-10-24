@@ -29,17 +29,16 @@ namespace Pantalla_Contraseña
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormFotoAdmin));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pic_text_agregarfotodeperfil = new System.Windows.Forms.PictureBox();
-            this.btn_agregarfoto = new System.Windows.Forms.PictureBox();
             this.btn_crearfoto = new System.Windows.Forms.PictureBox();
             this.pic_PerfilDefault = new System.Windows.Forms.PictureBox();
+            this.btn_agregarfoto = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_text_agregarfotodeperfil)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_agregarfoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_crearfoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_PerfilDefault)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_agregarfoto)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -54,24 +53,13 @@ namespace Pantalla_Contraseña
             // pic_text_agregarfotodeperfil
             // 
             this.pic_text_agregarfotodeperfil.BackColor = System.Drawing.Color.Transparent;
-            this.pic_text_agregarfotodeperfil.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_text_agregarfotodeperfil.BackgroundImage")));
+            this.pic_text_agregarfotodeperfil.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Agregar_foto1;
             this.pic_text_agregarfotodeperfil.Location = new System.Drawing.Point(625, 296);
             this.pic_text_agregarfotodeperfil.Name = "pic_text_agregarfotodeperfil";
             this.pic_text_agregarfotodeperfil.Size = new System.Drawing.Size(654, 104);
             this.pic_text_agregarfotodeperfil.TabIndex = 2;
             this.pic_text_agregarfotodeperfil.TabStop = false;
-            // 
-            // btn_agregarfoto
-            // 
-            this.btn_agregarfoto.BackColor = System.Drawing.Color.Transparent;
-            this.btn_agregarfoto.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_agregarfoto.BackgroundImage")));
-            this.btn_agregarfoto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_agregarfoto.Location = new System.Drawing.Point(733, 390);
-            this.btn_agregarfoto.Name = "btn_agregarfoto";
-            this.btn_agregarfoto.Size = new System.Drawing.Size(433, 433);
-            this.btn_agregarfoto.TabIndex = 3;
-            this.btn_agregarfoto.TabStop = false;
-            this.btn_agregarfoto.Click += new System.EventHandler(this.click_agregarfoto);
+            this.pic_text_agregarfotodeperfil.Click += new System.EventHandler(this.pic_text_agregarfotodeperfil_Click);
             // 
             // btn_crearfoto
             // 
@@ -97,6 +85,18 @@ namespace Pantalla_Contraseña
             this.pic_PerfilDefault.TabStop = false;
             this.pic_PerfilDefault.Visible = false;
             // 
+            // btn_agregarfoto
+            // 
+            this.btn_agregarfoto.BackColor = System.Drawing.Color.Transparent;
+            this.btn_agregarfoto.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.que_lindo_boton;
+            this.btn_agregarfoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_agregarfoto.Location = new System.Drawing.Point(752, 427);
+            this.btn_agregarfoto.Name = "btn_agregarfoto";
+            this.btn_agregarfoto.Size = new System.Drawing.Size(400, 400);
+            this.btn_agregarfoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_agregarfoto.TabIndex = 6;
+            this.btn_agregarfoto.TabStop = false;
+            // 
             // FormFotoAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -104,9 +104,9 @@ namespace Pantalla_Contraseña
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Fondo;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.btn_agregarfoto);
             this.Controls.Add(this.pic_PerfilDefault);
             this.Controls.Add(this.btn_crearfoto);
-            this.Controls.Add(this.btn_agregarfoto);
             this.Controls.Add(this.pic_text_agregarfotodeperfil);
             this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
@@ -116,9 +116,9 @@ namespace Pantalla_Contraseña
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_text_agregarfotodeperfil)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_agregarfoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_crearfoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_PerfilDefault)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_agregarfoto)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -127,8 +127,8 @@ namespace Pantalla_Contraseña
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pic_text_agregarfotodeperfil;
-        private System.Windows.Forms.PictureBox btn_agregarfoto;
         private System.Windows.Forms.PictureBox btn_crearfoto;
         private System.Windows.Forms.PictureBox pic_PerfilDefault;
+        private System.Windows.Forms.PictureBox btn_agregarfoto;
     }
 }

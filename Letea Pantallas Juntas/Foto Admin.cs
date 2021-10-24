@@ -30,14 +30,14 @@ namespace Pantalla_Contraseña
 
         private void click_agregarfoto(object sender, EventArgs e)
         {
-            OpenFileDialog BuscarImagen = new OpenFileDialog(); BuscarImagen.Filter = "Archivos de Imagen |*.jpg;*.jpeg";
-
+            OpenFileDialog BuscarImagen = new OpenFileDialog(); 
+            
+            BuscarImagen.Filter = "Archivos de Imagen |*.jpg;*.jpeg";
             BuscarImagen.FileName = "";
             BuscarImagen.Title = "Titulo del Dialogo";
         
             if (BuscarImagen.ShowDialog() == DialogResult.OK)
             {
-
                 String Direccion = BuscarImagen.FileName; 
 
                 btn_agregarfoto.ImageLocation = Direccion;
@@ -48,6 +48,11 @@ namespace Pantalla_Contraseña
 
         private void click_crearfoto(object sender, EventArgs e)
         {
+            if (btn_agregarfoto.Image == null)
+            {
+                btn_agregarfoto.Image = pic_PerfilDefault.Image;
+            }
+            
             string sql = "UPDATE Admin set Foto = (@foto)";
             MemoryStream ms = new MemoryStream();
             btn_agregarfoto.Image.Save(ms, ImageFormat.Jpeg);
@@ -60,6 +65,11 @@ namespace Pantalla_Contraseña
             FormCrearPaciente form = new FormCrearPaciente();
             form.Show();
             this.Hide();
+        }
+
+        private void pic_text_agregarfotodeperfil_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
