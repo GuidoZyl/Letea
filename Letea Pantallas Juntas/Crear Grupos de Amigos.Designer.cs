@@ -34,6 +34,7 @@ namespace Pantalla_Contraseña
             this.txt_Nom = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_Guardar = new System.Windows.Forms.PictureBox();
+            this.lbl_IngreseNombre = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btn_AgregarFoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_ParteSuperior)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -50,6 +51,7 @@ namespace Pantalla_Contraseña
             this.btn_AgregarFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_AgregarFoto.TabIndex = 0;
             this.btn_AgregarFoto.TabStop = false;
+            this.btn_AgregarFoto.Click += new System.EventHandler(this.btn_AgregarFoto_Click);
             // 
             // pic_ParteSuperior
             // 
@@ -99,6 +101,18 @@ namespace Pantalla_Contraseña
             this.btn_Guardar.TabStop = false;
             this.btn_Guardar.Click += new System.EventHandler(this.btn_Guardar_Click);
             // 
+            // lbl_IngreseNombre
+            // 
+            this.lbl_IngreseNombre.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_IngreseNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_IngreseNombre.ForeColor = System.Drawing.Color.Red;
+            this.lbl_IngreseNombre.Location = new System.Drawing.Point(755, 816);
+            this.lbl_IngreseNombre.Name = "lbl_IngreseNombre";
+            this.lbl_IngreseNombre.Size = new System.Drawing.Size(418, 54);
+            this.lbl_IngreseNombre.TabIndex = 15;
+            this.lbl_IngreseNombre.Text = "Ingrese un nombre";
+            this.lbl_IngreseNombre.Visible = false;
+            // 
             // FormCrearGruposAmigos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -106,6 +120,7 @@ namespace Pantalla_Contraseña
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Fondo;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.lbl_IngreseNombre);
             this.Controls.Add(this.btn_Guardar);
             this.Controls.Add(this.txt_Nom);
             this.Controls.Add(this.pic_ParteSuperior);
@@ -132,5 +147,6 @@ namespace Pantalla_Contraseña
         private System.Windows.Forms.TextBox txt_Nom;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox btn_Guardar;
+        private System.Windows.Forms.Label lbl_IngreseNombre;
     }
 }

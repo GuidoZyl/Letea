@@ -124,3 +124,4 @@ C:\Users\nico4\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas\ob
 C:\Users\nico4\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Letea.csproj.CoreCompileInputs.cache
 C:\Users\nico4\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla Contraseña.exe
 C:\Users\nico4\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla Contraseña.pdb
+C:\Users\Uriel\Downloads\Letea Pantallas Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.FormCrearGruposAmigos.resources
