@@ -63,9 +63,29 @@ namespace Pantalla_Contraseña.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Acerca_de_Nosotros {
+            get {
+                object obj = ResourceManager.GetObject("Acerca de Nosotros", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Administrador {
             get {
                 object obj = ResourceManager.GetObject("Administrador", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Agregar_familiar__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Agregar familiar (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -86,6 +106,26 @@ namespace Pantalla_Contraseña.Properties {
         internal static System.Drawing.Bitmap Agregar_Imagen {
             get {
                 object obj = ResourceManager.GetObject("Agregar Imagen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cerrar_la_aplicación {
+            get {
+                object obj = ResourceManager.GetObject("Cerrar la aplicación", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cerrar_sesión {
+            get {
+                object obj = ResourceManager.GetObject("Cerrar sesión", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -146,6 +186,16 @@ namespace Pantalla_Contraseña.Properties {
         internal static System.Drawing.Bitmap Crear_paciente {
             get {
                 object obj = ResourceManager.GetObject("Crear paciente", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Creditos {
+            get {
+                object obj = ResourceManager.GetObject("Creditos", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

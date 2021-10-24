@@ -27,7 +27,7 @@ namespace Pantalla_Contraseña
 
         private void btn_Config_Click(object sender, EventArgs e)
         {
-            FormConfiguración config = new FormConfiguración();
+            Configuracion config = new Configuracion();
             config.Show();
             
         }

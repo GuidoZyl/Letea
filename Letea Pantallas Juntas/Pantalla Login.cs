@@ -26,6 +26,7 @@ namespace Pantalla_Contraseña
 
         private void FormPantallaLogIn_Load(object sender, EventArgs e)
         {
+            ModoAdmin = false;
             FormFotoUsuarioRegistro.PrimerPaciente = true;
 
             conexion.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=.\Base de Datos 4.accdb;";

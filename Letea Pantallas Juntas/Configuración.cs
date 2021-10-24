@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Pantalla_Contraseña
 {
-    public partial class FormConfiguración : Form
+    public partial class Configuracion : Form
     {
-        public FormConfiguración()
+        public Configuracion()
         {
             InitializeComponent();
         }
@@ -20,6 +20,23 @@ namespace Pantalla_Contraseña
         private void Configuración_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_AcercaDeNosotros_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_CerrarSesión_Click(object sender, EventArgs e)
+        {
+            FormPantallaLogIn form = new FormPantallaLogIn();
+            form.Show();
+            this.Hide();
+        }
+
+        private void btn_CerrarAplicacion_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

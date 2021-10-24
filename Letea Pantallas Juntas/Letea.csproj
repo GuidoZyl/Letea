@@ -253,5 +253,20 @@
   <ItemGroup>
     <None Include="Resources\Fondo Coniguración.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Agregar familiar %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Acerca de Nosotros.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Creditos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cerrar sesión.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cerrar la aplicación.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

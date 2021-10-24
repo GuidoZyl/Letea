@@ -264,9 +264,12 @@ namespace Pantalla_Contraseña
             // 
             // btn_Crear
             // 
-            this.btn_Crear.Location = new System.Drawing.Point(1606, 874);
+            this.btn_Crear.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Crear.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Agregar_familiar__1_;
+            this.btn_Crear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Crear.Location = new System.Drawing.Point(1466, 36);
             this.btn_Crear.Name = "btn_Crear";
-            this.btn_Crear.Size = new System.Drawing.Size(255, 112);
+            this.btn_Crear.Size = new System.Drawing.Size(426, 96);
             this.btn_Crear.TabIndex = 18;
             this.btn_Crear.TabStop = false;
             this.btn_Crear.Click += new System.EventHandler(this.btn_Crear_Click);
