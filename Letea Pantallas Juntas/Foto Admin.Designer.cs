@@ -76,7 +76,7 @@ namespace Pantalla_Contraseña
             // 
             // pic_PerfilDefault
             // 
-            this.pic_PerfilDefault.Image = global::Pantalla_Contraseña.Properties.Resources.Vector1;
+            this.pic_PerfilDefault.Image = global::Pantalla_Contraseña.Properties.Resources.Perfil_Vacío;
             this.pic_PerfilDefault.Location = new System.Drawing.Point(86, 357);
             this.pic_PerfilDefault.Name = "pic_PerfilDefault";
             this.pic_PerfilDefault.Size = new System.Drawing.Size(300, 300);

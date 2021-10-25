@@ -273,6 +273,16 @@ namespace Pantalla_Contraseña.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Dave2 {
+            get {
+                object obj = ResourceManager.GetObject("Dave2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap FLECHA_DERECHA {
             get {
                 object obj = ResourceManager.GetObject("FLECHA DERECHA", resourceCulture);
@@ -406,6 +416,16 @@ namespace Pantalla_Contraseña.Properties {
         internal static System.Drawing.Bitmap Parte_Superior2 {
             get {
                 object obj = ResourceManager.GetObject("Parte Superior2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Perfil_Vacío {
+            get {
+                object obj = ResourceManager.GetObject("Perfil Vacío", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

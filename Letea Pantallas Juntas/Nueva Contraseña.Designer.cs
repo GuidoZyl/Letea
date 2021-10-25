@@ -87,7 +87,7 @@ namespace Pantalla_Contraseña
             this.txtbox_nuevacontraseña.Location = new System.Drawing.Point(460, 387);
             this.txtbox_nuevacontraseña.Name = "txtbox_nuevacontraseña";
             this.txtbox_nuevacontraseña.Size = new System.Drawing.Size(1000, 129);
-            this.txtbox_nuevacontraseña.TabIndex = 6;
+            this.txtbox_nuevacontraseña.TabIndex = 1;
             // 
             // pic_nuevacontraseña
             // 

@@ -50,6 +50,11 @@ namespace Pantalla_Contraseña
 
         private void click_crearfotousuario(object sender, EventArgs e)
         {
+            if (btn_agregarfoto.Image == null)
+            {
+                btn_agregarfoto.Image = pic_PerfilDefault.Image;
+            }
+            
             string sql = "UPDATE Usuario set Foto = (@foto)";
             MemoryStream ms = new MemoryStream();
             btn_agregarfoto.Image.Save(ms, ImageFormat.Jpeg);
@@ -74,21 +79,5 @@ namespace Pantalla_Contraseña
                 this.Hide();
             }
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            string sql = "SELECT Foto FROM Usuario";
-            OleDbCommand cmd = new OleDbCommand(sql, conexion);
-            OleDbDataAdapter data = new OleDbDataAdapter(cmd);
-
-            data.Fill(ds, "foto");
-
-            int ult = ds.Tables["foto"].Rows.Count - 1;
-            MemoryStream ms = new MemoryStream((byte[])ds.Tables["foto"].Rows[ult]["Foto"]);
-
-            Bitmap bm = new Bitmap(ms);
-            btn_agregarfoto.Image = bm;
-        }
-    }
-    
+    }   
 }
