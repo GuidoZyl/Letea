@@ -96,6 +96,7 @@ namespace Pantalla_Contraseña
             this.btn_agregarfoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_agregarfoto.TabIndex = 6;
             this.btn_agregarfoto.TabStop = false;
+            this.btn_agregarfoto.Click += new System.EventHandler(this.btn_agregarfoto_Click);
             // 
             // FormFotoAdmin
             // 

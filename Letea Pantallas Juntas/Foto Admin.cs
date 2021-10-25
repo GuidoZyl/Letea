@@ -28,23 +28,7 @@ namespace Pantalla_Contraseña
             conexion.Open();
         }
 
-        private void click_agregarfoto(object sender, EventArgs e)
-        {
-            OpenFileDialog BuscarImagen = new OpenFileDialog(); 
-            
-            BuscarImagen.Filter = "Archivos de Imagen |*.jpg;*.jpeg";
-            BuscarImagen.FileName = "";
-            BuscarImagen.Title = "Titulo del Dialogo";
-        
-            if (BuscarImagen.ShowDialog() == DialogResult.OK)
-            {
-                String Direccion = BuscarImagen.FileName; 
-
-                btn_agregarfoto.ImageLocation = Direccion;
-
-                btn_agregarfoto.SizeMode = PictureBoxSizeMode.StretchImage;
-            }
-        }
+  
 
         private void click_crearfoto(object sender, EventArgs e)
         {
@@ -70,6 +54,24 @@ namespace Pantalla_Contraseña
         private void pic_text_agregarfotodeperfil_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_agregarfoto_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog BuscarImagen = new OpenFileDialog();
+
+            BuscarImagen.Filter = "Archivos de Imagen |*.jpg;*.jpeg";
+            BuscarImagen.FileName = "";
+            BuscarImagen.Title = "Titulo del Dialogo";
+
+            if (BuscarImagen.ShowDialog() == DialogResult.OK)
+            {
+                String Direccion = BuscarImagen.FileName;
+
+                btn_agregarfoto.ImageLocation = Direccion;
+
+                btn_agregarfoto.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
         }
     }
 }
