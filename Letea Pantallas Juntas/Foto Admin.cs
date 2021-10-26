@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Data.OleDb;
 using System.Drawing.Imaging;
+using System.Drawing.Drawing2D;
 
 namespace Pantalla_Contraseña
 {
@@ -72,6 +73,13 @@ namespace Pantalla_Contraseña
 
                 btn_agregarfoto.SizeMode = PictureBoxSizeMode.StretchImage;
             }
+        }
+
+        private void btn_agregarfoto_Paint(object sender, PaintEventArgs e)
+        {
+            GraphicsPath grpath = new GraphicsPath();
+            grpath.AddEllipse(0, 0, 400, 400);
+            btn_agregarfoto.Region = new System.Drawing.Region(grpath);
         }
     }
 }

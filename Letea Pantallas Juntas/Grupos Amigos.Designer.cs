@@ -45,6 +45,10 @@ namespace Pantalla_Contraseña
             this.lbl_Nom6 = new System.Windows.Forms.Label();
             this.lbl_Nom7 = new System.Windows.Forms.Label();
             this.lbl_Nom8 = new System.Windows.Forms.Label();
+            this.btn_Volver = new System.Windows.Forms.PictureBox();
+            this.btn_Crear = new System.Windows.Forms.PictureBox();
+            this.btn_Izq = new System.Windows.Forms.PictureBox();
+            this.btn_Der = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Nom1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Nom2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Nom3)).BeginInit();
@@ -53,6 +57,10 @@ namespace Pantalla_Contraseña
             ((System.ComponentModel.ISupportInitialize)(this.pic_Nom6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Nom7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Nom8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Volver)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Crear)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Izq)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Der)).BeginInit();
             this.SuspendLayout();
             // 
             // pic_Nom1
@@ -223,6 +231,54 @@ namespace Pantalla_Contraseña
             this.lbl_Nom8.Text = "label1";
             this.lbl_Nom8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btn_Volver
+            // 
+            this.btn_Volver.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Volver.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Volver.Image = global::Pantalla_Contraseña.Properties.Resources.Boton_Volver;
+            this.btn_Volver.Location = new System.Drawing.Point(30, 27);
+            this.btn_Volver.Name = "btn_Volver";
+            this.btn_Volver.Size = new System.Drawing.Size(110, 110);
+            this.btn_Volver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_Volver.TabIndex = 25;
+            this.btn_Volver.TabStop = false;
+            // 
+            // btn_Crear
+            // 
+            this.btn_Crear.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Crear.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.AGREGAR_GRUPO__1_;
+            this.btn_Crear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Crear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Crear.Location = new System.Drawing.Point(1477, 21);
+            this.btn_Crear.Name = "btn_Crear";
+            this.btn_Crear.Size = new System.Drawing.Size(426, 96);
+            this.btn_Crear.TabIndex = 26;
+            this.btn_Crear.TabStop = false;
+            this.btn_Crear.Visible = false;
+            // 
+            // btn_Izq
+            // 
+            this.btn_Izq.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Izq.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.FLECHA_IZQUIERDA;
+            this.btn_Izq.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Izq.Location = new System.Drawing.Point(79, 500);
+            this.btn_Izq.Name = "btn_Izq";
+            this.btn_Izq.Size = new System.Drawing.Size(63, 98);
+            this.btn_Izq.TabIndex = 27;
+            this.btn_Izq.TabStop = false;
+            this.btn_Izq.Visible = false;
+            // 
+            // btn_Der
+            // 
+            this.btn_Der.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Der.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.FLECHA_DERECHA;
+            this.btn_Der.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Der.Location = new System.Drawing.Point(1778, 500);
+            this.btn_Der.Name = "btn_Der";
+            this.btn_Der.Size = new System.Drawing.Size(63, 98);
+            this.btn_Der.TabIndex = 28;
+            this.btn_Der.TabStop = false;
+            // 
             // FormGruposAmigos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -230,6 +286,10 @@ namespace Pantalla_Contraseña
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Fondo;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.btn_Der);
+            this.Controls.Add(this.btn_Izq);
+            this.Controls.Add(this.btn_Crear);
+            this.Controls.Add(this.btn_Volver);
             this.Controls.Add(this.lbl_Nom8);
             this.Controls.Add(this.lbl_Nom7);
             this.Controls.Add(this.lbl_Nom6);
@@ -257,6 +317,10 @@ namespace Pantalla_Contraseña
             ((System.ComponentModel.ISupportInitialize)(this.pic_Nom6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Nom7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Nom8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Volver)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Crear)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Izq)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Der)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -279,5 +343,9 @@ namespace Pantalla_Contraseña
         private System.Windows.Forms.Label lbl_Nom6;
         private System.Windows.Forms.Label lbl_Nom7;
         private System.Windows.Forms.Label lbl_Nom8;
+        private System.Windows.Forms.PictureBox btn_Volver;
+        private System.Windows.Forms.PictureBox btn_Crear;
+        private System.Windows.Forms.PictureBox btn_Izq;
+        private System.Windows.Forms.PictureBox btn_Der;
     }
 }

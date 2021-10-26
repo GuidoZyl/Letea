@@ -90,6 +90,8 @@ namespace Pantalla_Contraseña
             this.btn_agregarfoto.BackColor = System.Drawing.Color.Transparent;
             this.btn_agregarfoto.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.que_lindo_boton;
             this.btn_agregarfoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_agregarfoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.btn_agregarfoto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_agregarfoto.Location = new System.Drawing.Point(752, 427);
             this.btn_agregarfoto.Name = "btn_agregarfoto";
             this.btn_agregarfoto.Size = new System.Drawing.Size(400, 400);
@@ -97,6 +99,7 @@ namespace Pantalla_Contraseña
             this.btn_agregarfoto.TabIndex = 6;
             this.btn_agregarfoto.TabStop = false;
             this.btn_agregarfoto.Click += new System.EventHandler(this.btn_agregarfoto_Click);
+            this.btn_agregarfoto.Paint += new System.Windows.Forms.PaintEventHandler(this.btn_agregarfoto_Paint);
             // 
             // FormFotoAdmin
             // 

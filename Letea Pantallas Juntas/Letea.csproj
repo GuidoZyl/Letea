@@ -364,5 +364,11 @@
   <ItemGroup>
     <None Include="Resources\Perfil Vacío.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AGREGAR GRUPO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AGREGAR GRUPO %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
