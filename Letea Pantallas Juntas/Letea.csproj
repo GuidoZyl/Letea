@@ -108,6 +108,12 @@
     <Compile Include="Elegir Paciente.Designer.cs">
       <DependentUpon>Elegir Paciente.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormGrupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGrupo.Designer.cs">
+      <DependentUpon>FormGrupo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Grupos Amigos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Elegir Paciente.resx">
       <DependentUpon>Elegir Paciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGrupo.resx">
+      <DependentUpon>FormGrupo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Grupos Amigos.resx">
       <DependentUpon>Grupos Amigos.cs</DependentUpon>
@@ -369,6 +378,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AGREGAR GRUPO %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AGREGAR AMIGO %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

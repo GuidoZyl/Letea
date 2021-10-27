@@ -264,6 +264,7 @@ namespace Pantalla_Contraseña
             this.btn_Crear.TabIndex = 26;
             this.btn_Crear.TabStop = false;
             this.btn_Crear.Visible = false;
+            this.btn_Crear.Click += new System.EventHandler(this.btn_Crear_Click_1);
             // 
             // btn_Izq
             // 

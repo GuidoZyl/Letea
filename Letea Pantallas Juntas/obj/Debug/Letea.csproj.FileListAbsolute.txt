@@ -140,3 +140,4 @@ C:\Users\46960341\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas
 C:\Users\46960341\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.FormPacientes2.resources
 C:\Users\46960341\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.FormGruposAmigos.resources
 C:\Users\46960341\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.FormPrincipal.resources
+C:\Users\46960341\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.FormGrupo.resources

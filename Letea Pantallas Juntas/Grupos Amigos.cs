@@ -295,16 +295,16 @@ namespace Pantalla_Contraseña
         private void lbl_Clicked(object sender, EventArgs e)
         {
             Label LabelClicked = sender as Label;
-            string sql = "SELECT Id FROM Usuario WHERE NombreCompleto = '" + LabelClicked.Text + "'";
+            string sql = "SELECT Id FROM GruposdeAmigos WHERE Nombre = '" + LabelClicked.Text + "'";
             OleDbCommand cmd = new OleDbCommand(sql, conexion);
             OleDbDataAdapter da = new OleDbDataAdapter(cmd);
             da.Fill(ds, "IDPaciente");
 
             IDGrupo = Convert.ToInt32(ds.Tables["IDPaciente"].Rows[0]["Id"]);
-
-            FormPrincipal form = new FormPrincipal();
+            FormGrupo form = new FormGrupo();
             form.Show();
             this.Hide();
+         
         }
 
         private void btn_Crear_Click(object sender, EventArgs e)
@@ -582,6 +582,11 @@ namespace Pantalla_Contraseña
             FormPrincipal form = new FormPrincipal();
             form.Show();
             this.Hide();
+        }
+
+        private void btn_Crear_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
