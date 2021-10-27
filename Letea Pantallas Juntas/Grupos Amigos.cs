@@ -55,7 +55,7 @@ namespace Pantalla_Contraseña
             conexion.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=.\Base de Datos 4.accdb;";
             conexion.Open();
 
-            string sql = "Select Nombre from GruposdeAmigos";
+            string sql = "Select Nombre from GruposdeAmigos WHERE IDUsuario = "+FormPacientes2.IDPaciente+"";
             OleDbCommand comando = new OleDbCommand(sql, conexion);
             OleDbDataAdapter data = new OleDbDataAdapter(comando);
 
@@ -575,6 +575,13 @@ namespace Pantalla_Contraseña
                 if (borderSize > 0)
                     graph.DrawEllipse(penBorder, rectBorder);
             }
+        }
+
+        private void btn_Volver_Click_1(object sender, EventArgs e)
+        {
+            FormPrincipal form = new FormPrincipal();
+            form.Show();
+            this.Hide();
         }
     }
 }

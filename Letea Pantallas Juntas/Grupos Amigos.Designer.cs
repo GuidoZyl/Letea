@@ -250,6 +250,7 @@ namespace Pantalla_Contraseña
             this.btn_Volver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_Volver.TabIndex = 25;
             this.btn_Volver.TabStop = false;
+            this.btn_Volver.Click += new System.EventHandler(this.btn_Volver_Click_1);
             // 
             // btn_Crear
             // 

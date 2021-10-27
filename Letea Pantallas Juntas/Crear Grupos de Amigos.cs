@@ -68,6 +68,9 @@ namespace Pantalla_Contraseña
                 Task.Delay(2000).Wait();
                 lbl_IngreseNombre.Visible = false;
             }
+            FormGruposAmigos form = new FormGruposAmigos();
+            form.Show();
+            this.Hide();
         }
 
         private void btn_AgregarFoto_Click(object sender, EventArgs e)

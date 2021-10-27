@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace Pantalla_Contraseña
 {
     public partial class FormPrincipal : Form
     {
+        OleDbConnection conexion = new OleDbConnection();
+        DataSet ds = new DataSet();
+
         public FormPrincipal()
         {
             InitializeComponent();
@@ -47,9 +51,26 @@ namespace Pantalla_Contraseña
 
         private void btn_Amigos_Click(object sender, EventArgs e)
         {
-            FormCrearGruposAmigos form = new FormCrearGruposAmigos();
-            form.Show();
-            this.Hide();
+            conexion.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=.\Base de Datos 4.accdb;";
+            conexion.Open();
+            string consulta = "SELECT IDUsuario FROM GruposdeAmigos WHERE IDUsuario = "+FormPacientes2.IDPaciente+"";
+            OleDbCommand comando = new OleDbCommand(consulta, conexion);
+            OleDbDataAdapter data = new OleDbDataAdapter(comando);
+
+            data.Fill(ds, "idusuario");
+            int ultimo = Convert.ToInt32(ds.Tables["idusuario"].Rows.Count);
+            if (ultimo > 0)
+            {
+                FormGruposAmigos form = new FormGruposAmigos();
+                form.Show();
+                this.Hide();
+            }
+            else
+            {
+                FormCrearGruposAmigos form = new FormCrearGruposAmigos();
+                form.Show();
+                this.Hide();
+            }
         }
     }
 }
