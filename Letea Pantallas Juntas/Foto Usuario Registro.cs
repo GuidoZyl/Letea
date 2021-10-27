@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.OleDb;
 using System.Drawing.Imaging;
 using System.IO;
+using System.Drawing.Drawing2D;
 
 namespace Pantalla_Contraseña
 {
@@ -77,6 +78,38 @@ namespace Pantalla_Contraseña
                 FormPacientes2 form = new FormPacientes2();
                 form.Show();
                 this.Hide();
+            }
+        }
+
+        private void btn_agregarfoto_Paint(object sender, PaintEventArgs pe)
+        {
+            int borderSize = 6;
+            Color borderColor = Color.CornflowerBlue;
+            Color borderColor2 = Color.HotPink;
+            DashStyle borderLineStyle = DashStyle.Solid;
+            DashCap borderCapStyle = DashCap.Flat;
+            float gradientAngle = 50F;
+
+            base.OnPaint(pe);
+            var graph = pe.Graphics;
+            var rectContourSmooth = Rectangle.Inflate(btn_agregarfoto.ClientRectangle, 0, 0);
+            var rectBorder = Rectangle.Inflate(rectContourSmooth, -borderSize, -borderSize);
+            var smoothSize = borderSize > 0 ? borderSize * 3 : 1;
+            using (var borderGColor = new LinearGradientBrush(rectBorder, borderColor, borderColor2, gradientAngle))
+            using (var pathRegion = new GraphicsPath())
+            using (var penSmooth = new Pen(btn_agregarfoto.BackColor, smoothSize))
+            using (var penBorder = new Pen(borderGColor, borderSize))
+            {
+                graph.SmoothingMode = SmoothingMode.AntiAlias;
+                penBorder.DashStyle = borderLineStyle;
+                penBorder.DashCap = borderCapStyle;
+                pathRegion.AddEllipse(rectContourSmooth);
+
+                btn_agregarfoto.Region = new Region(pathRegion);
+
+                graph.DrawEllipse(penSmooth, rectContourSmooth);
+                if (borderSize > 0)
+                    graph.DrawEllipse(penBorder, rectBorder);
             }
         }
     }   

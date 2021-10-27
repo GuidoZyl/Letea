@@ -48,13 +48,15 @@ namespace Pantalla_Contraseña
             this.btn_agregarfoto.BackColor = System.Drawing.Color.Transparent;
             this.btn_agregarfoto.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.que_lindo_boton;
             this.btn_agregarfoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_agregarfoto.Location = new System.Drawing.Point(760, 299);
+            this.btn_agregarfoto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_agregarfoto.Location = new System.Drawing.Point(755, 299);
             this.btn_agregarfoto.Name = "btn_agregarfoto";
             this.btn_agregarfoto.Size = new System.Drawing.Size(400, 400);
             this.btn_agregarfoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_agregarfoto.TabIndex = 0;
             this.btn_agregarfoto.TabStop = false;
             this.btn_agregarfoto.Click += new System.EventHandler(this.btn_AgregarFoto_Click);
+            this.btn_agregarfoto.Paint += new System.Windows.Forms.PaintEventHandler(this.btn_agregarfoto_Paint);
             // 
             // pic_ParteSuperior
             // 
@@ -72,9 +74,9 @@ namespace Pantalla_Contraseña
             this.txt_Nom.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Nom.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Nom.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txt_Nom.Location = new System.Drawing.Point(711, 750);
+            this.txt_Nom.Location = new System.Drawing.Point(713, 750);
             this.txt_Nom.Name = "txt_Nom";
-            this.txt_Nom.Size = new System.Drawing.Size(498, 38);
+            this.txt_Nom.Size = new System.Drawing.Size(495, 38);
             this.txt_Nom.TabIndex = 0;
             this.txt_Nom.TabStop = false;
             this.txt_Nom.Text = "Introduzca el nombre del grupo";
@@ -109,7 +111,7 @@ namespace Pantalla_Contraseña
             this.lbl_IngreseNombre.BackColor = System.Drawing.Color.Transparent;
             this.lbl_IngreseNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_IngreseNombre.ForeColor = System.Drawing.Color.Red;
-            this.lbl_IngreseNombre.Location = new System.Drawing.Point(755, 816);
+            this.lbl_IngreseNombre.Location = new System.Drawing.Point(746, 806);
             this.lbl_IngreseNombre.Name = "lbl_IngreseNombre";
             this.lbl_IngreseNombre.Size = new System.Drawing.Size(418, 54);
             this.lbl_IngreseNombre.TabIndex = 15;

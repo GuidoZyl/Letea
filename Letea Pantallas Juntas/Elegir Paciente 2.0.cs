@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Drawing.Drawing2D;
 
 namespace Pantalla_Contraseña
 {
@@ -144,7 +145,7 @@ namespace Pantalla_Contraseña
 
         private void btn_Der_Click(object sender, EventArgs e)
         {
-            
+
             int z = 0;
 
             if (lbl_Nom4.Text != null)
@@ -256,9 +257,9 @@ namespace Pantalla_Contraseña
         {
 
             if (lbl_Nom1.Text != nombrecompleto[0, 0] || lbl_Nom1.Visible == false)
-            {               
+            {
                 for (int i = 4; i <= ultimo; i++)
-                {                    
+                {
                     if ((lbl_Nom1.Text == nombrecompleto[i, 0] && lbl_Nom1.Visible == true) || (lbl_Nom5.Text == nombrecompleto[i, 0] && lbl_Nom5.Visible == true) || (lbl_Nom6.Text == nombrecompleto[i, 0] && lbl_Nom6.Visible == true))
                     {
                         lbl_Nom1.Visible = true;
@@ -285,7 +286,7 @@ namespace Pantalla_Contraseña
 
                         btn_Der.Visible = true;
 
-                        if (lbl_Nom1.Text == nombrecompleto[0,0])
+                        if (lbl_Nom1.Text == nombrecompleto[0, 0])
                         {
                             btn_Izq.Visible = false;
                         }
@@ -321,6 +322,262 @@ namespace Pantalla_Contraseña
             FormPantallaLogIn form = new FormPantallaLogIn();
             form.Show();
             this.Hide();
+        }
+
+        private void pic_Nom1_Paint(object sender, PaintEventArgs pe)
+        {
+            int borderSize = 6;
+            Color borderColor = Color.CornflowerBlue;
+            Color borderColor2 = Color.HotPink;
+            DashStyle borderLineStyle = DashStyle.Solid;
+            DashCap borderCapStyle = DashCap.Flat;
+            float gradientAngle = 50F;
+
+            base.OnPaint(pe);
+            var graph = pe.Graphics;
+            var rectContourSmooth = Rectangle.Inflate(pic_Nom1.ClientRectangle, -1, -1);
+            var rectBorder = Rectangle.Inflate(rectContourSmooth, -borderSize, -borderSize);
+            var smoothSize = borderSize > 0 ? borderSize * 3 : 1;
+            using (var borderGColor = new LinearGradientBrush(rectBorder, borderColor, borderColor2, gradientAngle))
+            using (var pathRegion = new GraphicsPath())
+            using (var penSmooth = new Pen(pic_Nom1.BackColor, smoothSize))
+            using (var penBorder = new Pen(borderGColor, borderSize))
+            {
+                graph.SmoothingMode = SmoothingMode.AntiAlias;
+                penBorder.DashStyle = borderLineStyle;
+                penBorder.DashCap = borderCapStyle;
+                pathRegion.AddEllipse(rectContourSmooth);
+
+                pic_Nom1.Region = new Region(pathRegion);
+
+                graph.DrawEllipse(penSmooth, rectContourSmooth);
+                if (borderSize > 0)
+                    graph.DrawEllipse(penBorder, rectBorder);
+            }
+        }
+
+        private void pic_Nom2_Paint(object sender, PaintEventArgs pe)
+        {
+            int borderSize = 6;
+            Color borderColor = Color.CornflowerBlue;
+            Color borderColor2 = Color.HotPink;
+            DashStyle borderLineStyle = DashStyle.Solid;
+            DashCap borderCapStyle = DashCap.Flat;
+            float gradientAngle = 50F;
+
+            base.OnPaint(pe);
+            var graph = pe.Graphics;
+            var rectContourSmooth = Rectangle.Inflate(pic_Nom2.ClientRectangle, -1, -1);
+            var rectBorder = Rectangle.Inflate(rectContourSmooth, -borderSize, -borderSize);
+            var smoothSize = borderSize > 0 ? borderSize * 3 : 1;
+            using (var borderGColor = new LinearGradientBrush(rectBorder, borderColor, borderColor2, gradientAngle))
+            using (var pathRegion = new GraphicsPath())
+            using (var penSmooth = new Pen(pic_Nom2.BackColor, smoothSize))
+            using (var penBorder = new Pen(borderGColor, borderSize))
+            {
+                graph.SmoothingMode = SmoothingMode.AntiAlias;
+                penBorder.DashStyle = borderLineStyle;
+                penBorder.DashCap = borderCapStyle;
+                pathRegion.AddEllipse(rectContourSmooth);
+
+                pic_Nom2.Region = new Region(pathRegion);
+
+                graph.DrawEllipse(penSmooth, rectContourSmooth);
+                if (borderSize > 0)
+                    graph.DrawEllipse(penBorder, rectBorder);
+            }
+        }
+
+        private void pic_Nom3_Paint(object sender, PaintEventArgs pe)
+        {
+            int borderSize = 6;
+            Color borderColor = Color.CornflowerBlue;
+            Color borderColor2 = Color.HotPink;
+            DashStyle borderLineStyle = DashStyle.Solid;
+            DashCap borderCapStyle = DashCap.Flat;
+            float gradientAngle = 50F;
+
+            base.OnPaint(pe);
+            var graph = pe.Graphics;
+            var rectContourSmooth = Rectangle.Inflate(pic_Nom3.ClientRectangle, -1, -1);
+            var rectBorder = Rectangle.Inflate(rectContourSmooth, -borderSize, -borderSize);
+            var smoothSize = borderSize > 0 ? borderSize * 3 : 1;
+            using (var borderGColor = new LinearGradientBrush(rectBorder, borderColor, borderColor2, gradientAngle))
+            using (var pathRegion = new GraphicsPath())
+            using (var penSmooth = new Pen(pic_Nom3.BackColor, smoothSize))
+            using (var penBorder = new Pen(borderGColor, borderSize))
+            {
+                graph.SmoothingMode = SmoothingMode.AntiAlias;
+                penBorder.DashStyle = borderLineStyle;
+                penBorder.DashCap = borderCapStyle;
+                pathRegion.AddEllipse(rectContourSmooth);
+
+                pic_Nom3.Region = new Region(pathRegion);
+
+                graph.DrawEllipse(penSmooth, rectContourSmooth);
+                if (borderSize > 0)
+                    graph.DrawEllipse(penBorder, rectBorder);
+            }
+        }
+
+        private void pic_Nom4_Paint(object sender, PaintEventArgs pe)
+        {
+            int borderSize = 6;
+            Color borderColor = Color.CornflowerBlue;
+            Color borderColor2 = Color.HotPink;
+            DashStyle borderLineStyle = DashStyle.Solid;
+            DashCap borderCapStyle = DashCap.Flat;
+            float gradientAngle = 50F;
+
+            base.OnPaint(pe);
+            var graph = pe.Graphics;
+            var rectContourSmooth = Rectangle.Inflate(pic_Nom4.ClientRectangle, -1, -1);
+            var rectBorder = Rectangle.Inflate(rectContourSmooth, -borderSize, -borderSize);
+            var smoothSize = borderSize > 0 ? borderSize * 3 : 1;
+            using (var borderGColor = new LinearGradientBrush(rectBorder, borderColor, borderColor2, gradientAngle))
+            using (var pathRegion = new GraphicsPath())
+            using (var penSmooth = new Pen(pic_Nom4.BackColor, smoothSize))
+            using (var penBorder = new Pen(borderGColor, borderSize))
+            {
+                graph.SmoothingMode = SmoothingMode.AntiAlias;
+                penBorder.DashStyle = borderLineStyle;
+                penBorder.DashCap = borderCapStyle;
+                pathRegion.AddEllipse(rectContourSmooth);
+
+                pic_Nom4.Region = new Region(pathRegion);
+
+                graph.DrawEllipse(penSmooth, rectContourSmooth);
+                if (borderSize > 0)
+                    graph.DrawEllipse(penBorder, rectBorder);
+            }
+        }
+
+        private void pic_Nom5_Paint(object sender, PaintEventArgs pe)
+        {
+            int borderSize = 6;
+            Color borderColor = Color.CornflowerBlue;
+            Color borderColor2 = Color.HotPink;
+            DashStyle borderLineStyle = DashStyle.Solid;
+            DashCap borderCapStyle = DashCap.Flat;
+            float gradientAngle = 50F;
+
+            base.OnPaint(pe);
+            var graph = pe.Graphics;
+            var rectContourSmooth = Rectangle.Inflate(pic_Nom5.ClientRectangle, -1, -1);
+            var rectBorder = Rectangle.Inflate(rectContourSmooth, -borderSize, -borderSize);
+            var smoothSize = borderSize > 0 ? borderSize * 3 : 1;
+            using (var borderGColor = new LinearGradientBrush(rectBorder, borderColor, borderColor2, gradientAngle))
+            using (var pathRegion = new GraphicsPath())
+            using (var penSmooth = new Pen(pic_Nom5.BackColor, smoothSize))
+            using (var penBorder = new Pen(borderGColor, borderSize))
+            {
+                graph.SmoothingMode = SmoothingMode.AntiAlias;
+                penBorder.DashStyle = borderLineStyle;
+                penBorder.DashCap = borderCapStyle;
+                pathRegion.AddEllipse(rectContourSmooth);
+
+                pic_Nom5.Region = new Region(pathRegion);
+
+                graph.DrawEllipse(penSmooth, rectContourSmooth);
+                if (borderSize > 0)
+                    graph.DrawEllipse(penBorder, rectBorder);
+            }
+        }
+
+        private void pic_Nom6_Paint(object sender, PaintEventArgs pe)
+        {
+            int borderSize = 6;
+            Color borderColor = Color.CornflowerBlue;
+            Color borderColor2 = Color.HotPink;
+            DashStyle borderLineStyle = DashStyle.Solid;
+            DashCap borderCapStyle = DashCap.Flat;
+            float gradientAngle = 50F;
+
+            base.OnPaint(pe);
+            var graph = pe.Graphics;
+            var rectContourSmooth = Rectangle.Inflate(pic_Nom6.ClientRectangle, -1, -1);
+            var rectBorder = Rectangle.Inflate(rectContourSmooth, -borderSize, -borderSize);
+            var smoothSize = borderSize > 0 ? borderSize * 3 : 1;
+            using (var borderGColor = new LinearGradientBrush(rectBorder, borderColor, borderColor2, gradientAngle))
+            using (var pathRegion = new GraphicsPath())
+            using (var penSmooth = new Pen(pic_Nom6.BackColor, smoothSize))
+            using (var penBorder = new Pen(borderGColor, borderSize))
+            {
+                graph.SmoothingMode = SmoothingMode.AntiAlias;
+                penBorder.DashStyle = borderLineStyle;
+                penBorder.DashCap = borderCapStyle;
+                pathRegion.AddEllipse(rectContourSmooth);
+
+                pic_Nom6.Region = new Region(pathRegion);
+
+                graph.DrawEllipse(penSmooth, rectContourSmooth);
+                if (borderSize > 0)
+                    graph.DrawEllipse(penBorder, rectBorder);
+            }
+        }
+
+        private void pic_Nom7_Paint(object sender, PaintEventArgs pe)
+        {
+            int borderSize = 6;
+            Color borderColor = Color.CornflowerBlue;
+            Color borderColor2 = Color.HotPink;
+            DashStyle borderLineStyle = DashStyle.Solid;
+            DashCap borderCapStyle = DashCap.Flat;
+            float gradientAngle = 50F;
+
+            base.OnPaint(pe);
+            var graph = pe.Graphics;
+            var rectContourSmooth = Rectangle.Inflate(pic_Nom7.ClientRectangle, -1, -1);
+            var rectBorder = Rectangle.Inflate(rectContourSmooth, -borderSize, -borderSize);
+            var smoothSize = borderSize > 0 ? borderSize * 3 : 1;
+            using (var borderGColor = new LinearGradientBrush(rectBorder, borderColor, borderColor2, gradientAngle))
+            using (var pathRegion = new GraphicsPath())
+            using (var penSmooth = new Pen(pic_Nom7.BackColor, smoothSize))
+            using (var penBorder = new Pen(borderGColor, borderSize))
+            {
+                graph.SmoothingMode = SmoothingMode.AntiAlias;
+                penBorder.DashStyle = borderLineStyle;
+                penBorder.DashCap = borderCapStyle;
+                pathRegion.AddEllipse(rectContourSmooth);
+
+                pic_Nom7.Region = new Region(pathRegion);
+
+                graph.DrawEllipse(penSmooth, rectContourSmooth);
+                if (borderSize > 0)
+                    graph.DrawEllipse(penBorder, rectBorder);
+            }
+        }
+
+        private void pic_Nom8_Paint(object sender, PaintEventArgs pe)
+        {
+            int borderSize = 6;
+            Color borderColor = Color.CornflowerBlue;
+            Color borderColor2 = Color.HotPink;
+            DashStyle borderLineStyle = DashStyle.Solid;
+            DashCap borderCapStyle = DashCap.Flat;
+            float gradientAngle = 50F;
+
+            base.OnPaint(pe);
+            var graph = pe.Graphics;
+            var rectContourSmooth = Rectangle.Inflate(pic_Nom8.ClientRectangle, -1, -1);
+            var rectBorder = Rectangle.Inflate(rectContourSmooth, -borderSize + 2, -borderSize + 2);
+            var smoothSize = borderSize > 0 ? borderSize * 3 : 1;
+            using (var borderGColor = new LinearGradientBrush(rectBorder, borderColor, borderColor2, gradientAngle))
+            using (var pathRegion = new GraphicsPath())
+            using (var penSmooth = new Pen(pic_Nom8.BackColor, smoothSize))
+            using (var penBorder = new Pen(borderGColor, borderSize))
+            {
+                graph.SmoothingMode = SmoothingMode.AntiAlias;
+                penBorder.DashStyle = borderLineStyle;
+                penBorder.DashCap = borderCapStyle;
+                pathRegion.AddEllipse(rectContourSmooth);
+
+                pic_Nom8.Region = new Region(pathRegion);
+
+                graph.DrawEllipse(penSmooth, rectContourSmooth);
+                if (borderSize > 0)
+                    graph.DrawEllipse(penBorder, rectBorder);
+            }
         }
     }
 }

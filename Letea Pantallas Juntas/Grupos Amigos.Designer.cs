@@ -71,6 +71,7 @@ namespace Pantalla_Contraseña
             this.pic_Nom1.Size = new System.Drawing.Size(300, 300);
             this.pic_Nom1.TabIndex = 9;
             this.pic_Nom1.TabStop = false;
+            this.pic_Nom1.Paint += new System.Windows.Forms.PaintEventHandler(this.pic_Nom1_Paint);
             // 
             // pic_Nom2
             // 
@@ -80,6 +81,7 @@ namespace Pantalla_Contraseña
             this.pic_Nom2.Size = new System.Drawing.Size(300, 300);
             this.pic_Nom2.TabIndex = 10;
             this.pic_Nom2.TabStop = false;
+            this.pic_Nom2.Paint += new System.Windows.Forms.PaintEventHandler(this.pic_Nom2_Paint);
             // 
             // pic_Nom3
             // 
@@ -89,6 +91,7 @@ namespace Pantalla_Contraseña
             this.pic_Nom3.Size = new System.Drawing.Size(300, 300);
             this.pic_Nom3.TabIndex = 11;
             this.pic_Nom3.TabStop = false;
+            this.pic_Nom3.Paint += new System.Windows.Forms.PaintEventHandler(this.pic_Nom3_Paint);
             // 
             // pic_Nom4
             // 
@@ -98,6 +101,7 @@ namespace Pantalla_Contraseña
             this.pic_Nom4.Size = new System.Drawing.Size(300, 300);
             this.pic_Nom4.TabIndex = 12;
             this.pic_Nom4.TabStop = false;
+            this.pic_Nom4.Paint += new System.Windows.Forms.PaintEventHandler(this.pic_Nom4_Paint);
             // 
             // pic_Nom5
             // 
@@ -107,6 +111,7 @@ namespace Pantalla_Contraseña
             this.pic_Nom5.Size = new System.Drawing.Size(300, 300);
             this.pic_Nom5.TabIndex = 13;
             this.pic_Nom5.TabStop = false;
+            this.pic_Nom5.Paint += new System.Windows.Forms.PaintEventHandler(this.pic_Nom5_Paint);
             // 
             // pic_Nom6
             // 
@@ -116,6 +121,7 @@ namespace Pantalla_Contraseña
             this.pic_Nom6.Size = new System.Drawing.Size(300, 300);
             this.pic_Nom6.TabIndex = 14;
             this.pic_Nom6.TabStop = false;
+            this.pic_Nom6.Paint += new System.Windows.Forms.PaintEventHandler(this.pic_Nom6_Paint);
             // 
             // pic_Nom7
             // 
@@ -125,6 +131,7 @@ namespace Pantalla_Contraseña
             this.pic_Nom7.Size = new System.Drawing.Size(300, 300);
             this.pic_Nom7.TabIndex = 15;
             this.pic_Nom7.TabStop = false;
+            this.pic_Nom7.Paint += new System.Windows.Forms.PaintEventHandler(this.pic_Nom7_Paint);
             // 
             // pic_Nom8
             // 
@@ -134,6 +141,7 @@ namespace Pantalla_Contraseña
             this.pic_Nom8.Size = new System.Drawing.Size(300, 300);
             this.pic_Nom8.TabIndex = 16;
             this.pic_Nom8.TabStop = false;
+            this.pic_Nom8.Paint += new System.Windows.Forms.PaintEventHandler(this.pic_Nom8_Paint);
             // 
             // lbl_Nom1
             // 
@@ -251,7 +259,7 @@ namespace Pantalla_Contraseña
             this.btn_Crear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Crear.Location = new System.Drawing.Point(1477, 21);
             this.btn_Crear.Name = "btn_Crear";
-            this.btn_Crear.Size = new System.Drawing.Size(426, 96);
+            this.btn_Crear.Size = new System.Drawing.Size(426, 102);
             this.btn_Crear.TabIndex = 26;
             this.btn_Crear.TabStop = false;
             this.btn_Crear.Visible = false;
@@ -308,6 +316,7 @@ namespace Pantalla_Contraseña
             this.Controls.Add(this.pic_Nom1);
             this.Name = "FormGruposAmigos";
             this.Text = "FormGruposAmigos";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormGruposAmigos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pic_Nom1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Nom2)).EndInit();

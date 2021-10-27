@@ -29,7 +29,7 @@ namespace Pantalla_Contraseña
             conexion.Open();
         }
 
-  
+
 
         private void click_crearfoto(object sender, EventArgs e)
         {
@@ -37,7 +37,7 @@ namespace Pantalla_Contraseña
             {
                 btn_agregarfoto.Image = pic_PerfilDefault.Image;
             }
-            
+
             string sql = "UPDATE Admin set Foto = (@foto)";
             MemoryStream ms = new MemoryStream();
             btn_agregarfoto.Image.Save(ms, ImageFormat.Jpeg);
@@ -75,11 +75,43 @@ namespace Pantalla_Contraseña
             }
         }
 
-        private void btn_agregarfoto_Paint(object sender, PaintEventArgs e)
+        private void btn_agregarfoto_Paint(object sender, PaintEventArgs pe)
         {
-            GraphicsPath grpath = new GraphicsPath();
-            grpath.AddEllipse(0, 0, 400, 400);
-            btn_agregarfoto.Region = new System.Drawing.Region(grpath);
+
+            /*GraphicsPath grpath = new GraphicsPath();
+            grpath.AddEllipse(0, 8, 390, 390);
+            btn_agregarfoto.Region = new Region(grpath);*/
+
+            int borderSize = 5;
+            Color borderColor = Color.RoyalBlue;
+            Color borderColor2 = Color.HotPink;
+            DashStyle borderLineStyle = DashStyle.Solid;
+            DashCap borderCapStyle = DashCap.Flat;
+            float gradientAngle = 50F;
+
+            base.OnPaint(pe);
+            //Fields
+            var graph = pe.Graphics;
+            var rectContourSmooth = Rectangle.Inflate(btn_agregarfoto.ClientRectangle, -1, -1);
+            var rectBorder = Rectangle.Inflate(rectContourSmooth, -borderSize, -borderSize);
+            var smoothSize = borderSize > 0 ? borderSize * 3 : 1;
+            using (var borderGColor = new LinearGradientBrush(rectBorder, borderColor, borderColor2, gradientAngle))
+            using (var pathRegion = new GraphicsPath())
+            using (Pen penSmooth = new Pen(btn_agregarfoto.BackColor, smoothSize))
+            using (var penBorder = new Pen(borderGColor, borderSize))
+            {
+                graph.SmoothingMode = SmoothingMode.AntiAlias;
+                penBorder.DashStyle = borderLineStyle;
+                penBorder.DashCap = borderCapStyle;
+                pathRegion.AddEllipse(rectContourSmooth);
+                //Set rounded region 
+                btn_agregarfoto.Region = new Region(pathRegion);
+
+                //Drawing
+                graph.DrawEllipse(penSmooth, rectContourSmooth);//Draw contour smoothing
+                if (borderSize > 0) //Draw border
+                    graph.DrawEllipse(penBorder, rectBorder);
+            }
         }
     }
 }
