@@ -75,6 +75,7 @@
             this.lbl_NomGrupo.TabIndex = 22;
             this.lbl_NomGrupo.Text = "lbl_NomGrupo";
             this.lbl_NomGrupo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_NomGrupo.Click += new System.EventHandler(this.lbl_NomGrupo_Click);
             // 
             // pic_GrupoAmigo
             // 

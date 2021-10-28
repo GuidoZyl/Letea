@@ -15,6 +15,8 @@ namespace Pantalla_Contraseña
     {
         OleDbConnection conexion = new OleDbConnection();
         DataSet ds = new DataSet();
+        public static int ultimo;
+        string[,] InfoAmigo = new string[ultimo + 1, 4];
         public FormGrupo()
         {
             InitializeComponent();
@@ -43,6 +45,16 @@ namespace Pantalla_Contraseña
 
             data.Fill(ds, "Nombregrupo");
             lbl_NomGrupo.Text = ds.Tables["Nombregrupo"].Rows[0][0].ToString();
+            string consulta1 = "SELECT [Nombre],[Apellido],[Fecha de Nacimiento],[Lugar Donde la conoció] FROM Amigos WHERE IdGruposDeAmigos = " + FormGruposAmigos.IDGrupo + "";
+            OleDbCommand comando1 = new OleDbCommand(consulta, conexion);
+            OleDbDataAdapter data1 = new OleDbDataAdapter(comando1);
+            data1.Fill(ds, "Amigo");
+            ultimo = Convert.ToInt32(ds.Tables["Amigo"].Rows.Count - 1);
+        }
+
+        private void lbl_NomGrupo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
