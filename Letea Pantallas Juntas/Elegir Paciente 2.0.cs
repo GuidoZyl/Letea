@@ -71,15 +71,20 @@ namespace Pantalla_Contraseña
                 nombrecompleto[canti, 0] = ds.Tables["NombreCompleto"].Rows[canti][0].ToString();
             }
 
-            /*string sql2 = "Select Foto from Usuario";
+            string sql2 = "Select Foto from Usuario";
             OleDbCommand comando2 = new OleDbCommand(sql2, conexion);
             OleDbDataAdapter data2 = new OleDbDataAdapter(comando2);
 
             data2.Fill(ds, "Fotos");
             foto = new byte[ultimo + 1, 1];
-            for (int canti = 0; canti <= ultimo; canti++)
+
+            MemoryStream[] ms = new MemoryStream[ultimo + 1];
+
+
+
+            /*for (int canti = 0; canti <= ultimo; canti++)
             {
-                foto[canti, 0] = ds.Tables["Fotos"].Rows[canti][0];
+                ms[canti] = ds.Tables["Fotos"].Rows[0]["Foto"];
             }*/
 
             if (ultimo == 0)
@@ -89,9 +94,9 @@ namespace Pantalla_Contraseña
 
                 lbl_Nom5.Text = nombrecompleto[0, 0];
 
-                /*MemoryStream ms = new MemoryStream(foto[0, 0]);
-                Bitmap bm = new Bitmap(ms);
-                pic_Nom5.Image = bm;*/
+                
+                //Bitmap bm = new Bitmap(ms[0]);
+                //pic_Nom5.Image = bm;
             }
 
             else if (ultimo == 1)
@@ -335,8 +340,8 @@ namespace Pantalla_Contraseña
 
             base.OnPaint(pe);
             var graph = pe.Graphics;
-            var rectContourSmooth = Rectangle.Inflate(pic_Nom1.ClientRectangle, -1, -1);
-            var rectBorder = Rectangle.Inflate(rectContourSmooth, -borderSize, -borderSize);
+            var rectContourSmooth = Rectangle.Inflate(pic_Nom1.ClientRectangle, 0, 0);
+            var rectBorder = Rectangle.Inflate(rectContourSmooth, -borderSize + 3, -borderSize + 3);
             var smoothSize = borderSize > 0 ? borderSize * 3 : 1;
             using (var borderGColor = new LinearGradientBrush(rectBorder, borderColor, borderColor2, gradientAngle))
             using (var pathRegion = new GraphicsPath())
@@ -367,8 +372,8 @@ namespace Pantalla_Contraseña
 
             base.OnPaint(pe);
             var graph = pe.Graphics;
-            var rectContourSmooth = Rectangle.Inflate(pic_Nom2.ClientRectangle, -1, -1);
-            var rectBorder = Rectangle.Inflate(rectContourSmooth, -borderSize, -borderSize);
+            var rectContourSmooth = Rectangle.Inflate(pic_Nom2.ClientRectangle, 0, 0);
+            var rectBorder = Rectangle.Inflate(rectContourSmooth, -borderSize + 3, -borderSize + 3);
             var smoothSize = borderSize > 0 ? borderSize * 3 : 1;
             using (var borderGColor = new LinearGradientBrush(rectBorder, borderColor, borderColor2, gradientAngle))
             using (var pathRegion = new GraphicsPath())
@@ -399,8 +404,8 @@ namespace Pantalla_Contraseña
 
             base.OnPaint(pe);
             var graph = pe.Graphics;
-            var rectContourSmooth = Rectangle.Inflate(pic_Nom3.ClientRectangle, -1, -1);
-            var rectBorder = Rectangle.Inflate(rectContourSmooth, -borderSize, -borderSize);
+            var rectContourSmooth = Rectangle.Inflate(pic_Nom3.ClientRectangle, 0, 0);
+            var rectBorder = Rectangle.Inflate(rectContourSmooth, -borderSize + 3, -borderSize + 3);
             var smoothSize = borderSize > 0 ? borderSize * 3 : 1;
             using (var borderGColor = new LinearGradientBrush(rectBorder, borderColor, borderColor2, gradientAngle))
             using (var pathRegion = new GraphicsPath())
@@ -431,8 +436,8 @@ namespace Pantalla_Contraseña
 
             base.OnPaint(pe);
             var graph = pe.Graphics;
-            var rectContourSmooth = Rectangle.Inflate(pic_Nom4.ClientRectangle, -1, -1);
-            var rectBorder = Rectangle.Inflate(rectContourSmooth, -borderSize, -borderSize);
+            var rectContourSmooth = Rectangle.Inflate(pic_Nom4.ClientRectangle, 0, 0);
+            var rectBorder = Rectangle.Inflate(rectContourSmooth, -borderSize + 3, -borderSize + 3);
             var smoothSize = borderSize > 0 ? borderSize * 3 : 1;
             using (var borderGColor = new LinearGradientBrush(rectBorder, borderColor, borderColor2, gradientAngle))
             using (var pathRegion = new GraphicsPath())
@@ -463,8 +468,8 @@ namespace Pantalla_Contraseña
 
             base.OnPaint(pe);
             var graph = pe.Graphics;
-            var rectContourSmooth = Rectangle.Inflate(pic_Nom5.ClientRectangle, -1, -1);
-            var rectBorder = Rectangle.Inflate(rectContourSmooth, -borderSize, -borderSize);
+            var rectContourSmooth = Rectangle.Inflate(pic_Nom5.ClientRectangle, 0, 0);
+            var rectBorder = Rectangle.Inflate(rectContourSmooth, -borderSize + 3, -borderSize + 3);
             var smoothSize = borderSize > 0 ? borderSize * 3 : 1;
             using (var borderGColor = new LinearGradientBrush(rectBorder, borderColor, borderColor2, gradientAngle))
             using (var pathRegion = new GraphicsPath())
@@ -495,8 +500,8 @@ namespace Pantalla_Contraseña
 
             base.OnPaint(pe);
             var graph = pe.Graphics;
-            var rectContourSmooth = Rectangle.Inflate(pic_Nom6.ClientRectangle, -1, -1);
-            var rectBorder = Rectangle.Inflate(rectContourSmooth, -borderSize, -borderSize);
+            var rectContourSmooth = Rectangle.Inflate(pic_Nom6.ClientRectangle, 0, 0);
+            var rectBorder = Rectangle.Inflate(rectContourSmooth, -borderSize + 3, -borderSize + 3);
             var smoothSize = borderSize > 0 ? borderSize * 3 : 1;
             using (var borderGColor = new LinearGradientBrush(rectBorder, borderColor, borderColor2, gradientAngle))
             using (var pathRegion = new GraphicsPath())
@@ -527,8 +532,8 @@ namespace Pantalla_Contraseña
 
             base.OnPaint(pe);
             var graph = pe.Graphics;
-            var rectContourSmooth = Rectangle.Inflate(pic_Nom7.ClientRectangle, -1, -1);
-            var rectBorder = Rectangle.Inflate(rectContourSmooth, -borderSize, -borderSize);
+            var rectContourSmooth = Rectangle.Inflate(pic_Nom7.ClientRectangle, 0, 0);
+            var rectBorder = Rectangle.Inflate(rectContourSmooth, -borderSize + 3, -borderSize + 3);
             var smoothSize = borderSize > 0 ? borderSize * 3 : 1;
             using (var borderGColor = new LinearGradientBrush(rectBorder, borderColor, borderColor2, gradientAngle))
             using (var pathRegion = new GraphicsPath())
@@ -559,8 +564,8 @@ namespace Pantalla_Contraseña
 
             base.OnPaint(pe);
             var graph = pe.Graphics;
-            var rectContourSmooth = Rectangle.Inflate(pic_Nom8.ClientRectangle, -1, -1);
-            var rectBorder = Rectangle.Inflate(rectContourSmooth, -borderSize + 2, -borderSize + 2);
+            var rectContourSmooth = Rectangle.Inflate(pic_Nom8.ClientRectangle, 0, 0);
+            var rectBorder = Rectangle.Inflate(rectContourSmooth, -borderSize + 3, -borderSize + 3);
             var smoothSize = borderSize > 0 ? borderSize * 3 : 1;
             using (var borderGColor = new LinearGradientBrush(rectBorder, borderColor, borderColor2, gradientAngle))
             using (var pathRegion = new GraphicsPath())

@@ -13,7 +13,7 @@ namespace Pantalla_Contraseña.Componentes
     class FormRedondeado : Component
     {
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-        private static extern IntPtr CreateRoundRectRgn
+        public static extern IntPtr CreateRoundRectRgn
           (
              int nLeftRect,
              int nTopRect,

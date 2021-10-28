@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using Pantalla_Contraseña.Componentes;
 
 namespace Pantalla_Contraseña
 {
@@ -16,7 +17,7 @@ namespace Pantalla_Contraseña
         OleDbConnection conexion = new OleDbConnection();
         DataSet ds = new DataSet();
         public static int ultimo;
-        string[,] InfoAmigo = new string[ultimo + 1, 4];
+
         public FormGrupo()
         {
             InitializeComponent();
@@ -37,14 +38,20 @@ namespace Pantalla_Contraseña
 
         private void FormGrupo_Load(object sender, EventArgs e)
         {
+            if (FormPantallaLogIn.ModoAdmin)
+            {
+                btn_AgregarAmigo.Visible = true;
+                btn_Config.Visible = true;
+            }
+
             conexion.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=.\Base de Datos 4.accdb;";
             conexion.Open();
-            string consulta = "SELECT Nombre FROM GruposAmigos WHERE Id = " + FormGruposAmigos.IDGrupo + "";
+            string consulta = "SELECT Nombre FROM GruposdeAmigos WHERE Id = " + FormGruposAmigos.IDGrupo + "";
             OleDbCommand comando = new OleDbCommand(consulta, conexion);
             OleDbDataAdapter data = new OleDbDataAdapter(comando);
 
             data.Fill(ds, "Nombregrupo");
-            lbl_NomGrupo.Text = ds.Tables["Nombregrupo"].Rows[0][0].ToString();
+            lbl_NomGrupo.Text = ds.Tables["Nombregrupo"].Rows[0]["Nombre"].ToString();
             string consulta1 = "SELECT [Nombre],[Apellido],[Fecha de Nacimiento],[Lugar Donde la conoció] FROM Amigos WHERE IdGruposDeAmigos = " + FormGruposAmigos.IDGrupo + "";
             OleDbCommand comando1 = new OleDbCommand(consulta, conexion);
             OleDbDataAdapter data1 = new OleDbDataAdapter(comando1);

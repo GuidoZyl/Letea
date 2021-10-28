@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
 using System.IO;
+using System.Drawing.Drawing2D;
 
 namespace Pantalla_Contraseña
 {
@@ -98,6 +99,38 @@ namespace Pantalla_Contraseña
         private void btn_Salir_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void pic_Administrador_Paint(object sender, PaintEventArgs pe)
+        {
+            int borderSize = 6;
+            Color borderColor = Color.CornflowerBlue;
+            Color borderColor2 = Color.HotPink;
+            DashStyle borderLineStyle = DashStyle.Solid;
+            DashCap borderCapStyle = DashCap.Flat;
+            float gradientAngle = 50F;
+
+            base.OnPaint(pe);
+            var graph = pe.Graphics;
+            var rectContourSmooth = Rectangle.Inflate(pic_Administrador.ClientRectangle, 0, 0);
+            var rectBorder = Rectangle.Inflate(rectContourSmooth, -borderSize + 3, -borderSize + 3);
+            var smoothSize = borderSize > 0 ? borderSize * 3 : 1;
+            using (var borderGColor = new LinearGradientBrush(rectBorder, borderColor, borderColor2, gradientAngle))
+            using (var pathRegion = new GraphicsPath())
+            using (var penSmooth = new Pen(pic_Administrador.BackColor, smoothSize))
+            using (var penBorder = new Pen(borderGColor, borderSize))
+            {
+                graph.SmoothingMode = SmoothingMode.AntiAlias;
+                penBorder.DashStyle = borderLineStyle;
+                penBorder.DashCap = borderCapStyle;
+                pathRegion.AddEllipse(rectContourSmooth);
+
+                pic_Administrador.Region = new Region(pathRegion);
+
+                graph.DrawEllipse(penSmooth, rectContourSmooth);
+                if (borderSize > 0)
+                    graph.DrawEllipse(penBorder, rectBorder);
+            }
         }
     }
 }

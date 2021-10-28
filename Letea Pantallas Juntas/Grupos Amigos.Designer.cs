@@ -81,6 +81,7 @@ namespace Pantalla_Contraseña
             this.pic_Nom2.Size = new System.Drawing.Size(300, 300);
             this.pic_Nom2.TabIndex = 10;
             this.pic_Nom2.TabStop = false;
+            this.pic_Nom2.Click += new System.EventHandler(this.lbl_Clicked);
             this.pic_Nom2.Paint += new System.Windows.Forms.PaintEventHandler(this.pic_Nom2_Paint);
             // 
             // pic_Nom3
@@ -154,6 +155,7 @@ namespace Pantalla_Contraseña
             this.lbl_Nom1.TabIndex = 17;
             this.lbl_Nom1.Text = "Luis Embon Strizzi";
             this.lbl_Nom1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Nom1.Click += new System.EventHandler(this.lbl_Clicked);
             // 
             // lbl_Nom2
             // 
@@ -166,6 +168,7 @@ namespace Pantalla_Contraseña
             this.lbl_Nom2.TabIndex = 18;
             this.lbl_Nom2.Text = "label1";
             this.lbl_Nom2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Nom2.Click += new System.EventHandler(this.lbl_Clicked);
             // 
             // lbl_Nom3
             // 
@@ -178,6 +181,7 @@ namespace Pantalla_Contraseña
             this.lbl_Nom3.TabIndex = 19;
             this.lbl_Nom3.Text = "label1";
             this.lbl_Nom3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Nom3.Click += new System.EventHandler(this.lbl_Clicked);
             // 
             // lbl_Nom4
             // 
@@ -190,6 +194,7 @@ namespace Pantalla_Contraseña
             this.lbl_Nom4.TabIndex = 20;
             this.lbl_Nom4.Text = "label1";
             this.lbl_Nom4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Nom4.Click += new System.EventHandler(this.lbl_Clicked);
             // 
             // lbl_Nom5
             // 
@@ -202,6 +207,7 @@ namespace Pantalla_Contraseña
             this.lbl_Nom5.TabIndex = 21;
             this.lbl_Nom5.Text = "label1";
             this.lbl_Nom5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Nom5.Click += new System.EventHandler(this.lbl_Clicked);
             // 
             // lbl_Nom6
             // 
@@ -214,6 +220,7 @@ namespace Pantalla_Contraseña
             this.lbl_Nom6.TabIndex = 22;
             this.lbl_Nom6.Text = "label1";
             this.lbl_Nom6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Nom6.Click += new System.EventHandler(this.lbl_Clicked);
             // 
             // lbl_Nom7
             // 
@@ -226,6 +233,7 @@ namespace Pantalla_Contraseña
             this.lbl_Nom7.TabIndex = 23;
             this.lbl_Nom7.Text = "label1";
             this.lbl_Nom7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Nom7.Click += new System.EventHandler(this.lbl_Clicked);
             // 
             // lbl_Nom8
             // 
@@ -238,6 +246,7 @@ namespace Pantalla_Contraseña
             this.lbl_Nom8.TabIndex = 24;
             this.lbl_Nom8.Text = "label1";
             this.lbl_Nom8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Nom8.Click += new System.EventHandler(this.lbl_Clicked);
             // 
             // btn_Volver
             // 
