@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
 using Pantalla_Contraseña.Componentes;
+using System.IO;
 
 namespace Pantalla_Contraseña
 {
@@ -57,9 +58,27 @@ namespace Pantalla_Contraseña
             OleDbDataAdapter data1 = new OleDbDataAdapter(comando1);
             data1.Fill(ds, "Amigo");
             ultimo = Convert.ToInt32(ds.Tables["Amigo"].Rows.Count - 1);
+            
+            
+            string sql = "SELECT Foto FROM GruposdeAmigos WHERE Id = "+FormGruposAmigos.IDGrupo+"";
+            OleDbCommand cmd = new OleDbCommand(sql, conexion);
+            OleDbDataAdapter data2 = new OleDbDataAdapter(cmd);
+
+            data2.Fill(ds, "fotogrupo");
+
+            MemoryStream ms = new MemoryStream((byte[])ds.Tables["fotogrupo"].Rows[0]["Foto"]);
+
+            Bitmap bm = new Bitmap(ms);
+
+            pic_GrupoAmigo.Image = bm;
         }
 
         private void lbl_NomGrupo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pic_GrupoAmigo_Click(object sender, EventArgs e)
         {
 
         }

@@ -132,5 +132,10 @@ namespace Pantalla_Contraseña
                     graph.DrawEllipse(penBorder, rectBorder);
             }
         }
+
+        private void pic_Administrador_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

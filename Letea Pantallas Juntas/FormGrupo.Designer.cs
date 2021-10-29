@@ -93,11 +93,13 @@
             this.pic_GrupoAmigo.Size = new System.Drawing.Size(715, 335);
             this.pic_GrupoAmigo.TabIndex = 23;
             this.pic_GrupoAmigo.TabStop = false;
+            this.pic_GrupoAmigo.Click += new System.EventHandler(this.pic_GrupoAmigo_Click);
             // 
             // btn_AgregarAmigo
             // 
             this.btn_AgregarAmigo.BackColor = System.Drawing.Color.Transparent;
             this.btn_AgregarAmigo.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.AGREGAR_AMIGO__1_;
+            this.btn_AgregarAmigo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_AgregarAmigo.Location = new System.Drawing.Point(739, 546);
             this.btn_AgregarAmigo.Name = "btn_AgregarAmigo";
             this.btn_AgregarAmigo.Size = new System.Drawing.Size(496, 126);

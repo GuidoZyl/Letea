@@ -61,6 +61,7 @@ namespace Pantalla_Contraseña
             this.pic_Administrador.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_Administrador.TabIndex = 0;
             this.pic_Administrador.TabStop = false;
+            this.pic_Administrador.Click += new System.EventHandler(this.pic_Administrador_Click);
             this.pic_Administrador.Paint += new System.Windows.Forms.PaintEventHandler(this.pic_Administrador_Paint);
             // 
             // txt_Administrador
