@@ -69,6 +69,12 @@
     <Compile Include="AcercaDenosotros.Designer.cs">
       <DependentUpon>AcercaDenosotros.cs</DependentUpon>
     </Compile>
+    <Compile Include="AgregarAmigo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarAmigo.Designer.cs">
+      <DependentUpon>AgregarAmigo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Crear Grupos de Amigos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +163,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AcercaDenosotros.resx">
       <DependentUpon>AcercaDenosotros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarAmigo.resx">
+      <DependentUpon>AgregarAmigo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Crear Grupos de Amigos.resx">
       <DependentUpon>Crear Grupos de Amigos.cs</DependentUpon>
@@ -387,6 +396,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Component 13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Introducción de datos.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

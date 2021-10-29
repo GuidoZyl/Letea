@@ -55,20 +55,16 @@ namespace Pantalla_Contraseña
 
             data.Fill(ds, "Nombregrupo");
             lbl_NomGrupo.Text = ds.Tables["Nombregrupo"].Rows[0]["Nombre"].ToString();
-            string consulta1 = "SELECT [Nombre],[Apellido],[Fecha de Nacimiento],[Lugar Donde la Conoció] FROM Amigos WHERE IdGruposDeAmigos = " + FormGruposAmigos.IDGrupo + "";
+            string consulta1 = "SELECT [Nombre],[Apellido],[Fecha de Nacimiento],[Foto] FROM Amigos WHERE IdGruposDeAmigos = " + FormGruposAmigos.IDGrupo + "";
             OleDbCommand comando1 = new OleDbCommand(consulta1, conexion);
             OleDbDataAdapter data1 = new OleDbDataAdapter(comando1);
             data1.Fill(ds, "Amigo");
             ultimo = Convert.ToInt32(ds.Tables["Amigo"].Rows.Count - 1);
 
-            if (ultimo != -1)
-            {
                 for (int i = 0; i <= ultimo; i++)
                 {
                     InfoAmigo[i, 0] = ds.Tables["Amigo"].Rows[i][0].ToString();
                 }
-            }
-
 
             string sql = "SELECT Foto FROM GruposdeAmigos WHERE Id = " + FormGruposAmigos.IDGrupo + "";
             OleDbCommand cmd = new OleDbCommand(sql, conexion);
@@ -369,6 +365,13 @@ namespace Pantalla_Contraseña
                     btn_FlechaDer.Visible = false;
                 }
             }
+        }
+
+        private void btn_AgregarAmigo_Click(object sender, EventArgs e)
+        {
+            AgregarAmigo form = new AgregarAmigo();
+            form.Show();
+            this.Close();
         }
     }
 }

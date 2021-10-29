@@ -115,6 +115,7 @@
             this.btn_AgregarAmigo.TabIndex = 24;
             this.btn_AgregarAmigo.TabStop = false;
             this.btn_AgregarAmigo.Visible = false;
+            this.btn_AgregarAmigo.Click += new System.EventHandler(this.btn_AgregarAmigo_Click);
             // 
             // pic_Nom1
             // 

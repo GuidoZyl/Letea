@@ -16,7 +16,7 @@ namespace Pantalla_Contraseña
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormPacientes2());
+            Application.Run(new FormFotoUsuarioRegistro());
         }
     }
 }

@@ -423,6 +423,16 @@ namespace Pantalla_Contraseña.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Introducción_de_datos {
+            get {
+                object obj = ResourceManager.GetObject("Introducción de datos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Nueva_contraseña {
             get {
                 object obj = ResourceManager.GetObject("Nueva contraseña", resourceCulture);

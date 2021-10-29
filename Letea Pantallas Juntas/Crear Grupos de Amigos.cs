@@ -123,5 +123,15 @@ namespace Pantalla_Contraseña
                     graph.DrawEllipse(penBorder, rectBorder);
             }
         }
+
+        private void txt_Nom_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
