@@ -11,15 +11,27 @@ using System.Data.OleDb;
 using Pantalla_Contraseña.Componentes;
 using System.IO;
 using System.Drawing.Drawing2D;
+using System.Runtime.InteropServices;
 
 namespace Pantalla_Contraseña
 {
     public partial class FormGrupo : Form
     {
+        /*[DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+        (
+        int nLeftRect,
+        int nTopRect,
+        int nRightRect,
+        int nBottomRect,
+        int nWidthEllipse,
+        int nHeightEllipse
+        );*/
+
         OleDbConnection conexion = new OleDbConnection();
         DataSet ds = new DataSet();
         public static int ultimo;
-        string[,] InfoAmigo = new string[ultimo + 1, 4];
+        string[,] InfoAmigo;
 
         public FormGrupo()
         {
@@ -47,24 +59,32 @@ namespace Pantalla_Contraseña
                 btn_Config.Visible = true;
             }
 
+            //pic_GrupoAmigo.BorderStyle = BorderStyle.None;
+            //pic_GrupoAmigo.Region = Region.FromHrgn(CreateRoundRectRgn(pic_GrupoAmigo.Location.X, pic_GrupoAmigo.Location.Y, pic_GrupoAmigo.Width, pic_GrupoAmigo.Height, 30, 30));
+
             conexion.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=.\Base de Datos 4.accdb;";
             conexion.Open();
+
             string consulta = "SELECT Nombre FROM GruposdeAmigos WHERE Id = " + FormGruposAmigos.IDGrupo + "";
             OleDbCommand comando = new OleDbCommand(consulta, conexion);
             OleDbDataAdapter data = new OleDbDataAdapter(comando);
 
             data.Fill(ds, "Nombregrupo");
             lbl_NomGrupo.Text = ds.Tables["Nombregrupo"].Rows[0]["Nombre"].ToString();
+
             string consulta1 = "SELECT [Nombre],[Apellido],[Fecha de Nacimiento],[Foto] FROM Amigos WHERE IdGruposDeAmigos = " + FormGruposAmigos.IDGrupo + "";
             OleDbCommand comando1 = new OleDbCommand(consulta1, conexion);
             OleDbDataAdapter data1 = new OleDbDataAdapter(comando1);
             data1.Fill(ds, "Amigo");
+
             ultimo = Convert.ToInt32(ds.Tables["Amigo"].Rows.Count - 1);
 
-                for (int i = 0; i <= ultimo; i++)
-                {
-                    InfoAmigo[i, 0] = ds.Tables["Amigo"].Rows[i][0].ToString();
-                }
+            InfoAmigo = new string[ultimo + 1, 4];
+
+            for (int i = 0; i <= ultimo; i++)
+            {
+                InfoAmigo[i, 0] = ds.Tables["Amigo"].Rows[i]["Nombre"].ToString();
+            }
 
             string sql = "SELECT Foto FROM GruposdeAmigos WHERE Id = " + FormGruposAmigos.IDGrupo + "";
             OleDbCommand cmd = new OleDbCommand(sql, conexion);
@@ -365,13 +385,34 @@ namespace Pantalla_Contraseña
                     btn_FlechaDer.Visible = false;
                 }
             }
+            if (lbl_Nom1.Text != InfoAmigo[0, 0] || lbl_Nom1.Visible == false)
+            {
+                btn_FlechaIzq.Visible = true;
+            }
         }
 
         private void btn_AgregarAmigo_Click(object sender, EventArgs e)
         {
             AgregarAmigo form = new AgregarAmigo();
             form.Show();
-            this.Close();
+            this.Hide();
+        }
+
+        private void lbl_Nom1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pic_GrupoAmigo_Paint(object sender, PaintEventArgs e)
+        {
+            Rectangle r = new Rectangle(0, 0, pic_GrupoAmigo.Width, pic_GrupoAmigo.Height);
+            GraphicsPath gp = new GraphicsPath();
+            int d = 80;
+            gp.AddArc(r.X, r.Y, d, d, 180, 90);
+            gp.AddArc(r.X + r.Width - d, r.Y, d, d, 270, 90);
+            gp.AddArc(r.X + r.Width - d, r.Y + r.Height - d, d, d, 0, 90);
+            gp.AddArc(r.X, r.Y + r.Height - d, d, d, 90, 90);
+            pic_GrupoAmigo.Region = new Region(gp);
         }
     }
 }

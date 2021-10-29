@@ -93,35 +93,14 @@ namespace Pantalla_Contraseña
 
         private void btn_agregarfoto_Paint(object sender, PaintEventArgs pe)
         {
-            int borderSize = 5;
-            Color borderColor = Color.CornflowerBlue;
-            Color borderColor2 = Color.HotPink;
-            DashStyle borderLineStyle = DashStyle.Solid;
-            DashCap borderCapStyle = DashCap.Flat;
-            float gradientAngle = 50F;
-
-            base.OnPaint(pe);
-            var graph = pe.Graphics;
-            var rectContourSmooth = Rectangle.Inflate(btn_agregarfoto.ClientRectangle, -1, -1);
-            var rectBorder = Rectangle.Inflate(rectContourSmooth, -borderSize +2, -borderSize +2);
-            var smoothSize = borderSize > 0 ? borderSize * 3 : 1;
-            using (var borderGColor = new LinearGradientBrush(rectBorder, borderColor, borderColor2, gradientAngle))
-            using (var pathRegion = new GraphicsPath())
-            using (var penSmooth = new Pen(btn_agregarfoto.BackColor, smoothSize))
-            using (var penBorder = new Pen(borderGColor, borderSize))
-            {
-                graph.SmoothingMode = SmoothingMode.AntiAlias;
-                penBorder.DashStyle = borderLineStyle;
-                penBorder.DashCap = borderCapStyle;
-                pathRegion.AddEllipse(rectContourSmooth);
-
-                btn_agregarfoto.Region = new Region(pathRegion);
-
-
-                graph.DrawEllipse(penSmooth, rectContourSmooth);
-                if (borderSize > 0)
-                    graph.DrawEllipse(penBorder, rectBorder);
-            }
+            Rectangle r = new Rectangle(0, 0, btn_agregarfoto.Width, btn_agregarfoto.Height);
+            GraphicsPath gp = new GraphicsPath();
+            int d = 80;
+            gp.AddArc(r.X, r.Y, d, d, 180, 90);
+            gp.AddArc(r.X + r.Width - d, r.Y, d, d, 270, 90);
+            gp.AddArc(r.X + r.Width - d, r.Y + r.Height - d, d, d, 0, 90);
+            gp.AddArc(r.X, r.Y + r.Height - d, d, d, 90, 90);
+            btn_agregarfoto.Region = new Region(gp);
         }
 
         private void txt_Nom_TextChanged(object sender, EventArgs e)
@@ -131,7 +110,7 @@ namespace Pantalla_Contraseña
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

@@ -103,6 +103,7 @@
             this.pic_GrupoAmigo.TabIndex = 23;
             this.pic_GrupoAmigo.TabStop = false;
             this.pic_GrupoAmigo.Click += new System.EventHandler(this.pic_GrupoAmigo_Click);
+            this.pic_GrupoAmigo.Paint += new System.Windows.Forms.PaintEventHandler(this.pic_GrupoAmigo_Paint);
             // 
             // btn_AgregarAmigo
             // 
@@ -165,9 +166,10 @@
             // 
             this.btn_FlechaIzq.BackColor = System.Drawing.Color.Transparent;
             this.btn_FlechaIzq.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.FLECHA_IZQUIERDA;
-            this.btn_FlechaIzq.Location = new System.Drawing.Point(-16, 699);
+            this.btn_FlechaIzq.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_FlechaIzq.Location = new System.Drawing.Point(30, 685);
             this.btn_FlechaIzq.Name = "btn_FlechaIzq";
-            this.btn_FlechaIzq.Size = new System.Drawing.Size(102, 50);
+            this.btn_FlechaIzq.Size = new System.Drawing.Size(63, 98);
             this.btn_FlechaIzq.TabIndex = 29;
             this.btn_FlechaIzq.TabStop = false;
             this.btn_FlechaIzq.Visible = false;
@@ -177,51 +179,65 @@
             // 
             this.btn_FlechaDer.BackColor = System.Drawing.Color.Transparent;
             this.btn_FlechaDer.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.FLECHA_DERECHA;
-            this.btn_FlechaDer.Location = new System.Drawing.Point(1795, 714);
+            this.btn_FlechaDer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_FlechaDer.Location = new System.Drawing.Point(1811, 685);
             this.btn_FlechaDer.Name = "btn_FlechaDer";
-            this.btn_FlechaDer.Size = new System.Drawing.Size(102, 50);
+            this.btn_FlechaDer.Size = new System.Drawing.Size(63, 98);
             this.btn_FlechaDer.TabIndex = 30;
             this.btn_FlechaDer.TabStop = false;
             this.btn_FlechaDer.Click += new System.EventHandler(this.btn_FlechaDer_Click);
             // 
             // lbl_Nom1
             // 
-            this.lbl_Nom1.AutoSize = true;
-            this.lbl_Nom1.Location = new System.Drawing.Point(280, 909);
+            this.lbl_Nom1.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Nom1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_Nom1.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F);
+            this.lbl_Nom1.Location = new System.Drawing.Point(106, 844);
             this.lbl_Nom1.Name = "lbl_Nom1";
-            this.lbl_Nom1.Size = new System.Drawing.Size(35, 13);
+            this.lbl_Nom1.Size = new System.Drawing.Size(357, 78);
             this.lbl_Nom1.TabIndex = 31;
             this.lbl_Nom1.Text = "label1";
+            this.lbl_Nom1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl_Nom1.Visible = false;
+            this.lbl_Nom1.Click += new System.EventHandler(this.lbl_Nom1_Click);
             // 
             // lbl_Nom2
             // 
-            this.lbl_Nom2.AutoSize = true;
-            this.lbl_Nom2.Location = new System.Drawing.Point(757, 909);
+            this.lbl_Nom2.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Nom2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_Nom2.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F);
+            this.lbl_Nom2.Location = new System.Drawing.Point(555, 844);
             this.lbl_Nom2.Name = "lbl_Nom2";
-            this.lbl_Nom2.Size = new System.Drawing.Size(35, 13);
+            this.lbl_Nom2.Size = new System.Drawing.Size(357, 78);
             this.lbl_Nom2.TabIndex = 32;
             this.lbl_Nom2.Text = "label1";
+            this.lbl_Nom2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl_Nom2.Visible = false;
             // 
             // lbl_Nom3
             // 
-            this.lbl_Nom3.AutoSize = true;
-            this.lbl_Nom3.Location = new System.Drawing.Point(1175, 909);
+            this.lbl_Nom3.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Nom3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_Nom3.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F);
+            this.lbl_Nom3.Location = new System.Drawing.Point(1006, 844);
             this.lbl_Nom3.Name = "lbl_Nom3";
-            this.lbl_Nom3.Size = new System.Drawing.Size(35, 13);
+            this.lbl_Nom3.Size = new System.Drawing.Size(357, 78);
             this.lbl_Nom3.TabIndex = 33;
             this.lbl_Nom3.Text = "label1";
+            this.lbl_Nom3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl_Nom3.Visible = false;
             // 
             // lbl_Nom4
             // 
-            this.lbl_Nom4.AutoSize = true;
-            this.lbl_Nom4.Location = new System.Drawing.Point(1617, 909);
+            this.lbl_Nom4.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Nom4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_Nom4.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F);
+            this.lbl_Nom4.Location = new System.Drawing.Point(1445, 844);
             this.lbl_Nom4.Name = "lbl_Nom4";
-            this.lbl_Nom4.Size = new System.Drawing.Size(35, 13);
+            this.lbl_Nom4.Size = new System.Drawing.Size(357, 78);
             this.lbl_Nom4.TabIndex = 34;
             this.lbl_Nom4.Text = "label1";
+            this.lbl_Nom4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl_Nom4.Visible = false;
             // 
             // FormGrupo
@@ -261,7 +277,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btn_FlechaIzq)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_FlechaDer)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

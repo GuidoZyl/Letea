@@ -286,6 +286,7 @@ namespace Pantalla_Contraseña
             this.btn_Izq.TabIndex = 27;
             this.btn_Izq.TabStop = false;
             this.btn_Izq.Visible = false;
+            this.btn_Izq.Click += new System.EventHandler(this.btn_Izq_Click);
             // 
             // btn_Der
             // 
@@ -297,6 +298,7 @@ namespace Pantalla_Contraseña
             this.btn_Der.Size = new System.Drawing.Size(63, 98);
             this.btn_Der.TabIndex = 28;
             this.btn_Der.TabStop = false;
+            this.btn_Der.Click += new System.EventHandler(this.btn_Der_Click);
             // 
             // FormGruposAmigos
             // 

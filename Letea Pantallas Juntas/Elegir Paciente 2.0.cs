@@ -80,8 +80,6 @@ namespace Pantalla_Contraseña
 
             MemoryStream[] ms = new MemoryStream[ultimo + 1];
 
-
-
             /*for (int canti = 0; canti <= ultimo; canti++)
             {
                 ms[canti] = ds.Tables["Fotos"].Rows[0]["Foto"];

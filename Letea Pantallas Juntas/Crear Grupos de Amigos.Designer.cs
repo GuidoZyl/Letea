@@ -46,12 +46,12 @@ namespace Pantalla_Contraseña
             // btn_agregarfoto
             // 
             this.btn_agregarfoto.BackColor = System.Drawing.Color.Transparent;
-            this.btn_agregarfoto.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.que_lindo_boton;
+            this.btn_agregarfoto.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Agregar_Foto_Ancha__1_;
             this.btn_agregarfoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_agregarfoto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_agregarfoto.Location = new System.Drawing.Point(755, 299);
+            this.btn_agregarfoto.Location = new System.Drawing.Point(686, 376);
             this.btn_agregarfoto.Name = "btn_agregarfoto";
-            this.btn_agregarfoto.Size = new System.Drawing.Size(400, 400);
+            this.btn_agregarfoto.Size = new System.Drawing.Size(554, 335);
             this.btn_agregarfoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_agregarfoto.TabIndex = 0;
             this.btn_agregarfoto.TabStop = false;
