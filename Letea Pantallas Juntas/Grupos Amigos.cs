@@ -309,7 +309,7 @@ namespace Pantalla_Contraseña
 
         private void btn_Crear_Click(object sender, EventArgs e)
         {
-            FormCrearPaciente form = new FormCrearPaciente();
+            FormCrearGruposAmigos form = new FormCrearGruposAmigos();
             form.Show();
             this.Hide();
         }
@@ -582,11 +582,6 @@ namespace Pantalla_Contraseña
             FormPrincipal form = new FormPrincipal();
             form.Show();
             this.Hide();
-        }
-
-        private void btn_Crear_Click_1(object sender, EventArgs e)
-        {
-
         }
     }
 }

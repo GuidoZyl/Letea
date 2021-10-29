@@ -382,5 +382,11 @@
   <ItemGroup>
     <None Include="Resources\AGREGAR AMIGO %281%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Grupos sin foto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Component 13.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

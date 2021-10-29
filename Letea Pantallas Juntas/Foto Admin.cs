@@ -77,11 +77,6 @@ namespace Pantalla_Contraseña
 
         private void btn_agregarfoto_Paint(object sender, PaintEventArgs pe)
         {
-
-            /*GraphicsPath grpath = new GraphicsPath();
-            grpath.AddEllipse(0, 8, 390, 390);
-            btn_agregarfoto.Region = new Region(grpath);*/
-
             int borderSize = 5;
             Color borderColor = Color.RoyalBlue;
             Color borderColor2 = Color.HotPink;
@@ -90,7 +85,7 @@ namespace Pantalla_Contraseña
             float gradientAngle = 50F;
 
             base.OnPaint(pe);
-            //Fields
+
             var graph = pe.Graphics;
             var rectContourSmooth = Rectangle.Inflate(btn_agregarfoto.ClientRectangle, -1, -1);
             var rectBorder = Rectangle.Inflate(rectContourSmooth, -borderSize, -borderSize);
@@ -104,12 +99,11 @@ namespace Pantalla_Contraseña
                 penBorder.DashStyle = borderLineStyle;
                 penBorder.DashCap = borderCapStyle;
                 pathRegion.AddEllipse(rectContourSmooth);
-                //Set rounded region 
+
                 btn_agregarfoto.Region = new Region(pathRegion);
 
-                //Drawing
-                graph.DrawEllipse(penSmooth, rectContourSmooth);//Draw contour smoothing
-                if (borderSize > 0) //Draw border
+                graph.DrawEllipse(penSmooth, rectContourSmooth);
+                if (borderSize > 0)
                     graph.DrawEllipse(penBorder, rectBorder);
             }
         }

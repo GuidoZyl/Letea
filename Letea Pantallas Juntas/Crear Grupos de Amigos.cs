@@ -49,11 +49,11 @@ namespace Pantalla_Contraseña
             
             if (btn_agregarfoto.Image == null && txt_Nom.Text != null && txt_Nom.Text != "Introduzca el nombre del grupo")
             {
-                btn_agregarfoto.Image = pic_FotoPerfil.BackgroundImage;
+                btn_agregarfoto.Image = pic_FotoPerfil.Image;
             }
             if (txt_Nom.Text != null && txt_Nom.Text != "Introduzca el nombre del grupo")
             {
-                string sql = "INSERT into GruposdeAmigos (Nombre, IDUsuario, Foto) values ('" + txt_Nom.Text + "', " + FormPacientes2.IDPaciente + ", " + btn_agregarfoto.Image + ")";
+                string sql = "INSERT into GruposdeAmigos (Nombre, IDUsuario, Foto) values ('" + txt_Nom.Text + "', " + FormPacientes2.IDPaciente + ", @foto)";
                 MemoryStream ms = new MemoryStream();
                 btn_agregarfoto.Image.Save(ms, ImageFormat.Jpeg);
                 byte[] aByte = ms.ToArray();

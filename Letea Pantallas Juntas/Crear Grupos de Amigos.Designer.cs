@@ -120,8 +120,9 @@ namespace Pantalla_Contraseña
             // 
             // pic_FotoPerfil
             // 
-            this.pic_FotoPerfil.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Vector1;
+            this.pic_FotoPerfil.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Grupos_sin_foto;
             this.pic_FotoPerfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pic_FotoPerfil.Image = global::Pantalla_Contraseña.Properties.Resources.Component_13;
             this.pic_FotoPerfil.Location = new System.Drawing.Point(1431, 376);
             this.pic_FotoPerfil.Name = "pic_FotoPerfil";
             this.pic_FotoPerfil.Size = new System.Drawing.Size(102, 69);

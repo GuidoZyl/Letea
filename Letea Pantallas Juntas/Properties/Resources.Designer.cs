@@ -213,6 +213,16 @@ namespace Pantalla_Contraseña.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Component_13 {
+            get {
+                object obj = ResourceManager.GetObject("Component 13", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Configuración {
             get {
                 object obj = ResourceManager.GetObject("Configuración", resourceCulture);
@@ -366,6 +376,16 @@ namespace Pantalla_Contraseña.Properties {
         internal static System.Drawing.Bitmap fotoperfil {
             get {
                 object obj = ResourceManager.GetObject("fotoperfil", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Grupos_sin_foto {
+            get {
+                object obj = ResourceManager.GetObject("Grupos sin foto", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

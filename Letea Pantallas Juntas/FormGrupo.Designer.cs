@@ -34,17 +34,25 @@
             this.pic_GrupoAmigo = new System.Windows.Forms.PictureBox();
             this.btn_AgregarAmigo = new System.Windows.Forms.PictureBox();
             this.pic_Nom1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pic_Nom2 = new System.Windows.Forms.PictureBox();
+            this.pic_Nom3 = new System.Windows.Forms.PictureBox();
+            this.pic_Nom4 = new System.Windows.Forms.PictureBox();
+            this.btn_FlechaIzq = new System.Windows.Forms.PictureBox();
+            this.btn_FlechaDer = new System.Windows.Forms.PictureBox();
+            this.lbl_Nom1 = new System.Windows.Forms.Label();
+            this.lbl_Nom2 = new System.Windows.Forms.Label();
+            this.lbl_Nom3 = new System.Windows.Forms.Label();
+            this.lbl_Nom4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Volver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Config)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_GrupoAmigo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_AgregarAmigo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Nom1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Nom2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Nom3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Nom4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_FlechaIzq)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_FlechaDer)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Volver
@@ -78,7 +86,7 @@
             this.lbl_NomGrupo.BackColor = System.Drawing.Color.Transparent;
             this.lbl_NomGrupo.Cursor = System.Windows.Forms.Cursors.Default;
             this.lbl_NomGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_NomGrupo.Location = new System.Drawing.Point(666, 102);
+            this.lbl_NomGrupo.Location = new System.Drawing.Point(676, 33);
             this.lbl_NomGrupo.Name = "lbl_NomGrupo";
             this.lbl_NomGrupo.Size = new System.Drawing.Size(600, 100);
             this.lbl_NomGrupo.TabIndex = 22;
@@ -88,9 +96,10 @@
             // 
             // pic_GrupoAmigo
             // 
-            this.pic_GrupoAmigo.Location = new System.Drawing.Point(610, 205);
+            this.pic_GrupoAmigo.Location = new System.Drawing.Point(700, 125);
             this.pic_GrupoAmigo.Name = "pic_GrupoAmigo";
-            this.pic_GrupoAmigo.Size = new System.Drawing.Size(715, 335);
+            this.pic_GrupoAmigo.Size = new System.Drawing.Size(554, 335);
+            this.pic_GrupoAmigo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_GrupoAmigo.TabIndex = 23;
             this.pic_GrupoAmigo.TabStop = false;
             this.pic_GrupoAmigo.Click += new System.EventHandler(this.pic_GrupoAmigo_Click);
@@ -100,7 +109,7 @@
             this.btn_AgregarAmigo.BackColor = System.Drawing.Color.Transparent;
             this.btn_AgregarAmigo.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.AGREGAR_AMIGO__1_;
             this.btn_AgregarAmigo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_AgregarAmigo.Location = new System.Drawing.Point(739, 546);
+            this.btn_AgregarAmigo.Location = new System.Drawing.Point(739, 462);
             this.btn_AgregarAmigo.Name = "btn_AgregarAmigo";
             this.btn_AgregarAmigo.Size = new System.Drawing.Size(496, 126);
             this.btn_AgregarAmigo.TabIndex = 24;
@@ -110,38 +119,109 @@
             // pic_Nom1
             // 
             this.pic_Nom1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pic_Nom1.Location = new System.Drawing.Point(179, 716);
+            this.pic_Nom1.Location = new System.Drawing.Point(160, 591);
             this.pic_Nom1.Name = "pic_Nom1";
             this.pic_Nom1.Size = new System.Drawing.Size(250, 250);
             this.pic_Nom1.TabIndex = 25;
             this.pic_Nom1.TabStop = false;
+            this.pic_Nom1.Visible = false;
+            this.pic_Nom1.Paint += new System.Windows.Forms.PaintEventHandler(this.pic_Nom1_Paint);
             // 
-            // pictureBox1
+            // pic_Nom2
             // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Location = new System.Drawing.Point(634, 716);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(250, 250);
-            this.pictureBox1.TabIndex = 26;
-            this.pictureBox1.TabStop = false;
+            this.pic_Nom2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pic_Nom2.Location = new System.Drawing.Point(612, 591);
+            this.pic_Nom2.Name = "pic_Nom2";
+            this.pic_Nom2.Size = new System.Drawing.Size(250, 250);
+            this.pic_Nom2.TabIndex = 26;
+            this.pic_Nom2.TabStop = false;
+            this.pic_Nom2.Visible = false;
+            this.pic_Nom2.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
             // 
-            // pictureBox2
+            // pic_Nom3
             // 
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Location = new System.Drawing.Point(1065, 716);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(250, 250);
-            this.pictureBox2.TabIndex = 27;
-            this.pictureBox2.TabStop = false;
+            this.pic_Nom3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pic_Nom3.Location = new System.Drawing.Point(1055, 591);
+            this.pic_Nom3.Name = "pic_Nom3";
+            this.pic_Nom3.Size = new System.Drawing.Size(250, 250);
+            this.pic_Nom3.TabIndex = 27;
+            this.pic_Nom3.TabStop = false;
+            this.pic_Nom3.Visible = false;
+            this.pic_Nom3.Paint += new System.Windows.Forms.PaintEventHandler(this.pic_Nom3_Paint);
             // 
-            // pictureBox3
+            // pic_Nom4
             // 
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Location = new System.Drawing.Point(1461, 716);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(250, 250);
-            this.pictureBox3.TabIndex = 28;
-            this.pictureBox3.TabStop = false;
+            this.pic_Nom4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pic_Nom4.Location = new System.Drawing.Point(1499, 591);
+            this.pic_Nom4.Name = "pic_Nom4";
+            this.pic_Nom4.Size = new System.Drawing.Size(250, 250);
+            this.pic_Nom4.TabIndex = 28;
+            this.pic_Nom4.TabStop = false;
+            this.pic_Nom4.Visible = false;
+            this.pic_Nom4.Paint += new System.Windows.Forms.PaintEventHandler(this.pic_Nom4_Paint);
+            // 
+            // btn_FlechaIzq
+            // 
+            this.btn_FlechaIzq.BackColor = System.Drawing.Color.Transparent;
+            this.btn_FlechaIzq.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.FLECHA_IZQUIERDA;
+            this.btn_FlechaIzq.Location = new System.Drawing.Point(-16, 699);
+            this.btn_FlechaIzq.Name = "btn_FlechaIzq";
+            this.btn_FlechaIzq.Size = new System.Drawing.Size(102, 50);
+            this.btn_FlechaIzq.TabIndex = 29;
+            this.btn_FlechaIzq.TabStop = false;
+            this.btn_FlechaIzq.Visible = false;
+            this.btn_FlechaIzq.Click += new System.EventHandler(this.btn_FlechaIzq_Click);
+            // 
+            // btn_FlechaDer
+            // 
+            this.btn_FlechaDer.BackColor = System.Drawing.Color.Transparent;
+            this.btn_FlechaDer.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.FLECHA_DERECHA;
+            this.btn_FlechaDer.Location = new System.Drawing.Point(1795, 714);
+            this.btn_FlechaDer.Name = "btn_FlechaDer";
+            this.btn_FlechaDer.Size = new System.Drawing.Size(102, 50);
+            this.btn_FlechaDer.TabIndex = 30;
+            this.btn_FlechaDer.TabStop = false;
+            this.btn_FlechaDer.Click += new System.EventHandler(this.btn_FlechaDer_Click);
+            // 
+            // lbl_Nom1
+            // 
+            this.lbl_Nom1.AutoSize = true;
+            this.lbl_Nom1.Location = new System.Drawing.Point(280, 909);
+            this.lbl_Nom1.Name = "lbl_Nom1";
+            this.lbl_Nom1.Size = new System.Drawing.Size(35, 13);
+            this.lbl_Nom1.TabIndex = 31;
+            this.lbl_Nom1.Text = "label1";
+            this.lbl_Nom1.Visible = false;
+            // 
+            // lbl_Nom2
+            // 
+            this.lbl_Nom2.AutoSize = true;
+            this.lbl_Nom2.Location = new System.Drawing.Point(757, 909);
+            this.lbl_Nom2.Name = "lbl_Nom2";
+            this.lbl_Nom2.Size = new System.Drawing.Size(35, 13);
+            this.lbl_Nom2.TabIndex = 32;
+            this.lbl_Nom2.Text = "label1";
+            this.lbl_Nom2.Visible = false;
+            // 
+            // lbl_Nom3
+            // 
+            this.lbl_Nom3.AutoSize = true;
+            this.lbl_Nom3.Location = new System.Drawing.Point(1175, 909);
+            this.lbl_Nom3.Name = "lbl_Nom3";
+            this.lbl_Nom3.Size = new System.Drawing.Size(35, 13);
+            this.lbl_Nom3.TabIndex = 33;
+            this.lbl_Nom3.Text = "label1";
+            this.lbl_Nom3.Visible = false;
+            // 
+            // lbl_Nom4
+            // 
+            this.lbl_Nom4.AutoSize = true;
+            this.lbl_Nom4.Location = new System.Drawing.Point(1617, 909);
+            this.lbl_Nom4.Name = "lbl_Nom4";
+            this.lbl_Nom4.Size = new System.Drawing.Size(35, 13);
+            this.lbl_Nom4.TabIndex = 34;
+            this.lbl_Nom4.Text = "label1";
+            this.lbl_Nom4.Visible = false;
             // 
             // FormGrupo
             // 
@@ -150,9 +230,15 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Fondo;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.lbl_Nom4);
+            this.Controls.Add(this.lbl_Nom3);
+            this.Controls.Add(this.lbl_Nom2);
+            this.Controls.Add(this.lbl_Nom1);
+            this.Controls.Add(this.btn_FlechaDer);
+            this.Controls.Add(this.btn_FlechaIzq);
+            this.Controls.Add(this.pic_Nom4);
+            this.Controls.Add(this.pic_Nom3);
+            this.Controls.Add(this.pic_Nom2);
             this.Controls.Add(this.pic_Nom1);
             this.Controls.Add(this.btn_AgregarAmigo);
             this.Controls.Add(this.pic_GrupoAmigo);
@@ -168,10 +254,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_GrupoAmigo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_AgregarAmigo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Nom1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Nom2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Nom3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Nom4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_FlechaIzq)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_FlechaDer)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -183,8 +272,14 @@
         private System.Windows.Forms.PictureBox pic_GrupoAmigo;
         private System.Windows.Forms.PictureBox btn_AgregarAmigo;
         private System.Windows.Forms.PictureBox pic_Nom1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pic_Nom2;
+        private System.Windows.Forms.PictureBox pic_Nom3;
+        private System.Windows.Forms.PictureBox pic_Nom4;
+        private System.Windows.Forms.PictureBox btn_FlechaIzq;
+        private System.Windows.Forms.PictureBox btn_FlechaDer;
+        private System.Windows.Forms.Label lbl_Nom1;
+        private System.Windows.Forms.Label lbl_Nom2;
+        private System.Windows.Forms.Label lbl_Nom3;
+        private System.Windows.Forms.Label lbl_Nom4;
     }
 }
