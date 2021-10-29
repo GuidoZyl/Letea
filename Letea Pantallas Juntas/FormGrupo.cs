@@ -56,7 +56,7 @@ namespace Pantalla_Contraseña
             data.Fill(ds, "Nombregrupo");
             lbl_NomGrupo.Text = ds.Tables["Nombregrupo"].Rows[0]["Nombre"].ToString();
             string consulta1 = "SELECT [Nombre],[Apellido],[Fecha de Nacimiento],[Lugar Donde la Conoció] FROM Amigos WHERE IdGruposDeAmigos = " + FormGruposAmigos.IDGrupo + "";
-            OleDbCommand comando1 = new OleDbCommand(consulta, conexion);
+            OleDbCommand comando1 = new OleDbCommand(consulta1, conexion);
             OleDbDataAdapter data1 = new OleDbDataAdapter(comando1);
             data1.Fill(ds, "Amigo");
             ultimo = Convert.ToInt32(ds.Tables["Amigo"].Rows.Count - 1);
