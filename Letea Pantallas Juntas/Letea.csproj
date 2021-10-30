@@ -114,6 +114,12 @@
     <Compile Include="Elegir Paciente.Designer.cs">
       <DependentUpon>Elegir Paciente.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormEditAmigo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditAmigo.Designer.cs">
+      <DependentUpon>FormEditAmigo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormGrupo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Elegir Paciente.resx">
       <DependentUpon>Elegir Paciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditAmigo.resx">
+      <DependentUpon>FormEditAmigo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormGrupo.resx">
       <DependentUpon>FormGrupo.cs</DependentUpon>
