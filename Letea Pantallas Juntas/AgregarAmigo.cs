@@ -89,7 +89,7 @@ namespace Pantalla_Contraseña
             if (txt_Nom.Text == "Introduzca el nombre del amigo")
             {
                 txt_Nom.Text = "";
-                txt_Nom.ForeColor = System.Drawing.SystemColors.WindowText;
+                txt_Nom.ForeColor = SystemColors.WindowText;
             }
         }
 
@@ -98,19 +98,25 @@ namespace Pantalla_Contraseña
             if (txt_Apellido.Text == "Introduzca el apellido del amigo")
             {
                 txt_Apellido.Text = "";
-                txt_Apellido.ForeColor = System.Drawing.SystemColors.WindowText;
+                txt_Apellido.ForeColor = SystemColors.WindowText;
             }
         }
 
         private void btn_Guardar_Click(object sender, EventArgs e)
         {
-            string sql = "INSERT into Amigos ([Nombre], [Apellido],  [IDGruposdeAmigos], [Foto]) values ('" + txt_Nom.Text + "', '"+txt_Apellido.Text+"'," + FormGruposAmigos.IDGrupo + ", @foto)";
+            string sql = "INSERT into Amigos ([Nombre], [Apellido], [IDGruposdeAmigos], [Foto]) values ('" + txt_Nom.Text + "', '"+txt_Apellido.Text+"'," + FormGruposAmigos.IDGrupo + ", @foto)";
+            
             MemoryStream ms = new MemoryStream();
             btn_agregarfoto.Image.Save(ms, ImageFormat.Jpeg);
             byte[] aByte = ms.ToArray();
+
             OleDbCommand cmd = new OleDbCommand(sql, conexion);
+
             cmd.Parameters.AddWithValue("Foto", aByte);
             cmd.ExecuteNonQuery();
+
+            conexion.Close();
+
             FormGrupo form = new FormGrupo();
             form.Show();
             this.Hide();

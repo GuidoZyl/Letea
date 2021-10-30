@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.OleDb;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -25,7 +26,7 @@ namespace Pantalla_Contraseña
         {
             conexion.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=.\Base de Datos 4.accdb;";
             conexion.Open();
-            string consulta = "SELECT [Nombre] , [Apellido] , [Foto] FROM Amigos WHERE Id = " + FormGrupo.RowPaciente + "";
+            string consulta = "SELECT [Nombre] , [Apellido] , [Foto] FROM Amigos WHERE Id = " + FormGrupo.IDAmigo + "";
             OleDbCommand comando = new OleDbCommand(consulta, conexion);
             OleDbDataAdapter data = new OleDbDataAdapter(comando);
 
@@ -38,6 +39,45 @@ namespace Pantalla_Contraseña
             lbl_Nombre.Text = ds.Tables["InfoAmigo"].Rows[0][0].ToString();
             lbl_Apellido.Text = ds.Tables["InfoAmigo"].Rows[0][1].ToString();
 
+        }
+
+        private void btn_agregarfoto_Paint(object sender, PaintEventArgs pe)
+        {
+            int borderSize = 6;
+            Color borderColor = Color.CornflowerBlue;
+            Color borderColor2 = Color.HotPink;
+            DashStyle borderLineStyle = DashStyle.Solid;
+            DashCap borderCapStyle = DashCap.Flat;
+            float gradientAngle = 50F;
+
+            base.OnPaint(pe);
+            var graph = pe.Graphics;
+            var rectContourSmooth = Rectangle.Inflate(btn_agregarfoto.ClientRectangle, 0, 0);
+            var rectBorder = Rectangle.Inflate(rectContourSmooth, -borderSize + 3, -borderSize + 3);
+            var smoothSize = borderSize > 0 ? borderSize * 3 : 1;
+            using (var borderGColor = new LinearGradientBrush(rectBorder, borderColor, borderColor2, gradientAngle))
+            using (var pathRegion = new GraphicsPath())
+            using (var penSmooth = new Pen(btn_agregarfoto.BackColor, smoothSize))
+            using (var penBorder = new Pen(borderGColor, borderSize))
+            {
+                graph.SmoothingMode = SmoothingMode.AntiAlias;
+                penBorder.DashStyle = borderLineStyle;
+                penBorder.DashCap = borderCapStyle;
+                pathRegion.AddEllipse(rectContourSmooth);
+
+                btn_agregarfoto.Region = new Region(pathRegion);
+
+                graph.DrawEllipse(penSmooth, rectContourSmooth);
+                if (borderSize > 0)
+                    graph.DrawEllipse(penBorder, rectBorder);
+            }
+        }
+
+        private void btn_Volver_Click(object sender, EventArgs e)
+        {
+            FormGrupo form = new FormGrupo();
+            form.Show();
+            this.Hide();
         }
     }
 }

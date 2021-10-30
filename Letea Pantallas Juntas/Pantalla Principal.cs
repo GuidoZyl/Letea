@@ -39,6 +39,8 @@ namespace Pantalla_Contraseña
 
         private void btn_Volver_Click(object sender, EventArgs e)
         {
+            conexion.Close();
+
             FormPacientes2 form = new FormPacientes2();
             form.Show();
             this.Hide();
@@ -61,12 +63,17 @@ namespace Pantalla_Contraseña
             int ultimo = Convert.ToInt32(ds.Tables["idusuario"].Rows.Count);
             if (ultimo > 0)
             {
+                conexion.Close();
+
                 FormGruposAmigos form = new FormGruposAmigos();
                 form.Show();
                 this.Hide();
             }
+
             else
             {
+                conexion.Close();
+
                 FormCrearGruposAmigos form = new FormCrearGruposAmigos();
                 form.Show();
                 this.Hide();

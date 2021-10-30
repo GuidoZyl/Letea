@@ -17,22 +17,13 @@ namespace Pantalla_Contraseña
 {
     public partial class FormGrupo : Form
     {
-        /*[DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-        private static extern IntPtr CreateRoundRectRgn
-        (
-        int nLeftRect,
-        int nTopRect,
-        int nRightRect,
-        int nBottomRect,
-        int nWidthEllipse,
-        int nHeightEllipse
-        );*/
+        public static int IDAmigo;
 
         OleDbConnection conexion = new OleDbConnection();
         DataSet ds = new DataSet();
+
         public static int ultimo;
         string[,] InfoAmigo;
-        public static int RowPaciente;
 
         public FormGrupo()
         {
@@ -54,15 +45,14 @@ namespace Pantalla_Contraseña
 
         private void FormGrupo_Load(object sender, EventArgs e)
         {
+            //Modo Admin
             if (FormPantallaLogIn.ModoAdmin)
             {
                 btn_AgregarAmigo.Visible = true;
                 btn_Config.Visible = true;
             }
 
-            //pic_GrupoAmigo.BorderStyle = BorderStyle.None;
-            //pic_GrupoAmigo.Region = Region.FromHrgn(CreateRoundRectRgn(pic_GrupoAmigo.Location.X, pic_GrupoAmigo.Location.Y, pic_GrupoAmigo.Width, pic_GrupoAmigo.Height, 30, 30));
-
+            //Guardar nombre y foto del grupo desde la base de datos
             conexion.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=.\Base de Datos 4.accdb;";
             conexion.Open();
 
@@ -72,20 +62,6 @@ namespace Pantalla_Contraseña
 
             data.Fill(ds, "Nombregrupo");
             lbl_NomGrupo.Text = ds.Tables["Nombregrupo"].Rows[0]["Nombre"].ToString();
-
-            string consulta1 = "SELECT [Nombre],[Apellido],[Fecha de Nacimiento],[Foto] FROM Amigos WHERE IdGruposDeAmigos = " + FormGruposAmigos.IDGrupo + "";
-            OleDbCommand comando1 = new OleDbCommand(consulta1, conexion);
-            OleDbDataAdapter data1 = new OleDbDataAdapter(comando1);
-            data1.Fill(ds, "Amigo");
-
-            ultimo = Convert.ToInt32(ds.Tables["Amigo"].Rows.Count - 1);
-
-            InfoAmigo = new string[ultimo + 1, 4];
-
-            for (int i = 0; i <= ultimo; i++)
-            {
-                InfoAmigo[i, 0] = ds.Tables["Amigo"].Rows[i]["Nombre"].ToString();
-            }
 
             string sql = "SELECT Foto FROM GruposdeAmigos WHERE Id = " + FormGruposAmigos.IDGrupo + "";
             OleDbCommand cmd = new OleDbCommand(sql, conexion);
@@ -98,6 +74,23 @@ namespace Pantalla_Contraseña
             Bitmap bm = new Bitmap(ms);
 
             pic_GrupoAmigo.Image = bm;
+
+            //Guardar información de los amigos de la base de datos
+            string consulta1 = "SELECT [Nombre],[Apellido],[Fecha de Nacimiento],[Foto], [Id] FROM Amigos WHERE IdGruposDeAmigos = " + FormGruposAmigos.IDGrupo + "";
+            OleDbCommand comando1 = new OleDbCommand(consulta1, conexion);
+            OleDbDataAdapter data1 = new OleDbDataAdapter(comando1);
+            data1.Fill(ds, "Amigo");
+
+            ultimo = Convert.ToInt32(ds.Tables["Amigo"].Rows.Count - 1);
+
+            InfoAmigo = new string[ultimo + 1, 5];
+
+            for (int i = 0; i <= ultimo; i++)
+            {
+                InfoAmigo[i, 0] = ds.Tables["Amigo"].Rows[i]["Nombre"].ToString();
+                InfoAmigo[i, 4] = ds.Tables["Amigo"].Rows[i]["Id"].ToString();
+            }           
+
             if (ultimo >= 3)
             {
                 lbl_Nom1.Visible = true;
@@ -112,50 +105,54 @@ namespace Pantalla_Contraseña
 
 
                 lbl_Nom1.Text = InfoAmigo[0, 0];
-                lbl_Nom1.Tag = (int)0;
+                lbl_Nom1.Tag = InfoAmigo[0, 4];
                 lbl_Nom2.Text = InfoAmigo[1, 0];
-                lbl_Nom2.Tag = (int)1;
+                lbl_Nom2.Tag = InfoAmigo[1, 4];
                 lbl_Nom3.Text = InfoAmigo[2, 0];
-                lbl_Nom3.Tag = (int)2;
+                lbl_Nom3.Tag = InfoAmigo[2, 4];
                 lbl_Nom4.Text = InfoAmigo[3, 0];
-                lbl_Nom4.Tag = (int)3;
+                lbl_Nom4.Tag = InfoAmigo[3, 4];
             }
-            if (ultimo == 2)
+
+            else if (ultimo == 2)
             {
                 lbl_Nom1.Visible = true;
                 lbl_Nom2.Visible = true;
                 lbl_Nom3.Visible = true;
-
                 pic_Nom1.Visible = true;
                 pic_Nom2.Visible = true;
                 pic_Nom3.Visible = true;
+
                 lbl_Nom1.Text = InfoAmigo[0, 0];
-                
+                lbl_Nom1.Tag = InfoAmigo[0, 4];
                 lbl_Nom2.Text = InfoAmigo[1, 0];
-                
+                lbl_Nom2.Tag = InfoAmigo[1, 4];
                 lbl_Nom3.Text = InfoAmigo[2, 0];
-                
+                lbl_Nom3.Tag = InfoAmigo[2, 4];
             }
-            if (ultimo == 1)
+            
+            else if (ultimo == 1)
             {
                 lbl_Nom1.Visible = true;
                 lbl_Nom2.Visible = true;
-
                 pic_Nom1.Visible = true;
                 pic_Nom2.Visible = true;
+
                 lbl_Nom1.Text = InfoAmigo[0, 0];
-                lbl_Nom1.Tag = (int) 0;
+                lbl_Nom1.Tag = InfoAmigo[0, 4];
                 lbl_Nom2.Text = InfoAmigo[1, 0];
-                lbl_Nom2.Tag = (int) 1;
+                lbl_Nom2.Tag = InfoAmigo[1, 4];
             }
-            if (ultimo == 0)
+            
+            else if (ultimo == 0)
             {
                 lbl_Nom1.Visible = true;
-
                 pic_Nom1.Visible = true;
+
                 lbl_Nom1.Text = InfoAmigo[0, 0];
-                lbl_Nom1.Tag = (int) 0;
+                lbl_Nom1.Tag = InfoAmigo[0, 4];
             }
+
             if (ultimo < 4)
             {
                 btn_FlechaDer.Visible = false;
@@ -325,13 +322,16 @@ namespace Pantalla_Contraseña
 
 
                         lbl_Nom1.Text = InfoAmigo[i - 4, 0];
-                        
+                        lbl_Nom1.Tag = InfoAmigo[i - 4, 4];
+
                         lbl_Nom2.Text = InfoAmigo[i - 3, 0];
-                        
+                        lbl_Nom2.Tag = InfoAmigo[i - 3, 4];
+
                         lbl_Nom3.Text = InfoAmigo[i - 2, 0];
-                        
+                        lbl_Nom3.Tag = InfoAmigo[i - 2, 4];
+
                         lbl_Nom4.Text = InfoAmigo[i - 1, 0];
-                        
+                        lbl_Nom4.Tag = InfoAmigo[i - 1, 4];
 
                         btn_FlechaDer.Visible = true;
 
@@ -353,13 +353,17 @@ namespace Pantalla_Contraseña
                 if (lbl_Nom4.Text == InfoAmigo[i, 0])
                 {
                     lbl_Nom1.Text = InfoAmigo[i + 1, 0];
-                  
+                    lbl_Nom1.Tag = InfoAmigo[i + 1, 4];
+
                     lbl_Nom2.Text = InfoAmigo[i + 2, 0];
-                   
+                    lbl_Nom2.Tag = InfoAmigo[i + 2, 4];
+
                     lbl_Nom3.Text = InfoAmigo[i + 3, 0];
-                    
+                    lbl_Nom3.Tag = InfoAmigo[i + 3, 4];
+
                     lbl_Nom4.Text = InfoAmigo[i + 4, 0];
-                    
+                    lbl_Nom4.Tag = InfoAmigo[i + 4, 4];
+
                     z = 1;
                 }
             }
@@ -369,35 +373,46 @@ namespace Pantalla_Contraseña
                 {
                     lbl_Nom4.Visible = false;
                     pic_Nom4.Visible = false;
+
                     lbl_Nom1.Text = InfoAmigo[ultimo - 2, 0];
-           
+                    lbl_Nom1.Tag = InfoAmigo[ultimo - 2, 4];
+
                     lbl_Nom2.Text = InfoAmigo[ultimo - 1, 0];
-                 
+                    lbl_Nom2.Tag = InfoAmigo[ultimo - 1, 4];
+
                     lbl_Nom3.Text = InfoAmigo[ultimo, 0];
-                   
+                    lbl_Nom3.Tag = InfoAmigo[ultimo, 4];
                 }
+
                 if (lbl_Nom4.Text == InfoAmigo[ultimo - 2, 0])
                 {
                     lbl_Nom4.Visible = false;
                     pic_Nom4.Visible = false;
+
                     lbl_Nom1.Text = InfoAmigo[ultimo - 1, 0];
-              
+                    lbl_Nom1.Tag = InfoAmigo[ultimo - 1, 4];
+
                     lbl_Nom2.Text = InfoAmigo[ultimo, 0];
-              
+                    lbl_Nom2.Tag = InfoAmigo[ultimo, 4];
+
                     lbl_Nom3.Visible = false;
                     pic_Nom3.Visible = false;
                 }
+
                 if (lbl_Nom4.Text == InfoAmigo[ultimo - 1, 0])
                 {
                     lbl_Nom4.Visible = false;
                     pic_Nom4.Visible = false;
+
                     lbl_Nom1.Text = InfoAmigo[ultimo, 0];
-             
+                    lbl_Nom1.Tag = InfoAmigo[ultimo, 4];
+
                     lbl_Nom2.Visible = false;
                     pic_Nom2.Visible = false;
                     lbl_Nom3.Visible = false;
                     pic_Nom3.Visible = false;
                 }
+
                 if (lbl_Nom4.Text == InfoAmigo[ultimo, 0])
                 {
                     btn_FlechaDer.Visible = false;
@@ -420,13 +435,18 @@ namespace Pantalla_Contraseña
         {
             AgregarAmigo form = new AgregarAmigo();
             form.Show();
-            this.Hide();
+            FormGruposAmigos.form.Hide();
         }
 
         private void lbl_Nom1_Click(object sender, EventArgs e)
         {
             Label LabelClicked = sender as Label;
-            
+
+            IDAmigo = Convert.ToInt32(LabelClicked.Tag);
+
+            FormEditAmigo form = new FormEditAmigo();
+            form.Show();
+            this.Hide();
         }
 
         private void pic_GrupoAmigo_Paint(object sender, PaintEventArgs e)

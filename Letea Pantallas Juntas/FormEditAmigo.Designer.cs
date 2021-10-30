@@ -41,10 +41,12 @@ namespace Pantalla_Contraseña
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.lbl_Apellido = new System.Windows.Forms.Label();
             this.lbl_Nombre = new System.Windows.Forms.Label();
+            this.btn_Volver = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.btn_agregarfoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Volver)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_agregarfoto
@@ -53,21 +55,24 @@ namespace Pantalla_Contraseña
             this.btn_agregarfoto.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.que_lindo_boton;
             this.btn_agregarfoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_agregarfoto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_agregarfoto.Location = new System.Drawing.Point(240, 240);
+            this.btn_agregarfoto.Location = new System.Drawing.Point(242, 185);
             this.btn_agregarfoto.Name = "btn_agregarfoto";
             this.btn_agregarfoto.Size = new System.Drawing.Size(600, 600);
+            this.btn_agregarfoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_agregarfoto.TabIndex = 4;
             this.btn_agregarfoto.TabStop = false;
+            this.btn_agregarfoto.Paint += new System.Windows.Forms.PaintEventHandler(this.btn_agregarfoto_Paint);
             // 
             // lbl_Nacimiento
             // 
+            this.lbl_Nacimiento.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Nacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
             this.lbl_Nacimiento.ForeColor = System.Drawing.Color.Black;
-            this.lbl_Nacimiento.Location = new System.Drawing.Point(1014, 674);
+            this.lbl_Nacimiento.Location = new System.Drawing.Point(1010, 619);
             this.lbl_Nacimiento.Name = "lbl_Nacimiento";
-            this.lbl_Nacimiento.Size = new System.Drawing.Size(358, 35);
+            this.lbl_Nacimiento.Size = new System.Drawing.Size(355, 35);
             this.lbl_Nacimiento.TabIndex = 17;
-            this.lbl_Nacimiento.Text = "Fecha de nacimiento";
+            this.lbl_Nacimiento.Text = "Fecha de nacimiento:";
             // 
             // txt_Apellido
             // 
@@ -112,7 +117,7 @@ namespace Pantalla_Contraseña
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(1012, 290);
+            this.pictureBox1.Location = new System.Drawing.Point(1014, 290);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(500, 62);
             this.pictureBox1.TabIndex = 14;
@@ -122,9 +127,9 @@ namespace Pantalla_Contraseña
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox3.Location = new System.Drawing.Point(1012, 662);
+            this.pictureBox3.Location = new System.Drawing.Point(1014, 657);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(600, 62);
+            this.pictureBox3.Size = new System.Drawing.Size(498, 62);
             this.pictureBox3.TabIndex = 18;
             this.pictureBox3.TabStop = false;
             // 
@@ -133,7 +138,7 @@ namespace Pantalla_Contraseña
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.label2.Location = new System.Drawing.Point(1011, 212);
+            this.label2.Location = new System.Drawing.Point(1007, 248);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(333, 39);
             this.label2.TabIndex = 20;
@@ -144,7 +149,7 @@ namespace Pantalla_Contraseña
             this.lbl_ApellidoNoEdit.AutoSize = true;
             this.lbl_ApellidoNoEdit.BackColor = System.Drawing.Color.Transparent;
             this.lbl_ApellidoNoEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.lbl_ApellidoNoEdit.Location = new System.Drawing.Point(1010, 414);
+            this.lbl_ApellidoNoEdit.Location = new System.Drawing.Point(1010, 441);
             this.lbl_ApellidoNoEdit.Name = "lbl_ApellidoNoEdit";
             this.lbl_ApellidoNoEdit.Size = new System.Drawing.Size(335, 39);
             this.lbl_ApellidoNoEdit.TabIndex = 19;
@@ -156,7 +161,7 @@ namespace Pantalla_Contraseña
             this.dateTimePicker1.Enabled = false;
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(1346, 666);
+            this.dateTimePicker1.Location = new System.Drawing.Point(1023, 662);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(245, 53);
             this.dateTimePicker1.TabIndex = 21;
@@ -181,6 +186,19 @@ namespace Pantalla_Contraseña
             this.lbl_Nombre.TabIndex = 23;
             this.lbl_Nombre.Text = "label1";
             // 
+            // btn_Volver
+            // 
+            this.btn_Volver.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Volver.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Volver.Image = global::Pantalla_Contraseña.Properties.Resources.Boton_Volver;
+            this.btn_Volver.Location = new System.Drawing.Point(30, 30);
+            this.btn_Volver.Name = "btn_Volver";
+            this.btn_Volver.Size = new System.Drawing.Size(110, 110);
+            this.btn_Volver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_Volver.TabIndex = 24;
+            this.btn_Volver.TabStop = false;
+            this.btn_Volver.Click += new System.EventHandler(this.btn_Volver_Click);
+            // 
             // FormEditAmigo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -188,6 +206,7 @@ namespace Pantalla_Contraseña
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Fondo;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.btn_Volver);
             this.Controls.Add(this.lbl_Nombre);
             this.Controls.Add(this.lbl_Apellido);
             this.Controls.Add(this.dateTimePicker1);
@@ -202,11 +221,13 @@ namespace Pantalla_Contraseña
             this.Controls.Add(this.btn_agregarfoto);
             this.Name = "FormEditAmigo";
             this.Text = "FormEditAmigo";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormEditAmigo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btn_agregarfoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Volver)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -226,5 +247,6 @@ namespace Pantalla_Contraseña
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label lbl_Apellido;
         private System.Windows.Forms.Label lbl_Nombre;
+        private System.Windows.Forms.PictureBox btn_Volver;
     }
 }
