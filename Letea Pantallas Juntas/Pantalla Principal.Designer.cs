@@ -45,17 +45,25 @@ namespace Pantalla_Contraseña
             // 
             // btn_Familia
             // 
+            this.btn_Familia.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Familia.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Familia.Image = global::Pantalla_Contraseña.Properties.Resources.Boton_familia__1_;
             this.btn_Familia.Location = new System.Drawing.Point(582, 500);
             this.btn_Familia.Name = "btn_Familia";
             this.btn_Familia.Size = new System.Drawing.Size(300, 300);
+            this.btn_Familia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_Familia.TabIndex = 0;
             this.btn_Familia.TabStop = false;
             // 
             // btn_Amigos
             // 
+            this.btn_Amigos.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Amigos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Amigos.Image = global::Pantalla_Contraseña.Properties.Resources.Boton_amigos__1_;
             this.btn_Amigos.Location = new System.Drawing.Point(1038, 500);
             this.btn_Amigos.Name = "btn_Amigos";
             this.btn_Amigos.Size = new System.Drawing.Size(300, 300);
+            this.btn_Amigos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_Amigos.TabIndex = 1;
             this.btn_Amigos.TabStop = false;
             this.btn_Amigos.Click += new System.EventHandler(this.btn_Amigos_Click);

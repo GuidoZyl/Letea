@@ -34,6 +34,7 @@ namespace Pantalla_Contraseña
 
         private void btn_CerrarSesión_Click(object sender, EventArgs e)
         {
+            FormPantallaLogIn.ModoAdmin = false;
             FormPantallaLogIn form = new FormPantallaLogIn();
             form.Show();
             FormPacientes2.form.Hide();
@@ -63,5 +64,10 @@ namespace Pantalla_Contraseña
         int nWidthEllipse, 
         int nHeightEllipse 
         );
+
+        private void btn_Cerrar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }
