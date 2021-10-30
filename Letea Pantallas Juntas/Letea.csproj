@@ -415,5 +415,8 @@
   <ItemGroup>
     <None Include="Resources\Agregar Foto Ancha %281%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Editar amigo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

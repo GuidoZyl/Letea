@@ -42,11 +42,15 @@ namespace Pantalla_Contraseña
             this.lbl_Apellido = new System.Windows.Forms.Label();
             this.lbl_Nombre = new System.Windows.Forms.Label();
             this.btn_Volver = new System.Windows.Forms.PictureBox();
+            this.btn_EditarAmigo = new System.Windows.Forms.PictureBox();
+            this.btn_Guardar = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.btn_agregarfoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Volver)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_EditarAmigo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Guardar)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_agregarfoto
@@ -78,6 +82,7 @@ namespace Pantalla_Contraseña
             // 
             this.txt_Apellido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txt_Apellido.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_Apellido.Enabled = false;
             this.txt_Apellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Apellido.ForeColor = System.Drawing.Color.Black;
             this.txt_Apellido.Location = new System.Drawing.Point(1017, 494);
@@ -199,6 +204,33 @@ namespace Pantalla_Contraseña
             this.btn_Volver.TabStop = false;
             this.btn_Volver.Click += new System.EventHandler(this.btn_Volver_Click);
             // 
+            // btn_EditarAmigo
+            // 
+            this.btn_EditarAmigo.BackColor = System.Drawing.Color.Transparent;
+            this.btn_EditarAmigo.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Editar_amigo;
+            this.btn_EditarAmigo.Location = new System.Drawing.Point(1430, 905);
+            this.btn_EditarAmigo.Name = "btn_EditarAmigo";
+            this.btn_EditarAmigo.Size = new System.Drawing.Size(404, 80);
+            this.btn_EditarAmigo.TabIndex = 25;
+            this.btn_EditarAmigo.TabStop = false;
+            this.btn_EditarAmigo.Visible = false;
+            this.btn_EditarAmigo.Click += new System.EventHandler(this.btn_EditarAmigo_Click);
+            // 
+            // btn_Guardar
+            // 
+            this.btn_Guardar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_Guardar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Guardar.Image = global::Pantalla_Contraseña.Properties.Resources.Boton_Guardar;
+            this.btn_Guardar.Location = new System.Drawing.Point(1565, 899);
+            this.btn_Guardar.Name = "btn_Guardar";
+            this.btn_Guardar.Size = new System.Drawing.Size(288, 96);
+            this.btn_Guardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_Guardar.TabIndex = 26;
+            this.btn_Guardar.TabStop = false;
+            this.btn_Guardar.Visible = false;
+            this.btn_Guardar.Click += new System.EventHandler(this.btn_Guardar_Click);
+            // 
             // FormEditAmigo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -206,6 +238,8 @@ namespace Pantalla_Contraseña
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Fondo;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.btn_Guardar);
+            this.Controls.Add(this.btn_EditarAmigo);
             this.Controls.Add(this.btn_Volver);
             this.Controls.Add(this.lbl_Nombre);
             this.Controls.Add(this.lbl_Apellido);
@@ -228,6 +262,8 @@ namespace Pantalla_Contraseña
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Volver)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_EditarAmigo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Guardar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -248,5 +284,7 @@ namespace Pantalla_Contraseña
         private System.Windows.Forms.Label lbl_Apellido;
         private System.Windows.Forms.Label lbl_Nombre;
         private System.Windows.Forms.PictureBox btn_Volver;
+        private System.Windows.Forms.PictureBox btn_EditarAmigo;
+        private System.Windows.Forms.PictureBox btn_Guardar;
     }
 }

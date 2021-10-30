@@ -24,6 +24,11 @@ namespace Pantalla_Contraseña
 
         private void FormEditAmigo_Load(object sender, EventArgs e)
         {
+            if (FormPantallaLogIn.ModoAdmin)
+            {
+                btn_EditarAmigo.Visible = true;
+            }
+            
             conexion.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=.\Base de Datos 4.accdb;";
             conexion.Open();
             string consulta = "SELECT [Nombre] , [Apellido] , [Foto] FROM Amigos WHERE Id = " + FormGrupo.IDAmigo + "";
@@ -78,6 +83,37 @@ namespace Pantalla_Contraseña
             FormGrupo form = new FormGrupo();
             form.Show();
             this.Hide();
+        }
+
+        private void btn_EditarAmigo_Click(object sender, EventArgs e)
+        {
+            btn_Guardar.Visible = true;
+            txt_Nom.Visible = true;
+            txt_Apellido.Visible = true;
+            txt_Apellido.Text = lbl_Apellido.Text;
+            txt_Nom.Text = lbl_Nombre.Text;
+            lbl_Apellido.Visible = false;
+            lbl_Nombre.Visible = false;
+            txt_Nom.Enabled = true;
+            txt_Apellido.Enabled = true;
+            dateTimePicker1.Enabled = true;
+            btn_EditarAmigo.Visible = false;
+        }
+
+        private void btn_Guardar_Click(object sender, EventArgs e)
+        {
+            string sql = "UPDATE AMIGOS set [Nombre] = '" + txt_Nom.Text + "', [Apellido] = '" + txt_Apellido.Text + "' WHERE Id = " + FormGrupo.IDAmigo + "";
+            OleDbCommand cmd = new OleDbCommand(sql, conexion);
+            cmd.ExecuteNonQuery();
+            btn_EditarAmigo.Visible = true;
+            lbl_Apellido.Text = txt_Apellido.Text;
+            lbl_Nombre.Text = txt_Nom.Text;
+            lbl_Apellido.Visible = true;
+            lbl_Nombre.Visible = true;
+            txt_Nom.Enabled = false;
+            txt_Apellido.Enabled = false;
+            dateTimePicker1.Enabled = false;
+            btn_Guardar.Visible = false;
         }
     }
 }
