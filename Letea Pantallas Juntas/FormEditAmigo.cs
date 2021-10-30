@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.OleDb;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -17,6 +18,9 @@ namespace Pantalla_Contraseña
     {
         OleDbConnection conexion = new OleDbConnection();
         DataSet ds = new DataSet();
+
+        bool ModoEdit = false;
+
         public FormEditAmigo()
         {
             InitializeComponent();
@@ -31,7 +35,7 @@ namespace Pantalla_Contraseña
             
             conexion.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=.\Base de Datos 4.accdb;";
             conexion.Open();
-            string consulta = "SELECT [Nombre] , [Apellido] , [Foto] FROM Amigos WHERE Id = " + FormGrupo.IDAmigo + "";
+            string consulta = "SELECT [Nombre], [Apellido], [Foto] FROM Amigos WHERE Id = " + FormGrupo.IDAmigo + "";
             OleDbCommand comando = new OleDbCommand(consulta, conexion);
             OleDbDataAdapter data = new OleDbDataAdapter(comando);
 
@@ -57,7 +61,7 @@ namespace Pantalla_Contraseña
 
             base.OnPaint(pe);
             var graph = pe.Graphics;
-            var rectContourSmooth = Rectangle.Inflate(btn_agregarfoto.ClientRectangle, 0, 0);
+            var rectContourSmooth = Rectangle.Inflate(btn_agregarfoto.ClientRectangle, -1, -1);
             var rectBorder = Rectangle.Inflate(rectContourSmooth, -borderSize + 3, -borderSize + 3);
             var smoothSize = borderSize > 0 ? borderSize * 3 : 1;
             using (var borderGColor = new LinearGradientBrush(rectBorder, borderColor, borderColor2, gradientAngle))
@@ -98,22 +102,57 @@ namespace Pantalla_Contraseña
             txt_Apellido.Enabled = true;
             dateTimePicker1.Enabled = true;
             btn_EditarAmigo.Visible = false;
+            btn_agregarfoto.Cursor = Cursors.Hand;
+
+            ModoEdit = true;
         }
 
         private void btn_Guardar_Click(object sender, EventArgs e)
         {
-            string sql = "UPDATE AMIGOS set [Nombre] = '" + txt_Nom.Text + "', [Apellido] = '" + txt_Apellido.Text + "' WHERE Id = " + FormGrupo.IDAmigo + "";
+            string sql = "UPDATE AMIGOS set [Nombre] = '" + txt_Nom.Text + "', [Apellido] = '" + txt_Apellido.Text + "', [Foto] = @foto WHERE Id = " + FormGrupo.IDAmigo + "";
+
+            MemoryStream ms = new MemoryStream();
+            btn_agregarfoto.Image.Save(ms, ImageFormat.Jpeg);
+            byte[] aByte = ms.ToArray();
+
             OleDbCommand cmd = new OleDbCommand(sql, conexion);
+
+            cmd.Parameters.AddWithValue("Foto", aByte);
             cmd.ExecuteNonQuery();
+
             btn_EditarAmigo.Visible = true;
             lbl_Apellido.Text = txt_Apellido.Text;
             lbl_Nombre.Text = txt_Nom.Text;
+
             lbl_Apellido.Visible = true;
             lbl_Nombre.Visible = true;
             txt_Nom.Enabled = false;
             txt_Apellido.Enabled = false;
             dateTimePicker1.Enabled = false;
             btn_Guardar.Visible = false;
+            btn_agregarfoto.Cursor = Cursors.Default;
+
+            ModoEdit = false;
+        }
+
+        private void btn_agregarfoto_Click(object sender, EventArgs e)
+        {
+            if (ModoEdit)
+            {
+                OpenFileDialog BuscarImagen = new OpenFileDialog(); BuscarImagen.Filter = "Archivos de Imagen |*.jpg;*.jpeg";
+
+                BuscarImagen.FileName = "";
+                BuscarImagen.Title = "Titulo del Dialogo";
+
+                if (BuscarImagen.ShowDialog() == DialogResult.OK)
+                {
+                    String Direccion = BuscarImagen.FileName;
+
+                    btn_agregarfoto.ImageLocation = Direccion;
+
+                    btn_agregarfoto.SizeMode = PictureBoxSizeMode.StretchImage;
+                }
+            }
         }
     }
 }

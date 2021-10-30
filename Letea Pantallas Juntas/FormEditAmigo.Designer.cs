@@ -58,13 +58,14 @@ namespace Pantalla_Contraseña
             this.btn_agregarfoto.BackColor = System.Drawing.Color.Transparent;
             this.btn_agregarfoto.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.que_lindo_boton;
             this.btn_agregarfoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_agregarfoto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_agregarfoto.Cursor = System.Windows.Forms.Cursors.Default;
             this.btn_agregarfoto.Location = new System.Drawing.Point(242, 185);
             this.btn_agregarfoto.Name = "btn_agregarfoto";
             this.btn_agregarfoto.Size = new System.Drawing.Size(600, 600);
             this.btn_agregarfoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_agregarfoto.TabIndex = 4;
             this.btn_agregarfoto.TabStop = false;
+            this.btn_agregarfoto.Click += new System.EventHandler(this.btn_agregarfoto_Click);
             this.btn_agregarfoto.Paint += new System.Windows.Forms.PaintEventHandler(this.btn_agregarfoto_Paint);
             // 
             // lbl_Nacimiento
@@ -207,10 +208,12 @@ namespace Pantalla_Contraseña
             // btn_EditarAmigo
             // 
             this.btn_EditarAmigo.BackColor = System.Drawing.Color.Transparent;
-            this.btn_EditarAmigo.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Editar_amigo;
-            this.btn_EditarAmigo.Location = new System.Drawing.Point(1430, 905);
+            this.btn_EditarAmigo.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Editar_amigo1;
+            this.btn_EditarAmigo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_EditarAmigo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_EditarAmigo.Location = new System.Drawing.Point(1449, 899);
             this.btn_EditarAmigo.Name = "btn_EditarAmigo";
-            this.btn_EditarAmigo.Size = new System.Drawing.Size(404, 80);
+            this.btn_EditarAmigo.Size = new System.Drawing.Size(404, 102);
             this.btn_EditarAmigo.TabIndex = 25;
             this.btn_EditarAmigo.TabStop = false;
             this.btn_EditarAmigo.Visible = false;

@@ -53,8 +53,8 @@ namespace Pantalla_Contraseña
 
             base.OnPaint(pe);
             var graph = pe.Graphics;
-            var rectContourSmooth = Rectangle.Inflate(btn_agregarfoto.ClientRectangle, 0, 0);
-            var rectBorder = Rectangle.Inflate(rectContourSmooth, -borderSize, -borderSize);
+            var rectContourSmooth = Rectangle.Inflate(btn_agregarfoto.ClientRectangle, -1, -1);
+            var rectBorder = Rectangle.Inflate(rectContourSmooth, -borderSize + 3, -borderSize + 3);
             var smoothSize = borderSize > 0 ? borderSize * 3 : 1;
             using (var borderGColor = new LinearGradientBrush(rectBorder, borderColor, borderColor2, gradientAngle))
             using (var pathRegion = new GraphicsPath())
