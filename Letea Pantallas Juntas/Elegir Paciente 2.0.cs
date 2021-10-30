@@ -16,6 +16,7 @@ namespace Pantalla_Contraseña
     public partial class FormPacientes2 : Form
     {
         public static int IDPaciente;
+        public static FormPrincipal form = new FormPrincipal();
 
         OleDbConnection conexion = new OleDbConnection();
         DataSet ds = new DataSet();
@@ -308,7 +309,7 @@ namespace Pantalla_Contraseña
 
             IDPaciente = Convert.ToInt32(ds.Tables["IDPaciente"].Rows[0]["Id"]);
 
-            FormPrincipal form = new FormPrincipal();
+            
             form.Show();
             this.Hide();
         }
