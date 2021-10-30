@@ -32,6 +32,7 @@ namespace Pantalla_Contraseña
         DataSet ds = new DataSet();
         public static int ultimo;
         string[,] InfoAmigo;
+        public static int RowPaciente;
 
         public FormGrupo()
         {
@@ -111,9 +112,13 @@ namespace Pantalla_Contraseña
 
 
                 lbl_Nom1.Text = InfoAmigo[0, 0];
+                lbl_Nom1.Tag = (int)0;
                 lbl_Nom2.Text = InfoAmigo[1, 0];
+                lbl_Nom2.Tag = (int)1;
                 lbl_Nom3.Text = InfoAmigo[2, 0];
+                lbl_Nom3.Tag = (int)2;
                 lbl_Nom4.Text = InfoAmigo[3, 0];
+                lbl_Nom4.Tag = (int)3;
             }
             if (ultimo == 2)
             {
@@ -125,8 +130,11 @@ namespace Pantalla_Contraseña
                 pic_Nom2.Visible = true;
                 pic_Nom3.Visible = true;
                 lbl_Nom1.Text = InfoAmigo[0, 0];
+                
                 lbl_Nom2.Text = InfoAmigo[1, 0];
+                
                 lbl_Nom3.Text = InfoAmigo[2, 0];
+                
             }
             if (ultimo == 1)
             {
@@ -136,7 +144,9 @@ namespace Pantalla_Contraseña
                 pic_Nom1.Visible = true;
                 pic_Nom2.Visible = true;
                 lbl_Nom1.Text = InfoAmigo[0, 0];
+                lbl_Nom1.Tag = (int) 0;
                 lbl_Nom2.Text = InfoAmigo[1, 0];
+                lbl_Nom2.Tag = (int) 1;
             }
             if (ultimo == 0)
             {
@@ -144,6 +154,7 @@ namespace Pantalla_Contraseña
 
                 pic_Nom1.Visible = true;
                 lbl_Nom1.Text = InfoAmigo[0, 0];
+                lbl_Nom1.Tag = (int) 0;
             }
             if (ultimo < 4)
             {
@@ -314,9 +325,13 @@ namespace Pantalla_Contraseña
 
 
                         lbl_Nom1.Text = InfoAmigo[i - 4, 0];
+                        
                         lbl_Nom2.Text = InfoAmigo[i - 3, 0];
+                        
                         lbl_Nom3.Text = InfoAmigo[i - 2, 0];
+                        
                         lbl_Nom4.Text = InfoAmigo[i - 1, 0];
+                        
 
                         btn_FlechaDer.Visible = true;
 
@@ -338,9 +353,13 @@ namespace Pantalla_Contraseña
                 if (lbl_Nom4.Text == InfoAmigo[i, 0])
                 {
                     lbl_Nom1.Text = InfoAmigo[i + 1, 0];
+                  
                     lbl_Nom2.Text = InfoAmigo[i + 2, 0];
+                   
                     lbl_Nom3.Text = InfoAmigo[i + 3, 0];
+                    
                     lbl_Nom4.Text = InfoAmigo[i + 4, 0];
+                    
                     z = 1;
                 }
             }
@@ -351,15 +370,20 @@ namespace Pantalla_Contraseña
                     lbl_Nom4.Visible = false;
                     pic_Nom4.Visible = false;
                     lbl_Nom1.Text = InfoAmigo[ultimo - 2, 0];
+           
                     lbl_Nom2.Text = InfoAmigo[ultimo - 1, 0];
+                 
                     lbl_Nom3.Text = InfoAmigo[ultimo, 0];
+                   
                 }
                 if (lbl_Nom4.Text == InfoAmigo[ultimo - 2, 0])
                 {
                     lbl_Nom4.Visible = false;
                     pic_Nom4.Visible = false;
                     lbl_Nom1.Text = InfoAmigo[ultimo - 1, 0];
+              
                     lbl_Nom2.Text = InfoAmigo[ultimo, 0];
+              
                     lbl_Nom3.Visible = false;
                     pic_Nom3.Visible = false;
                 }
@@ -368,6 +392,7 @@ namespace Pantalla_Contraseña
                     lbl_Nom4.Visible = false;
                     pic_Nom4.Visible = false;
                     lbl_Nom1.Text = InfoAmigo[ultimo, 0];
+             
                     lbl_Nom2.Visible = false;
                     pic_Nom2.Visible = false;
                     lbl_Nom3.Visible = false;
@@ -400,7 +425,8 @@ namespace Pantalla_Contraseña
 
         private void lbl_Nom1_Click(object sender, EventArgs e)
         {
-
+            Label LabelClicked = sender as Label;
+            
         }
 
         private void pic_GrupoAmigo_Paint(object sender, PaintEventArgs e)

@@ -36,8 +36,6 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btn_Guardar = new System.Windows.Forms.PictureBox();
-            this.lbl_Nom = new System.Windows.Forms.Label();
-            this.lbl_Apellido = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_ApellidoNoEdit = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -74,7 +72,6 @@
             this.txt_Nom.TabIndex = 4;
             this.txt_Nom.TabStop = false;
             this.txt_Nom.Text = "Introduzca el nombre del amigo";
-            this.txt_Nom.Visible = false;
             this.txt_Nom.Click += new System.EventHandler(this.txt_Nom_Click);
             this.txt_Nom.TextChanged += new System.EventHandler(this.txt_Nom_TextChanged);
             // 
@@ -100,7 +97,6 @@
             this.txt_Apellido.TabIndex = 6;
             this.txt_Apellido.TabStop = false;
             this.txt_Apellido.Text = "Introduzca el apellido del amigo";
-            this.txt_Apellido.Visible = false;
             this.txt_Apellido.Click += new System.EventHandler(this.txt_Apellido_Click);
             // 
             // pictureBox2
@@ -119,7 +115,7 @@
             this.dateTimePicker1.Enabled = false;
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(1372, 664);
+            this.dateTimePicker1.Location = new System.Drawing.Point(1024, 663);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(245, 53);
             this.dateTimePicker1.TabIndex = 0;
@@ -131,7 +127,7 @@
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox3.Location = new System.Drawing.Point(1016, 660);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(601, 60);
+            this.pictureBox3.Size = new System.Drawing.Size(260, 60);
             this.pictureBox3.TabIndex = 12;
             this.pictureBox3.TabStop = false;
             // 
@@ -149,31 +145,11 @@
             this.btn_Guardar.TabStop = false;
             this.btn_Guardar.Click += new System.EventHandler(this.btn_Guardar_Click);
             // 
-            // lbl_Nom
-            // 
-            this.lbl_Nom.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_Nom.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.lbl_Nom.Location = new System.Drawing.Point(1018, 298);
-            this.lbl_Nom.Name = "lbl_Nom";
-            this.lbl_Nom.Size = new System.Drawing.Size(458, 41);
-            this.lbl_Nom.TabIndex = 14;
-            this.lbl_Nom.Text = "label1";
-            // 
-            // lbl_Apellido
-            // 
-            this.lbl_Apellido.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_Apellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.lbl_Apellido.Location = new System.Drawing.Point(1023, 491);
-            this.lbl_Apellido.Name = "lbl_Apellido";
-            this.lbl_Apellido.Size = new System.Drawing.Size(458, 41);
-            this.lbl_Apellido.TabIndex = 15;
-            this.lbl_Apellido.Text = "label1";
-            // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.label1.Location = new System.Drawing.Point(1023, 671);
+            this.label1.Location = new System.Drawing.Point(1014, 602);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(347, 41);
             this.label1.TabIndex = 16;
@@ -211,8 +187,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lbl_ApellidoNoEdit);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.lbl_Apellido);
-            this.Controls.Add(this.lbl_Nom);
             this.Controls.Add(this.btn_Guardar);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.txt_Apellido);
@@ -245,8 +219,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox btn_Guardar;
-        private System.Windows.Forms.Label lbl_Nom;
-        private System.Windows.Forms.Label lbl_Apellido;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl_ApellidoNoEdit;
         private System.Windows.Forms.Label label2;

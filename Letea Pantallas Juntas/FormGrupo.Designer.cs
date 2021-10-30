@@ -213,6 +213,7 @@
             this.lbl_Nom2.Text = "label1";
             this.lbl_Nom2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl_Nom2.Visible = false;
+            this.lbl_Nom2.Click += new System.EventHandler(this.lbl_Nom1_Click);
             // 
             // lbl_Nom3
             // 
@@ -226,6 +227,7 @@
             this.lbl_Nom3.Text = "label1";
             this.lbl_Nom3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl_Nom3.Visible = false;
+            this.lbl_Nom3.Click += new System.EventHandler(this.lbl_Nom1_Click);
             // 
             // lbl_Nom4
             // 
@@ -239,6 +241,7 @@
             this.lbl_Nom4.Text = "label1";
             this.lbl_Nom4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl_Nom4.Visible = false;
+            this.lbl_Nom4.Click += new System.EventHandler(this.lbl_Nom1_Click);
             // 
             // FormGrupo
             // 

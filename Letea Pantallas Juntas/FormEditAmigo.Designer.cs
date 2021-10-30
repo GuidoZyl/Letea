@@ -36,6 +36,11 @@ namespace Pantalla_Contraseña
             this.txt_Nom = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_ApellidoNoEdit = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.lbl_Apellido = new System.Windows.Forms.Label();
+            this.lbl_Nombre = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btn_agregarfoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -60,9 +65,9 @@ namespace Pantalla_Contraseña
             this.lbl_Nacimiento.ForeColor = System.Drawing.Color.Black;
             this.lbl_Nacimiento.Location = new System.Drawing.Point(1014, 674);
             this.lbl_Nacimiento.Name = "lbl_Nacimiento";
-            this.lbl_Nacimiento.Size = new System.Drawing.Size(537, 35);
+            this.lbl_Nacimiento.Size = new System.Drawing.Size(358, 35);
             this.lbl_Nacimiento.TabIndex = 17;
-            this.lbl_Nacimiento.Text = "Introduzca la fecha de nacimiento";
+            this.lbl_Nacimiento.Text = "Fecha de nacimiento";
             // 
             // txt_Apellido
             // 
@@ -76,6 +81,7 @@ namespace Pantalla_Contraseña
             this.txt_Apellido.TabIndex = 15;
             this.txt_Apellido.TabStop = false;
             this.txt_Apellido.Text = "Introduzca el apellido del amigo";
+            this.txt_Apellido.Visible = false;
             // 
             // pictureBox2
             // 
@@ -100,6 +106,7 @@ namespace Pantalla_Contraseña
             this.txt_Nom.TabIndex = 13;
             this.txt_Nom.TabStop = false;
             this.txt_Nom.Text = "Introduzca el nombre del amigo";
+            this.txt_Nom.Visible = false;
             // 
             // pictureBox1
             // 
@@ -117,9 +124,62 @@ namespace Pantalla_Contraseña
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox3.Location = new System.Drawing.Point(1012, 662);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(797, 62);
+            this.pictureBox3.Size = new System.Drawing.Size(600, 62);
             this.pictureBox3.TabIndex = 18;
             this.pictureBox3.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.label2.Location = new System.Drawing.Point(1011, 212);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(333, 39);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "Nombre de tu amigo:";
+            // 
+            // lbl_ApellidoNoEdit
+            // 
+            this.lbl_ApellidoNoEdit.AutoSize = true;
+            this.lbl_ApellidoNoEdit.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_ApellidoNoEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.lbl_ApellidoNoEdit.Location = new System.Drawing.Point(1010, 414);
+            this.lbl_ApellidoNoEdit.Name = "lbl_ApellidoNoEdit";
+            this.lbl_ApellidoNoEdit.Size = new System.Drawing.Size(335, 39);
+            this.lbl_ApellidoNoEdit.TabIndex = 19;
+            this.lbl_ApellidoNoEdit.Text = "Apellido de tu amigo:";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.Transparent;
+            this.dateTimePicker1.Enabled = false;
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(1346, 666);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(245, 53);
+            this.dateTimePicker1.TabIndex = 21;
+            // 
+            // lbl_Apellido
+            // 
+            this.lbl_Apellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.lbl_Apellido.ForeColor = System.Drawing.Color.Black;
+            this.lbl_Apellido.Location = new System.Drawing.Point(1019, 496);
+            this.lbl_Apellido.Name = "lbl_Apellido";
+            this.lbl_Apellido.Size = new System.Drawing.Size(481, 36);
+            this.lbl_Apellido.TabIndex = 22;
+            this.lbl_Apellido.Text = "lbl_Apellido";
+            // 
+            // lbl_Nombre
+            // 
+            this.lbl_Nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.lbl_Nombre.ForeColor = System.Drawing.Color.Black;
+            this.lbl_Nombre.Location = new System.Drawing.Point(1016, 302);
+            this.lbl_Nombre.Name = "lbl_Nombre";
+            this.lbl_Nombre.Size = new System.Drawing.Size(481, 36);
+            this.lbl_Nombre.TabIndex = 23;
+            this.lbl_Nombre.Text = "label1";
             // 
             // FormEditAmigo
             // 
@@ -128,6 +188,11 @@ namespace Pantalla_Contraseña
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Fondo;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.lbl_Nombre);
+            this.Controls.Add(this.lbl_Apellido);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbl_ApellidoNoEdit);
             this.Controls.Add(this.lbl_Nacimiento);
             this.Controls.Add(this.txt_Apellido);
             this.Controls.Add(this.pictureBox2);
@@ -137,6 +202,7 @@ namespace Pantalla_Contraseña
             this.Controls.Add(this.btn_agregarfoto);
             this.Name = "FormEditAmigo";
             this.Text = "FormEditAmigo";
+            this.Load += new System.EventHandler(this.FormEditAmigo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btn_agregarfoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -155,5 +221,10 @@ namespace Pantalla_Contraseña
         private System.Windows.Forms.TextBox txt_Nom;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbl_ApellidoNoEdit;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label lbl_Apellido;
+        private System.Windows.Forms.Label lbl_Nombre;
     }
 }
