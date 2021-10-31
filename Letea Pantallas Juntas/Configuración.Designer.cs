@@ -33,10 +33,12 @@ namespace Pantalla_Contraseña
             this.btn_Creditos = new System.Windows.Forms.PictureBox();
             this.btn_CerrarSesión = new System.Windows.Forms.PictureBox();
             this.btn_CerrarAplicacion = new System.Windows.Forms.PictureBox();
+            this.btn_Cerrar = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.btn_AcercaDeNosotros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Creditos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_CerrarSesión)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_CerrarAplicacion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Cerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_AcercaDeNosotros
@@ -91,6 +93,19 @@ namespace Pantalla_Contraseña
             this.btn_CerrarAplicacion.TabStop = false;
             this.btn_CerrarAplicacion.Click += new System.EventHandler(this.btn_CerrarAplicacion_Click);
             // 
+            // btn_Cerrar
+            // 
+            this.btn_Cerrar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Cerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Cerrar.Image = global::Pantalla_Contraseña.Properties.Resources.Cruz;
+            this.btn_Cerrar.Location = new System.Drawing.Point(1479, 28);
+            this.btn_Cerrar.Name = "btn_Cerrar";
+            this.btn_Cerrar.Size = new System.Drawing.Size(110, 107);
+            this.btn_Cerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_Cerrar.TabIndex = 4;
+            this.btn_Cerrar.TabStop = false;
+            this.btn_Cerrar.Click += new System.EventHandler(this.btn_Cerrar_Click);
+            // 
             // Configuracion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -98,6 +113,7 @@ namespace Pantalla_Contraseña
             this.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Fondo_Coniguración;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1634, 761);
+            this.Controls.Add(this.btn_Cerrar);
             this.Controls.Add(this.btn_CerrarAplicacion);
             this.Controls.Add(this.btn_CerrarSesión);
             this.Controls.Add(this.btn_Creditos);
@@ -113,6 +129,7 @@ namespace Pantalla_Contraseña
             ((System.ComponentModel.ISupportInitialize)(this.btn_Creditos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_CerrarSesión)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_CerrarAplicacion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Cerrar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -123,5 +140,6 @@ namespace Pantalla_Contraseña
         private System.Windows.Forms.PictureBox btn_Creditos;
         private System.Windows.Forms.PictureBox btn_CerrarSesión;
         private System.Windows.Forms.PictureBox btn_CerrarAplicacion;
+        private System.Windows.Forms.PictureBox btn_Cerrar;
     }
 }
