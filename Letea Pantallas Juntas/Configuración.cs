@@ -62,5 +62,10 @@ namespace Pantalla_Contraseña
         int nWidthEllipse, 
         int nHeightEllipse 
         );
+
+        private void btn_Cerrar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }
