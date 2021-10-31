@@ -158,6 +158,61 @@ namespace Pantalla_Contraseña
                 btn_FlechaDer.Visible = false;
                 btn_FlechaIzq.Visible = false;
             }
+            for (int u = 0; u<=ultimo;u++)
+            {
+                if (lbl_Nom1.Text == InfoAmigo[u,0])
+                {
+                    string sql2 = "SELECT Foto FROM Amigos WHERE Id ="+InfoAmigo[u,4]+"";
+                    OleDbCommand comando2 = new OleDbCommand(sql2, conexion);
+                    OleDbDataAdapter data3 = new OleDbDataAdapter(comando2);
+
+                    data3.Fill(ds, "fotos");
+                    MemoryStream ms1 = new MemoryStream((byte[])ds.Tables["fotos"].Rows[0]["Foto"]);
+
+                    Bitmap bm1 = new Bitmap(ms1);
+
+                    pic_Nom1.Image = bm1;
+                }
+                else if (lbl_Nom2.Text == InfoAmigo[u,0])
+                {
+                    string sql2 = "SELECT Foto FROM Amigos WHERE Id =" + InfoAmigo[u, 4] + "";
+                    OleDbCommand comando2 = new OleDbCommand(sql2, conexion);
+                    OleDbDataAdapter data3 = new OleDbDataAdapter(comando2);
+
+                    data3.Fill(ds, "fotos");
+                    MemoryStream ms1 = new MemoryStream((byte[])ds.Tables["fotos"].Rows[0]["Foto"]);
+
+                    Bitmap bm1 = new Bitmap(ms1);
+
+                    pic_Nom1.Image = bm1;
+                }
+                else if (lbl_Nom3.Text == InfoAmigo[u,0])
+                {
+                    string sql2 = "SELECT Foto FROM Amigos WHERE Id =" + InfoAmigo[u, 4] + "";
+                    OleDbCommand comando2 = new OleDbCommand(sql2, conexion);
+                    OleDbDataAdapter data3 = new OleDbDataAdapter(comando2);
+
+                    data3.Fill(ds, "fotos");
+                    MemoryStream ms1 = new MemoryStream((byte[])ds.Tables["fotos"].Rows[0]["Foto"]);
+
+                    Bitmap bm1 = new Bitmap(ms1);
+
+                    pic_Nom1.Image = bm1;
+                }
+                else if (lbl_Nom4.Text == InfoAmigo[u,0])
+                {
+                    string sql2 = "SELECT Foto FROM Amigos WHERE Id =" + InfoAmigo[u, 4] + "";
+                    OleDbCommand comando2 = new OleDbCommand(sql2, conexion);
+                    OleDbDataAdapter data3 = new OleDbDataAdapter(comando2);
+
+                    data3.Fill(ds, "fotos");
+                    MemoryStream ms1 = new MemoryStream((byte[])ds.Tables["fotos"].Rows[0]["Foto"]);
+
+                    Bitmap bm1 = new Bitmap(ms1);
+
+                    pic_Nom1.Image = bm1;
+                }
+            }
         }
 
         private void lbl_NomGrupo_Click(object sender, EventArgs e)
@@ -343,6 +398,61 @@ namespace Pantalla_Contraseña
                 }
             }
             btn_FlechaDer.Visible = true;
+            for (int u = 0; u <= ultimo; u++)
+            {
+                if (lbl_Nom1.Text == InfoAmigo[u, 0])
+                {
+                    string sql2 = "SELECT Foto FROM Amigos WHERE Id =" + InfoAmigo[u, 4] + "";
+                    OleDbCommand comando2 = new OleDbCommand(sql2, conexion);
+                    OleDbDataAdapter data3 = new OleDbDataAdapter(comando2);
+
+                    data3.Fill(ds, "fotos");
+                    MemoryStream ms1 = new MemoryStream((byte[])ds.Tables["fotos"].Rows[0]["Foto"]);
+
+                    Bitmap bm1 = new Bitmap(ms1);
+
+                    pic_Nom1.Image = bm1;
+                }
+                else if (lbl_Nom2.Text == InfoAmigo[u, 0])
+                {
+                    string sql2 = "SELECT Foto FROM Amigos WHERE Id =" + InfoAmigo[u, 4] + "";
+                    OleDbCommand comando2 = new OleDbCommand(sql2, conexion);
+                    OleDbDataAdapter data3 = new OleDbDataAdapter(comando2);
+
+                    data3.Fill(ds, "fotos");
+                    MemoryStream ms1 = new MemoryStream((byte[])ds.Tables["fotos"].Rows[0]["Foto"]);
+
+                    Bitmap bm1 = new Bitmap(ms1);
+
+                    pic_Nom1.Image = bm1;
+                }
+                else if (lbl_Nom3.Text == InfoAmigo[u, 0])
+                {
+                    string sql2 = "SELECT Foto FROM Amigos WHERE Id =" + InfoAmigo[u, 4] + "";
+                    OleDbCommand comando2 = new OleDbCommand(sql2, conexion);
+                    OleDbDataAdapter data3 = new OleDbDataAdapter(comando2);
+
+                    data3.Fill(ds, "fotos");
+                    MemoryStream ms1 = new MemoryStream((byte[])ds.Tables["fotos"].Rows[0]["Foto"]);
+
+                    Bitmap bm1 = new Bitmap(ms1);
+
+                    pic_Nom1.Image = bm1;
+                }
+                else if (lbl_Nom4.Text == InfoAmigo[u, 0])
+                {
+                    string sql2 = "SELECT Foto FROM Amigos WHERE Id =" + InfoAmigo[u, 4] + "";
+                    OleDbCommand comando2 = new OleDbCommand(sql2, conexion);
+                    OleDbDataAdapter data3 = new OleDbDataAdapter(comando2);
+
+                    data3.Fill(ds, "fotos");
+                    MemoryStream ms1 = new MemoryStream((byte[])ds.Tables["fotos"].Rows[0]["Foto"]);
+
+                    Bitmap bm1 = new Bitmap(ms1);
+
+                    pic_Nom1.Image = bm1;
+                }
+            }
         }
 
         private void btn_FlechaDer_Click(object sender, EventArgs e)
@@ -428,6 +538,61 @@ namespace Pantalla_Contraseña
             if (lbl_Nom1.Text != InfoAmigo[0, 0] || lbl_Nom1.Visible == false)
             {
                 btn_FlechaIzq.Visible = true;
+            }
+            for (int u = 0; u <= ultimo; u++)
+            {
+                if (lbl_Nom1.Text == InfoAmigo[u, 0])
+                {
+                    string sql2 = "SELECT Foto FROM Amigos WHERE Id =" + InfoAmigo[u, 4] + "";
+                    OleDbCommand comando2 = new OleDbCommand(sql2, conexion);
+                    OleDbDataAdapter data3 = new OleDbDataAdapter(comando2);
+
+                    data3.Fill(ds, "fotos");
+                    MemoryStream ms1 = new MemoryStream((byte[])ds.Tables["fotos"].Rows[0]["Foto"]);
+
+                    Bitmap bm1 = new Bitmap(ms1);
+
+                    pic_Nom1.Image = bm1;
+                }
+                else if (lbl_Nom2.Text == InfoAmigo[u, 0])
+                {
+                    string sql2 = "SELECT Foto FROM Amigos WHERE Id =" + InfoAmigo[u, 4] + "";
+                    OleDbCommand comando2 = new OleDbCommand(sql2, conexion);
+                    OleDbDataAdapter data3 = new OleDbDataAdapter(comando2);
+
+                    data3.Fill(ds, "fotos");
+                    MemoryStream ms1 = new MemoryStream((byte[])ds.Tables["fotos"].Rows[0]["Foto"]);
+
+                    Bitmap bm1 = new Bitmap(ms1);
+
+                    pic_Nom1.Image = bm1;
+                }
+                else if (lbl_Nom3.Text == InfoAmigo[u, 0])
+                {
+                    string sql2 = "SELECT Foto FROM Amigos WHERE Id =" + InfoAmigo[u, 4] + "";
+                    OleDbCommand comando2 = new OleDbCommand(sql2, conexion);
+                    OleDbDataAdapter data3 = new OleDbDataAdapter(comando2);
+
+                    data3.Fill(ds, "fotos");
+                    MemoryStream ms1 = new MemoryStream((byte[])ds.Tables["fotos"].Rows[0]["Foto"]);
+
+                    Bitmap bm1 = new Bitmap(ms1);
+
+                    pic_Nom1.Image = bm1;
+                }
+                else if (lbl_Nom4.Text == InfoAmigo[u, 0])
+                {
+                    string sql2 = "SELECT Foto FROM Amigos WHERE Id =" + InfoAmigo[u, 4] + "";
+                    OleDbCommand comando2 = new OleDbCommand(sql2, conexion);
+                    OleDbDataAdapter data3 = new OleDbDataAdapter(comando2);
+
+                    data3.Fill(ds, "fotos");
+                    MemoryStream ms1 = new MemoryStream((byte[])ds.Tables["fotos"].Rows[0]["Foto"]);
+
+                    Bitmap bm1 = new Bitmap(ms1);
+
+                    pic_Nom1.Image = bm1;
+                }
             }
         }
 

@@ -124,6 +124,7 @@
             this.pic_Nom1.Location = new System.Drawing.Point(160, 591);
             this.pic_Nom1.Name = "pic_Nom1";
             this.pic_Nom1.Size = new System.Drawing.Size(250, 250);
+            this.pic_Nom1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_Nom1.TabIndex = 25;
             this.pic_Nom1.TabStop = false;
             this.pic_Nom1.Visible = false;
@@ -135,6 +136,7 @@
             this.pic_Nom2.Location = new System.Drawing.Point(612, 591);
             this.pic_Nom2.Name = "pic_Nom2";
             this.pic_Nom2.Size = new System.Drawing.Size(250, 250);
+            this.pic_Nom2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_Nom2.TabIndex = 26;
             this.pic_Nom2.TabStop = false;
             this.pic_Nom2.Visible = false;
@@ -146,6 +148,7 @@
             this.pic_Nom3.Location = new System.Drawing.Point(1055, 591);
             this.pic_Nom3.Name = "pic_Nom3";
             this.pic_Nom3.Size = new System.Drawing.Size(250, 250);
+            this.pic_Nom3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_Nom3.TabIndex = 27;
             this.pic_Nom3.TabStop = false;
             this.pic_Nom3.Visible = false;
@@ -157,6 +160,7 @@
             this.pic_Nom4.Location = new System.Drawing.Point(1499, 591);
             this.pic_Nom4.Name = "pic_Nom4";
             this.pic_Nom4.Size = new System.Drawing.Size(250, 250);
+            this.pic_Nom4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_Nom4.TabIndex = 28;
             this.pic_Nom4.TabStop = false;
             this.pic_Nom4.Visible = false;
