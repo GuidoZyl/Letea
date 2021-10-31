@@ -39,11 +39,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_ApellidoNoEdit = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.pic_FotoPerfil = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.btn_agregarfoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Guardar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_FotoPerfil)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_agregarfoto
@@ -177,6 +179,15 @@
             this.label2.TabIndex = 18;
             this.label2.Text = "Nombre de tu amigo:";
             // 
+            // pic_FotoPerfil
+            // 
+            this.pic_FotoPerfil.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Perfil_Vacío;
+            this.pic_FotoPerfil.Location = new System.Drawing.Point(593, 24);
+            this.pic_FotoPerfil.Name = "pic_FotoPerfil";
+            this.pic_FotoPerfil.Size = new System.Drawing.Size(99, 51);
+            this.pic_FotoPerfil.TabIndex = 19;
+            this.pic_FotoPerfil.TabStop = false;
+            // 
             // AgregarAmigo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -184,6 +195,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Fondo;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.pic_FotoPerfil);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lbl_ApellidoNoEdit);
             this.Controls.Add(this.label1);
@@ -204,6 +216,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Guardar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_FotoPerfil)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -222,5 +235,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl_ApellidoNoEdit;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pic_FotoPerfil;
     }
 }

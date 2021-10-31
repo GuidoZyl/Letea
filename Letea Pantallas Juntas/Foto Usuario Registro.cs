@@ -18,6 +18,7 @@ namespace Pantalla_Contraseña
     {
         OleDbConnection conexion = new OleDbConnection();
         DataSet ds = new DataSet();
+        public static FormPantallaLogIn form = new FormPantallaLogIn();
 
         public static bool PrimerPaciente = false;
         public FormFotoUsuarioRegistro()
@@ -68,7 +69,6 @@ namespace Pantalla_Contraseña
             if (!PrimerPaciente)
             {
                 PrimerPaciente = true;
-                FormPantallaLogIn form = new FormPantallaLogIn();
                 form.Show();
                 this.Hide();
             }

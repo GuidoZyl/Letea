@@ -34,8 +34,7 @@ namespace Pantalla_Contraseña
 
         private void btn_CerrarSesión_Click(object sender, EventArgs e)
         {
-            FormPantallaLogIn form = new FormPantallaLogIn();
-            form.Show();
+            FormFotoUsuarioRegistro.form.Show();
             FormPacientes2.form.Hide();
             FormGruposAmigos.form.Hide();
             this.Hide();

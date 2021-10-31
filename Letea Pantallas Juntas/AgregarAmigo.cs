@@ -104,6 +104,11 @@ namespace Pantalla_Contraseña
 
         private void btn_Guardar_Click(object sender, EventArgs e)
         {
+            if (btn_agregarfoto == null)
+            {
+                btn_agregarfoto.Image = pic_FotoPerfil.BackgroundImage;
+            }
+            
             string sql = "INSERT into Amigos ([Nombre], [Apellido], [IDGruposdeAmigos], [Foto]) values ('" + txt_Nom.Text + "', '"+txt_Apellido.Text+"'," + FormGruposAmigos.IDGrupo + ", @foto)";
             
             MemoryStream ms = new MemoryStream();
