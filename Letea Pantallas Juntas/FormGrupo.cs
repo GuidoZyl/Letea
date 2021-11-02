@@ -34,6 +34,7 @@ namespace Pantalla_Contraseña
         {
             FormGruposAmigos form = new FormGruposAmigos();
             form.Show();
+
             this.Hide();
         }
 
@@ -180,11 +181,11 @@ namespace Pantalla_Contraseña
                     OleDbDataAdapter data3 = new OleDbDataAdapter(comando2);
 
                     data3.Fill(ds, "fotos");
-                    MemoryStream ms1 = new MemoryStream((byte[])ds.Tables["fotos"].Rows[0]["Foto"]);
+                    MemoryStream ms2 = new MemoryStream((byte[])ds.Tables["fotos"].Rows[0]["Foto"]);
 
-                    Bitmap bm1 = new Bitmap(ms1);
+                    Bitmap bm2 = new Bitmap(ms2);
 
-                    pic_Nom1.Image = bm1;
+                    pic_Nom2.Image = bm2;
                 }
                 else if (lbl_Nom3.Text == InfoAmigo[u,0])
                 {
@@ -193,11 +194,11 @@ namespace Pantalla_Contraseña
                     OleDbDataAdapter data3 = new OleDbDataAdapter(comando2);
 
                     data3.Fill(ds, "fotos");
-                    MemoryStream ms1 = new MemoryStream((byte[])ds.Tables["fotos"].Rows[0]["Foto"]);
+                    MemoryStream ms3 = new MemoryStream((byte[])ds.Tables["fotos"].Rows[0]["Foto"]);
 
-                    Bitmap bm1 = new Bitmap(ms1);
+                    Bitmap bm3 = new Bitmap(ms3);
 
-                    pic_Nom1.Image = bm1;
+                    pic_Nom3.Image = bm3;
                 }
                 else if (lbl_Nom4.Text == InfoAmigo[u,0])
                 {
@@ -206,11 +207,11 @@ namespace Pantalla_Contraseña
                     OleDbDataAdapter data3 = new OleDbDataAdapter(comando2);
 
                     data3.Fill(ds, "fotos");
-                    MemoryStream ms1 = new MemoryStream((byte[])ds.Tables["fotos"].Rows[0]["Foto"]);
+                    MemoryStream ms4 = new MemoryStream((byte[])ds.Tables["fotos"].Rows[0]["Foto"]);
 
-                    Bitmap bm1 = new Bitmap(ms1);
+                    Bitmap bm4 = new Bitmap(ms4);
 
-                    pic_Nom1.Image = bm1;
+                    pic_Nom4.Image = bm4;
                 }
             }
         }
@@ -407,11 +408,11 @@ namespace Pantalla_Contraseña
                     OleDbDataAdapter data3 = new OleDbDataAdapter(comando2);
 
                     data3.Fill(ds, "fotos");
-                    MemoryStream ms1 = new MemoryStream((byte[])ds.Tables["fotos"].Rows[0]["Foto"]);
+                    MemoryStream ms5 = new MemoryStream((byte[])ds.Tables["fotos"].Rows[0]["Foto"]);
 
-                    Bitmap bm1 = new Bitmap(ms1);
+                    Bitmap bm5 = new Bitmap(ms5);
 
-                    pic_Nom1.Image = bm1;
+                    pic_Nom1.Image = bm5;
                 }
                 else if (lbl_Nom2.Text == InfoAmigo[u, 0])
                 {
@@ -420,11 +421,11 @@ namespace Pantalla_Contraseña
                     OleDbDataAdapter data3 = new OleDbDataAdapter(comando2);
 
                     data3.Fill(ds, "fotos");
-                    MemoryStream ms1 = new MemoryStream((byte[])ds.Tables["fotos"].Rows[0]["Foto"]);
+                    MemoryStream ms6 = new MemoryStream((byte[])ds.Tables["fotos"].Rows[0]["Foto"]);
 
-                    Bitmap bm1 = new Bitmap(ms1);
+                    Bitmap bm6 = new Bitmap(ms6);
 
-                    pic_Nom1.Image = bm1;
+                    pic_Nom2.Image = bm6;
                 }
                 else if (lbl_Nom3.Text == InfoAmigo[u, 0])
                 {
@@ -433,11 +434,11 @@ namespace Pantalla_Contraseña
                     OleDbDataAdapter data3 = new OleDbDataAdapter(comando2);
 
                     data3.Fill(ds, "fotos");
-                    MemoryStream ms1 = new MemoryStream((byte[])ds.Tables["fotos"].Rows[0]["Foto"]);
+                    MemoryStream ms7 = new MemoryStream((byte[])ds.Tables["fotos"].Rows[0]["Foto"]);
 
-                    Bitmap bm1 = new Bitmap(ms1);
+                    Bitmap bm7 = new Bitmap(ms7);
 
-                    pic_Nom1.Image = bm1;
+                    pic_Nom3.Image = bm7;
                 }
                 else if (lbl_Nom4.Text == InfoAmigo[u, 0])
                 {
@@ -446,11 +447,11 @@ namespace Pantalla_Contraseña
                     OleDbDataAdapter data3 = new OleDbDataAdapter(comando2);
 
                     data3.Fill(ds, "fotos");
-                    MemoryStream ms1 = new MemoryStream((byte[])ds.Tables["fotos"].Rows[0]["Foto"]);
+                    MemoryStream ms8 = new MemoryStream((byte[])ds.Tables["fotos"].Rows[0]["Foto"]);
 
-                    Bitmap bm1 = new Bitmap(ms1);
+                    Bitmap bm8 = new Bitmap(ms8);
 
-                    pic_Nom1.Image = bm1;
+                    pic_Nom4.Image = bm8;
                 }
             }
         }
@@ -565,7 +566,7 @@ namespace Pantalla_Contraseña
 
                     Bitmap bm1 = new Bitmap(ms1);
 
-                    pic_Nom1.Image = bm1;
+                    pic_Nom2.Image = bm1;
                 }
                 else if (lbl_Nom3.Text == InfoAmigo[u, 0])
                 {
@@ -578,7 +579,7 @@ namespace Pantalla_Contraseña
 
                     Bitmap bm1 = new Bitmap(ms1);
 
-                    pic_Nom1.Image = bm1;
+                    pic_Nom3.Image = bm1;
                 }
                 else if (lbl_Nom4.Text == InfoAmigo[u, 0])
                 {
@@ -591,7 +592,7 @@ namespace Pantalla_Contraseña
 
                     Bitmap bm1 = new Bitmap(ms1);
 
-                    pic_Nom1.Image = bm1;
+                    pic_Nom4.Image = bm1;
                 }
             }
         }

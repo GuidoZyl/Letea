@@ -22,7 +22,7 @@ namespace Pantalla_Contraseña
 
         int ultimo;
         string[,] nombrecompleto;
-        byte[,] foto;
+        
 
         public FormGruposAmigos()
         {
@@ -315,12 +315,7 @@ namespace Pantalla_Contraseña
             this.Hide();
         }
 
-        private void btn_Volver_Click(object sender, EventArgs e)
-        {
-            FormPantallaLogIn form = new FormPantallaLogIn();
-            form.Show();
-            this.Hide();
-        }
+     
 
         private void pic_Nom1_Paint(object sender, PaintEventArgs pe)
         {
