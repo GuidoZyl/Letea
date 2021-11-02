@@ -35,7 +35,7 @@ namespace Pantalla_Contraseña
             FormGruposAmigos form = new FormGruposAmigos();
             form.Show();
 
-            this.Hide();
+            this.Close();
         }
 
         private void btn_Config_Click(object sender, EventArgs e)

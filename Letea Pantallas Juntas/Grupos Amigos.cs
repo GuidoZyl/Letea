@@ -31,6 +31,7 @@ namespace Pantalla_Contraseña
 
         private void FormGruposAmigos_Load(object sender, EventArgs e)
         {
+         
             if (FormPantallaLogIn.ModoAdmin)
             {
                 btn_Crear.Visible = true;
