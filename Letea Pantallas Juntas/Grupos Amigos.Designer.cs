@@ -69,6 +69,7 @@ namespace Pantalla_Contraseña
             this.pic_Nom1.Location = new System.Drawing.Point(500, 70);
             this.pic_Nom1.Name = "pic_Nom1";
             this.pic_Nom1.Size = new System.Drawing.Size(300, 300);
+            this.pic_Nom1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_Nom1.TabIndex = 9;
             this.pic_Nom1.TabStop = false;
             this.pic_Nom1.Paint += new System.Windows.Forms.PaintEventHandler(this.pic_Nom1_Paint);
@@ -79,6 +80,7 @@ namespace Pantalla_Contraseña
             this.pic_Nom2.Location = new System.Drawing.Point(1150, 70);
             this.pic_Nom2.Name = "pic_Nom2";
             this.pic_Nom2.Size = new System.Drawing.Size(300, 300);
+            this.pic_Nom2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_Nom2.TabIndex = 10;
             this.pic_Nom2.TabStop = false;
             this.pic_Nom2.Click += new System.EventHandler(this.lbl_Clicked);
@@ -90,6 +92,7 @@ namespace Pantalla_Contraseña
             this.pic_Nom3.Location = new System.Drawing.Point(500, 550);
             this.pic_Nom3.Name = "pic_Nom3";
             this.pic_Nom3.Size = new System.Drawing.Size(300, 300);
+            this.pic_Nom3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_Nom3.TabIndex = 11;
             this.pic_Nom3.TabStop = false;
             this.pic_Nom3.Paint += new System.Windows.Forms.PaintEventHandler(this.pic_Nom3_Paint);
@@ -100,6 +103,7 @@ namespace Pantalla_Contraseña
             this.pic_Nom4.Location = new System.Drawing.Point(1150, 550);
             this.pic_Nom4.Name = "pic_Nom4";
             this.pic_Nom4.Size = new System.Drawing.Size(300, 300);
+            this.pic_Nom4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_Nom4.TabIndex = 12;
             this.pic_Nom4.TabStop = false;
             this.pic_Nom4.Paint += new System.Windows.Forms.PaintEventHandler(this.pic_Nom4_Paint);
@@ -110,6 +114,7 @@ namespace Pantalla_Contraseña
             this.pic_Nom5.Location = new System.Drawing.Point(800, 250);
             this.pic_Nom5.Name = "pic_Nom5";
             this.pic_Nom5.Size = new System.Drawing.Size(300, 300);
+            this.pic_Nom5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_Nom5.TabIndex = 13;
             this.pic_Nom5.TabStop = false;
             this.pic_Nom5.Paint += new System.Windows.Forms.PaintEventHandler(this.pic_Nom5_Paint);
@@ -120,6 +125,7 @@ namespace Pantalla_Contraseña
             this.pic_Nom6.Location = new System.Drawing.Point(450, 250);
             this.pic_Nom6.Name = "pic_Nom6";
             this.pic_Nom6.Size = new System.Drawing.Size(300, 300);
+            this.pic_Nom6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_Nom6.TabIndex = 14;
             this.pic_Nom6.TabStop = false;
             this.pic_Nom6.Paint += new System.Windows.Forms.PaintEventHandler(this.pic_Nom6_Paint);
@@ -130,6 +136,7 @@ namespace Pantalla_Contraseña
             this.pic_Nom7.Location = new System.Drawing.Point(1200, 250);
             this.pic_Nom7.Name = "pic_Nom7";
             this.pic_Nom7.Size = new System.Drawing.Size(300, 300);
+            this.pic_Nom7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_Nom7.TabIndex = 15;
             this.pic_Nom7.TabStop = false;
             this.pic_Nom7.Paint += new System.Windows.Forms.PaintEventHandler(this.pic_Nom7_Paint);
@@ -140,6 +147,7 @@ namespace Pantalla_Contraseña
             this.pic_Nom8.Location = new System.Drawing.Point(825, 550);
             this.pic_Nom8.Name = "pic_Nom8";
             this.pic_Nom8.Size = new System.Drawing.Size(300, 300);
+            this.pic_Nom8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_Nom8.TabIndex = 16;
             this.pic_Nom8.TabStop = false;
             this.pic_Nom8.Paint += new System.Windows.Forms.PaintEventHandler(this.pic_Nom8_Paint);
