@@ -77,7 +77,7 @@ namespace Pantalla_Contraseña
 
         private void btn_agregarfoto_Paint(object sender, PaintEventArgs pe)
         {
-            int borderSize = 5;
+            int borderSize = 4;
             Color borderColor = Color.RoyalBlue;
             Color borderColor2 = Color.HotPink;
             DashStyle borderLineStyle = DashStyle.Solid;
@@ -87,12 +87,12 @@ namespace Pantalla_Contraseña
             base.OnPaint(pe);
 
             var graph = pe.Graphics;
-            var rectContourSmooth = Rectangle.Inflate(btn_agregarfoto.ClientRectangle, -1, -1);
+            var rectContourSmooth = Rectangle.Inflate(btn_agregarfoto.ClientRectangle, 0, 0);
             var rectBorder = Rectangle.Inflate(rectContourSmooth, -borderSize, -borderSize);
             var smoothSize = borderSize > 0 ? borderSize * 3 : 1;
             using (var borderGColor = new LinearGradientBrush(rectBorder, borderColor, borderColor2, gradientAngle))
             using (var pathRegion = new GraphicsPath())
-            using (Pen penSmooth = new Pen(btn_agregarfoto.BackColor, smoothSize))
+            using (var penSmooth = new Pen(btn_agregarfoto.BackColor, smoothSize))
             using (var penBorder = new Pen(borderGColor, borderSize))
             {
                 graph.SmoothingMode = SmoothingMode.AntiAlias;

@@ -57,7 +57,7 @@ namespace Pantalla_Contraseña
                 btn_agregarfoto.Image = pic_PerfilDefault.Image;
             }
             
-            string sql = "UPDATE Usuario set Foto = (@foto)";
+            string sql = "UPDATE Usuario set Foto = (@foto) WHERE Id = " + FormCrearPaciente.IDPacienteTemp + "";
             MemoryStream ms = new MemoryStream();
             btn_agregarfoto.Image.Save(ms, ImageFormat.Jpeg);
             byte[] aByte = ms.ToArray();
@@ -65,6 +65,8 @@ namespace Pantalla_Contraseña
             OleDbCommand consulta = new OleDbCommand(sql, conexion);
             consulta.Parameters.AddWithValue("Foto", aByte);
             consulta.ExecuteNonQuery();
+
+            FormCrearPaciente.IDPacienteTemp = 0;
 
             if (!PrimerPaciente)
             {

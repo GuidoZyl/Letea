@@ -15,6 +15,9 @@ namespace Pantalla_Contraseña
     public partial class FormCrearPaciente : Form
     {
         OleDbConnection conexion = new OleDbConnection();
+        DataSet ds = new DataSet();
+
+        public static int IDPacienteTemp;
 
         public FormCrearPaciente()
         {
@@ -34,6 +37,14 @@ namespace Pantalla_Contraseña
                 string sql = "Insert into Usuario (NombreCompleto) values ('" + txtbox_NombreUsuario.Text + "')";
                 OleDbCommand cmd = new OleDbCommand(sql, conexion);
                 cmd.ExecuteNonQuery();
+
+                string sql2 = "SELECT Id FROM Usuario WHERE NombreCompleto = '" + txtbox_NombreUsuario.Text + "'";
+                OleDbCommand cmd2 = new OleDbCommand(sql2, conexion);
+                OleDbDataAdapter da = new OleDbDataAdapter(cmd2);
+
+                da.Fill(ds, "Usuario");
+
+                IDPacienteTemp = Convert.ToInt32(ds.Tables["Usuario"].Rows[0]["Id"]);
 
                 conexion.Close();
 

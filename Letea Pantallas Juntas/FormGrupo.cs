@@ -25,25 +25,6 @@ namespace Pantalla_Contraseña
         public static int ultimo;
         string[,] InfoAmigo;
 
-        MemoryStream pic1;
-        MemoryStream pic2;
-        MemoryStream pic3;
-        MemoryStream pic4;
-        MemoryStream pic5;
-        MemoryStream pic6;
-        MemoryStream pic7;
-        MemoryStream pic8;
-
-        Bitmap bm1;
-        Bitmap bm2;
-        Bitmap bm3;
-        Bitmap bm4;
-        Bitmap bm5;
-        Bitmap bm6;
-        Bitmap bm7;
-        Bitmap bm8;
-
-
         public FormGrupo()
         {
             InitializeComponent();
@@ -605,7 +586,7 @@ namespace Pantalla_Contraseña
         {
             AgregarAmigo form = new AgregarAmigo();
             form.Show();
-            FormGruposAmigos.form.Hide();
+            this.Hide();
         }
 
         private void lbl_Nom1_Click(object sender, EventArgs e)

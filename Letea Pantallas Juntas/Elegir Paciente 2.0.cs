@@ -16,14 +16,13 @@ namespace Pantalla_Contraseña
     public partial class FormPacientes2 : Form
     {
         public static int IDPaciente;
-        public static FormPrincipal form = new FormPrincipal();
+        //public static FormPrincipal form = new FormPrincipal();
 
         OleDbConnection conexion = new OleDbConnection();
         DataSet ds = new DataSet();
 
         int ultimo;
         string[,] nombrecompleto;
-        byte[,] foto;
 
         public FormPacientes2()
         {
@@ -59,32 +58,18 @@ namespace Pantalla_Contraseña
             conexion.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=.\Base de Datos 4.accdb;";
             conexion.Open();
 
-            string sql = "Select NombreCompleto from Usuario";
+            string sql = "Select [NombreCompleto], [Foto] from Usuario";
             OleDbCommand comando = new OleDbCommand(sql, conexion);
             OleDbDataAdapter data = new OleDbDataAdapter(comando);
 
-            data.Fill(ds, "NombreCompleto");
-            ultimo = Convert.ToInt32(ds.Tables["NombreCompleto"].Rows.Count) - 1;
+            data.Fill(ds, "Usuario");
+            ultimo = Convert.ToInt32(ds.Tables["Usuario"].Rows.Count) - 1;
 
             nombrecompleto = new string[ultimo + 1, 1];
             for (int canti = 0; canti <= ultimo; canti++)
             {
-                nombrecompleto[canti, 0] = ds.Tables["NombreCompleto"].Rows[canti][0].ToString();
+                nombrecompleto[canti, 0] = ds.Tables["Usuario"].Rows[canti][0].ToString();
             }
-
-            string sql2 = "Select Foto from Usuario";
-            OleDbCommand comando2 = new OleDbCommand(sql2, conexion);
-            OleDbDataAdapter data2 = new OleDbDataAdapter(comando2);
-
-            data2.Fill(ds, "Fotos");
-            foto = new byte[ultimo + 1, 1];
-
-            MemoryStream[] ms = new MemoryStream[ultimo + 1];
-
-            /*for (int canti = 0; canti <= ultimo; canti++)
-            {
-                ms[canti] = ds.Tables["Fotos"].Rows[0]["Foto"];
-            }*/
 
             if (ultimo == 0)
             {
@@ -92,16 +77,12 @@ namespace Pantalla_Contraseña
                 pic_Nom5.Visible = true;
 
                 lbl_Nom5.Text = nombrecompleto[0, 0];
-                lbl_Nom5.Text = nombrecompleto[0, 0];
-                MemoryStream pic1 = new MemoryStream((byte[])ds.Tables["Fotos"].Rows[0]["Foto"]);
 
-                Bitmap bm1 = new Bitmap(pic1);
+                MemoryStream pic5 = new MemoryStream((byte[])ds.Tables["Usuario"].Rows[0]["Foto"]);
 
-                pic_Nom5.Image = bm1;
+                Bitmap bm5 = new Bitmap(pic5);
 
-
-                //Bitmap bm = new Bitmap(ms[0]);
-                //pic_Nom5.Image = bm;
+                pic_Nom5.Image = bm5;
             }
 
             else if (ultimo == 1)
@@ -112,17 +93,18 @@ namespace Pantalla_Contraseña
                 pic_Nom7.Visible = true;
 
                 lbl_Nom6.Text = nombrecompleto[0, 0];
-                MemoryStream pic2 = new MemoryStream((byte[])ds.Tables["Fotos"].Rows[0]["Foto"]);
+                MemoryStream pic6 = new MemoryStream((byte[])ds.Tables["Usuario"].Rows[0]["Foto"]);
 
-                Bitmap bm2 = new Bitmap(pic2);
+                Bitmap bm6 = new Bitmap(pic6);
 
-                pic_Nom6.Image = bm2;
+                pic_Nom6.Image = bm6;
+
                 lbl_Nom7.Text = nombrecompleto[1, 0];
-                MemoryStream pic3 = new MemoryStream((byte[])ds.Tables["Fotos"].Rows[1]["Foto"]);
+                MemoryStream pic7 = new MemoryStream((byte[])ds.Tables["Usuario"].Rows[1]["Foto"]);
 
-                Bitmap bm3 = new Bitmap(pic3);
+                Bitmap bm7 = new Bitmap(pic7);
 
-                pic_Nom7.Image = bm3;
+                pic_Nom7.Image = bm7;
             }
 
             else if (ultimo == 2)
@@ -135,23 +117,25 @@ namespace Pantalla_Contraseña
                 pic_Nom8.Visible = true;
 
                 lbl_Nom1.Text = nombrecompleto[0, 0];
-                MemoryStream pic4 = new MemoryStream((byte[])ds.Tables["Fotos"].Rows[0]["Foto"]);
+                MemoryStream pic1 = new MemoryStream((byte[])ds.Tables["Usuario"].Rows[0]["Foto"]);
 
-                Bitmap bm4 = new Bitmap(pic4);
+                Bitmap bm1 = new Bitmap(pic1);
 
-                pic_Nom1.Image = bm4;
+                pic_Nom1.Image = bm1;
+
                 lbl_Nom2.Text = nombrecompleto[1, 0];
-                MemoryStream pic5 = new MemoryStream((byte[])ds.Tables["Fotos"].Rows[1]["Foto"]);
+                MemoryStream pic2 = new MemoryStream((byte[])ds.Tables["Usuario"].Rows[1]["Foto"]);
 
-                Bitmap bm5 = new Bitmap(pic5);
+                Bitmap bm2 = new Bitmap(pic2);
 
-                pic_Nom2.Image = bm5;
+                pic_Nom2.Image = bm2;
+
                 lbl_Nom8.Text = nombrecompleto[2, 0];
-                MemoryStream pic6 = new MemoryStream((byte[])ds.Tables["Fotos"].Rows[2]["Foto"]);
+                MemoryStream pic8 = new MemoryStream((byte[])ds.Tables["Usuario"].Rows[2]["Foto"]);
 
-                Bitmap bm6 = new Bitmap(pic6);
+                Bitmap bm8 = new Bitmap(pic8);
 
-                pic_Nom8.Image = bm6;
+                pic_Nom8.Image = bm8;
             }
 
             else if (ultimo >= 3)
@@ -166,29 +150,36 @@ namespace Pantalla_Contraseña
                 pic_Nom4.Visible = true;
 
                 lbl_Nom1.Text = nombrecompleto[0, 0];
-                MemoryStream pic7 = new MemoryStream((byte[])ds.Tables["Fotos"].Rows[0]["Foto"]);
 
-                Bitmap bm7 = new Bitmap(pic7);
+                MemoryStream pic1 = new MemoryStream((byte[])ds.Tables["Usuario"].Rows[0]["Foto"]);
 
-                pic_Nom1.Image = bm7;
+                Bitmap bm1 = new Bitmap(pic1);
+
+                pic_Nom1.Image = bm1;
+
                 lbl_Nom2.Text = nombrecompleto[1, 0];
-                MemoryStream pic8 = new MemoryStream((byte[])ds.Tables["Fotos"].Rows[1]["Foto"]);
 
-                Bitmap bm8 = new Bitmap(pic8);
+                MemoryStream pic2 = new MemoryStream((byte[])ds.Tables["Usuario"].Rows[1]["Foto"]);
 
-                pic_Nom2.Image = bm8;
+                Bitmap bm2 = new Bitmap(pic2);
+
+                pic_Nom2.Image = bm2;
+
                 lbl_Nom3.Text = nombrecompleto[2, 0];
-                MemoryStream pic9 = new MemoryStream((byte[])ds.Tables["Fotos"].Rows[2]["Foto"]);
 
-                Bitmap bm9 = new Bitmap(pic9);
+                MemoryStream pic3 = new MemoryStream((byte[])ds.Tables["Usuario"].Rows[2]["Foto"]);
 
-                pic_Nom3.Image = bm9;
+                Bitmap bm3 = new Bitmap(pic3);
+
+                pic_Nom3.Image = bm3;
+
                 lbl_Nom4.Text = nombrecompleto[3, 0];
-                MemoryStream pic10 = new MemoryStream((byte[])ds.Tables["Fotos"].Rows[0]["Foto"]);
 
-                Bitmap bm10 = new Bitmap(pic10);
+                MemoryStream pic4 = new MemoryStream((byte[])ds.Tables["Usuario"].Rows[3]["Foto"]);
 
-                pic_Nom4.Image = bm10;
+                Bitmap bm4 = new Bitmap(pic4);
+
+                pic_Nom4.Image = bm4;
             }
 
             if (ultimo <= 3)
@@ -212,25 +203,25 @@ namespace Pantalla_Contraseña
                         if (lbl_Nom4.Text == nombrecompleto[i, 0])
                         {
                             lbl_Nom1.Text = nombrecompleto[i + 1, 0];
-                            MemoryStream pic1 = new MemoryStream((byte[])ds.Tables["Fotos"].Rows[i+1]["Foto"]);
+                            MemoryStream pic1 = new MemoryStream((byte[])ds.Tables["Usuario"].Rows[i+1]["Foto"]);
 
                             Bitmap bm1 = new Bitmap(pic1);
 
                             pic_Nom1.Image = bm1;
                             lbl_Nom2.Text = nombrecompleto[i + 2, 0];
-                            MemoryStream pic2 = new MemoryStream((byte[])ds.Tables["Fotos"].Rows[i+2]["Foto"]);
+                            MemoryStream pic2 = new MemoryStream((byte[])ds.Tables["Usuario"].Rows[i+2]["Foto"]);
 
                             Bitmap bm2 = new Bitmap(pic2);
 
                             pic_Nom2.Image = bm2;
                             lbl_Nom3.Text = nombrecompleto[i + 3, 0];
-                            MemoryStream pic3 = new MemoryStream((byte[])ds.Tables["Fotos"].Rows[i+3]["Foto"]);
+                            MemoryStream pic3 = new MemoryStream((byte[])ds.Tables["Usuario"].Rows[i+3]["Foto"]);
 
                             Bitmap bm3 = new Bitmap(pic3);
 
                             pic_Nom3.Image = bm3;
                             lbl_Nom4.Text = nombrecompleto[i + 4, 0];
-                            MemoryStream pic4 = new MemoryStream((byte[])ds.Tables["Fotos"].Rows[i+4]["Foto"]);
+                            MemoryStream pic4 = new MemoryStream((byte[])ds.Tables["Usuario"].Rows[i+4]["Foto"]);
 
                             Bitmap bm4 = new Bitmap(pic4);
 
@@ -269,19 +260,19 @@ namespace Pantalla_Contraseña
                             btn_Der.Visible = false;
 
                             lbl_Nom1.Text = nombrecompleto[ultimo - 2, 0];
-                            MemoryStream pic5 = new MemoryStream((byte[])ds.Tables["Fotos"].Rows[ultimo-2]["Foto"]);
+                            MemoryStream pic5 = new MemoryStream((byte[])ds.Tables["Usuario"].Rows[ultimo-2]["Foto"]);
 
                             Bitmap bm5 = new Bitmap(pic5);
 
                             pic_Nom1.Image = bm5;
                             lbl_Nom2.Text = nombrecompleto[ultimo - 1, 0];
-                            MemoryStream pic6 = new MemoryStream((byte[])ds.Tables["Fotos"].Rows[ultimo-1]["Foto"]);
+                            MemoryStream pic6 = new MemoryStream((byte[])ds.Tables["Usuario"].Rows[ultimo-1]["Foto"]);
 
                             Bitmap bm6 = new Bitmap(pic6);
 
                             pic_Nom2.Image = bm6;
                             lbl_Nom8.Text = nombrecompleto[ultimo, 0];
-                            MemoryStream pic7 = new MemoryStream((byte[])ds.Tables["Fotos"].Rows[ultimo]["Foto"]);
+                            MemoryStream pic7 = new MemoryStream((byte[])ds.Tables["Usuario"].Rows[ultimo]["Foto"]);
 
                             Bitmap bm7 = new Bitmap(pic7);
 
@@ -309,13 +300,13 @@ namespace Pantalla_Contraseña
                             btn_Der.Visible = false;
 
                             lbl_Nom6.Text = nombrecompleto[ultimo - 1, 0];
-                            MemoryStream pic8 = new MemoryStream((byte[])ds.Tables["Fotos"].Rows[ultimo-1]["Foto"]);
+                            MemoryStream pic8 = new MemoryStream((byte[])ds.Tables["Usuario"].Rows[ultimo-1]["Foto"]);
 
                             Bitmap bm8 = new Bitmap(pic8);
 
                             pic_Nom6.Image = bm8;
                             lbl_Nom7.Text = nombrecompleto[ultimo, 0];
-                            MemoryStream pic9 = new MemoryStream((byte[])ds.Tables["Fotos"].Rows[0]["Foto"]);
+                            MemoryStream pic9 = new MemoryStream((byte[])ds.Tables["Usuario"].Rows[0]["Foto"]);
 
                             Bitmap bm9 = new Bitmap(pic9);
 
@@ -343,7 +334,7 @@ namespace Pantalla_Contraseña
                             btn_Der.Visible = false;
 
                             lbl_Nom5.Text = nombrecompleto[ultimo, 0];
-                            MemoryStream pic10 = new MemoryStream((byte[])ds.Tables["Fotos"].Rows[0]["Foto"]);
+                            MemoryStream pic10 = new MemoryStream((byte[])ds.Tables["Usuario"].Rows[0]["Foto"]);
 
                             Bitmap bm10 = new Bitmap(pic10);
 
@@ -389,25 +380,25 @@ namespace Pantalla_Contraseña
                         lbl_Nom3.Text = nombrecompleto[i - 2, 0];
                         lbl_Nom4.Text = nombrecompleto[i - 1, 0];
                     
-                        MemoryStream pic1 = new MemoryStream((byte[])ds.Tables["Fotos"].Rows[i - 4]["Foto"]);
+                        MemoryStream pic1 = new MemoryStream((byte[])ds.Tables["Usuario"].Rows[i - 4]["Foto"]);
 
                         Bitmap bm1 = new Bitmap(pic1);
 
                         pic_Nom1.Image = bm1;
                        
-                        MemoryStream pic2 = new MemoryStream((byte[])ds.Tables["Fotos"].Rows[i - 3]["Foto"]);
+                        MemoryStream pic2 = new MemoryStream((byte[])ds.Tables["Usuario"].Rows[i - 3]["Foto"]);
 
                         Bitmap bm2 = new Bitmap(pic2);
 
                         pic_Nom2.Image = bm2;
                         
-                        MemoryStream pic3 = new MemoryStream((byte[])ds.Tables["Fotos"].Rows[i - 2]["Foto"]);
+                        MemoryStream pic3 = new MemoryStream((byte[])ds.Tables["Usuario"].Rows[i - 2]["Foto"]);
 
                         Bitmap bm3 = new Bitmap(pic3);
 
                         pic_Nom3.Image = bm3;
                         
-                        MemoryStream pic4 = new MemoryStream((byte[])ds.Tables["Fotos"].Rows[i - 1]["Foto"]);
+                        MemoryStream pic4 = new MemoryStream((byte[])ds.Tables["Usuario"].Rows[i - 1]["Foto"]);
 
                         Bitmap bm4 = new Bitmap(pic4);
 
@@ -434,6 +425,7 @@ namespace Pantalla_Contraseña
 
             IDPaciente = Convert.ToInt32(ds.Tables["IDPaciente"].Rows[0]["Id"]);
 
+            FormPrincipal form = new FormPrincipal();
             form.Show();
             this.Hide();
         }
@@ -463,8 +455,8 @@ namespace Pantalla_Contraseña
 
             base.OnPaint(pe);
             var graph = pe.Graphics;
-            var rectContourSmooth = Rectangle.Inflate(pic_Nom1.ClientRectangle, 0, 0);
-            var rectBorder = Rectangle.Inflate(rectContourSmooth, -borderSize + 3, -borderSize + 3);
+            var rectContourSmooth = Rectangle.Inflate(pic_Nom1.ClientRectangle, -1, -1);
+            var rectBorder = Rectangle.Inflate(rectContourSmooth, -borderSize, -borderSize);
             var smoothSize = borderSize > 0 ? borderSize * 3 : 1;
             using (var borderGColor = new LinearGradientBrush(rectBorder, borderColor, borderColor2, gradientAngle))
             using (var pathRegion = new GraphicsPath())
@@ -495,8 +487,8 @@ namespace Pantalla_Contraseña
 
             base.OnPaint(pe);
             var graph = pe.Graphics;
-            var rectContourSmooth = Rectangle.Inflate(pic_Nom2.ClientRectangle, 0, 0);
-            var rectBorder = Rectangle.Inflate(rectContourSmooth, -borderSize + 3, -borderSize + 3);
+            var rectContourSmooth = Rectangle.Inflate(pic_Nom2.ClientRectangle, -1, -1);
+            var rectBorder = Rectangle.Inflate(rectContourSmooth, -borderSize, -borderSize);
             var smoothSize = borderSize > 0 ? borderSize * 3 : 1;
             using (var borderGColor = new LinearGradientBrush(rectBorder, borderColor, borderColor2, gradientAngle))
             using (var pathRegion = new GraphicsPath())
@@ -527,8 +519,8 @@ namespace Pantalla_Contraseña
 
             base.OnPaint(pe);
             var graph = pe.Graphics;
-            var rectContourSmooth = Rectangle.Inflate(pic_Nom3.ClientRectangle, 0, 0);
-            var rectBorder = Rectangle.Inflate(rectContourSmooth, -borderSize + 3, -borderSize + 3);
+            var rectContourSmooth = Rectangle.Inflate(pic_Nom3.ClientRectangle, -1, -1);
+            var rectBorder = Rectangle.Inflate(rectContourSmooth, -borderSize, -borderSize);
             var smoothSize = borderSize > 0 ? borderSize * 3 : 1;
             using (var borderGColor = new LinearGradientBrush(rectBorder, borderColor, borderColor2, gradientAngle))
             using (var pathRegion = new GraphicsPath())
@@ -559,8 +551,8 @@ namespace Pantalla_Contraseña
 
             base.OnPaint(pe);
             var graph = pe.Graphics;
-            var rectContourSmooth = Rectangle.Inflate(pic_Nom4.ClientRectangle, 0, 0);
-            var rectBorder = Rectangle.Inflate(rectContourSmooth, -borderSize + 3, -borderSize + 3);
+            var rectContourSmooth = Rectangle.Inflate(pic_Nom4.ClientRectangle, -1, -1);
+            var rectBorder = Rectangle.Inflate(rectContourSmooth, -borderSize, -borderSize);
             var smoothSize = borderSize > 0 ? borderSize * 3 : 1;
             using (var borderGColor = new LinearGradientBrush(rectBorder, borderColor, borderColor2, gradientAngle))
             using (var pathRegion = new GraphicsPath())
@@ -591,8 +583,8 @@ namespace Pantalla_Contraseña
 
             base.OnPaint(pe);
             var graph = pe.Graphics;
-            var rectContourSmooth = Rectangle.Inflate(pic_Nom5.ClientRectangle, 0, 0);
-            var rectBorder = Rectangle.Inflate(rectContourSmooth, -borderSize + 3, -borderSize + 3);
+            var rectContourSmooth = Rectangle.Inflate(pic_Nom5.ClientRectangle, -1, -1);
+            var rectBorder = Rectangle.Inflate(rectContourSmooth, -borderSize, -borderSize);
             var smoothSize = borderSize > 0 ? borderSize * 3 : 1;
             using (var borderGColor = new LinearGradientBrush(rectBorder, borderColor, borderColor2, gradientAngle))
             using (var pathRegion = new GraphicsPath())
@@ -623,8 +615,8 @@ namespace Pantalla_Contraseña
 
             base.OnPaint(pe);
             var graph = pe.Graphics;
-            var rectContourSmooth = Rectangle.Inflate(pic_Nom6.ClientRectangle, 0, 0);
-            var rectBorder = Rectangle.Inflate(rectContourSmooth, -borderSize + 3, -borderSize + 3);
+            var rectContourSmooth = Rectangle.Inflate(pic_Nom6.ClientRectangle, -1, -1);
+            var rectBorder = Rectangle.Inflate(rectContourSmooth, -borderSize, -borderSize);
             var smoothSize = borderSize > 0 ? borderSize * 3 : 1;
             using (var borderGColor = new LinearGradientBrush(rectBorder, borderColor, borderColor2, gradientAngle))
             using (var pathRegion = new GraphicsPath())
@@ -655,8 +647,8 @@ namespace Pantalla_Contraseña
 
             base.OnPaint(pe);
             var graph = pe.Graphics;
-            var rectContourSmooth = Rectangle.Inflate(pic_Nom7.ClientRectangle, 0, 0);
-            var rectBorder = Rectangle.Inflate(rectContourSmooth, -borderSize + 3, -borderSize + 3);
+            var rectContourSmooth = Rectangle.Inflate(pic_Nom7.ClientRectangle, -1, -1);
+            var rectBorder = Rectangle.Inflate(rectContourSmooth, -borderSize, -borderSize);
             var smoothSize = borderSize > 0 ? borderSize * 3 : 1;
             using (var borderGColor = new LinearGradientBrush(rectBorder, borderColor, borderColor2, gradientAngle))
             using (var pathRegion = new GraphicsPath())
@@ -687,8 +679,8 @@ namespace Pantalla_Contraseña
 
             base.OnPaint(pe);
             var graph = pe.Graphics;
-            var rectContourSmooth = Rectangle.Inflate(pic_Nom8.ClientRectangle, 0, 0);
-            var rectBorder = Rectangle.Inflate(rectContourSmooth, -borderSize + 3, -borderSize + 3);
+            var rectContourSmooth = Rectangle.Inflate(pic_Nom8.ClientRectangle, -1, -1);
+            var rectBorder = Rectangle.Inflate(rectContourSmooth, -borderSize, -borderSize);
             var smoothSize = borderSize > 0 ? borderSize * 3 : 1;
             using (var borderGColor = new LinearGradientBrush(rectBorder, borderColor, borderColor2, gradientAngle))
             using (var pathRegion = new GraphicsPath())

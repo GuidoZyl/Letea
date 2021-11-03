@@ -19,7 +19,7 @@ namespace Pantalla_Contraseña
         DataSet ds = new DataSet();
 
         public static int IDGrupo;
-        public static FormGrupo form = new FormGrupo();
+        //public static FormGrupo form = new FormGrupo();
 
         int ultimo;
         string[,] nombrecompleto;
@@ -410,7 +410,8 @@ namespace Pantalla_Contraseña
             da.Fill(ds, "IDPaciente");
 
             IDGrupo = Convert.ToInt32(ds.Tables["IDPaciente"].Rows[0]["Id"]);
-          
+
+            FormGrupo form = new FormGrupo();
             form.Show();
             this.Hide();
          
