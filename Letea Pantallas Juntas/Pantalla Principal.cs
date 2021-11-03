@@ -19,10 +19,12 @@ namespace Pantalla_Contraseña
         public FormPrincipal()
         {
             InitializeComponent();
+            
         }
 
-        private void FormPrincipal_Load(object sender, EventArgs e)
+        public void FormPrincipal_Load(object sender, EventArgs e)
         {
+            MessageBox.Show(Convert.ToString(FormPantallaLogIn.ModoAdmin));
             if (!FormPantallaLogIn.ModoAdmin) {
                 btn_Config.Visible = false;
                 btn_CrearPaciente.Visible = false;
@@ -33,8 +35,7 @@ namespace Pantalla_Contraseña
         private void btn_Config_Click(object sender, EventArgs e)
         {
             Configuracion config = new Configuracion();
-            config.Show();
-            
+            config.Show();           
         }
 
         private void btn_Volver_Click(object sender, EventArgs e)

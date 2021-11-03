@@ -104,7 +104,7 @@ namespace Pantalla_Contraseña
 
         private void btn_Guardar_Click(object sender, EventArgs e)
         {
-            if (btn_agregarfoto == null)
+            if (btn_agregarfoto.Image == null)
             {
                 btn_agregarfoto.Image = pic_FotoPerfil.BackgroundImage;
             }

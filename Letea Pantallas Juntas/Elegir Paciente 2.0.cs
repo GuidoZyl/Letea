@@ -309,7 +309,6 @@ namespace Pantalla_Contraseña
 
             IDPaciente = Convert.ToInt32(ds.Tables["IDPaciente"].Rows[0]["Id"]);
 
-            
             form.Show();
             this.Hide();
         }

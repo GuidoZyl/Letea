@@ -184,9 +184,10 @@
             this.pic_FotoPerfil.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Perfil_Vacío;
             this.pic_FotoPerfil.Location = new System.Drawing.Point(593, 24);
             this.pic_FotoPerfil.Name = "pic_FotoPerfil";
-            this.pic_FotoPerfil.Size = new System.Drawing.Size(99, 51);
+            this.pic_FotoPerfil.Size = new System.Drawing.Size(43, 32);
             this.pic_FotoPerfil.TabIndex = 19;
             this.pic_FotoPerfil.TabStop = false;
+            this.pic_FotoPerfil.Visible = false;
             // 
             // AgregarAmigo
             // 

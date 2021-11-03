@@ -25,6 +25,25 @@ namespace Pantalla_Contraseña
         public static int ultimo;
         string[,] InfoAmigo;
 
+        MemoryStream pic1;
+        MemoryStream pic2;
+        MemoryStream pic3;
+        MemoryStream pic4;
+        MemoryStream pic5;
+        MemoryStream pic6;
+        MemoryStream pic7;
+        MemoryStream pic8;
+
+        Bitmap bm1;
+        Bitmap bm2;
+        Bitmap bm3;
+        Bitmap bm4;
+        Bitmap bm5;
+        Bitmap bm6;
+        Bitmap bm7;
+        Bitmap bm8;
+
+
         public FormGrupo()
         {
             InitializeComponent();
@@ -34,8 +53,7 @@ namespace Pantalla_Contraseña
         {
             FormGruposAmigos form = new FormGruposAmigos();
             form.Show();
-
-            this.Close();
+            this.Hide();
         }
 
         private void btn_Config_Click(object sender, EventArgs e)
@@ -86,6 +104,8 @@ namespace Pantalla_Contraseña
 
             InfoAmigo = new string[ultimo + 1, 5];
 
+            
+
             for (int i = 0; i <= ultimo; i++)
             {
                 InfoAmigo[i, 0] = ds.Tables["Amigo"].Rows[i]["Nombre"].ToString();
@@ -107,12 +127,41 @@ namespace Pantalla_Contraseña
 
                 lbl_Nom1.Text = InfoAmigo[0, 0];
                 lbl_Nom1.Tag = InfoAmigo[0, 4];
+
+                MemoryStream pic1 = new MemoryStream((byte[])ds.Tables["Amigo"].Rows[0]["Foto"]);
+
+                Bitmap bm1 = new Bitmap(pic1);
+
+                pic_Nom1.Image = bm1;
+
                 lbl_Nom2.Text = InfoAmigo[1, 0];
                 lbl_Nom2.Tag = InfoAmigo[1, 4];
+
+                MemoryStream pic2 = new MemoryStream((byte[])ds.Tables["Amigo"].Rows[1]["Foto"]);
+
+                Bitmap bm2 = new Bitmap(pic2);
+
+                pic_Nom2.Image = bm2;
+
+
                 lbl_Nom3.Text = InfoAmigo[2, 0];
                 lbl_Nom3.Tag = InfoAmigo[2, 4];
+
+                MemoryStream pic3 = new MemoryStream((byte[])ds.Tables["Amigo"].Rows[2]["Foto"]);
+
+                Bitmap bm3 = new Bitmap(pic3);
+
+                pic_Nom3.Image = bm3;
+
+
                 lbl_Nom4.Text = InfoAmigo[3, 0];
                 lbl_Nom4.Tag = InfoAmigo[3, 4];
+
+                MemoryStream pic4 = new MemoryStream((byte[])ds.Tables["Amigo"].Rows[3]["Foto"]);
+
+                Bitmap bm4 = new Bitmap(pic4);
+
+                pic_Nom4.Image = bm4;
             }
 
             else if (ultimo == 2)
@@ -126,10 +175,27 @@ namespace Pantalla_Contraseña
 
                 lbl_Nom1.Text = InfoAmigo[0, 0];
                 lbl_Nom1.Tag = InfoAmigo[0, 4];
+                MemoryStream pic1 = new MemoryStream((byte[])ds.Tables["Amigo"].Rows[0]["Foto"]);
+
+                Bitmap bm1 = new Bitmap(pic1);
+
+                pic_Nom1.Image = bm1;
+
                 lbl_Nom2.Text = InfoAmigo[1, 0];
                 lbl_Nom2.Tag = InfoAmigo[1, 4];
+                MemoryStream pic2 = new MemoryStream((byte[])ds.Tables["Amigo"].Rows[1]["Foto"]);
+
+                Bitmap bm2 = new Bitmap(pic2);
+
+                pic_Nom2.Image = bm2;
+
                 lbl_Nom3.Text = InfoAmigo[2, 0];
                 lbl_Nom3.Tag = InfoAmigo[2, 4];
+                MemoryStream pic3 = new MemoryStream((byte[])ds.Tables["Amigo"].Rows[2]["Foto"]);
+
+                Bitmap bm3 = new Bitmap(pic3);
+
+                pic_Nom3.Image = bm3;
             }
             
             else if (ultimo == 1)
@@ -143,6 +209,18 @@ namespace Pantalla_Contraseña
                 lbl_Nom1.Tag = InfoAmigo[0, 4];
                 lbl_Nom2.Text = InfoAmigo[1, 0];
                 lbl_Nom2.Tag = InfoAmigo[1, 4];
+
+                MemoryStream pic1 = new MemoryStream((byte[])ds.Tables["Amigo"].Rows[0]["Foto"]);
+
+                Bitmap bm1 = new Bitmap(pic1);
+
+                pic_Nom1.Image = bm1;
+
+                MemoryStream pic2 = new MemoryStream((byte[])ds.Tables["Amigo"].Rows[1]["Foto"]);
+
+                Bitmap bm2 = new Bitmap(pic2);
+
+                pic_Nom2.Image = bm2;
             }
             
             else if (ultimo == 0)
@@ -152,67 +230,19 @@ namespace Pantalla_Contraseña
 
                 lbl_Nom1.Text = InfoAmigo[0, 0];
                 lbl_Nom1.Tag = InfoAmigo[0, 4];
+
+                MemoryStream pic1 = new MemoryStream((byte[])ds.Tables["Amigo"].Rows[0]["Foto"]);
+
+                Bitmap bm1 = new Bitmap(pic1);
+
+                pic_Nom1.Image = bm1;
+
             }
 
             if (ultimo < 4)
             {
                 btn_FlechaDer.Visible = false;
                 btn_FlechaIzq.Visible = false;
-            }
-            for (int u = 0; u<=ultimo;u++)
-            {
-                if (lbl_Nom1.Text == InfoAmigo[u,0])
-                {
-                    string sql2 = "SELECT Foto FROM Amigos WHERE Id ="+InfoAmigo[u,4]+"";
-                    OleDbCommand comando2 = new OleDbCommand(sql2, conexion);
-                    OleDbDataAdapter data3 = new OleDbDataAdapter(comando2);
-
-                    data3.Fill(ds, "fotos");
-                    MemoryStream ms1 = new MemoryStream((byte[])ds.Tables["fotos"].Rows[0]["Foto"]);
-
-                    Bitmap bm1 = new Bitmap(ms1);
-
-                    pic_Nom1.Image = bm1;
-                }
-                else if (lbl_Nom2.Text == InfoAmigo[u,0])
-                {
-                    string sql2 = "SELECT Foto FROM Amigos WHERE Id =" + InfoAmigo[u, 4] + "";
-                    OleDbCommand comando2 = new OleDbCommand(sql2, conexion);
-                    OleDbDataAdapter data3 = new OleDbDataAdapter(comando2);
-
-                    data3.Fill(ds, "fotos");
-                    MemoryStream ms2 = new MemoryStream((byte[])ds.Tables["fotos"].Rows[0]["Foto"]);
-
-                    Bitmap bm2 = new Bitmap(ms2);
-
-                    pic_Nom2.Image = bm2;
-                }
-                else if (lbl_Nom3.Text == InfoAmigo[u,0])
-                {
-                    string sql2 = "SELECT Foto FROM Amigos WHERE Id =" + InfoAmigo[u, 4] + "";
-                    OleDbCommand comando2 = new OleDbCommand(sql2, conexion);
-                    OleDbDataAdapter data3 = new OleDbDataAdapter(comando2);
-
-                    data3.Fill(ds, "fotos");
-                    MemoryStream ms3 = new MemoryStream((byte[])ds.Tables["fotos"].Rows[0]["Foto"]);
-
-                    Bitmap bm3 = new Bitmap(ms3);
-
-                    pic_Nom3.Image = bm3;
-                }
-                else if (lbl_Nom4.Text == InfoAmigo[u,0])
-                {
-                    string sql2 = "SELECT Foto FROM Amigos WHERE Id =" + InfoAmigo[u, 4] + "";
-                    OleDbCommand comando2 = new OleDbCommand(sql2, conexion);
-                    OleDbDataAdapter data3 = new OleDbDataAdapter(comando2);
-
-                    data3.Fill(ds, "fotos");
-                    MemoryStream ms4 = new MemoryStream((byte[])ds.Tables["fotos"].Rows[0]["Foto"]);
-
-                    Bitmap bm4 = new Bitmap(ms4);
-
-                    pic_Nom4.Image = bm4;
-                }
             }
         }
 
@@ -380,14 +410,38 @@ namespace Pantalla_Contraseña
                         lbl_Nom1.Text = InfoAmigo[i - 4, 0];
                         lbl_Nom1.Tag = InfoAmigo[i - 4, 4];
 
+                        MemoryStream pic1 = new MemoryStream((byte[])ds.Tables["Amigo"].Rows[i - 4]["Foto"]);
+
+                        Bitmap bm1 = new Bitmap(pic1);
+
+                        pic_Nom1.Image = bm1;
+
                         lbl_Nom2.Text = InfoAmigo[i - 3, 0];
                         lbl_Nom2.Tag = InfoAmigo[i - 3, 4];
+
+                        MemoryStream pic2 = new MemoryStream((byte[])ds.Tables["Amigo"].Rows[i - 3]["Foto"]);
+
+                        Bitmap bm2 = new Bitmap(pic2);
+
+                        pic_Nom2.Image = bm2;
 
                         lbl_Nom3.Text = InfoAmigo[i - 2, 0];
                         lbl_Nom3.Tag = InfoAmigo[i - 2, 4];
 
+                        MemoryStream pic3 = new MemoryStream((byte[])ds.Tables["Amigo"].Rows[i - 2]["Foto"]);
+
+                        Bitmap bm3 = new Bitmap(pic3);
+
+                        pic_Nom3.Image = bm3;
+
                         lbl_Nom4.Text = InfoAmigo[i - 1, 0];
                         lbl_Nom4.Tag = InfoAmigo[i - 1, 4];
+
+                        MemoryStream pic4 = new MemoryStream((byte[])ds.Tables["Amigo"].Rows[i - 1]["Foto"]);
+
+                        Bitmap bm4 = new Bitmap(pic4);
+
+                        pic_Nom4.Image = bm4;
 
                         btn_FlechaDer.Visible = true;
 
@@ -399,61 +453,6 @@ namespace Pantalla_Contraseña
                 }
             }
             btn_FlechaDer.Visible = true;
-            for (int u = 0; u <= ultimo; u++)
-            {
-                if (lbl_Nom1.Text == InfoAmigo[u, 0])
-                {
-                    string sql2 = "SELECT Foto FROM Amigos WHERE Id =" + InfoAmigo[u, 4] + "";
-                    OleDbCommand comando2 = new OleDbCommand(sql2, conexion);
-                    OleDbDataAdapter data3 = new OleDbDataAdapter(comando2);
-
-                    data3.Fill(ds, "fotos");
-                    MemoryStream ms5 = new MemoryStream((byte[])ds.Tables["fotos"].Rows[0]["Foto"]);
-
-                    Bitmap bm5 = new Bitmap(ms5);
-
-                    pic_Nom1.Image = bm5;
-                }
-                else if (lbl_Nom2.Text == InfoAmigo[u, 0])
-                {
-                    string sql2 = "SELECT Foto FROM Amigos WHERE Id =" + InfoAmigo[u, 4] + "";
-                    OleDbCommand comando2 = new OleDbCommand(sql2, conexion);
-                    OleDbDataAdapter data3 = new OleDbDataAdapter(comando2);
-
-                    data3.Fill(ds, "fotos");
-                    MemoryStream ms6 = new MemoryStream((byte[])ds.Tables["fotos"].Rows[0]["Foto"]);
-
-                    Bitmap bm6 = new Bitmap(ms6);
-
-                    pic_Nom2.Image = bm6;
-                }
-                else if (lbl_Nom3.Text == InfoAmigo[u, 0])
-                {
-                    string sql2 = "SELECT Foto FROM Amigos WHERE Id =" + InfoAmigo[u, 4] + "";
-                    OleDbCommand comando2 = new OleDbCommand(sql2, conexion);
-                    OleDbDataAdapter data3 = new OleDbDataAdapter(comando2);
-
-                    data3.Fill(ds, "fotos");
-                    MemoryStream ms7 = new MemoryStream((byte[])ds.Tables["fotos"].Rows[0]["Foto"]);
-
-                    Bitmap bm7 = new Bitmap(ms7);
-
-                    pic_Nom3.Image = bm7;
-                }
-                else if (lbl_Nom4.Text == InfoAmigo[u, 0])
-                {
-                    string sql2 = "SELECT Foto FROM Amigos WHERE Id =" + InfoAmigo[u, 4] + "";
-                    OleDbCommand comando2 = new OleDbCommand(sql2, conexion);
-                    OleDbDataAdapter data3 = new OleDbDataAdapter(comando2);
-
-                    data3.Fill(ds, "fotos");
-                    MemoryStream ms8 = new MemoryStream((byte[])ds.Tables["fotos"].Rows[0]["Foto"]);
-
-                    Bitmap bm8 = new Bitmap(ms8);
-
-                    pic_Nom4.Image = bm8;
-                }
-            }
         }
 
         private void btn_FlechaDer_Click(object sender, EventArgs e)
@@ -466,14 +465,38 @@ namespace Pantalla_Contraseña
                     lbl_Nom1.Text = InfoAmigo[i + 1, 0];
                     lbl_Nom1.Tag = InfoAmigo[i + 1, 4];
 
+                    MemoryStream pic1 = new MemoryStream((byte[])ds.Tables["Amigo"].Rows[i + 1]["Foto"]);
+
+                    Bitmap bm1 = new Bitmap(pic1);
+
+                    pic_Nom1.Image = bm1;
+
                     lbl_Nom2.Text = InfoAmigo[i + 2, 0];
                     lbl_Nom2.Tag = InfoAmigo[i + 2, 4];
+
+                    MemoryStream pic2 = new MemoryStream((byte[])ds.Tables["Amigo"].Rows[i + 2]["Foto"]);
+
+                    Bitmap bm2 = new Bitmap(pic2);
+
+                    pic_Nom2.Image = bm2;
 
                     lbl_Nom3.Text = InfoAmigo[i + 3, 0];
                     lbl_Nom3.Tag = InfoAmigo[i + 3, 4];
 
+                    MemoryStream pic3 = new MemoryStream((byte[])ds.Tables["Amigo"].Rows[i + 3]["Foto"]);
+
+                    Bitmap bm3 = new Bitmap(pic3);
+
+                    pic_Nom3.Image = bm3;
+
                     lbl_Nom4.Text = InfoAmigo[i + 4, 0];
                     lbl_Nom4.Tag = InfoAmigo[i + 4, 4];
+
+                    MemoryStream pic4 = new MemoryStream((byte[])ds.Tables["Amigo"].Rows[i + 4]["Foto"]);
+
+                    Bitmap bm4 = new Bitmap(pic4);
+
+                    pic_Nom4.Image = bm4;
 
                     z = 1;
                 }
@@ -488,11 +511,29 @@ namespace Pantalla_Contraseña
                     lbl_Nom1.Text = InfoAmigo[ultimo - 2, 0];
                     lbl_Nom1.Tag = InfoAmigo[ultimo - 2, 4];
 
+                    MemoryStream pic1 = new MemoryStream((byte[])ds.Tables["Amigo"].Rows[ultimo - 2]["Foto"]);
+
+                    Bitmap bm1 = new Bitmap(pic1);
+
+                    pic_Nom1.Image = bm1;
+
                     lbl_Nom2.Text = InfoAmigo[ultimo - 1, 0];
                     lbl_Nom2.Tag = InfoAmigo[ultimo - 1, 4];
 
+                    MemoryStream pic2 = new MemoryStream((byte[])ds.Tables["Amigo"].Rows[ultimo - 1]["Foto"]);
+
+                    Bitmap bm2 = new Bitmap(pic2);
+
+                    pic_Nom2.Image = bm2;
+
                     lbl_Nom3.Text = InfoAmigo[ultimo, 0];
                     lbl_Nom3.Tag = InfoAmigo[ultimo, 4];
+
+                    MemoryStream pic3 = new MemoryStream((byte[])ds.Tables["Amigo"].Rows[ultimo]["Foto"]);
+
+                    Bitmap bm3 = new Bitmap(pic3);
+
+                    pic_Nom3.Image = bm3;
                 }
 
                 if (lbl_Nom4.Text == InfoAmigo[ultimo - 2, 0])
@@ -503,8 +544,20 @@ namespace Pantalla_Contraseña
                     lbl_Nom1.Text = InfoAmigo[ultimo - 1, 0];
                     lbl_Nom1.Tag = InfoAmigo[ultimo - 1, 4];
 
+                    MemoryStream pic1 = new MemoryStream((byte[])ds.Tables["Amigo"].Rows[ultimo - 1]["Foto"]);
+
+                    Bitmap bm1 = new Bitmap(pic1);
+
+                    pic_Nom1.Image = bm1;
+
                     lbl_Nom2.Text = InfoAmigo[ultimo, 0];
                     lbl_Nom2.Tag = InfoAmigo[ultimo, 4];
+
+                    MemoryStream pic2 = new MemoryStream((byte[])ds.Tables["Amigo"].Rows[ultimo]["Foto"]);
+
+                    Bitmap bm2 = new Bitmap(pic2);
+
+                    pic_Nom2.Image = bm2;
 
                     lbl_Nom3.Visible = false;
                     pic_Nom3.Visible = false;
@@ -517,6 +570,12 @@ namespace Pantalla_Contraseña
 
                     lbl_Nom1.Text = InfoAmigo[ultimo, 0];
                     lbl_Nom1.Tag = InfoAmigo[ultimo, 4];
+
+                    MemoryStream pic1 = new MemoryStream((byte[])ds.Tables["Amigo"].Rows[ultimo]["Foto"]);
+
+                    Bitmap bm1 = new Bitmap(pic1);
+
+                    pic_Nom1.Image = bm1;
 
                     lbl_Nom2.Visible = false;
                     pic_Nom2.Visible = false;
@@ -539,61 +598,6 @@ namespace Pantalla_Contraseña
             if (lbl_Nom1.Text != InfoAmigo[0, 0] || lbl_Nom1.Visible == false)
             {
                 btn_FlechaIzq.Visible = true;
-            }
-            for (int u = 0; u <= ultimo; u++)
-            {
-                if (lbl_Nom1.Text == InfoAmigo[u, 0])
-                {
-                    string sql2 = "SELECT Foto FROM Amigos WHERE Id =" + InfoAmigo[u, 4] + "";
-                    OleDbCommand comando2 = new OleDbCommand(sql2, conexion);
-                    OleDbDataAdapter data3 = new OleDbDataAdapter(comando2);
-
-                    data3.Fill(ds, "fotos");
-                    MemoryStream ms1 = new MemoryStream((byte[])ds.Tables["fotos"].Rows[0]["Foto"]);
-
-                    Bitmap bm1 = new Bitmap(ms1);
-
-                    pic_Nom1.Image = bm1;
-                }
-                else if (lbl_Nom2.Text == InfoAmigo[u, 0])
-                {
-                    string sql2 = "SELECT Foto FROM Amigos WHERE Id =" + InfoAmigo[u, 4] + "";
-                    OleDbCommand comando2 = new OleDbCommand(sql2, conexion);
-                    OleDbDataAdapter data3 = new OleDbDataAdapter(comando2);
-
-                    data3.Fill(ds, "fotos");
-                    MemoryStream ms1 = new MemoryStream((byte[])ds.Tables["fotos"].Rows[0]["Foto"]);
-
-                    Bitmap bm1 = new Bitmap(ms1);
-
-                    pic_Nom2.Image = bm1;
-                }
-                else if (lbl_Nom3.Text == InfoAmigo[u, 0])
-                {
-                    string sql2 = "SELECT Foto FROM Amigos WHERE Id =" + InfoAmigo[u, 4] + "";
-                    OleDbCommand comando2 = new OleDbCommand(sql2, conexion);
-                    OleDbDataAdapter data3 = new OleDbDataAdapter(comando2);
-
-                    data3.Fill(ds, "fotos");
-                    MemoryStream ms1 = new MemoryStream((byte[])ds.Tables["fotos"].Rows[0]["Foto"]);
-
-                    Bitmap bm1 = new Bitmap(ms1);
-
-                    pic_Nom3.Image = bm1;
-                }
-                else if (lbl_Nom4.Text == InfoAmigo[u, 0])
-                {
-                    string sql2 = "SELECT Foto FROM Amigos WHERE Id =" + InfoAmigo[u, 4] + "";
-                    OleDbCommand comando2 = new OleDbCommand(sql2, conexion);
-                    OleDbDataAdapter data3 = new OleDbDataAdapter(comando2);
-
-                    data3.Fill(ds, "fotos");
-                    MemoryStream ms1 = new MemoryStream((byte[])ds.Tables["fotos"].Rows[0]["Foto"]);
-
-                    Bitmap bm1 = new Bitmap(ms1);
-
-                    pic_Nom4.Image = bm1;
-                }
             }
         }
 
