@@ -17,8 +17,6 @@ namespace Pantalla_Contraseña
         OleDbConnection conexion = new OleDbConnection();
         DataSet ds = new DataSet();
 
-        int PregElegida;
-
         public FormPreguntas()
         {
             InitializeComponent();
@@ -53,19 +51,29 @@ namespace Pantalla_Contraseña
 
             Random(preguntas);
 
-            if (preguntas[1] == "¿Qué parentesco tiene esta persona con usted?")
+            lbl_Pregunta.Text = preguntas[0];
+
+            if (preguntas[0] == "¿Qué parentesco tiene esta persona con usted?")
             {
-                PregElegida = 1;
+                
             }
 
-            else if (preguntas[1] == "¿De dónde conoce usted a esta persona?")
+            else if (preguntas[0] == "¿De dónde conoce usted a esta persona?")
             {
-                PregElegida = 2;
+                
             }
 
-            else if (preguntas[1] == "¿Cuál es el nombre de esta persona?")
+            else if (preguntas[0] == "¿Cuál es el nombre de esta persona?")
             {
-                PregElegida = 3;
+                string sql2 = "SELECT Id FROM Amigos";
+                OleDbCommand cmd2 = new OleDbCommand(sql2, conexion);
+                OleDbDataAdapter da2 = new OleDbDataAdapter(cmd2);
+                da2.Fill(ds, "IdCorrecta");
+
+                int[] IdCorrecta = new int[ds.Tables["IdCorrecta"].Rows.Count];
+                Random(IdCorrecta);
+
+
             }
         }
 
