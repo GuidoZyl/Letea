@@ -132,6 +132,12 @@
     <Compile Include="Grupos Amigos.Designer.cs">
       <DependentUpon>Grupos Amigos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Juego de Preguntas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Juego de Preguntas.Designer.cs">
+      <DependentUpon>Juego de Preguntas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pantalla Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,6 +205,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Grupos Amigos.resx">
       <DependentUpon>Grupos Amigos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Juego de Preguntas.resx">
+      <DependentUpon>Juego de Preguntas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pantalla Login.resx">
       <DependentUpon>Pantalla Login.cs</DependentUpon>
@@ -429,6 +438,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Boton familia %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boton Respuesta.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

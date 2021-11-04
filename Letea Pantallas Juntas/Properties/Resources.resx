@@ -142,6 +142,9 @@
   <data name="Agregar foto1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Agregar foto1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Boton familia (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Boton familia (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Cruz" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cruz.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -205,14 +208,11 @@
   <data name="Acerca de Nosotros" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Acerca de Nosotros.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Parte Superior2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Parte Superior2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Parte Superior Crear GurupoAmigos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Parte Superior Crear GurupoAmigos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Siguiente1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Siguiente1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Contraseña" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Contraseña.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Parte Superior" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Parte Superior.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -220,8 +220,8 @@
   <data name="Salir" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Salir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Parte Superior1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Parte Superior1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Siguiente1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Siguiente1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Agregar familiar (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Agregar familiar (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -241,8 +241,8 @@
   <data name="Creditos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Creditos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Contraseña" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Contraseña.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Parte Superior2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Parte Superior2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Dave2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Dave2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -292,19 +292,22 @@
   <data name="Crear1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Crear1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Crear paciente" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Crear paciente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="fotoperfil" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fotoperfil.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Editar amigo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Editar amigo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Crear paciente" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Crear paciente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Parte Superior1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Parte Superior1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Rectangle 51" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Rectangle 51.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Boton familia (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Boton familia (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Boton Respuesta" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Boton Respuesta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
