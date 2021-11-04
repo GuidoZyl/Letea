@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.OleDb;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -65,15 +66,32 @@ namespace Pantalla_Contraseña
 
             else if (preguntas[0] == "¿Cuál es el nombre de esta persona?")
             {
+                //FALTA PONER QUE ELIJA LOS AMIGOS DEL PACIENTE ESPECIFICO
                 string sql2 = "SELECT Id FROM Amigos";
                 OleDbCommand cmd2 = new OleDbCommand(sql2, conexion);
                 OleDbDataAdapter da2 = new OleDbDataAdapter(cmd2);
                 da2.Fill(ds, "IdCorrecta");
 
                 int[] IdCorrecta = new int[ds.Tables["IdCorrecta"].Rows.Count];
+                for (int i = 0; i < ds.Tables["IdCorrecta"].Rows.Count; i++)
+                {
+                    IdCorrecta[i] = Convert.ToInt32(ds.Tables["IdCorrecta"].Rows[i]["Id"]);
+                }
+
                 Random(IdCorrecta);
 
+                string sql3 = "SELECT * FROM Amigos WHERE Id = " + IdCorrecta[0] + "";
+                OleDbCommand cmd3 = new OleDbCommand(sql3, conexion);
+                OleDbDataAdapter da3 = new OleDbDataAdapter(cmd3);
+                da3.Fill(ds, "InfoCorrecta");
 
+                string NombreCorrecto = Convert.ToString(ds.Tables["InfoCorrecta"].Rows[0]["Nombre"]);
+
+                MemoryStream ms = new MemoryStream((byte[])ds.Tables["InfoCorrecta"].Rows[0]["Foto"]);
+
+                Bitmap bm = new Bitmap(ms);
+
+                pic_Persona.Image = bm;
             }
         }
 

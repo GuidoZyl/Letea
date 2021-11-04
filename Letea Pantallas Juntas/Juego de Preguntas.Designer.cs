@@ -166,7 +166,6 @@ namespace Pantalla_Contraseña
             // pic_Persona
             // 
             this.pic_Persona.BackColor = System.Drawing.Color.Black;
-            this.pic_Persona.Image = global::Pantalla_Contraseña.Properties.Resources.Dave2;
             this.pic_Persona.Location = new System.Drawing.Point(743, 180);
             this.pic_Persona.Name = "pic_Persona";
             this.pic_Persona.Size = new System.Drawing.Size(439, 366);
