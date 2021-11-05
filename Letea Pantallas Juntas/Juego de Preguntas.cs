@@ -18,6 +18,9 @@ namespace Pantalla_Contraseña
         OleDbConnection conexion = new OleDbConnection();
         DataSet ds = new DataSet();
 
+        string NombreCorrecto;
+        int Pregunta;
+
         public FormPreguntas()
         {
             InitializeComponent();
@@ -67,6 +70,8 @@ namespace Pantalla_Contraseña
             else if (preguntas[0] == "¿Cuál es el nombre de esta persona?")
             {
                 //FALTA PONER QUE ELIJA LOS AMIGOS DEL PACIENTE ESPECIFICO
+
+                Pregunta = 3;
                 string sql2 = "SELECT Id FROM Amigos";
                 OleDbCommand cmd2 = new OleDbCommand(sql2, conexion);
                 OleDbDataAdapter da2 = new OleDbDataAdapter(cmd2);
@@ -88,7 +93,7 @@ namespace Pantalla_Contraseña
                 OleDbDataAdapter da3 = new OleDbDataAdapter(cmd3);
                 da3.Fill(ds, "InfoCorrecta");
 
-                string NombreCorrecto = Convert.ToString(ds.Tables["InfoCorrecta"].Rows[0]["Nombre"]);
+                NombreCorrecto = Convert.ToString(ds.Tables["InfoCorrecta"].Rows[0]["Nombre"]);
 
                 MemoryStream ms = new MemoryStream((byte[])ds.Tables["InfoCorrecta"].Rows[0]["Foto"]);
 
@@ -118,7 +123,29 @@ namespace Pantalla_Contraseña
                     IdIncorrecta[i] = IdIncorrectaTemp[PosicionesRandom[i]];
                 }
 
-                MessageBox.Show(Convert.ToString(IdIncorrecta[0]) + " " + Convert.ToString(IdIncorrecta[1]) + " " + Convert.ToString(IdIncorrecta[2]));
+                string sql5 = "SELECT * FROM Amigos WHERE Id = " + IdIncorrecta[0] + " OR Id = " + IdIncorrecta[1] + " OR Id = " + IdIncorrecta[2] + "";
+                OleDbCommand cmd5 = new OleDbCommand(sql5, conexion);
+                OleDbDataAdapter da5 = new OleDbDataAdapter(cmd5);
+                da5.Fill(ds, "InfoIncorrecta");
+
+                string[] Opciones = new string[4];
+                for (int i = 0; i < 3; i++)
+                {
+                    Opciones[i] = Convert.ToString(ds.Tables["InfoIncorrecta"].Rows[i]["Nombre"]);
+                }
+                Opciones[3] = NombreCorrecto;
+
+                Random(Opciones);
+
+                lbl_Res1.Text = Opciones[0];
+                lbl_Res2.Text = Opciones[1];
+                lbl_Res3.Text = Opciones[2];
+                lbl_Res4.Text = Opciones[3];
+
+                ds.Tables["IdCorrecta"].Clear();
+                ds.Tables["InfoCorrecta"].Clear();
+                ds.Tables["IdIncorrecta"].Clear();
+                ds.Tables["InfoIncorrecta"].Clear();
             }
         }
 
@@ -140,6 +167,23 @@ namespace Pantalla_Contraseña
             gp.AddArc(r.X + r.Width - d, r.Y + r.Height - d, d, d, 0, 90);
             gp.AddArc(r.X, r.Y + r.Height - d, d, d, 90, 90);
             pic_Persona.Region = new Region(gp);
+        }
+
+        private void lbl_Res1_Click(object sender, EventArgs e)
+        {
+            Label LabelClicked = sender as Label;
+            if (Pregunta == 3)
+            {
+                if (LabelClicked.Text == NombreCorrecto)
+                {
+                    MessageBox.Show("Correcto");
+                    NuevaPregunta();
+                }
+                else
+                {
+                    MessageBox.Show("Inténtelo de nuevo");
+                }
+            }
         }
     }
 }

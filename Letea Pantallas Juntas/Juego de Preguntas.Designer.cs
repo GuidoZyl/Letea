@@ -126,6 +126,7 @@ namespace Pantalla_Contraseña
             this.lbl_Res1.TabIndex = 27;
             this.lbl_Res1.Text = "Martín";
             this.lbl_Res1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Res1.Click += new System.EventHandler(this.lbl_Res1_Click);
             // 
             // lbl_Res2
             // 
@@ -138,6 +139,7 @@ namespace Pantalla_Contraseña
             this.lbl_Res2.TabIndex = 28;
             this.lbl_Res2.Text = "Martín";
             this.lbl_Res2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Res2.Click += new System.EventHandler(this.lbl_Res1_Click);
             // 
             // lbl_Res3
             // 
@@ -150,6 +152,7 @@ namespace Pantalla_Contraseña
             this.lbl_Res3.TabIndex = 29;
             this.lbl_Res3.Text = "Martín";
             this.lbl_Res3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Res3.Click += new System.EventHandler(this.lbl_Res1_Click);
             // 
             // lbl_Res4
             // 
@@ -162,6 +165,7 @@ namespace Pantalla_Contraseña
             this.lbl_Res4.TabIndex = 30;
             this.lbl_Res4.Text = "Martín";
             this.lbl_Res4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Res4.Click += new System.EventHandler(this.lbl_Res1_Click);
             // 
             // pic_Persona
             // 
