@@ -64,7 +64,23 @@ namespace Pantalla_Contraseña
 
             else if (preguntas[0] == "¿De dónde conoce usted a esta persona?")
             {
-                
+                string check = "SELECT * FROM GruposdeAmigos";
+                OleDbCommand comando = new OleDbCommand(check, conexion);
+                OleDbDataAdapter data = new OleDbDataAdapter(comando);
+                data.Fill(ds, "Checkeo");
+
+                if (ds.Tables["Checkeo"].Rows.Count > 3)
+                {
+                    ds.Tables["Checkeo"].Clear();
+
+
+                }
+
+                else
+                {
+                    ds.Tables["Checkeo"].Clear();
+                    NuevaPregunta();
+                }
             }
 
             else if (preguntas[0] == "¿Cuál es el nombre de esta persona?")
