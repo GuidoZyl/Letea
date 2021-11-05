@@ -80,7 +80,10 @@ namespace Pantalla_Contraseña
 
                 Random(IdCorrecta);
 
-                string sql3 = "SELECT * FROM Amigos WHERE Id = " + IdCorrecta[0] + "";
+                Random rnd = new Random();
+                int PosicionCorrecta = rnd.Next(0, ds.Tables["IdCorrecta"].Rows.Count);
+
+                string sql3 = "SELECT * FROM Amigos WHERE Id = " + IdCorrecta[PosicionCorrecta] + "";
                 OleDbCommand cmd3 = new OleDbCommand(sql3, conexion);
                 OleDbDataAdapter da3 = new OleDbDataAdapter(cmd3);
                 da3.Fill(ds, "InfoCorrecta");
@@ -92,6 +95,30 @@ namespace Pantalla_Contraseña
                 Bitmap bm = new Bitmap(ms);
 
                 pic_Persona.Image = bm;
+
+                string sql4 = "SELECT Id FROM Amigos WHERE NOT Id = " + IdCorrecta[PosicionCorrecta] + "";
+                OleDbCommand cmd4 = new OleDbCommand(sql4, conexion);
+                OleDbDataAdapter da4 = new OleDbDataAdapter(cmd4);
+                da4.Fill(ds, "IdIncorrecta");
+
+                int[] IdIncorrectaTemp = new int[ds.Tables["IdIncorrecta"].Rows.Count];
+                for (int i = 0; i < ds.Tables["IdIncorrecta"].Rows.Count; i++)
+                {
+                    IdIncorrectaTemp[i] = Convert.ToInt32(ds.Tables["IdIncorrecta"].Rows[i]["Id"]);
+                }
+
+                Random(IdIncorrectaTemp);
+
+                int[] PosicionesRandom = { 0, 1, 2 };
+                Random(PosicionesRandom);
+
+                int[] IdIncorrecta = new int[3];
+                for (int i = 0; i < 3; i++)
+                {
+                    IdIncorrecta[i] = IdIncorrectaTemp[PosicionesRandom[i]];
+                }
+
+                MessageBox.Show(Convert.ToString(IdIncorrecta[0]) + " " + Convert.ToString(IdIncorrecta[1]) + " " + Convert.ToString(IdIncorrecta[2]));
             }
         }
 
