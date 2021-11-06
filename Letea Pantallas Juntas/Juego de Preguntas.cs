@@ -42,6 +42,7 @@ namespace Pantalla_Contraseña
 
         void NuevaPregunta()
         {
+            lbl_Nom.Visible = false;
             string sql = "SELECT * FROM JuegoPreguntas";
             OleDbCommand cmd = new OleDbCommand(sql, conexion);
             OleDbDataAdapter da = new OleDbDataAdapter(cmd);
@@ -91,8 +92,8 @@ namespace Pantalla_Contraseña
                     int PosicionCorrecta = rnd.Next(0, ds.Tables["IdGrupoCorrecta"].Rows.Count);
 
                     string query = "SELECT * FROM GruposdeAmigos WHERE Id = " + IdGrupoCorrecta[PosicionCorrecta] + "";
-                    OleDbCommand comado = new OleDbCommand(query, conexion);
-                    OleDbDataAdapter data2 = new OleDbDataAdapter(comando);
+                    OleDbCommand comando2 = new OleDbCommand(query, conexion);
+                    OleDbDataAdapter data2 = new OleDbDataAdapter(comando2);
                     data2.Fill(ds, "NombreGrupoCorrecto");
 
                     GrupoCorrecto = Convert.ToString(ds.Tables["NombreGrupoCorrecto"].Rows[0]["Nombre"]);
@@ -115,6 +116,7 @@ namespace Pantalla_Contraseña
                     Bitmap bm = new Bitmap(ms);
 
                     pic_Persona.Image = bm;
+                    lbl_Nom.Visible = true;
                     lbl_Nom.Text = Convert.ToString(ds.Tables["IdCorrecta"].Rows[PosicionCorrecta2]["Nombre"]);
 
                     string sql4 = "SELECT * FROM GruposdeAmigos WHERE NOT Id = " + IdGrupoCorrecta[PosicionCorrecta] + "";
@@ -162,6 +164,7 @@ namespace Pantalla_Contraseña
                     ds.Tables["IdCorrecta"].Clear();
                     ds.Tables["IdIncorrecta"].Clear();
                     ds.Tables["InfoIncorrecta"].Clear();
+                    ds.Tables["NombreGrupoCorrecto"].Clear();
                 }
 
                 else
@@ -301,6 +304,13 @@ namespace Pantalla_Contraseña
                     MessageBox.Show("Inténtelo de nuevo");
                 }
             }
+        }
+
+        private void btn_Volver_Click(object sender, EventArgs e)
+        {
+            JuegosAmigos form = new JuegosAmigos();
+            form.Show();
+            this.Hide();
         }
     }
 }

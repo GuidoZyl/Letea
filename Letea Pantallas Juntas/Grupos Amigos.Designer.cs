@@ -314,6 +314,7 @@ namespace Pantalla_Contraseña
             // 
             this.btn_Jugar.BackColor = System.Drawing.Color.Transparent;
             this.btn_Jugar.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Boton_jugar;
+            this.btn_Jugar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Jugar.Location = new System.Drawing.Point(37, 866);
             this.btn_Jugar.Name = "btn_Jugar";
             this.btn_Jugar.Size = new System.Drawing.Size(307, 122);

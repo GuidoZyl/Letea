@@ -60,6 +60,7 @@ namespace Pantalla_Contraseña
             this.btn_Volver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_Volver.TabIndex = 21;
             this.btn_Volver.TabStop = false;
+            this.btn_Volver.Click += new System.EventHandler(this.btn_Volver_Click);
             // 
             // btn_Respuesta1
             // 
@@ -189,6 +190,7 @@ namespace Pantalla_Contraseña
             this.lbl_Nom.TabIndex = 32;
             this.lbl_Nom.Text = "Martpin";
             this.lbl_Nom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Nom.Visible = false;
             // 
             // FormPreguntas
             // 

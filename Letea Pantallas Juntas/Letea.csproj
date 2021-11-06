@@ -472,5 +472,11 @@
   <ItemGroup>
     <None Include="Resources\Boton ASOCIANDO NOMBRES.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Botón Respu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Botón Fondo falso.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

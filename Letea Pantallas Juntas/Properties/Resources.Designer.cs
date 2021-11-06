@@ -213,6 +213,16 @@ namespace Pantalla_Contraseña.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Botón_Fondo_falso {
+            get {
+                object obj = ResourceManager.GetObject("Botón Fondo falso", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Boton_Guardar {
             get {
                 object obj = ResourceManager.GetObject("Boton Guardar", resourceCulture);
@@ -236,6 +246,16 @@ namespace Pantalla_Contraseña.Properties {
         internal static System.Drawing.Bitmap Boton_PREGUNTAS {
             get {
                 object obj = ResourceManager.GetObject("Boton PREGUNTAS", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Botón_Respu {
+            get {
+                object obj = ResourceManager.GetObject("Botón Respu", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

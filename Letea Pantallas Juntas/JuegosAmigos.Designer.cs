@@ -71,9 +71,9 @@ namespace Pantalla_Contraseña
             // 
             this.pic_Juegos.BackColor = System.Drawing.Color.Transparent;
             this.pic_Juegos.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Juegos;
-            this.pic_Juegos.Location = new System.Drawing.Point(778, 33);
+            this.pic_Juegos.Location = new System.Drawing.Point(787, 30);
             this.pic_Juegos.Name = "pic_Juegos";
-            this.pic_Juegos.Size = new System.Drawing.Size(364, 225);
+            this.pic_Juegos.Size = new System.Drawing.Size(364, 173);
             this.pic_Juegos.TabIndex = 23;
             this.pic_Juegos.TabStop = false;
             // 
@@ -81,6 +81,7 @@ namespace Pantalla_Contraseña
             // 
             this.btn_Preguntas.BackColor = System.Drawing.Color.Transparent;
             this.btn_Preguntas.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Boton_PREGUNTAS;
+            this.btn_Preguntas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Preguntas.Location = new System.Drawing.Point(231, 365);
             this.btn_Preguntas.Name = "btn_Preguntas";
             this.btn_Preguntas.Size = new System.Drawing.Size(544, 387);
@@ -92,6 +93,7 @@ namespace Pantalla_Contraseña
             // 
             this.btn_AsociandoNombres.BackColor = System.Drawing.Color.Transparent;
             this.btn_AsociandoNombres.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Boton_ASOCIANDO_NOMBRES;
+            this.btn_AsociandoNombres.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_AsociandoNombres.Location = new System.Drawing.Point(1156, 365);
             this.btn_AsociandoNombres.Name = "btn_AsociandoNombres";
             this.btn_AsociandoNombres.Size = new System.Drawing.Size(544, 387);
@@ -103,6 +105,7 @@ namespace Pantalla_Contraseña
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Fondo;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.btn_AsociandoNombres);

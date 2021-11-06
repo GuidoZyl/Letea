@@ -24,7 +24,6 @@ namespace Pantalla_Contraseña
 
         public void FormPrincipal_Load(object sender, EventArgs e)
         {
-            MessageBox.Show(Convert.ToString(FormPantallaLogIn.ModoAdmin));
             if (!FormPantallaLogIn.ModoAdmin) {
                 btn_Config.Visible = false;
                 btn_CrearPaciente.Visible = false;
