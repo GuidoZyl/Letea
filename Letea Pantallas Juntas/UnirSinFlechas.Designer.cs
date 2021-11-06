@@ -302,6 +302,7 @@ namespace Pantalla_Contraseña
             this.Name = "UnirSinFlechas";
             this.Text = "UnirSinFlechas";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.UnirSinFlechas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btn_Respuesta1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Respuesta2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Respuesta3)).EndInit();
