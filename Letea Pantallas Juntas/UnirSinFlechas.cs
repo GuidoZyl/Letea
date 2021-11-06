@@ -49,7 +49,7 @@ namespace Pantalla_Contraseña
             }
           Random(RowAmigo);
             
-            string sql2 = "SELECT Foto FROM Amigos";
+            string sql2 = "SELECT [Foto],[Nombre] FROM Amigos";
             OleDbCommand cmd2 = new OleDbCommand(sql2, conexion);
             OleDbDataAdapter da2 = new OleDbDataAdapter(cmd2);
             da2.Fill(ds, "FotoPersona1");
@@ -62,9 +62,9 @@ namespace Pantalla_Contraseña
             btn_Foto1.Image = bm;
             btn_Foto1.Tag = RowAmigo[0];
 
-           
+            Nombres[0] = ds.Tables["FotoPersona1"].Rows[RowAmigo[0]]["Nombre"].ToString();
 
-            string sql3 = "SELECT Foto FROM Amigos";
+            string sql3 = "SELECT [Foto],[Nombre] FROM Amigos";
             OleDbCommand cmd3 = new OleDbCommand(sql3, conexion);
             OleDbDataAdapter da3 = new OleDbDataAdapter(cmd3);
             da3.Fill(ds, "FotoPersona2");
@@ -75,8 +75,9 @@ namespace Pantalla_Contraseña
 
             btn_Foto2.Image = bm1;
             btn_Foto2.Tag = RowAmigo[1];
-           
-            string sql4 = "SELECT Foto FROM Amigos";
+
+            Nombres[1] = ds.Tables["FotoPersona2"].Rows[RowAmigo[1]]["Nombre"].ToString();
+            string sql4 = "SELECT [Foto],[Nombre] FROM Amigos";
             OleDbCommand cmd4 = new OleDbCommand(sql4, conexion);
             OleDbDataAdapter da4 = new OleDbDataAdapter(cmd4);
             da4.Fill(ds, "FotoPersona3");
@@ -88,7 +89,9 @@ namespace Pantalla_Contraseña
             btn_Foto3.Image = bm2;
             btn_Foto3.Tag = RowAmigo[2];
 
-            string sql5 = "SELECT Foto FROM Amigos";
+            Nombres[2] = ds.Tables["FotoPersona3"].Rows[RowAmigo[2]]["Nombre"].ToString();
+           
+            string sql5 = "SELECT [Foto],[Nombre] FROM Amigos";
             OleDbCommand cmd5 = new OleDbCommand(sql5, conexion);
             OleDbDataAdapter da5 = new OleDbDataAdapter(cmd5);
             da5.Fill(ds, "FotoPersona4");
@@ -100,7 +103,9 @@ namespace Pantalla_Contraseña
             btn_Foto4.Image = bm3;
             btn_Foto4.Tag = RowAmigo[3];
 
-            string sql6 = "SELECT Foto FROM Amigos";
+            Nombres[3] = ds.Tables["FotoPersona4"].Rows[RowAmigo[3]]["Nombre"].ToString();
+
+            string sql6 = "SELECT [Foto],[Nombre] FROM Amigos";
             OleDbCommand cmd6 = new OleDbCommand(sql6, conexion);
             OleDbDataAdapter da6 = new OleDbDataAdapter(cmd6);
             da6.Fill(ds, "FotoPersona5");
@@ -112,7 +117,8 @@ namespace Pantalla_Contraseña
             btn_Foto5.Image = bm4;
             btn_Foto5.Tag = RowAmigo[4];
 
-            string sql7 = "SELECT Foto FROM Amigos";
+            Nombres[4] = ds.Tables["FotoPersona5"].Rows[RowAmigo[4]]["Nombre"].ToString();
+            string sql7 = "SELECT [Foto],[Nombre] FROM Amigos";
             OleDbCommand cmd7 = new OleDbCommand(sql7, conexion);
             OleDbDataAdapter da7 = new OleDbDataAdapter(cmd7);
             da7.Fill(ds, "FotoPersona6");
@@ -124,7 +130,17 @@ namespace Pantalla_Contraseña
             btn_Foto6.Image = bm5;
             btn_Foto6.Tag = RowAmigo[5];
 
-            Numero[0] = RowAmigo[0];
+            Nombres[5] = ds.Tables["FotoPersona6"].Rows[RowAmigo[5]]["Nombre"].ToString();
+
+            Random(Nombres);
+            lbl_Res1.Text = Nombres[0];
+            lbl_Res2.Text = Nombres[1];
+            lbl_Res3.Text = Nombres[2];
+            lbl_Res4.Text = Nombres[3];
+            lbl_Res5.Text = Nombres[4];
+            lbl_Res6.Text = Nombres[5];
+
+            /*Numero[0] = RowAmigo[0];
             Numero[1] = RowAmigo[1];
             Numero[2] = RowAmigo[2];
             Numero[3] = RowAmigo[3];
@@ -141,7 +157,7 @@ namespace Pantalla_Contraseña
             if (btn_Foto1.Tag == btn_Respuesta1.Tag)
             {
 
-            }
+            }*/
         }
         private void lbl_Res1_Click(object sender, EventArgs e)
         {
