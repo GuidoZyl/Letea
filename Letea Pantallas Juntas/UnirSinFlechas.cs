@@ -43,7 +43,7 @@ namespace Pantalla_Contraseña
             {
                 IdAmigos[i] = i;
             }
-            Random(IdAmigos);
+          //  Random(IdAmigos);
             
             string sql2 = "SELECT Foto FROM Amigos WHERE Id = " + IdAmigos[0] + "";
             OleDbCommand cmd2 = new OleDbCommand(sql2, conexion);
