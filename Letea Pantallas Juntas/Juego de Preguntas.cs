@@ -19,6 +19,7 @@ namespace Pantalla_Contraseña
         DataSet ds = new DataSet();
 
         string NombreCorrecto;
+        string GrupoCorrecto;
         int Pregunta;
 
         public FormPreguntas()
@@ -72,8 +73,95 @@ namespace Pantalla_Contraseña
                 if (ds.Tables["Checkeo"].Rows.Count > 3)
                 {
                     ds.Tables["Checkeo"].Clear();
+                    Pregunta = 2;
 
+                    string sql2 = "SELECT Id FROM GruposdeAmigos";
+                    OleDbCommand cmd2 = new OleDbCommand(sql2, conexion);
+                    OleDbDataAdapter da2 = new OleDbDataAdapter(cmd2);
+                    da2.Fill(ds, "IdGrupoCorrecta");
 
+                    int[] IdGrupoCorrecta = new int[ds.Tables["IdGrupoCorrecta"].Rows.Count];
+                    for (int i = 0; i < ds.Tables["IdGrupoCorrecta"].Rows.Count; i++)
+                    {
+                        IdGrupoCorrecta[i] = Convert.ToInt32(ds.Tables["IdGrupoCorrecta"].Rows[i]["Id"]);
+                    }
+
+                    Random(IdGrupoCorrecta);
+                    Random rnd = new Random();
+                    int PosicionCorrecta = rnd.Next(0, ds.Tables["IdGrupoCorrecta"].Rows.Count);
+
+                    string query = "SELECT * FROM GruposdeAmigos WHERE Id = " + IdGrupoCorrecta[PosicionCorrecta] + "";
+                    OleDbCommand comado = new OleDbCommand(query, conexion);
+                    OleDbDataAdapter data2 = new OleDbDataAdapter(comando);
+                    data2.Fill(ds, "NombreGrupoCorrecto");
+
+                    GrupoCorrecto = Convert.ToString(ds.Tables["NombreGrupoCorrecto"].Rows[0]["Nombre"]);
+
+                    string sql3 = "SELECT * FROM Amigos WHERE IDGruposDeAmigos = " + IdGrupoCorrecta[PosicionCorrecta] + "";
+                    OleDbCommand cmd3 = new OleDbCommand(sql3, conexion);
+                    OleDbDataAdapter da3 = new OleDbDataAdapter(cmd3);
+                    da3.Fill(ds, "IdCorrecta");
+
+                    int[] IdCorrecta = new int[ds.Tables["IdCorrecta"].Rows.Count];
+                    for (int i = 0; i < ds.Tables["IdCorrecta"].Rows.Count; i++)
+                    {
+                        IdCorrecta[i] = Convert.ToInt32(ds.Tables["IdCorrecta"].Rows[i]["Id"]);
+                    }
+
+                    Random(IdCorrecta);
+                    int PosicionCorrecta2 = rnd.Next(0, ds.Tables["IdCorrecta"].Rows.Count);
+
+                    MemoryStream ms = new MemoryStream((byte[])ds.Tables["IdCorrecta"].Rows[PosicionCorrecta2]["Foto"]);
+                    Bitmap bm = new Bitmap(ms);
+
+                    pic_Persona.Image = bm;
+                    lbl_Nom.Text = Convert.ToString(ds.Tables["IdCorrecta"].Rows[PosicionCorrecta2]["Nombre"]);
+
+                    string sql4 = "SELECT * FROM GruposdeAmigos WHERE NOT Id = " + IdGrupoCorrecta[PosicionCorrecta] + "";
+                    OleDbCommand cmd4 = new OleDbCommand(sql4, conexion);
+                    OleDbDataAdapter da4 = new OleDbDataAdapter(cmd4);
+                    da4.Fill(ds, "IdIncorrecta");
+
+                    int[] IdIncorrectaTemp = new int[ds.Tables["IdIncorrecta"].Rows.Count];
+                    for (int i = 0; i < ds.Tables["IdIncorrecta"].Rows.Count; i++)
+                    {
+                        IdIncorrectaTemp[i] = Convert.ToInt32(ds.Tables["IdIncorrecta"].Rows[i]["Id"]);
+                    }
+
+                    Random(IdIncorrectaTemp);
+
+                    int[] PosicionesRandom = { 0, 1, 2 };
+                    Random(PosicionesRandom);
+
+                    int[] IdIncorrecta = new int[3];
+                    for (int i = 0; i < 3; i++)
+                    {
+                        IdIncorrecta[i] = IdIncorrectaTemp[PosicionesRandom[i]];
+                    }
+
+                    string sql5 = "SELECT * FROM GruposdeAmigos WHERE Id = " + IdIncorrecta[0] + " OR Id = " + IdIncorrecta[1] + " OR Id = " + IdIncorrecta[2] + "";
+                    OleDbCommand cmd5 = new OleDbCommand(sql5, conexion);
+                    OleDbDataAdapter da5 = new OleDbDataAdapter(cmd5);
+                    da5.Fill(ds, "InfoIncorrecta");
+
+                    string[] Opciones = new string[4];
+                    for (int i = 0; i < 3; i++)
+                    {
+                        Opciones[i] = Convert.ToString(ds.Tables["InfoIncorrecta"].Rows[i]["Nombre"]);
+                    }
+                    Opciones[3] = GrupoCorrecto;
+
+                    Random(Opciones);
+
+                    lbl_Res1.Text = Opciones[0];
+                    lbl_Res2.Text = Opciones[1];
+                    lbl_Res3.Text = Opciones[2];
+                    lbl_Res4.Text = Opciones[3];
+
+                    ds.Tables["IdGrupoCorrecta"].Clear();
+                    ds.Tables["IdCorrecta"].Clear();
+                    ds.Tables["IdIncorrecta"].Clear();
+                    ds.Tables["InfoIncorrecta"].Clear();
                 }
 
                 else
@@ -191,6 +279,19 @@ namespace Pantalla_Contraseña
             if (Pregunta == 3)
             {
                 if (LabelClicked.Text == NombreCorrecto)
+                {
+                    MessageBox.Show("Correcto");
+                    NuevaPregunta();
+                }
+                else
+                {
+                    MessageBox.Show("Inténtelo de nuevo");
+                }
+            }
+
+            else if (Pregunta == 2)
+            {
+                if (LabelClicked.Text == GrupoCorrecto)
                 {
                     MessageBox.Show("Correcto");
                     NuevaPregunta();

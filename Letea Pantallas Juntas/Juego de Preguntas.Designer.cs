@@ -40,6 +40,7 @@ namespace Pantalla_Contraseña
             this.lbl_Res3 = new System.Windows.Forms.Label();
             this.lbl_Res4 = new System.Windows.Forms.Label();
             this.pic_Persona = new System.Windows.Forms.PictureBox();
+            this.lbl_Nom = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Volver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Respuesta1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Respuesta2)).BeginInit();
@@ -108,7 +109,7 @@ namespace Pantalla_Contraseña
             // 
             this.lbl_Pregunta.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Pregunta.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F);
-            this.lbl_Pregunta.Location = new System.Drawing.Point(523, 37);
+            this.lbl_Pregunta.Location = new System.Drawing.Point(523, 32);
             this.lbl_Pregunta.Name = "lbl_Pregunta";
             this.lbl_Pregunta.Size = new System.Drawing.Size(875, 125);
             this.lbl_Pregunta.TabIndex = 26;
@@ -170,13 +171,24 @@ namespace Pantalla_Contraseña
             // pic_Persona
             // 
             this.pic_Persona.BackColor = System.Drawing.Color.Black;
-            this.pic_Persona.Location = new System.Drawing.Point(743, 180);
+            this.pic_Persona.Location = new System.Drawing.Point(743, 159);
             this.pic_Persona.Name = "pic_Persona";
             this.pic_Persona.Size = new System.Drawing.Size(439, 366);
             this.pic_Persona.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_Persona.TabIndex = 31;
             this.pic_Persona.TabStop = false;
             this.pic_Persona.Paint += new System.Windows.Forms.PaintEventHandler(this.pic_Persona_Paint);
+            // 
+            // lbl_Nom
+            // 
+            this.lbl_Nom.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Nom.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.lbl_Nom.Location = new System.Drawing.Point(829, 525);
+            this.lbl_Nom.Name = "lbl_Nom";
+            this.lbl_Nom.Size = new System.Drawing.Size(269, 65);
+            this.lbl_Nom.TabIndex = 32;
+            this.lbl_Nom.Text = "Martpin";
+            this.lbl_Nom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormPreguntas
             // 
@@ -185,6 +197,7 @@ namespace Pantalla_Contraseña
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Fondo;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.lbl_Nom);
             this.Controls.Add(this.pic_Persona);
             this.Controls.Add(this.lbl_Res4);
             this.Controls.Add(this.lbl_Res3);
@@ -223,5 +236,6 @@ namespace Pantalla_Contraseña
         private System.Windows.Forms.Label lbl_Res3;
         private System.Windows.Forms.Label lbl_Res4;
         private System.Windows.Forms.PictureBox pic_Persona;
+        private System.Windows.Forms.Label lbl_Nom;
     }
 }
