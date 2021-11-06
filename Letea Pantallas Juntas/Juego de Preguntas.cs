@@ -86,7 +86,7 @@ namespace Pantalla_Contraseña
                         IdGrupoCorrecta[i] = Convert.ToInt32(ds.Tables["IdGrupoCorrecta"].Rows[i]["Id"]);
                     }
 
-                    Random(IdGrupoCorrecta);
+                   //  Random(IdGrupoCorrecta);
                     Random rnd = new Random();
                     int PosicionCorrecta = rnd.Next(0, ds.Tables["IdGrupoCorrecta"].Rows.Count);
 
