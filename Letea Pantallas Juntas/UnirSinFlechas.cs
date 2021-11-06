@@ -16,6 +16,9 @@ namespace Pantalla_Contraseña
     {
         OleDbConnection conexion = new OleDbConnection();
         DataSet ds = new DataSet();
+        string[] Nombres = new string[6];
+        int[] Numero = new int[6];
+        
         public UnirSinFlechas()
         {
             InitializeComponent();
@@ -34,6 +37,7 @@ namespace Pantalla_Contraseña
         }
         void Juego()
         {
+            
             string sql = "SELECT * FROM Amigos";
             OleDbCommand cmd = new OleDbCommand(sql, conexion);
             OleDbDataAdapter da = new OleDbDataAdapter(cmd);
@@ -52,10 +56,14 @@ namespace Pantalla_Contraseña
 
             MemoryStream ms = new MemoryStream((byte[])ds.Tables["FotoPersona1"].Rows[RowAmigo[0]]["Foto"]);
 
+
             Bitmap bm = new Bitmap(ms);
 
             btn_Foto1.Image = bm;
-            
+            btn_Foto1.Tag = RowAmigo[0];
+
+           
+
             string sql3 = "SELECT Foto FROM Amigos";
             OleDbCommand cmd3 = new OleDbCommand(sql3, conexion);
             OleDbDataAdapter da3 = new OleDbDataAdapter(cmd3);
@@ -66,7 +74,8 @@ namespace Pantalla_Contraseña
             Bitmap bm1 = new Bitmap(ms1);
 
             btn_Foto2.Image = bm1;
-
+            btn_Foto2.Tag = RowAmigo[1];
+           
             string sql4 = "SELECT Foto FROM Amigos";
             OleDbCommand cmd4 = new OleDbCommand(sql4, conexion);
             OleDbDataAdapter da4 = new OleDbDataAdapter(cmd4);
@@ -77,6 +86,7 @@ namespace Pantalla_Contraseña
             Bitmap bm2 = new Bitmap(ms2);
 
             btn_Foto3.Image = bm2;
+            btn_Foto3.Tag = RowAmigo[2];
 
             string sql5 = "SELECT Foto FROM Amigos";
             OleDbCommand cmd5 = new OleDbCommand(sql5, conexion);
@@ -88,6 +98,7 @@ namespace Pantalla_Contraseña
             Bitmap bm3 = new Bitmap(ms3);
 
             btn_Foto4.Image = bm3;
+            btn_Foto4.Tag = RowAmigo[3];
 
             string sql6 = "SELECT Foto FROM Amigos";
             OleDbCommand cmd6 = new OleDbCommand(sql6, conexion);
@@ -99,6 +110,7 @@ namespace Pantalla_Contraseña
             Bitmap bm4 = new Bitmap(ms4);
 
             btn_Foto5.Image = bm4;
+            btn_Foto5.Tag = RowAmigo[4];
 
             string sql7 = "SELECT Foto FROM Amigos";
             OleDbCommand cmd7 = new OleDbCommand(sql7, conexion);
@@ -110,6 +122,26 @@ namespace Pantalla_Contraseña
             Bitmap bm5 = new Bitmap(ms5);
 
             btn_Foto6.Image = bm5;
+            btn_Foto6.Tag = RowAmigo[5];
+
+            Numero[0] = RowAmigo[0];
+            Numero[1] = RowAmigo[1];
+            Numero[2] = RowAmigo[2];
+            Numero[3] = RowAmigo[3];
+            Numero[4] = RowAmigo[4];
+            Numero[5] = RowAmigo[5];
+
+            Random(Numero);
+            btn_Respuesta1.Tag = Numero[0];
+            btn_Respuesta2.Tag = Numero[1];
+            btn_Respuesta3.Tag = Numero[2];
+            btn_Respuesta4.Tag = Numero[3];
+            btn_Respuesta5.Tag = Numero[4];
+            btn_Respuesta6.Tag = Numero[5];
+            if (btn_Foto1.Tag == btn_Respuesta1.Tag)
+            {
+
+            }
         }
         private void lbl_Res1_Click(object sender, EventArgs e)
         {
