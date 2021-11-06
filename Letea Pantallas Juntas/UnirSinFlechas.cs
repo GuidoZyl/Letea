@@ -34,78 +34,78 @@ namespace Pantalla_Contraseña
         }
         void Juego()
         {
-            string sql = "SELECT Id FROM Amigos";
+            string sql = "SELECT * FROM Amigos";
             OleDbCommand cmd = new OleDbCommand(sql, conexion);
             OleDbDataAdapter da = new OleDbDataAdapter(cmd);
-            da.Fill(ds, "FotoNombre");
-            int[] IdAmigos = new int[ds.Tables["FotoNombre"].Rows.Count];
-            for (int i = 0; i < ds.Tables["FotoNombre"].Rows.Count; i++)
+            da.Fill(ds, "Amigo");
+            int[] RowAmigo = new int[ds.Tables["Amigo"].Rows.Count];
+            for (int i = 0; i < ds.Tables["Amigo"].Rows.Count; i++)
             {
-                IdAmigos[i] = i;
+                RowAmigo[i] = i;
             }
-          //  Random(IdAmigos);
+          Random(RowAmigo);
             
-            string sql2 = "SELECT Foto FROM Amigos WHERE Id = " + IdAmigos[0] + "";
+            string sql2 = "SELECT Foto FROM Amigos";
             OleDbCommand cmd2 = new OleDbCommand(sql2, conexion);
             OleDbDataAdapter da2 = new OleDbDataAdapter(cmd2);
             da2.Fill(ds, "FotoPersona1");
 
-            MemoryStream ms = new MemoryStream((byte[])ds.Tables["FotoPersona1"].Rows[0]["Foto"]);
+            MemoryStream ms = new MemoryStream((byte[])ds.Tables["FotoPersona1"].Rows[RowAmigo[0]]["Foto"]);
 
             Bitmap bm = new Bitmap(ms);
 
             btn_Foto1.Image = bm;
             
-            string sql3 = "SELECT Foto FROM Amigos WHERE Id = " + IdAmigos[1] + "";
+            string sql3 = "SELECT Foto FROM Amigos";
             OleDbCommand cmd3 = new OleDbCommand(sql3, conexion);
             OleDbDataAdapter da3 = new OleDbDataAdapter(cmd3);
             da3.Fill(ds, "FotoPersona2");
 
-            MemoryStream ms1 = new MemoryStream((byte[])ds.Tables["FotoPersona2"].Rows[0]["Foto"]);
+            MemoryStream ms1 = new MemoryStream((byte[])ds.Tables["FotoPersona2"].Rows[RowAmigo[1]]["Foto"]);
 
             Bitmap bm1 = new Bitmap(ms1);
 
             btn_Foto2.Image = bm1;
 
-            string sql4 = "SELECT Foto FROM Amigos WHERE Id = " + IdAmigos[2] + "";
+            string sql4 = "SELECT Foto FROM Amigos";
             OleDbCommand cmd4 = new OleDbCommand(sql4, conexion);
             OleDbDataAdapter da4 = new OleDbDataAdapter(cmd4);
             da4.Fill(ds, "FotoPersona3");
 
-            MemoryStream ms2 = new MemoryStream((byte[])ds.Tables["FotoPersona3"].Rows[0]["Foto"]);
+            MemoryStream ms2 = new MemoryStream((byte[])ds.Tables["FotoPersona3"].Rows[RowAmigo[2]]["Foto"]);
 
             Bitmap bm2 = new Bitmap(ms2);
 
             btn_Foto3.Image = bm2;
 
-            string sql5 = "SELECT Foto FROM Amigos WHERE Id = " + IdAmigos[3] + "";
+            string sql5 = "SELECT Foto FROM Amigos";
             OleDbCommand cmd5 = new OleDbCommand(sql5, conexion);
             OleDbDataAdapter da5 = new OleDbDataAdapter(cmd5);
             da5.Fill(ds, "FotoPersona4");
 
-            MemoryStream ms3 = new MemoryStream((byte[])ds.Tables["FotoPersona4"].Rows[0]["Foto"]);
+            MemoryStream ms3 = new MemoryStream((byte[])ds.Tables["FotoPersona4"].Rows[RowAmigo[3]]["Foto"]);
 
             Bitmap bm3 = new Bitmap(ms3);
 
             btn_Foto4.Image = bm3;
 
-            string sql6 = "SELECT Foto FROM Amigos WHERE Id = " + IdAmigos[4] + "";
+            string sql6 = "SELECT Foto FROM Amigos";
             OleDbCommand cmd6 = new OleDbCommand(sql6, conexion);
             OleDbDataAdapter da6 = new OleDbDataAdapter(cmd6);
             da6.Fill(ds, "FotoPersona5");
 
-            MemoryStream ms4 = new MemoryStream((byte[])ds.Tables["FotoPersona5"].Rows[0]["Foto"]);
+            MemoryStream ms4 = new MemoryStream((byte[])ds.Tables["FotoPersona5"].Rows[RowAmigo[4]]["Foto"]);
 
             Bitmap bm4 = new Bitmap(ms4);
 
             btn_Foto5.Image = bm4;
 
-            string sql7 = "SELECT Foto FROM Amigos WHERE Id = " + IdAmigos[5] + "";
+            string sql7 = "SELECT Foto FROM Amigos";
             OleDbCommand cmd7 = new OleDbCommand(sql7, conexion);
             OleDbDataAdapter da7 = new OleDbDataAdapter(cmd7);
             da7.Fill(ds, "FotoPersona6");
 
-            MemoryStream ms5 = new MemoryStream((byte[])ds.Tables["FotoPersona6"].Rows[0]["Foto"]);
+            MemoryStream ms5 = new MemoryStream((byte[])ds.Tables["FotoPersona6"].Rows[RowAmigo[5]]["Foto"]);
 
             Bitmap bm5 = new Bitmap(ms5);
 

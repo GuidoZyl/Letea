@@ -31,7 +31,7 @@ namespace Pantalla_Contraseña
         {
             this.lbl_Res1 = new System.Windows.Forms.Label();
             this.btn_Respuesta1 = new System.Windows.Forms.PictureBox();
-            this.btn_Foto6 = new System.Windows.Forms.Label();
+            this.lbl_Res2 = new System.Windows.Forms.Label();
             this.btn_Respuesta2 = new System.Windows.Forms.PictureBox();
             this.lbl_Res3 = new System.Windows.Forms.Label();
             this.btn_Respuesta3 = new System.Windows.Forms.PictureBox();
@@ -47,7 +47,7 @@ namespace Pantalla_Contraseña
             this.btn_Foto3 = new System.Windows.Forms.PictureBox();
             this.btn_Foto4 = new System.Windows.Forms.PictureBox();
             this.btn_Foto5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_Foto6 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Respuesta1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Respuesta2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Respuesta3)).BeginInit();
@@ -60,7 +60,7 @@ namespace Pantalla_Contraseña
             ((System.ComponentModel.ISupportInitialize)(this.btn_Foto3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Foto4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Foto5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Foto6)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_Res1
@@ -87,17 +87,17 @@ namespace Pantalla_Contraseña
             this.btn_Respuesta1.TabStop = false;
             this.btn_Respuesta1.Click += new System.EventHandler(this.btn_RespuestaClick);
             // 
-            // btn_Foto6
+            // lbl_Res2
             // 
-            this.btn_Foto6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(164)))), ((int)(((byte)(190)))));
-            this.btn_Foto6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Foto6.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
-            this.btn_Foto6.Location = new System.Drawing.Point(835, 464);
-            this.btn_Foto6.Name = "btn_Foto6";
-            this.btn_Foto6.Size = new System.Drawing.Size(481, 148);
-            this.btn_Foto6.TabIndex = 31;
-            this.btn_Foto6.Text = "Martín";
-            this.btn_Foto6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Res2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(164)))), ((int)(((byte)(190)))));
+            this.lbl_Res2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_Res2.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
+            this.lbl_Res2.Location = new System.Drawing.Point(835, 464);
+            this.lbl_Res2.Name = "lbl_Res2";
+            this.lbl_Res2.Size = new System.Drawing.Size(481, 148);
+            this.lbl_Res2.TabIndex = 31;
+            this.lbl_Res2.Text = "Martín";
+            this.lbl_Res2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btn_Respuesta2
             // 
@@ -225,6 +225,7 @@ namespace Pantalla_Contraseña
             this.btn_Foto1.Location = new System.Drawing.Point(76, 172);
             this.btn_Foto1.Name = "btn_Foto1";
             this.btn_Foto1.Size = new System.Drawing.Size(264, 205);
+            this.btn_Foto1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_Foto1.TabIndex = 41;
             this.btn_Foto1.TabStop = false;
             this.btn_Foto1.Click += new System.EventHandler(this.btn_FotoClick);
@@ -234,6 +235,7 @@ namespace Pantalla_Contraseña
             this.btn_Foto2.Location = new System.Drawing.Point(76, 445);
             this.btn_Foto2.Name = "btn_Foto2";
             this.btn_Foto2.Size = new System.Drawing.Size(264, 205);
+            this.btn_Foto2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_Foto2.TabIndex = 42;
             this.btn_Foto2.TabStop = false;
             this.btn_Foto2.Click += new System.EventHandler(this.btn_FotoClick);
@@ -243,6 +245,7 @@ namespace Pantalla_Contraseña
             this.btn_Foto3.Location = new System.Drawing.Point(76, 735);
             this.btn_Foto3.Name = "btn_Foto3";
             this.btn_Foto3.Size = new System.Drawing.Size(264, 205);
+            this.btn_Foto3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_Foto3.TabIndex = 43;
             this.btn_Foto3.TabStop = false;
             this.btn_Foto3.Click += new System.EventHandler(this.btn_FotoClick);
@@ -252,6 +255,7 @@ namespace Pantalla_Contraseña
             this.btn_Foto4.Location = new System.Drawing.Point(497, 172);
             this.btn_Foto4.Name = "btn_Foto4";
             this.btn_Foto4.Size = new System.Drawing.Size(264, 205);
+            this.btn_Foto4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_Foto4.TabIndex = 44;
             this.btn_Foto4.TabStop = false;
             this.btn_Foto4.Click += new System.EventHandler(this.btn_FotoClick);
@@ -261,18 +265,20 @@ namespace Pantalla_Contraseña
             this.btn_Foto5.Location = new System.Drawing.Point(497, 445);
             this.btn_Foto5.Name = "btn_Foto5";
             this.btn_Foto5.Size = new System.Drawing.Size(264, 205);
+            this.btn_Foto5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_Foto5.TabIndex = 45;
             this.btn_Foto5.TabStop = false;
             this.btn_Foto5.Click += new System.EventHandler(this.btn_FotoClick);
             // 
-            // pictureBox1
+            // btn_Foto6
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(497, 735);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(264, 205);
-            this.pictureBox1.TabIndex = 46;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.btn_FotoClick);
+            this.btn_Foto6.Location = new System.Drawing.Point(497, 735);
+            this.btn_Foto6.Name = "btn_Foto6";
+            this.btn_Foto6.Size = new System.Drawing.Size(264, 205);
+            this.btn_Foto6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_Foto6.TabIndex = 46;
+            this.btn_Foto6.TabStop = false;
+            this.btn_Foto6.Click += new System.EventHandler(this.btn_FotoClick);
             // 
             // UnirSinFlechas
             // 
@@ -280,7 +286,7 @@ namespace Pantalla_Contraseña
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Fondo;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btn_Foto6);
             this.Controls.Add(this.btn_Foto5);
             this.Controls.Add(this.btn_Foto4);
             this.Controls.Add(this.btn_Foto3);
@@ -295,7 +301,7 @@ namespace Pantalla_Contraseña
             this.Controls.Add(this.btn_Respuesta4);
             this.Controls.Add(this.lbl_Res3);
             this.Controls.Add(this.btn_Respuesta3);
-            this.Controls.Add(this.btn_Foto6);
+            this.Controls.Add(this.lbl_Res2);
             this.Controls.Add(this.btn_Respuesta2);
             this.Controls.Add(this.lbl_Res1);
             this.Controls.Add(this.btn_Respuesta1);
@@ -315,7 +321,7 @@ namespace Pantalla_Contraseña
             ((System.ComponentModel.ISupportInitialize)(this.btn_Foto3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Foto4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Foto5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Foto6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -324,7 +330,7 @@ namespace Pantalla_Contraseña
 
         private System.Windows.Forms.Label lbl_Res1;
         private System.Windows.Forms.PictureBox btn_Respuesta1;
-        private System.Windows.Forms.Label btn_Foto6;
+        private System.Windows.Forms.Label lbl_Res2;
         private System.Windows.Forms.PictureBox btn_Respuesta2;
         private System.Windows.Forms.Label lbl_Res3;
         private System.Windows.Forms.PictureBox btn_Respuesta3;
@@ -340,6 +346,6 @@ namespace Pantalla_Contraseña
         private System.Windows.Forms.PictureBox btn_Foto3;
         private System.Windows.Forms.PictureBox btn_Foto4;
         private System.Windows.Forms.PictureBox btn_Foto5;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox btn_Foto6;
     }
 }
