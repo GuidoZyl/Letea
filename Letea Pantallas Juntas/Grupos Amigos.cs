@@ -528,5 +528,12 @@ namespace Pantalla_Contraseña
             form.Show();
             this.Hide();
         }
+
+        private void btn_Jugar_Click(object sender, EventArgs e)
+        {
+            JuegosAmigos form = new JuegosAmigos();
+            form.Show();
+            this.Hide();
+        }
     }
 }

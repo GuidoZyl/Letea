@@ -611,6 +611,8 @@ namespace Pantalla_Contraseña
             gp.AddArc(r.X, r.Y + r.Height - d, d, d, 90, 90);
             pic_GrupoAmigo.Region = new Region(gp);
         }
+
+       
     }
 }
 

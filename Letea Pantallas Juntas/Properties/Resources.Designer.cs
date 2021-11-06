@@ -193,6 +193,16 @@ namespace Pantalla_Contraseña.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Boton_ASOCIANDO_NOMBRES {
+            get {
+                object obj = ResourceManager.GetObject("Boton ASOCIANDO NOMBRES", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Boton_familia__1_ {
             get {
                 object obj = ResourceManager.GetObject("Boton familia (1)", resourceCulture);
@@ -206,6 +216,26 @@ namespace Pantalla_Contraseña.Properties {
         internal static System.Drawing.Bitmap Boton_Guardar {
             get {
                 object obj = ResourceManager.GetObject("Boton Guardar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Boton_jugar {
+            get {
+                object obj = ResourceManager.GetObject("Boton jugar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Boton_PREGUNTAS {
+            get {
+                object obj = ResourceManager.GetObject("Boton PREGUNTAS", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -506,6 +536,16 @@ namespace Pantalla_Contraseña.Properties {
         internal static System.Drawing.Bitmap Introducción_de_datos {
             get {
                 object obj = ResourceManager.GetObject("Introducción de datos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Juegos {
+            get {
+                object obj = ResourceManager.GetObject("Juegos", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
