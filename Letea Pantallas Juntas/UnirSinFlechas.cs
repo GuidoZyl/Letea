@@ -20,6 +20,11 @@ namespace Pantalla_Contraseña
         string[] Nombres = new string[6];
         int[] NombresTag = new int[6];
         int[] Numero = new int[6];
+
+        int TagBotonClickeado;
+        int TagFotoClickeada;
+
+        bool[] BotonesClickeados = new bool[12];
         
         public UnirSinFlechas()
         {
@@ -50,19 +55,9 @@ namespace Pantalla_Contraseña
                 RowAmigo[i] = i;
             }
 
-            int[,] apsdad = new int[2, 3];
-
-            for (int i = 0; i < 3; i++)
-            {
-                for (int k = 0; k < 2; k++)
-                {
-                    apsdad[k, i] = i;
-                }
-            }
-
             Random(RowAmigo);
             
-            string sql2 = "SELECT [Foto],[Nombre], FROM Amigos";
+            string sql2 = "SELECT [Foto],[Nombre] FROM Amigos";
             OleDbCommand cmd2 = new OleDbCommand(sql2, conexion);
             OleDbDataAdapter da2 = new OleDbDataAdapter(cmd2);
             da2.Fill(ds, "FotoPersona1");
@@ -191,6 +186,103 @@ namespace Pantalla_Contraseña
             }*/
         }
 
+        bool VerificarCorrecta()
+        {
+            if (TagBotonClickeado == TagFotoClickeada)
+            {
+                if (TagBotonClickeado == Convert.ToInt32(lbl_Res1.Tag))
+                {
+                    BotonesClickeados[0] = true;
+                }
+                if (TagBotonClickeado == Convert.ToInt32(lbl_Res2.Tag))
+                {
+                    BotonesClickeados[1] = true;
+                }
+                if (TagBotonClickeado == Convert.ToInt32(lbl_Res3.Tag))
+                {
+                    BotonesClickeados[2] = true;
+                }
+                if (TagBotonClickeado == Convert.ToInt32(lbl_Res4.Tag))
+                {
+                    BotonesClickeados[3] = true;
+                }
+                if (TagBotonClickeado == Convert.ToInt32(lbl_Res5.Tag))
+                {
+                    BotonesClickeados[4] = true;
+                }
+                if (TagBotonClickeado == Convert.ToInt32(lbl_Res6.Tag))
+                {
+                    BotonesClickeados[5] = true;
+                }
+
+                if (TagFotoClickeada == Convert.ToInt32(btn_Foto1.Tag))
+                {
+                    BotonesClickeados[6] = true;
+                }
+                if (TagFotoClickeada == Convert.ToInt32(btn_Foto2.Tag))
+                {
+                    BotonesClickeados[7] = true;
+                }
+                if (TagFotoClickeada == Convert.ToInt32(btn_Foto3.Tag))
+                {
+                    BotonesClickeados[8] = true;
+                }
+                if (TagFotoClickeada == Convert.ToInt32(btn_Foto4.Tag))
+                {
+                    BotonesClickeados[9] = true;
+                }
+                if (TagFotoClickeada == Convert.ToInt32(btn_Foto5.Tag))
+                {
+                    BotonesClickeados[10] = true;
+                }
+                if (TagFotoClickeada == Convert.ToInt32(btn_Foto6.Tag))
+                {
+                    BotonesClickeados[11] = true;
+                }
+                return true;
+            }
+            return false;
+        }
+
+        void SiguientePosicion()
+        {
+            if (BotonesClickeados[0]){ lbl_Res1.Visible = false; btn_Respuesta1.Visible = false; }
+            else { lbl_Res1.Visible = true; btn_Respuesta1.Visible = true; }
+            if (BotonesClickeados[1]) { lbl_Res2.Visible = false; btn_Respuesta2.Visible = false; }
+            else { lbl_Res2.Visible = true; btn_Respuesta2.Visible = true; }
+            if (BotonesClickeados[2]) { lbl_Res3.Visible = false; btn_Respuesta3.Visible = false; }
+            else { lbl_Res3.Visible = true; btn_Respuesta3.Visible = true; }
+            if (BotonesClickeados[3]) { lbl_Res4.Visible = false; btn_Respuesta4.Visible = false; }
+            else { lbl_Res4.Visible = true; btn_Respuesta4.Visible = true; }
+            if (BotonesClickeados[4]) { lbl_Res5.Visible = false; btn_Respuesta5.Visible = false; }
+            else { lbl_Res5.Visible = true; btn_Respuesta5.Visible = true; }
+            if (BotonesClickeados[5]) { lbl_Res6.Visible = false; btn_Respuesta6.Visible = false; }
+            else { lbl_Res6.Visible = true; btn_Respuesta6.Visible = true; }
+
+            if (BotonesClickeados[6]) { btn_Foto1.Visible = false; pictureBox1.Visible = false; }
+            else { btn_Foto1.Visible = true; pictureBox1.Visible = true; }
+            if (BotonesClickeados[7]) { btn_Foto2.Visible = false; pictureBox3.Visible = false; }
+            else { btn_Foto2.Visible = true; pictureBox3.Visible = true; }
+            if (BotonesClickeados[8]) { btn_Foto3.Visible = false; pictureBox5.Visible = false; }
+            else { btn_Foto3.Visible = true; pictureBox5.Visible = true; }
+            if (BotonesClickeados[9]) { btn_Foto4.Visible = false; pictureBox2.Visible = false; }
+            else { btn_Foto4.Visible = true; pictureBox2.Visible = true; }
+            if (BotonesClickeados[10]) { btn_Foto5.Visible = false; pictureBox4.Visible = false; }
+            else { btn_Foto5.Visible = true; pictureBox4.Visible = true; }
+            if (BotonesClickeados[11]) { btn_Foto6.Visible = false; pictureBox6.Visible = false; }
+            else { btn_Foto6.Visible = true; pictureBox6.Visible = true; }
+        }
+
+        void Ganaste()
+        {
+            if (lbl_Res1.Visible == false && lbl_Res2.Visible == false && lbl_Res3.Visible == false && lbl_Res4.Visible == false &&
+                lbl_Res5.Visible == false && lbl_Res6.Visible == false && btn_Foto1.Visible == false && btn_Foto2.Visible == false &&
+                btn_Foto3.Visible == false && btn_Foto4.Visible == false && btn_Foto5.Visible == false && btn_Foto6.Visible == false)
+            {
+                MessageBox.Show("GANASTE MOSTROOOOOOOOOOOOOOOOOO");
+            }
+        }
+
         private void btn_Volver_Click(object sender, EventArgs e)
         {
             JuegosAmigos form = new JuegosAmigos();
@@ -200,12 +292,232 @@ namespace Pantalla_Contraseña
 
         private void btn_RespuestaClick(object sender, EventArgs e)
         {
+            Label ClickedLabel = sender as Label;
+            TagBotonClickeado = Convert.ToInt32(ClickedLabel.Tag);
 
+            if (lbl_Res1.Tag == ClickedLabel.Tag)
+            {
+                lbl_Res1.Visible = true;
+                lbl_Res2.Visible = false;
+                lbl_Res3.Visible = false;
+                lbl_Res4.Visible = false;
+                lbl_Res5.Visible = false;
+                lbl_Res6.Visible = false;
+                btn_Respuesta1.Visible = true;
+                btn_Respuesta2.Visible = false;
+                btn_Respuesta3.Visible = false;
+                btn_Respuesta4.Visible = false;
+                btn_Respuesta5.Visible = false;
+                btn_Respuesta6.Visible = false;
+            }
+            if (lbl_Res2.Tag == ClickedLabel.Tag)
+            {
+                lbl_Res1.Visible = false;
+                lbl_Res2.Visible = true;
+                lbl_Res3.Visible = false;
+                lbl_Res4.Visible = false;
+                lbl_Res5.Visible = false;
+                lbl_Res6.Visible = false;
+                btn_Respuesta1.Visible = false;
+                btn_Respuesta2.Visible = true;
+                btn_Respuesta3.Visible = false;
+                btn_Respuesta4.Visible = false;
+                btn_Respuesta5.Visible = false;
+                btn_Respuesta6.Visible = false;
+            }
+            if (lbl_Res3.Tag == ClickedLabel.Tag)
+            {
+                lbl_Res1.Visible = false;
+                lbl_Res2.Visible = false;
+                lbl_Res3.Visible = true;
+                lbl_Res4.Visible = false;
+                lbl_Res5.Visible = false;
+                lbl_Res6.Visible = false;
+                btn_Respuesta1.Visible = false;
+                btn_Respuesta2.Visible = false;
+                btn_Respuesta3.Visible = true;
+                btn_Respuesta4.Visible = false;
+                btn_Respuesta5.Visible = false;
+                btn_Respuesta6.Visible = false;
+            }
+            if (lbl_Res4.Tag == ClickedLabel.Tag)
+            {
+                lbl_Res1.Visible = false;
+                lbl_Res2.Visible = false;
+                lbl_Res3.Visible = false;
+                lbl_Res4.Visible = true;
+                lbl_Res5.Visible = false;
+                lbl_Res6.Visible = false;
+                btn_Respuesta1.Visible = false;
+                btn_Respuesta2.Visible = false;
+                btn_Respuesta3.Visible = false;
+                btn_Respuesta4.Visible = true;
+                btn_Respuesta5.Visible = false;
+                btn_Respuesta6.Visible = false;
+            }
+            if (lbl_Res5.Tag == ClickedLabel.Tag)
+            {
+                lbl_Res1.Visible = false;
+                lbl_Res2.Visible = false;
+                lbl_Res3.Visible = false;
+                lbl_Res4.Visible = false;
+                lbl_Res5.Visible = true;
+                lbl_Res6.Visible = false;
+                btn_Respuesta1.Visible = false;
+                btn_Respuesta2.Visible = false;
+                btn_Respuesta3.Visible = false;
+                btn_Respuesta4.Visible = false;
+                btn_Respuesta5.Visible = true;
+                btn_Respuesta6.Visible = false;
+            }
+            if (lbl_Res6.Tag == ClickedLabel.Tag)
+            {
+                lbl_Res1.Visible = false;
+                lbl_Res2.Visible = false;
+                lbl_Res3.Visible = false;
+                lbl_Res4.Visible = false;
+                lbl_Res5.Visible = false;
+                lbl_Res6.Visible = true;
+                btn_Respuesta1.Visible = false;
+                btn_Respuesta2.Visible = false;
+                btn_Respuesta3.Visible = false;
+                btn_Respuesta4.Visible = false;
+                btn_Respuesta5.Visible = false;
+                btn_Respuesta6.Visible = true;
+            }
+
+            VerificarCorrecta();
+
+            if (TagBotonClickeado != 0 && TagFotoClickeada != 0)
+            {
+                if (VerificarCorrecta())
+                {
+                    MessageBox.Show("NASHEEE");
+                }
+                else
+                {
+                    MessageBox.Show("sos nefasto");
+                }
+                SiguientePosicion();
+                TagBotonClickeado = 0;
+                TagFotoClickeada = 0;
+            }
+            Ganaste();
         }
 
         private void btn_FotoClick(object sender, EventArgs e)
         {
+            PictureBox ClickedPic = sender as PictureBox;
+            TagFotoClickeada = Convert.ToInt32(ClickedPic.Tag);
 
+            if (btn_Foto1.Tag == ClickedPic.Tag)
+            {
+                btn_Foto1.Visible = true;
+                btn_Foto2.Visible = false;
+                btn_Foto3.Visible = false;
+                btn_Foto4.Visible = false;
+                btn_Foto5.Visible = false;
+                btn_Foto6.Visible = false;
+                pictureBox1.Visible = true;
+                pictureBox2.Visible = false;
+                pictureBox3.Visible = false;
+                pictureBox4.Visible = false;
+                pictureBox5.Visible = false;
+                pictureBox6.Visible = false;
+            }
+            if (btn_Foto2.Tag == ClickedPic.Tag)
+            {
+                btn_Foto1.Visible = false;
+                btn_Foto2.Visible = true;
+                btn_Foto3.Visible = false;
+                btn_Foto4.Visible = false;
+                btn_Foto5.Visible = false;
+                btn_Foto6.Visible = false;
+                pictureBox1.Visible = false;
+                pictureBox2.Visible = false;
+                pictureBox3.Visible = true;
+                pictureBox4.Visible = false;
+                pictureBox5.Visible = false;
+                pictureBox6.Visible = false;
+            }
+            if (btn_Foto3.Tag == ClickedPic.Tag)
+            {
+                btn_Foto1.Visible = false;
+                btn_Foto2.Visible = false;
+                btn_Foto3.Visible = true;
+                btn_Foto4.Visible = false;
+                btn_Foto5.Visible = false;
+                btn_Foto6.Visible = false;
+                pictureBox1.Visible = false;
+                pictureBox2.Visible = false;
+                pictureBox3.Visible = false;
+                pictureBox4.Visible = false;
+                pictureBox5.Visible = true;
+                pictureBox6.Visible = false;
+            }
+            if (btn_Foto4.Tag == ClickedPic.Tag)
+            {
+                btn_Foto1.Visible = false;
+                btn_Foto2.Visible = false;
+                btn_Foto3.Visible = false;
+                btn_Foto4.Visible = true;
+                btn_Foto5.Visible = false;
+                btn_Foto6.Visible = false;
+                pictureBox1.Visible = false;
+                pictureBox2.Visible = true;
+                pictureBox3.Visible = false;
+                pictureBox4.Visible = false;
+                pictureBox5.Visible = false;
+                pictureBox6.Visible = false;
+            }
+            if (btn_Foto5.Tag == ClickedPic.Tag)
+            {
+                btn_Foto1.Visible = false;
+                btn_Foto2.Visible = false;
+                btn_Foto3.Visible = false;
+                btn_Foto4.Visible = false;
+                btn_Foto5.Visible = true;
+                btn_Foto6.Visible = false;
+                pictureBox1.Visible = false;
+                pictureBox2.Visible = false;
+                pictureBox3.Visible = false;
+                pictureBox4.Visible = true;
+                pictureBox5.Visible = false;
+                pictureBox6.Visible = false;
+            }
+            if (btn_Foto6.Tag == ClickedPic.Tag)
+            {
+                btn_Foto1.Visible = false;
+                btn_Foto2.Visible = false;
+                btn_Foto3.Visible = false;
+                btn_Foto4.Visible = false;
+                btn_Foto5.Visible = false;
+                btn_Foto6.Visible = true;
+                pictureBox1.Visible = false;
+                pictureBox2.Visible = false;
+                pictureBox3.Visible = false;
+                pictureBox4.Visible = false;
+                pictureBox5.Visible = false;
+                pictureBox6.Visible = true;
+            }
+
+            VerificarCorrecta();
+
+            if (TagBotonClickeado != 0 && TagFotoClickeada != 0)
+            {
+                if (VerificarCorrecta())
+                {
+                    MessageBox.Show("NASHEEE");
+                }
+                else
+                {
+                    MessageBox.Show("sos nefasto");
+                }
+                SiguientePosicion();
+                TagBotonClickeado = 0;
+                TagFotoClickeada = 0;
+            }
+            Ganaste();
         }
 
         private void UnirSinFlechas_Load(object sender, EventArgs e)

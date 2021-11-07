@@ -19,7 +19,7 @@ namespace Pantalla_Contraseña
 
         private void btn_Volver_Click(object sender, EventArgs e)
         {
-            FormGrupo form = new FormGrupo();
+            FormGruposAmigos form = new FormGruposAmigos();
             form.Show();
             this.Hide();
         }

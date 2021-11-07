@@ -85,7 +85,6 @@ namespace Pantalla_Contraseña
             this.btn_Respuesta2.Size = new System.Drawing.Size(388, 235);
             this.btn_Respuesta2.TabIndex = 30;
             this.btn_Respuesta2.TabStop = false;
-            this.btn_Respuesta2.Click += new System.EventHandler(this.btn_RespuestaClick);
             // 
             // btn_Volver
             // 
@@ -127,7 +126,7 @@ namespace Pantalla_Contraseña
             // btn_Foto3
             // 
             this.btn_Foto3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Foto3.Location = new System.Drawing.Point(142, 726);
+            this.btn_Foto3.Location = new System.Drawing.Point(142, 735);
             this.btn_Foto3.Name = "btn_Foto3";
             this.btn_Foto3.Size = new System.Drawing.Size(325, 230);
             this.btn_Foto3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -238,6 +237,7 @@ namespace Pantalla_Contraseña
             this.lbl_Res1.TabIndex = 52;
             this.lbl_Res1.Text = "Martín";
             this.lbl_Res1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Res1.Click += new System.EventHandler(this.btn_RespuestaClick);
             // 
             // lbl_Res2
             // 
@@ -250,6 +250,7 @@ namespace Pantalla_Contraseña
             this.lbl_Res2.TabIndex = 53;
             this.lbl_Res2.Text = "Martín";
             this.lbl_Res2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Res2.Click += new System.EventHandler(this.btn_RespuestaClick);
             // 
             // lbl_Res3
             // 
@@ -262,6 +263,7 @@ namespace Pantalla_Contraseña
             this.lbl_Res3.TabIndex = 54;
             this.lbl_Res3.Text = "Martín";
             this.lbl_Res3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Res3.Click += new System.EventHandler(this.btn_RespuestaClick);
             // 
             // lbl_Res4
             // 
@@ -274,6 +276,7 @@ namespace Pantalla_Contraseña
             this.lbl_Res4.TabIndex = 55;
             this.lbl_Res4.Text = "Martín";
             this.lbl_Res4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Res4.Click += new System.EventHandler(this.btn_RespuestaClick);
             // 
             // lbl_Res5
             // 
@@ -286,6 +289,7 @@ namespace Pantalla_Contraseña
             this.lbl_Res5.TabIndex = 56;
             this.lbl_Res5.Text = "Martín";
             this.lbl_Res5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Res5.Click += new System.EventHandler(this.btn_RespuestaClick);
             // 
             // lbl_Res6
             // 
@@ -298,6 +302,7 @@ namespace Pantalla_Contraseña
             this.lbl_Res6.TabIndex = 57;
             this.lbl_Res6.Text = "Martín";
             this.lbl_Res6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Res6.Click += new System.EventHandler(this.btn_RespuestaClick);
             // 
             // pictureBox1
             // 
