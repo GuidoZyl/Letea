@@ -31,8 +31,12 @@ namespace Pantalla_Contraseña
         {
             this.btn_Volver = new System.Windows.Forms.PictureBox();
             this.btn_Crear = new System.Windows.Forms.PictureBox();
+            this.btn_Editar = new System.Windows.Forms.PictureBox();
+            this.btn_Guardar = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Volver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Crear)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Editar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Guardar)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Volver
@@ -46,6 +50,7 @@ namespace Pantalla_Contraseña
             this.btn_Volver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_Volver.TabIndex = 22;
             this.btn_Volver.TabStop = false;
+            this.btn_Volver.Click += new System.EventHandler(this.btn_Volver_Click);
             this.btn_Volver.Move += new System.EventHandler(this.btn_Volver_Move);
             // 
             // btn_Crear
@@ -63,6 +68,28 @@ namespace Pantalla_Contraseña
             this.btn_Crear.Visible = false;
             this.btn_Crear.Click += new System.EventHandler(this.btn_Crear_Click);
             // 
+            // btn_Editar
+            // 
+            this.btn_Editar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Editar.Image = global::Pantalla_Contraseña.Properties.Resources.Editar_amigo;
+            this.btn_Editar.Location = new System.Drawing.Point(1407, 898);
+            this.btn_Editar.Name = "btn_Editar";
+            this.btn_Editar.Size = new System.Drawing.Size(418, 86);
+            this.btn_Editar.TabIndex = 24;
+            this.btn_Editar.TabStop = false;
+            this.btn_Editar.Click += new System.EventHandler(this.btn_Editar_Click);
+            // 
+            // btn_Guardar
+            // 
+            this.btn_Guardar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Guardar.Image = global::Pantalla_Contraseña.Properties.Resources.Boton_Guardar;
+            this.btn_Guardar.Location = new System.Drawing.Point(1463, 884);
+            this.btn_Guardar.Name = "btn_Guardar";
+            this.btn_Guardar.Size = new System.Drawing.Size(345, 106);
+            this.btn_Guardar.TabIndex = 25;
+            this.btn_Guardar.TabStop = false;
+            this.btn_Guardar.Click += new System.EventHandler(this.btn_Guardar_Click);
+            // 
             // ArbolGenealogico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -70,6 +97,8 @@ namespace Pantalla_Contraseña
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Fondo;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.btn_Guardar);
+            this.Controls.Add(this.btn_Editar);
             this.Controls.Add(this.btn_Crear);
             this.Controls.Add(this.btn_Volver);
             this.Name = "ArbolGenealogico";
@@ -78,6 +107,8 @@ namespace Pantalla_Contraseña
             this.Load += new System.EventHandler(this.ArbolGenealogico_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btn_Volver)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Crear)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Editar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Guardar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -86,5 +117,7 @@ namespace Pantalla_Contraseña
 
         private System.Windows.Forms.PictureBox btn_Volver;
         private System.Windows.Forms.PictureBox btn_Crear;
+        private System.Windows.Forms.PictureBox btn_Editar;
+        private System.Windows.Forms.PictureBox btn_Guardar;
     }
 }

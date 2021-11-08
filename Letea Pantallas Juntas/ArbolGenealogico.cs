@@ -18,8 +18,8 @@ namespace Pantalla_Contraseña
         OleDbConnection conexion = new OleDbConnection();
         DataSet ds = new DataSet();
 
-        
 
+        public static bool Edit = false;
         int y = 50;
         string Nombre;
         private bool btnDown;
@@ -38,7 +38,9 @@ namespace Pantalla_Contraseña
             if (FormPantallaLogIn.ModoAdmin)
             {
                 btn_Crear.Visible = true;
+                btn_Editar.Visible = true;
             }
+            btn_Guardar.Visible = false;
 
             string sql = "SELECT * FROM Familia WHERE IDUsuario = " + FormPacientes2.IDPaciente + "";
             OleDbCommand cmd = new OleDbCommand(sql, conexion);
@@ -57,12 +59,17 @@ namespace Pantalla_Contraseña
                 temp.Image = bm;
 
                 temp.SizeMode = PictureBoxSizeMode.StretchImage;
-
-                temp.Location = new Point(200, y);
-                y += 155;
-
-                temp.Name = "pic_Familiar" + Convert.ToString(i);
+                if (ds.Tables["Familia"].Rows[i]["X"] == null)
+                {
+                temp.Location = new Point(200, 200);
+                }
+                else
+                {
+                    temp.Location = new Point(Convert.ToInt32(ds.Tables["Familia"].Rows[i]["X"]), Convert.ToInt32(ds.Tables["Familia"].Rows[i]["Y"]));
+                }
+                temp.Name = "pic_Familiar";
                 Nombre = temp.Name;
+                temp.Tag = Convert.ToInt32(ds.Tables["Familia"].Rows[i]["Id"]);
 
                 temp.Paint += new PaintEventHandler(handlerComun_Paint);
                 temp.MouseDown += new MouseEventHandler(temp_MouseDown);
@@ -120,33 +127,76 @@ namespace Pantalla_Contraseña
         }
         private void temp_MouseDown(object sender, MouseEventArgs e)
         {
-            // el boton izquierdo esta pulsado
-            if (e.Button == MouseButtons.Left)
+            if (FormPantallaLogIn.ModoAdmin)
             {
-                btnDown = true;
-                offsetX = e.X;
-                offsetY = e.Y;
+                if (Edit)
+                {
+                    // el boton izquierdo esta pulsado
+                    if (e.Button == MouseButtons.Left)
+                    {
+                        btnDown = true;
+                        offsetX = e.X;
+                        offsetY = e.Y;
+                    }
+                }
             }
         }
 
         private void temp_MouseMove(object sender, MouseEventArgs e)
         {
-            PictureBox PictureBoxTemp = sender as PictureBox;
-            if (btnDown)
+            if (FormPantallaLogIn.ModoAdmin)
             {
-                // mover el pictureBox con el raton
-                PictureBoxTemp.Left += e.X - offsetX;
-                PictureBoxTemp.Top += e.Y - offsetY;
+                if (Edit)
+                {
+                    PictureBox PictureBoxTemp = sender as PictureBox;
+                    if (btnDown)
+                    {
+                        // mover el pictureBox con el raton
+                        PictureBoxTemp.Left += e.X - offsetX;
+                        PictureBoxTemp.Top += e.Y - offsetY;
+                    }
+                }
             }
         }
 
         private void temp_MouseUp(object sender, MouseEventArgs e)
         {
-            // el boton izquierdo se libera
-            if (e.Button == MouseButtons.Left)
+            if (FormPantallaLogIn.ModoAdmin)
             {
-                btnDown = false;
+                if (Edit)
+                {
+                    PictureBox PictureBoxTemp = sender as PictureBox;
+                    // el boton izquierdo se libera
+                    if (e.Button == MouseButtons.Left)
+                    {
+                        btnDown = false;
+                    }
+                    string sql2 = "UPDATE Familia set X = " + PictureBoxTemp.Location.X + ", Y = " + PictureBoxTemp.Location.Y + "  WHERE Id = " + PictureBoxTemp.Tag + "";
+                    OleDbCommand consulta2 = new OleDbCommand(sql2, conexion);
+                    consulta2.ExecuteNonQuery();
+                }
             }
+        }
+
+        private void btn_Volver_Click(object sender, EventArgs e)
+        {
+            FormPrincipal form = new FormPrincipal();
+            form.Show();
+            this.Hide();
+        }
+
+        private void btn_Editar_Click(object sender, EventArgs e)
+        {
+            Edit = true;
+            btn_Editar.Visible = false;
+            btn_Guardar.Visible = true;
+        }
+
+        private void btn_Guardar_Click(object sender, EventArgs e)
+        {
+            Edit = false;
+            btn_Guardar.Visible = false;
+            btn_Editar.Visible = true;
         }
     }
 }   
