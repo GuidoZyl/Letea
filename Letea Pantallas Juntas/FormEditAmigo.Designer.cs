@@ -176,21 +176,21 @@ namespace Pantalla_Contraseña
             // 
             this.lbl_Apellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
             this.lbl_Apellido.ForeColor = System.Drawing.Color.Black;
-            this.lbl_Apellido.Location = new System.Drawing.Point(1019, 496);
+            this.lbl_Apellido.Location = new System.Drawing.Point(1019, 494);
             this.lbl_Apellido.Name = "lbl_Apellido";
-            this.lbl_Apellido.Size = new System.Drawing.Size(481, 36);
+            this.lbl_Apellido.Size = new System.Drawing.Size(481, 42);
             this.lbl_Apellido.TabIndex = 22;
-            this.lbl_Apellido.Text = "lbl_Apellido";
+            this.lbl_Apellido.Text = "asdfgj";
             // 
             // lbl_Nombre
             // 
             this.lbl_Nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
             this.lbl_Nombre.ForeColor = System.Drawing.Color.Black;
-            this.lbl_Nombre.Location = new System.Drawing.Point(1016, 302);
+            this.lbl_Nombre.Location = new System.Drawing.Point(1016, 300);
             this.lbl_Nombre.Name = "lbl_Nombre";
-            this.lbl_Nombre.Size = new System.Drawing.Size(481, 36);
+            this.lbl_Nombre.Size = new System.Drawing.Size(481, 45);
             this.lbl_Nombre.TabIndex = 23;
-            this.lbl_Nombre.Text = "label1";
+            this.lbl_Nombre.Text = "label1g";
             // 
             // btn_Volver
             // 

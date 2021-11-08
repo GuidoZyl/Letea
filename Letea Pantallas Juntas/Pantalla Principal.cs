@@ -24,6 +24,9 @@ namespace Pantalla_Contraseña
 
         public void FormPrincipal_Load(object sender, EventArgs e)
         {
+            conexion.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=.\Base de Datos 4.accdb;";
+            conexion.Open();
+
             if (!FormPantallaLogIn.ModoAdmin) {
                 btn_Config.Visible = false;
                 btn_CrearPaciente.Visible = false;
@@ -52,9 +55,7 @@ namespace Pantalla_Contraseña
         }
 
         private void btn_Amigos_Click(object sender, EventArgs e)
-        {
-            conexion.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=.\Base de Datos 4.accdb;";
-            conexion.Open();
+        {           
             string consulta = "SELECT IDUsuario FROM GruposdeAmigos WHERE IDUsuario = "+FormPacientes2.IDPaciente+"";
             OleDbCommand comando = new OleDbCommand(consulta, conexion);
             OleDbDataAdapter data = new OleDbDataAdapter(comando);
@@ -75,6 +76,33 @@ namespace Pantalla_Contraseña
                 conexion.Close();
 
                 FormCrearGruposAmigos form = new FormCrearGruposAmigos();
+                form.Show();
+                this.Hide();
+            }
+        }
+
+        private void btn_Familia_Click(object sender, EventArgs e)
+        {
+            string consulta = "SELECT * FROM Familia WHERE IDUsuario = " + FormPacientes2.IDPaciente + "";
+            OleDbCommand comando = new OleDbCommand(consulta, conexion);
+            OleDbDataAdapter data = new OleDbDataAdapter(comando);
+
+            data.Fill(ds, "idusuario");
+            int ultimo = Convert.ToInt32(ds.Tables["idusuario"].Rows.Count);
+            if (ultimo > 0)
+            {
+                conexion.Close();
+
+                ArbolGenealogico form = new ArbolGenealogico();
+                form.Show();
+                this.Hide();
+            }
+
+            else
+            {
+                conexion.Close();
+
+                FormCrearFamiliar form = new FormCrearFamiliar();
                 form.Show();
                 this.Hide();
             }

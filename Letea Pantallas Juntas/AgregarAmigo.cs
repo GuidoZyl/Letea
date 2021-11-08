@@ -132,5 +132,10 @@ namespace Pantalla_Contraseña
             conexion.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=.\Base de Datos 4.accdb;";
             conexion.Open();
         }
+
+        private void txt_Apellido_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

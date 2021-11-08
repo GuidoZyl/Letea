@@ -306,7 +306,7 @@ namespace Pantalla_Contraseña
 
                             pic_Nom6.Image = bm8;
                             lbl_Nom7.Text = nombrecompleto[ultimo, 0];
-                            MemoryStream pic9 = new MemoryStream((byte[])ds.Tables["Usuario"].Rows[0]["Foto"]);
+                            MemoryStream pic9 = new MemoryStream((byte[])ds.Tables["Usuario"].Rows[ultimo]["Foto"]);
 
                             Bitmap bm9 = new Bitmap(pic9);
 
@@ -334,7 +334,7 @@ namespace Pantalla_Contraseña
                             btn_Der.Visible = false;
 
                             lbl_Nom5.Text = nombrecompleto[ultimo, 0];
-                            MemoryStream pic10 = new MemoryStream((byte[])ds.Tables["Usuario"].Rows[0]["Foto"]);
+                            MemoryStream pic10 = new MemoryStream((byte[])ds.Tables["Usuario"].Rows[ultimo]["Foto"]);
 
                             Bitmap bm10 = new Bitmap(pic10);
 

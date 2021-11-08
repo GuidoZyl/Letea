@@ -136,9 +136,6 @@
   <data name="Boton amigos (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Boton amigos (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="TextoAcercaDeNosotros" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\TextoAcercaDeNosotros.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Contraseña" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Contraseña.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -159,9 +156,6 @@
   </data>
   <data name="Rectangle 51" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Rectangle 51.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Crear1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Crear1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="AGREGAR GRUPO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AGREGAR GRUPO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,6 +211,9 @@
   <data name="FLECHA DERECHA" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FLECHA DERECHA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Circulo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Circulo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Siguiente" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Siguiente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -250,14 +247,14 @@
   <data name="Vector (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Vector (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="AGREGAR GRUPO (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AGREGAR GRUPO (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="que lindo boton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\que lindo boton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ingresar como páciente" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ingresar como páciente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="que lindo boton" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\que lindo boton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Crear1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Crear1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Boton Guardar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Boton Guardar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -271,8 +268,8 @@
   <data name="Fondo Coniguración" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fondo Coniguración.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Acerca de Nosotros" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Acerca de Nosotros.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Botón Fondo falso" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Botón Fondo falso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Crear" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Crear.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -282,6 +279,9 @@
   </data>
   <data name="Ajustes" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Ajustes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Parte Superior Crear GurupoAmigos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Parte Superior Crear GurupoAmigos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Creditos1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Creditos1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -301,6 +301,9 @@
   <data name="Nueva contraseña" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Nueva contraseña.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="AGREGAR GRUPO (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AGREGAR GRUPO (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Juegos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Juegos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -316,16 +319,16 @@
   <data name="Grupos sin foto" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Grupos sin foto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Parte Superior Crear GurupoAmigos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Parte Superior Crear GurupoAmigos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Acerca de Nosotros" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Acerca de Nosotros.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="AGREGAR AMIGO (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AGREGAR AMIGO (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Circulo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Circulo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="TextoAcercaDeNosotros" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TextoAcercaDeNosotros.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Botón Fondo falso" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Botón Fondo falso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Agregar familiar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Agregar familiar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

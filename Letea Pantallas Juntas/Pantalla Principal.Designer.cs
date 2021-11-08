@@ -54,6 +54,7 @@ namespace Pantalla_Contraseña
             this.btn_Familia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_Familia.TabIndex = 0;
             this.btn_Familia.TabStop = false;
+            this.btn_Familia.Click += new System.EventHandler(this.btn_Familia_Click);
             // 
             // btn_Amigos
             // 

@@ -404,7 +404,7 @@ namespace Pantalla_Contraseña
         private void lbl_Clicked(object sender, EventArgs e)
         {
             Label LabelClicked = sender as Label;
-            string sql = "SELECT Id FROM GruposdeAmigos WHERE Nombre = '" + LabelClicked.Text + "'";
+            string sql = "SELECT Id FROM GruposdeAmigos WHERE Nombre = '" + LabelClicked.Text + "' AND IDUsuario = " + FormPacientes2.IDPaciente + "";
             OleDbCommand cmd = new OleDbCommand(sql, conexion);
             OleDbDataAdapter da = new OleDbDataAdapter(cmd);
             da.Fill(ds, "IDPaciente");

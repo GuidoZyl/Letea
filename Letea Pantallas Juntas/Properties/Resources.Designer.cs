@@ -93,6 +93,16 @@ namespace Pantalla_Contraseña.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Agregar_familiar {
+            get {
+                object obj = ResourceManager.GetObject("Agregar familiar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Agregar_familiar__1_ {
             get {
                 object obj = ResourceManager.GetObject("Agregar familiar (1)", resourceCulture);

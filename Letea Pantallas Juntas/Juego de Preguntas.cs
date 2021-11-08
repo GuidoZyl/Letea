@@ -66,7 +66,7 @@ namespace Pantalla_Contraseña
 
             else if (preguntas[0] == "¿De dónde conoce usted a esta persona?")
             {
-                string check = "SELECT * FROM GruposdeAmigos";
+                string check = "SELECT * FROM GruposdeAmigos WHERE IDUsuario = " + FormPacientes2.IDPaciente + "";
                 OleDbCommand comando = new OleDbCommand(check, conexion);
                 OleDbDataAdapter data = new OleDbDataAdapter(comando);
                 data.Fill(ds, "Checkeo");
@@ -76,7 +76,7 @@ namespace Pantalla_Contraseña
                     ds.Tables["Checkeo"].Clear();
                     Pregunta = 2;
 
-                    string sql2 = "SELECT Id FROM GruposdeAmigos";
+                    string sql2 = "SELECT Id FROM GruposdeAmigos WHERE IDUsuario = " + FormPacientes2.IDPaciente + "";
                     OleDbCommand cmd2 = new OleDbCommand(sql2, conexion);
                     OleDbDataAdapter da2 = new OleDbDataAdapter(cmd2);
                     da2.Fill(ds, "IdGrupoCorrecta");
@@ -91,14 +91,14 @@ namespace Pantalla_Contraseña
                     Random rnd = new Random();
                     int PosicionCorrecta = rnd.Next(0, ds.Tables["IdGrupoCorrecta"].Rows.Count);
 
-                    string query = "SELECT * FROM GruposdeAmigos WHERE Id = " + IdGrupoCorrecta[PosicionCorrecta] + "";
+                    string query = "SELECT * FROM GruposdeAmigos WHERE Id = " + IdGrupoCorrecta[PosicionCorrecta] + " AND IDUsuario = " + FormPacientes2.IDPaciente + "";
                     OleDbCommand comando2 = new OleDbCommand(query, conexion);
                     OleDbDataAdapter data2 = new OleDbDataAdapter(comando2);
                     data2.Fill(ds, "NombreGrupoCorrecto");
 
                     GrupoCorrecto = Convert.ToString(ds.Tables["NombreGrupoCorrecto"].Rows[0]["Nombre"]);
 
-                    string sql3 = "SELECT * FROM Amigos WHERE IDGruposDeAmigos = " + IdGrupoCorrecta[PosicionCorrecta] + "";
+                    string sql3 = "SELECT * FROM Amigos WHERE IDGruposDeAmigos = " + IdGrupoCorrecta[PosicionCorrecta] + " AND IDUsuario = " + FormPacientes2.IDPaciente + "";
                     OleDbCommand cmd3 = new OleDbCommand(sql3, conexion);
                     OleDbDataAdapter da3 = new OleDbDataAdapter(cmd3);
                     da3.Fill(ds, "IdCorrecta");
@@ -119,7 +119,7 @@ namespace Pantalla_Contraseña
                     lbl_Nom.Visible = true;
                     lbl_Nom.Text = Convert.ToString(ds.Tables["IdCorrecta"].Rows[PosicionCorrecta2]["Nombre"]);
 
-                    string sql4 = "SELECT * FROM GruposdeAmigos WHERE NOT Id = " + IdGrupoCorrecta[PosicionCorrecta] + "";
+                    string sql4 = "SELECT * FROM GruposdeAmigos WHERE NOT Id = " + IdGrupoCorrecta[PosicionCorrecta] + " AND IDUsuario = " + FormPacientes2.IDPaciente + "";
                     OleDbCommand cmd4 = new OleDbCommand(sql4, conexion);
                     OleDbDataAdapter da4 = new OleDbDataAdapter(cmd4);
                     da4.Fill(ds, "IdIncorrecta");
@@ -141,7 +141,7 @@ namespace Pantalla_Contraseña
                         IdIncorrecta[i] = IdIncorrectaTemp[PosicionesRandom[i]];
                     }
 
-                    string sql5 = "SELECT * FROM GruposdeAmigos WHERE Id = " + IdIncorrecta[0] + " OR Id = " + IdIncorrecta[1] + " OR Id = " + IdIncorrecta[2] + "";
+                    string sql5 = "SELECT * FROM GruposdeAmigos WHERE (Id = " + IdIncorrecta[0] + " OR Id = " + IdIncorrecta[1] + " OR Id = " + IdIncorrecta[2] + ") AND IDUsuario = " + FormPacientes2.IDPaciente + "";
                     OleDbCommand cmd5 = new OleDbCommand(sql5, conexion);
                     OleDbDataAdapter da5 = new OleDbDataAdapter(cmd5);
                     da5.Fill(ds, "InfoIncorrecta");
@@ -176,10 +176,8 @@ namespace Pantalla_Contraseña
 
             else if (preguntas[0] == "¿Cuál es el nombre de esta persona?")
             {
-                //FALTA PONER QUE ELIJA LOS AMIGOS DEL PACIENTE ESPECIFICO
-
                 Pregunta = 3;
-                string sql2 = "SELECT Id FROM Amigos";
+                string sql2 = "SELECT Id FROM Amigos WHERE IDUsuario = " + FormPacientes2.IDPaciente + "";
                 OleDbCommand cmd2 = new OleDbCommand(sql2, conexion);
                 OleDbDataAdapter da2 = new OleDbDataAdapter(cmd2);
                 da2.Fill(ds, "IdCorrecta");
@@ -195,7 +193,7 @@ namespace Pantalla_Contraseña
                 Random rnd = new Random();
                 int PosicionCorrecta = rnd.Next(0, ds.Tables["IdCorrecta"].Rows.Count);
 
-                string sql3 = "SELECT * FROM Amigos WHERE Id = " + IdCorrecta[PosicionCorrecta] + "";
+                string sql3 = "SELECT * FROM Amigos WHERE Id = " + IdCorrecta[PosicionCorrecta] + " AND IDUsuario = " + FormPacientes2.IDPaciente + "";
                 OleDbCommand cmd3 = new OleDbCommand(sql3, conexion);
                 OleDbDataAdapter da3 = new OleDbDataAdapter(cmd3);
                 da3.Fill(ds, "InfoCorrecta");
@@ -208,7 +206,7 @@ namespace Pantalla_Contraseña
 
                 pic_Persona.Image = bm;
 
-                string sql4 = "SELECT Id FROM Amigos WHERE NOT Id = " + IdCorrecta[PosicionCorrecta] + "";
+                string sql4 = "SELECT Id FROM Amigos WHERE NOT Id = " + IdCorrecta[PosicionCorrecta] + " AND IDUsuario = " + FormPacientes2.IDPaciente + "";
                 OleDbCommand cmd4 = new OleDbCommand(sql4, conexion);
                 OleDbDataAdapter da4 = new OleDbDataAdapter(cmd4);
                 da4.Fill(ds, "IdIncorrecta");
@@ -230,7 +228,7 @@ namespace Pantalla_Contraseña
                     IdIncorrecta[i] = IdIncorrectaTemp[PosicionesRandom[i]];
                 }
 
-                string sql5 = "SELECT * FROM Amigos WHERE Id = " + IdIncorrecta[0] + " OR Id = " + IdIncorrecta[1] + " OR Id = " + IdIncorrecta[2] + "";
+                string sql5 = "SELECT * FROM Amigos WHERE (Id = " + IdIncorrecta[0] + " OR Id = " + IdIncorrecta[1] + " OR Id = " + IdIncorrecta[2] + ") AND IDUsuario = " + FormPacientes2.IDPaciente + "";
                 OleDbCommand cmd5 = new OleDbCommand(sql5, conexion);
                 OleDbDataAdapter da5 = new OleDbDataAdapter(cmd5);
                 da5.Fill(ds, "InfoIncorrecta");
