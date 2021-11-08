@@ -22,7 +22,9 @@ namespace Pantalla_Contraseña
 
         int y = 50;
         string Nombre;
-
+        private bool btnDown;
+        private int offsetX;
+        private int offsetY;
         public ArbolGenealogico()
         {
             InitializeComponent();
@@ -63,6 +65,9 @@ namespace Pantalla_Contraseña
                 Nombre = temp.Name;
 
                 temp.Paint += new PaintEventHandler(handlerComun_Paint);
+                temp.MouseDown += new MouseEventHandler(temp_MouseDown);
+                temp.MouseUp += new MouseEventHandler(temp_MouseUp);
+                temp.MouseMove += new MouseEventHandler(temp_MouseMove);
 
                 Controls.Add(temp);
             }
@@ -108,5 +113,41 @@ namespace Pantalla_Contraseña
             form.Show();
             this.Hide();
         }
+        
+        private void btn_Volver_Move(object sender, EventArgs e)
+        {
+
+        }
+        private void temp_MouseDown(object sender, MouseEventArgs e)
+        {
+            // el boton izquierdo esta pulsado
+            if (e.Button == MouseButtons.Left)
+            {
+                btnDown = true;
+                offsetX = e.X;
+                offsetY = e.Y;
+            }
+        }
+
+        private void temp_MouseMove(object sender, MouseEventArgs e)
+        {
+            PictureBox PictureBoxTemp = sender as PictureBox;
+            if (btnDown)
+            {
+                // mover el pictureBox con el raton
+                PictureBoxTemp.Left += e.X - offsetX;
+                PictureBoxTemp.Top += e.Y - offsetY;
+            }
+        }
+
+        private void temp_MouseUp(object sender, MouseEventArgs e)
+        {
+            // el boton izquierdo se libera
+            if (e.Button == MouseButtons.Left)
+            {
+                btnDown = false;
+            }
+        }
     }
-}
+}   
+
