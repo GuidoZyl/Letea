@@ -72,8 +72,8 @@ namespace Pantalla_Contraseña
             // 
             this.btn_Editar.BackColor = System.Drawing.Color.Transparent;
             this.btn_Editar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Editar.Image = global::Pantalla_Contraseña.Properties.Resources.Editar_amigo1;
-            this.btn_Editar.Location = new System.Drawing.Point(1453, 888);
+            this.btn_Editar.Image = global::Pantalla_Contraseña.Properties.Resources.Editar_árbol__1_;
+            this.btn_Editar.Location = new System.Drawing.Point(1512, 908);
             this.btn_Editar.Name = "btn_Editar";
             this.btn_Editar.Size = new System.Drawing.Size(376, 99);
             this.btn_Editar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -87,9 +87,9 @@ namespace Pantalla_Contraseña
             this.btn_Guardar.BackColor = System.Drawing.Color.Transparent;
             this.btn_Guardar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Guardar.Image = global::Pantalla_Contraseña.Properties.Resources.Boton_Guardar;
-            this.btn_Guardar.Location = new System.Drawing.Point(1477, 881);
+            this.btn_Guardar.Location = new System.Drawing.Point(1547, 901);
             this.btn_Guardar.Name = "btn_Guardar";
-            this.btn_Guardar.Size = new System.Drawing.Size(345, 106);
+            this.btn_Guardar.Size = new System.Drawing.Size(328, 106);
             this.btn_Guardar.TabIndex = 25;
             this.btn_Guardar.TabStop = false;
             this.btn_Guardar.Visible = false;

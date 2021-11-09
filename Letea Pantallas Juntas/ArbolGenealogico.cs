@@ -58,14 +58,18 @@ namespace Pantalla_Contraseña
                 temp.Image = bm;
 
                 temp.SizeMode = PictureBoxSizeMode.StretchImage;
-                if (ds.Tables["Familia"].Rows[i]["X"] == null)
+
+                if (Convert.ToBoolean(ds.Tables["Familia"].Rows[i]["Editado"]) == false)
                 {
-                temp.Location = new Point(200, 200);
+                    temp.Location = new Point(30, 200);
                 }
+
                 else
                 {
                     temp.Location = new Point(Convert.ToInt32(ds.Tables["Familia"].Rows[i]["X"]), Convert.ToInt32(ds.Tables["Familia"].Rows[i]["Y"]));
                 }
+
+
                 temp.Name = "pic_Familiar";
                 Nombre = temp.Name;
                 temp.Tag = Convert.ToInt32(ds.Tables["Familia"].Rows[i]["Id"]);
@@ -74,8 +78,22 @@ namespace Pantalla_Contraseña
                 temp.MouseDown += new MouseEventHandler(temp_MouseDown);
                 temp.MouseUp += new MouseEventHandler(temp_MouseUp);
                 temp.MouseMove += new MouseEventHandler(temp_MouseMove);
+                temp.MouseEnter += new EventHandler(temp_MouseEnter);
 
                 Controls.Add(temp);
+            }
+        }
+
+        private void temp_MouseEnter(object sender, EventArgs e)
+        {
+            PictureBox PictureBoxTemp = sender as PictureBox;
+            if (FormPantallaLogIn.ModoAdmin && Edit)
+            {
+                PictureBoxTemp.Cursor = new Cursor("openhand.cur");
+            }
+            else
+            {
+                PictureBoxTemp.Cursor = Cursors.Default;
             }
         }
 
@@ -131,7 +149,7 @@ namespace Pantalla_Contraseña
             {
                 if (e.Button == MouseButtons.Left)
                 {
-                    //PictureBoxTemp.Cursor = 
+                    PictureBoxTemp.Cursor = new Cursor("closedhand.cur");
                     btnDown = true;
                     offsetX = e.X;
                     offsetY = e.Y;
@@ -161,9 +179,10 @@ namespace Pantalla_Contraseña
 
                  if (e.Button == MouseButtons.Left)
                  {
+                    PictureBoxTemp.Cursor = new Cursor("openhand.cur");
                         btnDown = false;
                  }
-                 string sql2 = "UPDATE Familia set X = " + PictureBoxTemp.Location.X + ", Y = " + PictureBoxTemp.Location.Y + "  WHERE Id = " + PictureBoxTemp.Tag + "";
+                 string sql2 = "UPDATE Familia set X = " + PictureBoxTemp.Location.X + ", Y = " + PictureBoxTemp.Location.Y + ",  Editado = " + true + " WHERE Id = " + PictureBoxTemp.Tag + "";
                  OleDbCommand consulta2 = new OleDbCommand(sql2, conexion);
                  consulta2.ExecuteNonQuery();
             }

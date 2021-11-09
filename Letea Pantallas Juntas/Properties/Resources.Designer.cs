@@ -453,9 +453,39 @@ namespace Pantalla_Contraseña.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Editar_amigo__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Editar amigo (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Editar_amigo__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Editar amigo (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Editar_amigo1 {
             get {
                 object obj = ResourceManager.GetObject("Editar amigo1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Editar_árbol__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Editar árbol (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

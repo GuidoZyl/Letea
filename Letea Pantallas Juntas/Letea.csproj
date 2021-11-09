@@ -499,5 +499,14 @@
   <ItemGroup>
     <None Include="Resources\Agregar familiar.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Editar amigo %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Editar amigo %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Editar árbol %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
