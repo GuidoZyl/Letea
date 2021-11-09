@@ -30,7 +30,9 @@ namespace Pantalla_Contraseña
 
         List<Point> Lista = new List<Point>();
 
-        Pen Lapiz = new Pen(Color.Black, 5);
+        Pen Lapiz = new Pen(Color.Black, 3);
+        Pen LapizAncho = new Pen(Color.Black, 5);
+
         Graphics g;
 
         public ArbolGenealogico()
@@ -160,7 +162,48 @@ namespace Pantalla_Contraseña
         }
         private void temp_MouseDown(object sender, MouseEventArgs e)
         {
+            PictureBox PictureBoxTemp = sender as PictureBox;
+            if (FormPantallaLogIn.ModoAdmin && Edit)
+            {
+                if (e.Button == MouseButtons.Left)
+                {
+                    if (!Linea)
+                    {
+                        PictureBoxTemp.Cursor = new Cursor("closedhand.cur");
+                        btnDown = true;
+                        offsetX = e.X;
+                        offsetY = e.Y;
+                    }
 
+                    else
+                    {
+                        Cursor = Cursors.Cross;
+                        cerrado = false;
+                        if (e.Button == MouseButtons.Left)
+                            g.DrawRectangle(Lapiz, new Rectangle(e.X + PictureBoxTemp.Location.X, e.Y + PictureBoxTemp.Location.Y, 1, 1));
+
+                        if (e.Button == MouseButtons.Left)
+                            Lista.Add(new Point(e.X + PictureBoxTemp.Location.X, e.Y + PictureBoxTemp.Location.Y));
+
+                        else if (e.Button == MouseButtons.Right)
+                        {
+                            Lista.Add(new Point(Lista[0].X, Lista[0].Y));
+                            cerrado = true;
+                        }
+
+                        if (Lista.Count > 1)
+                        {
+                            g.DrawLine(Lapiz, Lista[Lista.Count - 1], Lista[Lista.Count - 2]);
+                            Linea = false;
+                            cerrado = true;
+                        }
+
+                        if (cerrado == true)
+                            Lista.Clear();
+                    }
+                }
+
+            }
         }
 
         private void temp_MouseMove(object sender, MouseEventArgs e)
@@ -237,7 +280,40 @@ namespace Pantalla_Contraseña
 
         private void ArbolGenealogico_MouseDown(object sender, MouseEventArgs e)
         {
+            PictureBox PictureBoxTemp = sender as PictureBox;
+            if (FormPantallaLogIn.ModoAdmin && Edit)
+            {
+                if (e.Button == MouseButtons.Left)
+                {
+                    if (Linea)
+                    {
+                        Cursor = Cursors.Cross;
+                        cerrado = false;
+                        if (e.Button == MouseButtons.Left)
+                            g.DrawRectangle(Lapiz, new Rectangle(e.X, e.Y, 1, 1));
 
+                        if (e.Button == MouseButtons.Left)
+                            Lista.Add(new Point(e.X, e.Y));
+
+                        else if (e.Button == MouseButtons.Right)
+                        {
+                            Lista.Add(new Point(Lista[0].X, Lista[0].Y));
+                            cerrado = true;
+                        }
+
+                        if (Lista.Count > 1)
+                        {
+                            g.DrawLine(LapizAncho, Lista[Lista.Count - 1], Lista[Lista.Count - 2]);
+                            Linea = false;
+                            cerrado = true;
+                        }
+
+                        if (cerrado)
+                            Lista.Clear();
+                    }
+                }
+
+            }
         }
     }
 }   
