@@ -225,6 +225,7 @@ namespace Pantalla_Contraseña
                 btn_FlechaDer.Visible = false;
                 btn_FlechaIzq.Visible = false;
             }
+            MessageBox.Show("Listo");
         }
 
         private void lbl_NomGrupo_Click(object sender, EventArgs e)
