@@ -514,5 +514,8 @@
   <ItemGroup>
     <None Include="Resources\Creditos nashe.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Eliminar amigo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

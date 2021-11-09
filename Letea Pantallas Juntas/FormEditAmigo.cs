@@ -31,6 +31,7 @@ namespace Pantalla_Contraseña
             if (FormPantallaLogIn.ModoAdmin)
             {
                 btn_EditarAmigo.Visible = true;
+                btn_Eliminar.Visible = true;
             }
             
             conexion.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=.\Base de Datos 4.accdb;";
@@ -153,6 +154,17 @@ namespace Pantalla_Contraseña
                     btn_agregarfoto.SizeMode = PictureBoxSizeMode.StretchImage;
                 }
             }
+        }
+
+        private void btn_Eliminar_Click(object sender, EventArgs e)
+        {
+            string sql = "DELETE FROM Amigos WHERE Id = " + FormGrupo.IDAmigo + "";
+            OleDbCommand cmd = new OleDbCommand(sql, conexion);
+            cmd.ExecuteNonQuery();
+
+            FormGrupo form = new FormGrupo();
+            form.Show();
+            this.Hide();
         }
     }
 }

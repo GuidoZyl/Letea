@@ -44,6 +44,7 @@ namespace Pantalla_Contraseña
             this.btn_Volver = new System.Windows.Forms.PictureBox();
             this.btn_EditarAmigo = new System.Windows.Forms.PictureBox();
             this.btn_Guardar = new System.Windows.Forms.PictureBox();
+            this.btn_Eliminar = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.btn_agregarfoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -51,6 +52,7 @@ namespace Pantalla_Contraseña
             ((System.ComponentModel.ISupportInitialize)(this.btn_Volver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_EditarAmigo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Guardar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Eliminar)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_agregarfoto
@@ -235,6 +237,21 @@ namespace Pantalla_Contraseña
             this.btn_Guardar.Visible = false;
             this.btn_Guardar.Click += new System.EventHandler(this.btn_Guardar_Click);
             // 
+            // btn_Eliminar
+            // 
+            this.btn_Eliminar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Eliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Eliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Eliminar.Image = global::Pantalla_Contraseña.Properties.Resources.Eliminar_amigo;
+            this.btn_Eliminar.Location = new System.Drawing.Point(97, 899);
+            this.btn_Eliminar.Name = "btn_Eliminar";
+            this.btn_Eliminar.Size = new System.Drawing.Size(376, 96);
+            this.btn_Eliminar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_Eliminar.TabIndex = 27;
+            this.btn_Eliminar.TabStop = false;
+            this.btn_Eliminar.Visible = false;
+            this.btn_Eliminar.Click += new System.EventHandler(this.btn_Eliminar_Click);
+            // 
             // FormEditAmigo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -242,6 +259,7 @@ namespace Pantalla_Contraseña
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Fondo;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.btn_Eliminar);
             this.Controls.Add(this.btn_Guardar);
             this.Controls.Add(this.btn_EditarAmigo);
             this.Controls.Add(this.btn_Volver);
@@ -268,6 +286,7 @@ namespace Pantalla_Contraseña
             ((System.ComponentModel.ISupportInitialize)(this.btn_Volver)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_EditarAmigo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Guardar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Eliminar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -290,5 +309,6 @@ namespace Pantalla_Contraseña
         private System.Windows.Forms.PictureBox btn_Volver;
         private System.Windows.Forms.PictureBox btn_EditarAmigo;
         private System.Windows.Forms.PictureBox btn_Guardar;
+        private System.Windows.Forms.PictureBox btn_Eliminar;
     }
 }

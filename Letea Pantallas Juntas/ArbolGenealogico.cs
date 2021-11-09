@@ -47,7 +47,6 @@ namespace Pantalla_Contraseña
 
             if (FormPantallaLogIn.ModoAdmin)
             {
-                btn_Crear.Visible = true;
                 btn_Editar.Visible = true;
             }
 
@@ -199,7 +198,10 @@ namespace Pantalla_Contraseña
                         }
 
                         if (cerrado == true)
+                        {
                             Lista.Clear();
+                            btn_Linea.Visible = true;
+                        }
                     }
                 }
 
@@ -248,6 +250,7 @@ namespace Pantalla_Contraseña
         {
             Edit = true;
             btn_Editar.Visible = false;
+            btn_Crear.Visible = true;
             btn_Guardar.Visible = true;
             btn_Linea.Visible = true;
         }
@@ -258,11 +261,13 @@ namespace Pantalla_Contraseña
             btn_Guardar.Visible = false;
             btn_Editar.Visible = true;
             btn_Linea.Visible = false;
+            btn_Crear.Visible = false;
         }
 
         private void btn_Linea_Click(object sender, EventArgs e)
         {
             Linea = true;
+            btn_Linea.Visible = false;
         }
 
         private void ArbolGenealogico_MouseEnter(object sender, EventArgs e)
@@ -309,7 +314,10 @@ namespace Pantalla_Contraseña
                         }
 
                         if (cerrado)
+                        {
                             Lista.Clear();
+                            btn_Linea.Visible = true;
+                        }
                     }
                 }
 

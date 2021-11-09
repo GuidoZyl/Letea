@@ -75,7 +75,7 @@ namespace Pantalla_Contraseña
             this.btn_Editar.BackColor = System.Drawing.Color.Transparent;
             this.btn_Editar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Editar.Image = global::Pantalla_Contraseña.Properties.Resources.Editar_árbol__1_;
-            this.btn_Editar.Location = new System.Drawing.Point(1512, 908);
+            this.btn_Editar.Location = new System.Drawing.Point(1512, 910);
             this.btn_Editar.Name = "btn_Editar";
             this.btn_Editar.Size = new System.Drawing.Size(376, 99);
             this.btn_Editar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -89,7 +89,7 @@ namespace Pantalla_Contraseña
             this.btn_Guardar.BackColor = System.Drawing.Color.Transparent;
             this.btn_Guardar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Guardar.Image = global::Pantalla_Contraseña.Properties.Resources.Boton_Guardar;
-            this.btn_Guardar.Location = new System.Drawing.Point(1547, 901);
+            this.btn_Guardar.Location = new System.Drawing.Point(1547, 905);
             this.btn_Guardar.Name = "btn_Guardar";
             this.btn_Guardar.Size = new System.Drawing.Size(328, 106);
             this.btn_Guardar.TabIndex = 25;
@@ -102,7 +102,7 @@ namespace Pantalla_Contraseña
             this.btn_Linea.BackColor = System.Drawing.Color.Transparent;
             this.btn_Linea.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Linea.Image = global::Pantalla_Contraseña.Properties.Resources.Agregar_línea;
-            this.btn_Linea.Location = new System.Drawing.Point(1130, 908);
+            this.btn_Linea.Location = new System.Drawing.Point(1158, 908);
             this.btn_Linea.Name = "btn_Linea";
             this.btn_Linea.Size = new System.Drawing.Size(376, 99);
             this.btn_Linea.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
