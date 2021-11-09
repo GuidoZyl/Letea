@@ -137,5 +137,12 @@ namespace Pantalla_Contraseña
         {
 
         }
+
+        private void btn_Volver_Click(object sender, EventArgs e)
+        {
+            FormGrupo form = new FormGrupo();
+            form.Show();
+            this.Hide();
+        }
     }
 }

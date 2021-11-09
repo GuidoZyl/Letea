@@ -71,6 +71,7 @@ namespace Pantalla_Contraseña
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AcercaDenosotros";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.AcercaDenosotros_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btn_Volver)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_TextoNosotros)).EndInit();
             this.ResumeLayout(false);

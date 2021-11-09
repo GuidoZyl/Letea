@@ -40,12 +40,14 @@
             this.lbl_ApellidoNoEdit = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pic_FotoPerfil = new System.Windows.Forms.PictureBox();
+            this.btn_Volver = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.btn_agregarfoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Guardar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_FotoPerfil)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Volver)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_agregarfoto
@@ -190,6 +192,19 @@
             this.pic_FotoPerfil.TabStop = false;
             this.pic_FotoPerfil.Visible = false;
             // 
+            // btn_Volver
+            // 
+            this.btn_Volver.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Volver.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Volver.Image = global::Pantalla_Contraseña.Properties.Resources.Boton_Volver;
+            this.btn_Volver.Location = new System.Drawing.Point(30, 27);
+            this.btn_Volver.Name = "btn_Volver";
+            this.btn_Volver.Size = new System.Drawing.Size(110, 110);
+            this.btn_Volver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_Volver.TabIndex = 31;
+            this.btn_Volver.TabStop = false;
+            this.btn_Volver.Click += new System.EventHandler(this.btn_Volver_Click);
+            // 
             // AgregarAmigo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -197,6 +212,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Fondo;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.btn_Volver);
             this.Controls.Add(this.pic_FotoPerfil);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lbl_ApellidoNoEdit);
@@ -219,6 +235,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Guardar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_FotoPerfil)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Volver)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -238,5 +255,6 @@
         private System.Windows.Forms.Label lbl_ApellidoNoEdit;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pic_FotoPerfil;
+        private System.Windows.Forms.PictureBox btn_Volver;
     }
 }

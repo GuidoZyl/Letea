@@ -128,6 +128,7 @@
             this.pic_Nom1.TabIndex = 25;
             this.pic_Nom1.TabStop = false;
             this.pic_Nom1.Visible = false;
+            this.pic_Nom1.Click += new System.EventHandler(this.pic_Nom1_Click);
             this.pic_Nom1.Paint += new System.Windows.Forms.PaintEventHandler(this.pic_Nom1_Paint);
             // 
             // pic_Nom2
@@ -140,6 +141,7 @@
             this.pic_Nom2.TabIndex = 26;
             this.pic_Nom2.TabStop = false;
             this.pic_Nom2.Visible = false;
+            this.pic_Nom2.Click += new System.EventHandler(this.pic_Nom2_Click);
             this.pic_Nom2.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
             // 
             // pic_Nom3
@@ -152,6 +154,7 @@
             this.pic_Nom3.TabIndex = 27;
             this.pic_Nom3.TabStop = false;
             this.pic_Nom3.Visible = false;
+            this.pic_Nom3.Click += new System.EventHandler(this.pic_Nom3_Click);
             this.pic_Nom3.Paint += new System.Windows.Forms.PaintEventHandler(this.pic_Nom3_Paint);
             // 
             // pic_Nom4
@@ -164,6 +167,7 @@
             this.pic_Nom4.TabIndex = 28;
             this.pic_Nom4.TabStop = false;
             this.pic_Nom4.Visible = false;
+            this.pic_Nom4.Click += new System.EventHandler(this.pic_Nom4_Click);
             this.pic_Nom4.Paint += new System.Windows.Forms.PaintEventHandler(this.pic_Nom4_Paint);
             // 
             // btn_FlechaIzq

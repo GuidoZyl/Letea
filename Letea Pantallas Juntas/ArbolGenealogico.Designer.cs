@@ -46,7 +46,7 @@ namespace Pantalla_Contraseña
             this.btn_Volver.BackColor = System.Drawing.Color.Transparent;
             this.btn_Volver.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Volver.Image = global::Pantalla_Contraseña.Properties.Resources.Boton_Volver;
-            this.btn_Volver.Location = new System.Drawing.Point(40, 328);
+            this.btn_Volver.Location = new System.Drawing.Point(30, 27);
             this.btn_Volver.Name = "btn_Volver";
             this.btn_Volver.Size = new System.Drawing.Size(110, 110);
             this.btn_Volver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

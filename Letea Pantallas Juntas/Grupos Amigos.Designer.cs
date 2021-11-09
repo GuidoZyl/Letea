@@ -74,6 +74,7 @@ namespace Pantalla_Contraseña
             this.pic_Nom1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_Nom1.TabIndex = 9;
             this.pic_Nom1.TabStop = false;
+            this.pic_Nom1.Click += new System.EventHandler(this.pic_Nom1_Click);
             this.pic_Nom1.Paint += new System.Windows.Forms.PaintEventHandler(this.pic_Nom1_Paint);
             // 
             // pic_Nom2
@@ -85,7 +86,7 @@ namespace Pantalla_Contraseña
             this.pic_Nom2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_Nom2.TabIndex = 10;
             this.pic_Nom2.TabStop = false;
-            this.pic_Nom2.Click += new System.EventHandler(this.lbl_Clicked);
+            this.pic_Nom2.Click += new System.EventHandler(this.pic_Nom2_Click);
             this.pic_Nom2.Paint += new System.Windows.Forms.PaintEventHandler(this.pic_Nom2_Paint);
             // 
             // pic_Nom3
@@ -97,6 +98,7 @@ namespace Pantalla_Contraseña
             this.pic_Nom3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_Nom3.TabIndex = 11;
             this.pic_Nom3.TabStop = false;
+            this.pic_Nom3.Click += new System.EventHandler(this.pic_Nom3_Click);
             this.pic_Nom3.Paint += new System.Windows.Forms.PaintEventHandler(this.pic_Nom3_Paint);
             // 
             // pic_Nom4
@@ -108,6 +110,7 @@ namespace Pantalla_Contraseña
             this.pic_Nom4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_Nom4.TabIndex = 12;
             this.pic_Nom4.TabStop = false;
+            this.pic_Nom4.Click += new System.EventHandler(this.pic_Nom4_Click);
             this.pic_Nom4.Paint += new System.Windows.Forms.PaintEventHandler(this.pic_Nom4_Paint);
             // 
             // pic_Nom5
@@ -119,6 +122,7 @@ namespace Pantalla_Contraseña
             this.pic_Nom5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_Nom5.TabIndex = 13;
             this.pic_Nom5.TabStop = false;
+            this.pic_Nom5.Click += new System.EventHandler(this.pic_Nom5_Click);
             this.pic_Nom5.Paint += new System.Windows.Forms.PaintEventHandler(this.pic_Nom5_Paint);
             // 
             // pic_Nom6
@@ -130,6 +134,7 @@ namespace Pantalla_Contraseña
             this.pic_Nom6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_Nom6.TabIndex = 14;
             this.pic_Nom6.TabStop = false;
+            this.pic_Nom6.Click += new System.EventHandler(this.pic_Nom6_Click);
             this.pic_Nom6.Paint += new System.Windows.Forms.PaintEventHandler(this.pic_Nom6_Paint);
             // 
             // pic_Nom7
@@ -141,6 +146,7 @@ namespace Pantalla_Contraseña
             this.pic_Nom7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_Nom7.TabIndex = 15;
             this.pic_Nom7.TabStop = false;
+            this.pic_Nom7.Click += new System.EventHandler(this.pic_Nom7_Click);
             this.pic_Nom7.Paint += new System.Windows.Forms.PaintEventHandler(this.pic_Nom7_Paint);
             // 
             // pic_Nom8
@@ -152,6 +158,7 @@ namespace Pantalla_Contraseña
             this.pic_Nom8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_Nom8.TabIndex = 16;
             this.pic_Nom8.TabStop = false;
+            this.pic_Nom8.Click += new System.EventHandler(this.pic_Nom8_Click);
             this.pic_Nom8.Paint += new System.Windows.Forms.PaintEventHandler(this.pic_Nom8_Paint);
             // 
             // lbl_Nom1

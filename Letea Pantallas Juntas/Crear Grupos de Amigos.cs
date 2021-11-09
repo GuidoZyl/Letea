@@ -112,5 +112,27 @@ namespace Pantalla_Contraseña
         {
             
         }
+
+        private void btn_Volver_Click(object sender, EventArgs e)
+        {
+            string sql = "SELECT * FROM GruposdeAmigos WHERE IDUsuario = " + FormPacientes2.IDPaciente + "";
+            OleDbCommand cmd = new OleDbCommand(sql, conexion);
+            OleDbDataAdapter da = new OleDbDataAdapter(cmd);
+            da.Fill(ds, "checkeo");
+
+            if (Convert.ToInt32(ds.Tables["checkeo"].Rows.Count) > 0)
+            {
+                FormGruposAmigos form = new FormGruposAmigos();
+                form.Show();
+                this.Hide();
+            }
+
+            else
+            {
+                FormPrincipal form = new FormPrincipal();
+                form.Show();
+                this.Hide();
+            }
+        }
     }
 }

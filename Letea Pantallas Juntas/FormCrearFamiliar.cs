@@ -45,7 +45,7 @@ namespace Pantalla_Contraseña
         private void FormCrearFamiliar_Load(object sender, EventArgs e)
         {
             conexion.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=.\Base de Datos 4.accdb;";
-            conexion.Open();
+            conexion.Open();            
         }
 
         private void txt_Nom_Click(object sender, EventArgs e)
@@ -120,6 +120,28 @@ namespace Pantalla_Contraseña
                 graph.DrawEllipse(penSmooth, rectContourSmooth);
                 if (borderSize > 0)
                     graph.DrawEllipse(penBorder, rectBorder);
+            }
+        }
+
+        private void btn_Volver_Click(object sender, EventArgs e)
+        {
+            string sql = "SELECT * FROM Familia WHERE IDUsuario = " + FormPacientes2.IDPaciente + "";
+            OleDbCommand cmd = new OleDbCommand(sql, conexion);
+            OleDbDataAdapter da = new OleDbDataAdapter(cmd);
+            da.Fill(ds, "checkeo");
+
+            if (Convert.ToInt32(ds.Tables["checkeo"].Rows.Count) > 0)
+            {
+                ArbolGenealogico form = new ArbolGenealogico();
+                form.Show();
+                this.Hide();
+            }
+
+            else
+            {
+                FormPrincipal form = new FormPrincipal();
+                form.Show();
+                this.Hide();
             }
         }
     }

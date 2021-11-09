@@ -28,6 +28,15 @@ namespace Pantalla_Contraseña
         {
             conexion.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=.\Base de Datos 4.accdb;";
             conexion.Open();
+            string sql = "SELECT * FROM Usuario";
+            OleDbCommand cmd = new OleDbCommand(sql, conexion);
+            OleDbDataAdapter da = new OleDbDataAdapter(cmd);
+            da.Fill(ds, "checkeo");
+           
+            if (Convert.ToInt32(ds.Tables["checkeo"].Rows.Count) > 0)
+            {
+                btn_Volver.Visible = true;
+            }
         }
 
         private void btn_siguiente_Click(object sender, EventArgs e)
@@ -62,6 +71,13 @@ namespace Pantalla_Contraseña
                 Task.Delay(2000).Wait();
                 lbl_IngreseNombre.Visible = false;
             }            
+        }
+
+        private void btn_Volver_Click(object sender, EventArgs e)
+        {
+            FormPacientes2 form = new FormPacientes2();
+            form.Show();
+            this.Hide();
         }
     }
 }

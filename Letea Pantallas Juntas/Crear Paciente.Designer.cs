@@ -35,9 +35,11 @@ namespace Pantalla_Contraseña
             this.txtbox_NombreUsuario = new System.Windows.Forms.TextBox();
             this.btn_siguiente = new System.Windows.Forms.PictureBox();
             this.lbl_IngreseNombre = new System.Windows.Forms.Label();
+            this.btn_Volver = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pic_ParteSuperior)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_nombrecompleto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_siguiente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Volver)).BeginInit();
             this.SuspendLayout();
             // 
             // pic_ParteSuperior
@@ -95,6 +97,20 @@ namespace Pantalla_Contraseña
             this.lbl_IngreseNombre.Text = "Ingrese un nombre";
             this.lbl_IngreseNombre.Visible = false;
             // 
+            // btn_Volver
+            // 
+            this.btn_Volver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(75)))), ((int)(((byte)(243)))));
+            this.btn_Volver.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Volver.Image = global::Pantalla_Contraseña.Properties.Resources.Boton_Volver;
+            this.btn_Volver.Location = new System.Drawing.Point(30, 27);
+            this.btn_Volver.Name = "btn_Volver";
+            this.btn_Volver.Size = new System.Drawing.Size(110, 110);
+            this.btn_Volver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_Volver.TabIndex = 26;
+            this.btn_Volver.TabStop = false;
+            this.btn_Volver.Visible = false;
+            this.btn_Volver.Click += new System.EventHandler(this.btn_Volver_Click);
+            // 
             // FormCrearPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -102,6 +118,7 @@ namespace Pantalla_Contraseña
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Fondo;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.btn_Volver);
             this.Controls.Add(this.lbl_IngreseNombre);
             this.Controls.Add(this.btn_siguiente);
             this.Controls.Add(this.txtbox_NombreUsuario);
@@ -114,6 +131,7 @@ namespace Pantalla_Contraseña
             ((System.ComponentModel.ISupportInitialize)(this.pic_ParteSuperior)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_nombrecompleto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_siguiente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Volver)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -126,5 +144,6 @@ namespace Pantalla_Contraseña
         private System.Windows.Forms.TextBox txtbox_NombreUsuario;
         private System.Windows.Forms.PictureBox btn_siguiente;
         private System.Windows.Forms.Label lbl_IngreseNombre;
+        private System.Windows.Forms.PictureBox btn_Volver;
     }
 }

@@ -612,7 +612,41 @@ namespace Pantalla_Contraseña
             pic_GrupoAmigo.Region = new Region(gp);
         }
 
-       
+        private void pic_Nom1_Click(object sender, EventArgs e)
+        {
+            IDAmigo = Convert.ToInt32(lbl_Nom1.Tag);
+
+            FormEditAmigo form = new FormEditAmigo();
+            form.Show();
+            this.Hide();
+        }
+
+        private void pic_Nom2_Click(object sender, EventArgs e)
+        {
+            IDAmigo = Convert.ToInt32(lbl_Nom2.Tag);
+
+            FormEditAmigo form = new FormEditAmigo();
+            form.Show();
+            this.Hide();
+        }
+
+        private void pic_Nom3_Click(object sender, EventArgs e)
+        {
+            IDAmigo = Convert.ToInt32(lbl_Nom3.Tag);
+
+            FormEditAmigo form = new FormEditAmigo();
+            form.Show();
+            this.Hide();
+        }
+
+        private void pic_Nom4_Click(object sender, EventArgs e)
+        {
+            IDAmigo = Convert.ToInt32(lbl_Nom4.Tag);
+
+            FormEditAmigo form = new FormEditAmigo();
+            form.Show();
+            this.Hide();
+        }
     }
 }
 
