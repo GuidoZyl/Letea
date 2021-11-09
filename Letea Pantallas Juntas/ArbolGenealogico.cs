@@ -20,6 +20,7 @@ namespace Pantalla_Contraseña
 
 
         public static bool Edit = false;
+        bool Linea = false;
         int y = 50;
         string Nombre;
         private bool btnDown;
@@ -149,11 +150,20 @@ namespace Pantalla_Contraseña
             {
                 if (e.Button == MouseButtons.Left)
                 {
-                    PictureBoxTemp.Cursor = new Cursor("closedhand.cur");
-                    btnDown = true;
-                    offsetX = e.X;
-                    offsetY = e.Y;
+                    if (!Linea)
+                    {
+                        PictureBoxTemp.Cursor = new Cursor("closedhand.cur");
+                        btnDown = true;
+                        offsetX = e.X;
+                        offsetY = e.Y;
+                    }
+
+                    else
+                    {
+                        PictureBoxTemp.Cursor = Cursors.Cross;
+                    }
                 }
+
             }
         }
 
@@ -200,6 +210,7 @@ namespace Pantalla_Contraseña
             Edit = true;
             btn_Editar.Visible = false;
             btn_Guardar.Visible = true;
+            btn_Linea.Visible = true;
         }
 
         private void btn_Guardar_Click(object sender, EventArgs e)
@@ -207,6 +218,7 @@ namespace Pantalla_Contraseña
             Edit = false;
             btn_Guardar.Visible = false;
             btn_Editar.Visible = true;
+            btn_Linea.Visible = false;
         }
     }
 }   

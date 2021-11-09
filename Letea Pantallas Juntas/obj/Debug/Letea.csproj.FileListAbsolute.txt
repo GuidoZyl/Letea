@@ -160,3 +160,9 @@ E:\Guido\Documentos\Programación\Letea-Pantallas-Juntas\Letea Pantallas Juntas\
 E:\Guido\Documentos\Programación\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.ArbolGenealogico.resources
 C:\Users\Uriel\Downloads\Letea Pantallas Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.ArbolGenealogico.resources
 C:\Users\Uriel\Downloads\Letea Pantallas Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.FormCrearFamiliar.resources
+C:\Users\46919295\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.ArbolGenealogico.resources
+C:\Users\46919295\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.FormCrearFamiliar.resources
+C:\Users\46919295\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.FormEditAmigo.resources
+C:\Users\46919295\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.FormPreguntas.resources
+C:\Users\46919295\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.JuegosAmigos.resources
+C:\Users\46919295\Documents\GitHub\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.UnirSinFlechas.resources

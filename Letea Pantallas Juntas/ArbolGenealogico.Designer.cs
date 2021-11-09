@@ -33,10 +33,12 @@ namespace Pantalla_Contraseña
             this.btn_Crear = new System.Windows.Forms.PictureBox();
             this.btn_Editar = new System.Windows.Forms.PictureBox();
             this.btn_Guardar = new System.Windows.Forms.PictureBox();
+            this.btn_Linea = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Volver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Crear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Editar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Guardar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Linea)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Volver
@@ -95,6 +97,19 @@ namespace Pantalla_Contraseña
             this.btn_Guardar.Visible = false;
             this.btn_Guardar.Click += new System.EventHandler(this.btn_Guardar_Click);
             // 
+            // btn_Linea
+            // 
+            this.btn_Linea.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Linea.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Linea.Image = global::Pantalla_Contraseña.Properties.Resources.Agregar_línea;
+            this.btn_Linea.Location = new System.Drawing.Point(1130, 908);
+            this.btn_Linea.Name = "btn_Linea";
+            this.btn_Linea.Size = new System.Drawing.Size(376, 99);
+            this.btn_Linea.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_Linea.TabIndex = 26;
+            this.btn_Linea.TabStop = false;
+            this.btn_Linea.Visible = false;
+            // 
             // ArbolGenealogico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -102,6 +117,7 @@ namespace Pantalla_Contraseña
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Fondo;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.btn_Linea);
             this.Controls.Add(this.btn_Guardar);
             this.Controls.Add(this.btn_Editar);
             this.Controls.Add(this.btn_Crear);
@@ -114,6 +130,7 @@ namespace Pantalla_Contraseña
             ((System.ComponentModel.ISupportInitialize)(this.btn_Crear)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Editar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Guardar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Linea)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -124,5 +141,6 @@ namespace Pantalla_Contraseña
         private System.Windows.Forms.PictureBox btn_Crear;
         private System.Windows.Forms.PictureBox btn_Editar;
         private System.Windows.Forms.PictureBox btn_Guardar;
+        private System.Windows.Forms.PictureBox btn_Linea;
     }
 }
