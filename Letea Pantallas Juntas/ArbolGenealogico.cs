@@ -40,7 +40,6 @@ namespace Pantalla_Contraseña
                 btn_Crear.Visible = true;
                 btn_Editar.Visible = true;
             }
-            btn_Guardar.Visible = false;
 
             string sql = "SELECT * FROM Familia WHERE IDUsuario = " + FormPacientes2.IDPaciente + "";
             OleDbCommand cmd = new OleDbCommand(sql, conexion);
@@ -127,54 +126,46 @@ namespace Pantalla_Contraseña
         }
         private void temp_MouseDown(object sender, MouseEventArgs e)
         {
-            if (FormPantallaLogIn.ModoAdmin)
+            PictureBox PictureBoxTemp = sender as PictureBox;
+            if (FormPantallaLogIn.ModoAdmin && Edit)
             {
-                if (Edit)
+                if (e.Button == MouseButtons.Left)
                 {
-                    // el boton izquierdo esta pulsado
-                    if (e.Button == MouseButtons.Left)
-                    {
-                        btnDown = true;
-                        offsetX = e.X;
-                        offsetY = e.Y;
-                    }
+                    //PictureBoxTemp.Cursor = 
+                    btnDown = true;
+                    offsetX = e.X;
+                    offsetY = e.Y;
                 }
             }
         }
 
         private void temp_MouseMove(object sender, MouseEventArgs e)
         {
-            if (FormPantallaLogIn.ModoAdmin)
+            if (FormPantallaLogIn.ModoAdmin && Edit)
             {
-                if (Edit)
-                {
-                    PictureBox PictureBoxTemp = sender as PictureBox;
-                    if (btnDown)
-                    {
-                        // mover el pictureBox con el raton
-                        PictureBoxTemp.Left += e.X - offsetX;
-                        PictureBoxTemp.Top += e.Y - offsetY;
-                    }
-                }
+                 PictureBox PictureBoxTemp = sender as PictureBox;
+                 if (btnDown)
+                 {
+                     PictureBoxTemp.Left += e.X - offsetX;
+                     PictureBoxTemp.Top += e.Y - offsetY;
+                 }
+
             }
         }
 
         private void temp_MouseUp(object sender, MouseEventArgs e)
         {
-            if (FormPantallaLogIn.ModoAdmin)
+            if (FormPantallaLogIn.ModoAdmin && Edit)
             {
-                if (Edit)
-                {
-                    PictureBox PictureBoxTemp = sender as PictureBox;
-                    // el boton izquierdo se libera
-                    if (e.Button == MouseButtons.Left)
-                    {
+                 PictureBox PictureBoxTemp = sender as PictureBox;
+
+                 if (e.Button == MouseButtons.Left)
+                 {
                         btnDown = false;
-                    }
-                    string sql2 = "UPDATE Familia set X = " + PictureBoxTemp.Location.X + ", Y = " + PictureBoxTemp.Location.Y + "  WHERE Id = " + PictureBoxTemp.Tag + "";
-                    OleDbCommand consulta2 = new OleDbCommand(sql2, conexion);
-                    consulta2.ExecuteNonQuery();
-                }
+                 }
+                 string sql2 = "UPDATE Familia set X = " + PictureBoxTemp.Location.X + ", Y = " + PictureBoxTemp.Location.Y + "  WHERE Id = " + PictureBoxTemp.Tag + "";
+                 OleDbCommand consulta2 = new OleDbCommand(sql2, conexion);
+                 consulta2.ExecuteNonQuery();
             }
         }
 
