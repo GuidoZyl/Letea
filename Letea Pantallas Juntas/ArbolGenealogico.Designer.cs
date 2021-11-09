@@ -46,7 +46,7 @@ namespace Pantalla_Contraseña
             this.btn_Volver.BackColor = System.Drawing.Color.Transparent;
             this.btn_Volver.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Volver.Image = global::Pantalla_Contraseña.Properties.Resources.Boton_Volver;
-            this.btn_Volver.Location = new System.Drawing.Point(30, 27);
+            this.btn_Volver.Location = new System.Drawing.Point(40, 328);
             this.btn_Volver.Name = "btn_Volver";
             this.btn_Volver.Size = new System.Drawing.Size(110, 110);
             this.btn_Volver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -109,6 +109,7 @@ namespace Pantalla_Contraseña
             this.btn_Linea.TabIndex = 26;
             this.btn_Linea.TabStop = false;
             this.btn_Linea.Visible = false;
+            this.btn_Linea.Click += new System.EventHandler(this.btn_Linea_Click);
             // 
             // ArbolGenealogico
             // 
@@ -126,6 +127,8 @@ namespace Pantalla_Contraseña
             this.Text = "ArbolGenealogico";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ArbolGenealogico_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ArbolGenealogico_MouseDown);
+            this.MouseEnter += new System.EventHandler(this.ArbolGenealogico_MouseEnter);
             ((System.ComponentModel.ISupportInitialize)(this.btn_Volver)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Crear)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Editar)).EndInit();

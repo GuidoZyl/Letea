@@ -21,11 +21,18 @@ namespace Pantalla_Contraseña
 
         public static bool Edit = false;
         bool Linea = false;
+        bool cerrado = false;
         int y = 50;
         string Nombre;
         private bool btnDown;
         private int offsetX;
         private int offsetY;
+
+        List<Point> Lista = new List<Point>();
+
+        Pen Lapiz = new Pen(Color.Black, 5);
+        Graphics g;
+
         public ArbolGenealogico()
         {
             InitializeComponent();
@@ -41,6 +48,9 @@ namespace Pantalla_Contraseña
                 btn_Crear.Visible = true;
                 btn_Editar.Visible = true;
             }
+
+            g = CreateGraphics();
+            
 
             string sql = "SELECT * FROM Familia WHERE IDUsuario = " + FormPacientes2.IDPaciente + "";
             OleDbCommand cmd = new OleDbCommand(sql, conexion);
@@ -88,9 +98,14 @@ namespace Pantalla_Contraseña
         private void temp_MouseEnter(object sender, EventArgs e)
         {
             PictureBox PictureBoxTemp = sender as PictureBox;
-            if (FormPantallaLogIn.ModoAdmin && Edit)
+            if (FormPantallaLogIn.ModoAdmin && Edit && !Linea)
             {
                 PictureBoxTemp.Cursor = new Cursor("openhand.cur");
+            }
+
+            else if (Linea)
+            {
+                PictureBoxTemp.Cursor = Cursors.Cross;
             }
             else
             {
@@ -145,26 +160,7 @@ namespace Pantalla_Contraseña
         }
         private void temp_MouseDown(object sender, MouseEventArgs e)
         {
-            PictureBox PictureBoxTemp = sender as PictureBox;
-            if (FormPantallaLogIn.ModoAdmin && Edit)
-            {
-                if (e.Button == MouseButtons.Left)
-                {
-                    if (!Linea)
-                    {
-                        PictureBoxTemp.Cursor = new Cursor("closedhand.cur");
-                        btnDown = true;
-                        offsetX = e.X;
-                        offsetY = e.Y;
-                    }
 
-                    else
-                    {
-                        PictureBoxTemp.Cursor = Cursors.Cross;
-                    }
-                }
-
-            }
         }
 
         private void temp_MouseMove(object sender, MouseEventArgs e)
@@ -219,6 +215,29 @@ namespace Pantalla_Contraseña
             btn_Guardar.Visible = false;
             btn_Editar.Visible = true;
             btn_Linea.Visible = false;
+        }
+
+        private void btn_Linea_Click(object sender, EventArgs e)
+        {
+            Linea = true;
+        }
+
+        private void ArbolGenealogico_MouseEnter(object sender, EventArgs e)
+        {
+            if (Linea)
+            {
+                Cursor = Cursors.Cross;
+            }
+
+            else
+            {
+                Cursor = Cursors.Default;
+            }
+        }
+
+        private void ArbolGenealogico_MouseDown(object sender, MouseEventArgs e)
+        {
+
         }
     }
 }   
