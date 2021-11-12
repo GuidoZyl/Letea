@@ -28,6 +28,9 @@ namespace Pantalla_Contraseña
         private int offsetX;
         private int offsetY;
 
+        int z = 0;
+        int[] PosLinea = new int[4];
+
         List<Point> Lista = new List<Point>();
 
         Pen Lapiz = new Pen(Color.Black, 3);
@@ -94,6 +97,19 @@ namespace Pantalla_Contraseña
 
                 Controls.Add(temp);
             }
+
+            string query = "SELECT * FROM Lineas WHERE IDUsuario = " + FormPacientes2.IDPaciente + "";
+            OleDbCommand comando = new OleDbCommand(query, conexion);
+            OleDbDataAdapter da2 = new OleDbDataAdapter(comando);
+            da2.Fill(ds, "Lineas");
+            
+            for (int i = 0; i < ds.Tables["Lineas"].Rows.Count; i++)
+            {
+                Lista.Add(new Point(Convert.ToInt32(ds.Tables["Lineas"].Rows[i]["X1"]), Convert.ToInt32(ds.Tables["Lineas"].Rows[i]["Y1"])));
+                Lista.Add(new Point(Convert.ToInt32(ds.Tables["Lineas"].Rows[i]["X2"]), Convert.ToInt32(ds.Tables["Lineas"].Rows[i]["Y2"])));
+                g.DrawLine(Lapiz, Lista[0], Lista[1]);
+                Lista.Clear();
+            }
         }
 
         private void temp_MouseEnter(object sender, EventArgs e)
@@ -127,7 +143,7 @@ namespace Pantalla_Contraseña
 
             base.OnPaint(pe);
             var graph = pe.Graphics;
-            var rectContourSmooth = Rectangle.Inflate(PictureBoxPaint.ClientRectangle, -1, -1);
+            var rectContourSmooth = Rectangle.Inflate(PictureBoxPaint.ClientRectangle, 0, 0);
             var rectBorder = Rectangle.Inflate(rectContourSmooth, -borderSize, -borderSize);
             var smoothSize = borderSize > 0 ? borderSize * 3 : 1;
             using (var borderGColor = new LinearGradientBrush(rectBorder, borderColor, borderColor2, gradientAngle))
@@ -182,6 +198,10 @@ namespace Pantalla_Contraseña
                         {
                             g.DrawRectangle(Lapiz, new Rectangle(e.X + PictureBoxTemp.Location.X, e.Y + PictureBoxTemp.Location.Y, 1, 1));
                             Lista.Add(new Point(e.X + PictureBoxTemp.Location.X, e.Y + PictureBoxTemp.Location.Y));
+                            PosLinea[z] = e.X + PictureBoxTemp.Location.X;
+                            PosLinea[z + 1] = e.Y + PictureBoxTemp.Location.Y;
+
+                            z += 2;
                         }
 
                         else if (e.Button == MouseButtons.Right)
@@ -197,10 +217,15 @@ namespace Pantalla_Contraseña
                             cerrado = true;
                         }
 
-                        if (cerrado == true)
+                        if (cerrado)
                         {
+                            string sql = "INSERT INTO Lineas (X1, Y1, X2, Y2, IDUsuario) VALUES (" + PosLinea[0] + ", " + PosLinea[1] + ", " + PosLinea[2] + ", " + PosLinea[3] + ", " + FormPacientes2.IDPaciente + ")";
+                            OleDbCommand cmd = new OleDbCommand(sql, conexion);
+                            cmd.ExecuteNonQuery();
+
                             Lista.Clear();
                             btn_Linea.Visible = true;
+                            z = 0;                           
                         }
                     }
                 }
@@ -298,6 +323,11 @@ namespace Pantalla_Contraseña
                         {
                             g.DrawRectangle(Lapiz, new Rectangle(e.X, e.Y, 1, 1));
                             Lista.Add(new Point(e.X, e.Y));
+
+                            PosLinea[z] = e.X;
+                            PosLinea[z + 1] = e.Y;
+
+                            z += 2;
                         }
 
                         else if (e.Button == MouseButtons.Right)
@@ -315,8 +345,14 @@ namespace Pantalla_Contraseña
 
                         if (cerrado)
                         {
+                            string sql = "INSERT INTO Lineas (X1, Y1, X2, Y2, IDUsuario) VALUES (" + PosLinea[0] + ", " + PosLinea[1] + ", " + PosLinea[2] + ", " + PosLinea[3] + ", " + FormPacientes2.IDPaciente + ")";
+                            OleDbCommand cmd = new OleDbCommand(sql, conexion);
+                            cmd.ExecuteNonQuery();
+
                             Lista.Clear();
                             btn_Linea.Visible = true;
+
+                            z = 0;
                         }
                     }
                 }
