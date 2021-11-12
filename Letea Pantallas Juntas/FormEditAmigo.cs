@@ -161,7 +161,7 @@ namespace Pantalla_Contraseña
             string sql = "DELETE FROM Amigos WHERE Id = " + FormGrupo.IDAmigo + "";
             OleDbCommand cmd = new OleDbCommand(sql, conexion);
             cmd.ExecuteNonQuery();
-            Task.Delay(250).Wait();
+            Task.Delay(700).Wait();
             FormGrupo form = new FormGrupo();
             form.Show();
             this.Hide();

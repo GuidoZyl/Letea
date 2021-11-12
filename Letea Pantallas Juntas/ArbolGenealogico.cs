@@ -179,10 +179,10 @@ namespace Pantalla_Contraseña
                         Cursor = Cursors.Cross;
                         cerrado = false;
                         if (e.Button == MouseButtons.Left)
+                        {
                             g.DrawRectangle(Lapiz, new Rectangle(e.X + PictureBoxTemp.Location.X, e.Y + PictureBoxTemp.Location.Y, 1, 1));
-
-                        if (e.Button == MouseButtons.Left)
                             Lista.Add(new Point(e.X + PictureBoxTemp.Location.X, e.Y + PictureBoxTemp.Location.Y));
+                        }
 
                         else if (e.Button == MouseButtons.Right)
                         {
@@ -192,7 +192,7 @@ namespace Pantalla_Contraseña
 
                         if (Lista.Count > 1)
                         {
-                            g.DrawLine(Lapiz, Lista[Lista.Count - 1], Lista[Lista.Count - 2]);
+                            g.DrawLine(Lapiz, Lista[0], Lista[1]);
                             Linea = false;
                             cerrado = true;
                         }
@@ -295,10 +295,10 @@ namespace Pantalla_Contraseña
                         Cursor = Cursors.Cross;
                         cerrado = false;
                         if (e.Button == MouseButtons.Left)
+                        {
                             g.DrawRectangle(Lapiz, new Rectangle(e.X, e.Y, 1, 1));
-
-                        if (e.Button == MouseButtons.Left)
                             Lista.Add(new Point(e.X, e.Y));
+                        }
 
                         else if (e.Button == MouseButtons.Right)
                         {
@@ -308,7 +308,7 @@ namespace Pantalla_Contraseña
 
                         if (Lista.Count > 1)
                         {
-                            g.DrawLine(LapizAncho, Lista[Lista.Count - 1], Lista[Lista.Count - 2]);
+                            g.DrawLine(LapizAncho, Lista[0], Lista[1]);
                             Linea = false;
                             cerrado = true;
                         }
@@ -320,7 +320,6 @@ namespace Pantalla_Contraseña
                         }
                     }
                 }
-
             }
         }
     }
