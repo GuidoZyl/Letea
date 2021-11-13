@@ -141,7 +141,7 @@ namespace Pantalla_Contraseña
             string sql = "DELETE FROM Familia WHERE Id = " + ArbolGenealogico.IDFamiliar + "";
             OleDbCommand cmd = new OleDbCommand(sql, conexion);
             cmd.ExecuteNonQuery();
-            Task.Delay(700).Wait();
+            Task.Delay(1500).Wait();
             ArbolGenealogico form = new ArbolGenealogico();
             form.Show();
             this.Hide();

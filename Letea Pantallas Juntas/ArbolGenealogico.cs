@@ -173,6 +173,8 @@ namespace Pantalla_Contraseña
                 tempNombre.BackColor = Color.Transparent;
                 tempNombre.Tag = Convert.ToInt32(ds.Tables["Familia"].Rows[i]["Id"]);
 
+                tempNombre.Name = "Nombre_";
+
                 tempNombre.Click += new EventHandler(handlerLabel_Click);
                 tempNombre.Cursor = Cursors.Hand;
                 if (Convert.ToBoolean(ds.Tables["Familia"].Rows[i]["Editado"]) == false)
@@ -370,6 +372,11 @@ namespace Pantalla_Contraseña
             btn_Crear.Visible = true;
             btn_Guardar.Visible = true;
             btn_Linea.Visible = true;
+
+            foreach (Control item in this.Controls.OfType<Label>())
+            {
+                this.Controls.Remove(item);
+            }
         }
        
         private void btn_Guardar_Click(object sender, EventArgs e)
