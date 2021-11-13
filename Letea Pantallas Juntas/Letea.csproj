@@ -526,5 +526,8 @@
   <ItemGroup>
     <None Include="Resources\Eliminar amigo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Eliminar amigo1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

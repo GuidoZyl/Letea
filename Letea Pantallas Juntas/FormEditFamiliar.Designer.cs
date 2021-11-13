@@ -290,7 +290,7 @@ namespace Pantalla_Contraseña
             this.btn_Eliminar.BackColor = System.Drawing.Color.Transparent;
             this.btn_Eliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_Eliminar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Eliminar.Image = global::Pantalla_Contraseña.Properties.Resources.Eliminar_amigo;
+            this.btn_Eliminar.Image = global::Pantalla_Contraseña.Properties.Resources.Eliminar_amigo1;
             this.btn_Eliminar.Location = new System.Drawing.Point(97, 899);
             this.btn_Eliminar.Name = "btn_Eliminar";
             this.btn_Eliminar.Size = new System.Drawing.Size(376, 96);
