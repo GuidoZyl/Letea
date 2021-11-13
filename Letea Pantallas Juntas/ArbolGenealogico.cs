@@ -54,19 +54,46 @@ namespace Pantalla_Contraseña
             }
 
             g = CreateGraphics();
-            
+
 
             string sql = "SELECT * FROM Familia WHERE IDUsuario = " + FormPacientes2.IDPaciente + "";
             OleDbCommand cmd = new OleDbCommand(sql, conexion);
             OleDbDataAdapter da = new OleDbDataAdapter(cmd);
             da.Fill(ds, "Familia");
 
+           /* for (int i = 0; i < ds.Tables["Familia"].Rows.Count; i++)
+            {
+                Label tempNombre = new Label();
+
+                tempNombre.Width = 200;
+                tempNombre.AutoSize = false;
+                tempNombre.Height = 50;
+                tempNombre.Font = new Font("Microsoft Sans Serif", 15F);
+                tempNombre.TextAlign = ContentAlignment.MiddleCenter;
+                tempNombre.Text = ds.Tables["Familia"].Rows[i]["Nombre"].ToString();
+                tempNombre.BackColor = Color.Transparent;
+                if (Convert.ToBoolean(ds.Tables["Familia"].Rows[i]["Editado"]) == false)
+                {
+
+                }
+
+                else
+                {
+                    tempNombre.Location = new Point(Convert.ToInt32(ds.Tables["Familia"].Rows[i]["X"]) - 25, Convert.ToInt32(ds.Tables["Familia"].Rows[i]["Y"]) + 150);
+                }
+                Controls.Add(tempNombre);
+                tempNombre.SendToBack();
+            }*/
+
+           
             for (int i = 0; i < ds.Tables["Familia"].Rows.Count; i++)
             {
                 PictureBox temp = new PictureBox();
+                
 
                 temp.Height = 150;
                 temp.Width = 150;
+                
 
                 MemoryStream ms = new MemoryStream((byte[])ds.Tables["Familia"].Rows[i]["Foto"]);
                 Bitmap bm = new Bitmap(ms);
@@ -96,13 +123,18 @@ namespace Pantalla_Contraseña
                 temp.MouseEnter += new EventHandler(temp_MouseEnter);
 
                 Controls.Add(temp);
+                temp.BringToFront();
             }
-
+            Lineas();
+            Labels();
+        }
+        void Lineas()
+        {
             string query = "SELECT * FROM Lineas WHERE IDUsuario = " + FormPacientes2.IDPaciente + "";
             OleDbCommand comando = new OleDbCommand(query, conexion);
             OleDbDataAdapter da2 = new OleDbDataAdapter(comando);
             da2.Fill(ds, "Lineas");
-            
+
             for (int i = 0; i < ds.Tables["Lineas"].Rows.Count; i++)
             {
                 Lista.Add(new Point(Convert.ToInt32(ds.Tables["Lineas"].Rows[i]["X1"]), Convert.ToInt32(ds.Tables["Lineas"].Rows[i]["Y1"])));
@@ -111,7 +143,33 @@ namespace Pantalla_Contraseña
                 Lista.Clear();
             }
         }
+        void Labels()
+        {
+            for (int i = 0; i < ds.Tables["Familia"].Rows.Count; i++)
+            {
+                Task.Delay(500).Wait();
+                Label tempNombre = new Label();
 
+                tempNombre.Width = 200;
+                tempNombre.AutoSize = false;
+                tempNombre.Height = 50;
+                tempNombre.Font = new Font("Microsoft Sans Serif", 15F);
+                tempNombre.TextAlign = ContentAlignment.MiddleCenter;
+                tempNombre.Text = ds.Tables["Familia"].Rows[i]["Nombre"].ToString();
+                tempNombre.BackColor = Color.Transparent;
+                if (Convert.ToBoolean(ds.Tables["Familia"].Rows[i]["Editado"]) == false)
+                {
+
+                }
+
+                else
+                {
+                    tempNombre.Location = new Point(Convert.ToInt32(ds.Tables["Familia"].Rows[i]["X"]) - 25, Convert.ToInt32(ds.Tables["Familia"].Rows[i]["Y"]) + 150);
+                }
+                Controls.Add(tempNombre);
+                tempNombre.SendToBack();
+            }
+        }
         private void temp_MouseEnter(object sender, EventArgs e)
         {
             PictureBox PictureBoxTemp = sender as PictureBox;
