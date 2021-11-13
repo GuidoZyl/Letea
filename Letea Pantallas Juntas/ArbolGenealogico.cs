@@ -218,7 +218,10 @@ namespace Pantalla_Contraseña
                 this.Hide();
             }
         }
-
+        private void Label_Visible(object sender, EventArgs e)
+        {
+            
+        }
         private void handlerComun_Paint(object sender, PaintEventArgs pe)
         {
             PictureBox PictureBoxPaint = sender as PictureBox;
@@ -368,7 +371,7 @@ namespace Pantalla_Contraseña
             btn_Guardar.Visible = true;
             btn_Linea.Visible = true;
         }
-
+       
         private void btn_Guardar_Click(object sender, EventArgs e)
         {
             Edit = false;
@@ -376,6 +379,8 @@ namespace Pantalla_Contraseña
             btn_Editar.Visible = true;
             btn_Linea.Visible = false;
             btn_Crear.Visible = false;
+            Labels();
+            
         }
 
         private void btn_Linea_Click(object sender, EventArgs e)
