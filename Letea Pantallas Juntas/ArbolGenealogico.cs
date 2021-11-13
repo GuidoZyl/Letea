@@ -18,7 +18,7 @@ namespace Pantalla_Contraseña
         OleDbConnection conexion = new OleDbConnection();
         DataSet ds = new DataSet();
 
-
+        public static int IDFamiliar;
         public static bool Edit = false;
         bool Linea = false;
         bool cerrado = false;
@@ -120,6 +120,7 @@ namespace Pantalla_Contraseña
                 temp.MouseUp += new MouseEventHandler(temp_MouseUp);
                 temp.MouseMove += new MouseEventHandler(temp_MouseMove);
                 temp.MouseEnter += new EventHandler(temp_MouseEnter);
+                temp.Click += new EventHandler(handler_Click);
 
                 Controls.Add(temp);
                 temp.BringToFront();
@@ -142,6 +143,20 @@ namespace Pantalla_Contraseña
                 Lista.Clear();
             }
         }
+
+        private void handlerLabel_Click(object sender, EventArgs e)
+        {
+            if (!Edit)
+            {
+                Label lblClicked = sender as Label;
+                IDFamiliar = Convert.ToInt32(lblClicked.Tag);
+
+                FormEditFamiliar form = new FormEditFamiliar();
+                form.Show();
+                this.Hide();
+            }
+        }
+
         void Labels()
         {
             for (int i = 0; i < ds.Tables["Familia"].Rows.Count; i++)
@@ -156,6 +171,10 @@ namespace Pantalla_Contraseña
                 tempNombre.TextAlign = ContentAlignment.MiddleCenter;
                 tempNombre.Text = ds.Tables["Familia"].Rows[i]["Nombre"].ToString();
                 tempNombre.BackColor = Color.Transparent;
+                tempNombre.Tag = Convert.ToInt32(ds.Tables["Familia"].Rows[i]["Id"]);
+
+                tempNombre.Click += new EventHandler(handlerLabel_Click);
+                tempNombre.Cursor = Cursors.Hand;
                 if (Convert.ToBoolean(ds.Tables["Familia"].Rows[i]["Editado"]) == false)
                 {
 
@@ -183,7 +202,20 @@ namespace Pantalla_Contraseña
             }
             else
             {
-                PictureBoxTemp.Cursor = Cursors.Default;
+                PictureBoxTemp.Cursor = Cursors.Hand;
+            }
+        }
+
+        private void handler_Click(object sender, EventArgs e)
+        {
+            if (!Edit)
+            {
+                PictureBox pictureBoxClicked = sender as PictureBox;
+                IDFamiliar = Convert.ToInt32(pictureBoxClicked.Tag);
+
+                FormEditFamiliar form = new FormEditFamiliar();
+                form.Show();
+                this.Hide();
             }
         }
 

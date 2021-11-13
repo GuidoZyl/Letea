@@ -72,8 +72,8 @@ namespace Pantalla_Contraseña
             {
                 btn_agregarfoto.Image = pic_FotoPerfil.BackgroundImage;
             }
-            string relacion = txt_Parentesco.Text.ToLower();
-            string sql = "INSERT INTO Familia ([Nombre], [Apellido], [Foto], [IDUsuario], [FechadeNacimiento], [RelaciondeParentesco]) VALUES ('" + txt_Nom.Text + "', '" + txt_Apellido.Text + "', @foto, " + FormPacientes2.IDPaciente + ", '"+this.dateTimePicker1.Text+"', '"+relacion+"')";
+
+            string sql = "INSERT INTO Familia ([Nombre], [Apellido], [Foto], [IDUsuario], [FechadeNacimiento], [RelaciondeParentesco]) VALUES ('" + txt_Nom.Text + "', '" + txt_Apellido.Text + "', @foto, " + FormPacientes2.IDPaciente + ", '"+this.dateTimePicker1.Text+"', '"+txt_Parentesco.Text+"')";
 
             MemoryStream ms = new MemoryStream();
             btn_agregarfoto.Image.Save(ms, ImageFormat.Jpeg);

@@ -304,6 +304,7 @@ namespace Pantalla_Contraseña
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Fondo;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.btn_Eliminar);
@@ -328,6 +329,7 @@ namespace Pantalla_Contraseña
             this.Controls.Add(this.btn_Volver);
             this.Name = "FormEditFamiliar";
             this.Text = "FormEditFamiliar";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormEditFamiliar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btn_Volver)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_agregarfoto)).EndInit();

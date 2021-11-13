@@ -66,7 +66,7 @@ namespace Pantalla_Contraseña
 
             conexion.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=.\Base de Datos 4.accdb;";
             conexion.Open();
-            string consulta = "SELECT [Nombre], [Apellido], [Foto], [FechadeNacimiento], [RelaciondeParentesco] FROM Familia WHERE Id = " + FormGrupo.IDAmigo + "";
+            string consulta = "SELECT [Nombre], [Apellido], [Foto], [FechadeNacimiento], [RelaciondeParentesco] FROM Familia WHERE Id = " + ArbolGenealogico.IDFamiliar + "";
             OleDbCommand comando = new OleDbCommand(consulta, conexion);
             OleDbDataAdapter data = new OleDbDataAdapter(comando);
 
@@ -80,6 +80,7 @@ namespace Pantalla_Contraseña
             lbl_Apellido.Text = ds.Tables["InfoAmigo"].Rows[0][1].ToString();
             this.dateTimePicker1.Text = ds.Tables["InfoAmigo"].Rows[0][3].ToString();
             lbl_RelacionParentesco.Text = ds.Tables["InfoAmigo"].Rows[0][4].ToString();
+            txt_Parentesco.Text = ds.Tables["InfoAmigo"].Rows[0][4].ToString();
         }
 
         private void btn_EditarAmigo_Click(object sender, EventArgs e)
@@ -96,13 +97,16 @@ namespace Pantalla_Contraseña
             dateTimePicker1.Enabled = true;
             btn_EditarAmigo.Visible = false;
             btn_agregarfoto.Cursor = Cursors.Hand;
+            txt_Parentesco.Visible = true;
+            txt_Parentesco.Enabled = true;
+            lbl_RelacionParentesco.Visible = false;
 
             ModoEdit = true;
         }
 
         private void btn_Guardar_Click(object sender, EventArgs e)
         {
-            string sql = "UPDATE Familia set [Nombre] = '" + txt_Nom.Text + "', [Apellido] = '" + txt_Apellido.Text + "', [Foto] = @foto, [FechadeNacimiento] = '" + this.dateTimePicker1.Text + "', [RelaciondeParentesco] = '"+txt_Parentesco.Text+"' WHERE Id = " + FormGrupo.IDAmigo + ""; //falta algo acá
+            string sql = "UPDATE Familia set [Nombre] = '" + txt_Nom.Text + "', [Apellido] = '" + txt_Apellido.Text + "', [Foto] = @foto, [FechadeNacimiento] = '" + this.dateTimePicker1.Text + "', [RelaciondeParentesco] = '"+txt_Parentesco.Text+"' WHERE Id = " + ArbolGenealogico.IDFamiliar + "";
 
             MemoryStream ms = new MemoryStream();
             btn_agregarfoto.Image.Save(ms, ImageFormat.Jpeg);
@@ -116,6 +120,7 @@ namespace Pantalla_Contraseña
             btn_EditarAmigo.Visible = true;
             lbl_Apellido.Text = txt_Apellido.Text;
             lbl_Nombre.Text = txt_Nom.Text;
+            lbl_RelacionParentesco.Text = txt_Parentesco.Text;
 
             lbl_Apellido.Visible = true;
             lbl_Nombre.Visible = true;
@@ -124,13 +129,16 @@ namespace Pantalla_Contraseña
             dateTimePicker1.Enabled = false;
             btn_Guardar.Visible = false;
             btn_agregarfoto.Cursor = Cursors.Default;
+            txt_Parentesco.Visible = false;
+            txt_Parentesco.Enabled = false;
+            lbl_RelacionParentesco.Visible = true;
 
             ModoEdit = false;
         }
 
         private void btn_Eliminar_Click(object sender, EventArgs e)
         {
-            string sql = "DELETE FROM Familia WHERE Id = " + FormGrupo.IDAmigo + ""; //falta cambiar IDAmigo
+            string sql = "DELETE FROM Familia WHERE Id = " + ArbolGenealogico.IDFamiliar + "";
             OleDbCommand cmd = new OleDbCommand(sql, conexion);
             cmd.ExecuteNonQuery();
             Task.Delay(700).Wait();
