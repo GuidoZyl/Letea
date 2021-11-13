@@ -132,6 +132,12 @@
     <Compile Include="FormEditAmigo.Designer.cs">
       <DependentUpon>FormEditAmigo.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormEditFamiliar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditFamiliar.Designer.cs">
+      <DependentUpon>FormEditFamiliar.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormGrupo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -229,6 +235,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormEditAmigo.resx">
       <DependentUpon>FormEditAmigo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditFamiliar.resx">
+      <DependentUpon>FormEditFamiliar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormGrupo.resx">
       <DependentUpon>FormGrupo.cs</DependentUpon>

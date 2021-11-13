@@ -42,6 +42,9 @@ namespace Pantalla_Contraseña
             this.btn_Guardar = new System.Windows.Forms.PictureBox();
             this.pic_FotoPerfil = new System.Windows.Forms.PictureBox();
             this.btn_Volver = new System.Windows.Forms.PictureBox();
+            this.lbl_Parentesco = new System.Windows.Forms.Label();
+            this.txt_Parentesco = new System.Windows.Forms.TextBox();
+            this.pic_Parentesco = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.btn_agregarfoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -49,6 +52,7 @@ namespace Pantalla_Contraseña
             ((System.ComponentModel.ISupportInitialize)(this.btn_Guardar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_FotoPerfil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Volver)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Parentesco)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_agregarfoto
@@ -70,7 +74,7 @@ namespace Pantalla_Contraseña
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.label2.Location = new System.Drawing.Point(1087, 284);
+            this.label2.Location = new System.Drawing.Point(1075, 190);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(321, 39);
             this.label2.TabIndex = 27;
@@ -81,7 +85,7 @@ namespace Pantalla_Contraseña
             this.lbl_ApellidoNoEdit.AutoSize = true;
             this.lbl_ApellidoNoEdit.BackColor = System.Drawing.Color.Transparent;
             this.lbl_ApellidoNoEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.lbl_ApellidoNoEdit.Location = new System.Drawing.Point(1086, 486);
+            this.lbl_ApellidoNoEdit.Location = new System.Drawing.Point(1074, 392);
             this.lbl_ApellidoNoEdit.Name = "lbl_ApellidoNoEdit";
             this.lbl_ApellidoNoEdit.Size = new System.Drawing.Size(323, 39);
             this.lbl_ApellidoNoEdit.TabIndex = 26;
@@ -91,7 +95,7 @@ namespace Pantalla_Contraseña
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.label1.Location = new System.Drawing.Point(1087, 661);
+            this.label1.Location = new System.Drawing.Point(1075, 567);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(347, 41);
             this.label1.TabIndex = 25;
@@ -100,13 +104,15 @@ namespace Pantalla_Contraseña
             // dateTimePicker1
             // 
             this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.Transparent;
+            this.dateTimePicker1.CustomFormat = "dd/MM/yyyy";
             this.dateTimePicker1.Enabled = false;
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(1097, 722);
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(1085, 628);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(245, 53);
             this.dateTimePicker1.TabIndex = 19;
+            this.dateTimePicker1.Value = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             // 
             // txt_Apellido
             // 
@@ -114,7 +120,7 @@ namespace Pantalla_Contraseña
             this.txt_Apellido.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Apellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Apellido.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txt_Apellido.Location = new System.Drawing.Point(1094, 551);
+            this.txt_Apellido.Location = new System.Drawing.Point(1082, 457);
             this.txt_Apellido.Name = "txt_Apellido";
             this.txt_Apellido.Size = new System.Drawing.Size(495, 38);
             this.txt_Apellido.TabIndex = 22;
@@ -126,7 +132,7 @@ namespace Pantalla_Contraseña
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Location = new System.Drawing.Point(1091, 540);
+            this.pictureBox2.Location = new System.Drawing.Point(1079, 446);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(500, 60);
             this.pictureBox2.TabIndex = 23;
@@ -138,7 +144,7 @@ namespace Pantalla_Contraseña
             this.txt_Nom.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Nom.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Nom.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txt_Nom.Location = new System.Drawing.Point(1094, 357);
+            this.txt_Nom.Location = new System.Drawing.Point(1082, 263);
             this.txt_Nom.Name = "txt_Nom";
             this.txt_Nom.Size = new System.Drawing.Size(483, 38);
             this.txt_Nom.TabIndex = 20;
@@ -150,7 +156,7 @@ namespace Pantalla_Contraseña
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(1089, 347);
+            this.pictureBox1.Location = new System.Drawing.Point(1077, 253);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(500, 60);
             this.pictureBox1.TabIndex = 21;
@@ -160,7 +166,7 @@ namespace Pantalla_Contraseña
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox3.Location = new System.Drawing.Point(1089, 719);
+            this.pictureBox3.Location = new System.Drawing.Point(1077, 625);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(260, 60);
             this.pictureBox3.TabIndex = 24;
@@ -203,6 +209,41 @@ namespace Pantalla_Contraseña
             this.btn_Volver.TabStop = false;
             this.btn_Volver.Click += new System.EventHandler(this.btn_Volver_Click);
             // 
+            // lbl_Parentesco
+            // 
+            this.lbl_Parentesco.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Parentesco.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.lbl_Parentesco.Location = new System.Drawing.Point(1075, 729);
+            this.lbl_Parentesco.Name = "lbl_Parentesco";
+            this.lbl_Parentesco.Size = new System.Drawing.Size(347, 41);
+            this.lbl_Parentesco.TabIndex = 31;
+            this.lbl_Parentesco.Text = "Esta persona es tu:";
+            // 
+            // txt_Parentesco
+            // 
+            this.txt_Parentesco.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_Parentesco.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_Parentesco.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Parentesco.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.txt_Parentesco.Location = new System.Drawing.Point(1085, 802);
+            this.txt_Parentesco.Name = "txt_Parentesco";
+            this.txt_Parentesco.Size = new System.Drawing.Size(495, 38);
+            this.txt_Parentesco.TabIndex = 32;
+            this.txt_Parentesco.TabStop = false;
+            this.txt_Parentesco.Text = "Introduzca el parentesco";
+            this.txt_Parentesco.Click += new System.EventHandler(this.txt_Parentesco_Click);
+            this.txt_Parentesco.TextChanged += new System.EventHandler(this.txt_Parentesco_TextChanged);
+            // 
+            // pic_Parentesco
+            // 
+            this.pic_Parentesco.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.pic_Parentesco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pic_Parentesco.Location = new System.Drawing.Point(1082, 791);
+            this.pic_Parentesco.Name = "pic_Parentesco";
+            this.pic_Parentesco.Size = new System.Drawing.Size(500, 60);
+            this.pic_Parentesco.TabIndex = 33;
+            this.pic_Parentesco.TabStop = false;
+            // 
             // FormCrearFamiliar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -210,6 +251,9 @@ namespace Pantalla_Contraseña
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Fondo;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.txt_Parentesco);
+            this.Controls.Add(this.pic_Parentesco);
+            this.Controls.Add(this.lbl_Parentesco);
             this.Controls.Add(this.btn_Volver);
             this.Controls.Add(this.pic_FotoPerfil);
             this.Controls.Add(this.btn_Guardar);
@@ -234,6 +278,7 @@ namespace Pantalla_Contraseña
             ((System.ComponentModel.ISupportInitialize)(this.btn_Guardar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_FotoPerfil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Volver)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Parentesco)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -254,5 +299,8 @@ namespace Pantalla_Contraseña
         private System.Windows.Forms.PictureBox btn_Guardar;
         private System.Windows.Forms.PictureBox pic_FotoPerfil;
         private System.Windows.Forms.PictureBox btn_Volver;
+        private System.Windows.Forms.Label lbl_Parentesco;
+        private System.Windows.Forms.TextBox txt_Parentesco;
+        private System.Windows.Forms.PictureBox pic_Parentesco;
     }
 }

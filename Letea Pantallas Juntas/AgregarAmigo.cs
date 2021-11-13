@@ -108,8 +108,8 @@ namespace Pantalla_Contraseña
             {
                 btn_agregarfoto.Image = pic_FotoPerfil.BackgroundImage;
             }
-            
-            string sql = "INSERT into Amigos ([Nombre], [Apellido], [IDGruposdeAmigos], [Foto], [IdUsuario]) values ('" + txt_Nom.Text + "', '"+txt_Apellido.Text+"'," + FormGruposAmigos.IDGrupo + ", @foto, " + FormPacientes2.IDPaciente + ")";
+
+            string sql = "INSERT into Amigos ([Nombre], [Apellido], [IDGruposdeAmigos], [Foto], [IdUsuario], [FechadeNacimiento]) values ('" + txt_Nom.Text + "', '" + txt_Apellido.Text + "'," + FormGruposAmigos.IDGrupo + ", @foto, " + FormPacientes2.IDPaciente + ", '" + this.dateTimePicker1.Text+"')";
             
             MemoryStream ms = new MemoryStream();
             btn_agregarfoto.Image.Save(ms, ImageFormat.Jpeg);

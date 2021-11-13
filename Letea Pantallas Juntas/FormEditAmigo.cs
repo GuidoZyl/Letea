@@ -36,7 +36,7 @@ namespace Pantalla_Contraseña
             
             conexion.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=.\Base de Datos 4.accdb;";
             conexion.Open();
-            string consulta = "SELECT [Nombre], [Apellido], [Foto] FROM Amigos WHERE Id = " + FormGrupo.IDAmigo + "";
+            string consulta = "SELECT [Nombre], [Apellido], [Foto], [FechadeNacimiento] FROM Amigos WHERE Id = " + FormGrupo.IDAmigo + "";
             OleDbCommand comando = new OleDbCommand(consulta, conexion);
             OleDbDataAdapter data = new OleDbDataAdapter(comando);
 
@@ -48,6 +48,7 @@ namespace Pantalla_Contraseña
             btn_agregarfoto.Image = bm;
             lbl_Nombre.Text = ds.Tables["InfoAmigo"].Rows[0][0].ToString();
             lbl_Apellido.Text = ds.Tables["InfoAmigo"].Rows[0][1].ToString();
+            this.dateTimePicker1.Text = ds.Tables["InfoAmigo"].Rows[0][3].ToString();
 
         }
 
@@ -110,7 +111,7 @@ namespace Pantalla_Contraseña
 
         private void btn_Guardar_Click(object sender, EventArgs e)
         {
-            string sql = "UPDATE AMIGOS set [Nombre] = '" + txt_Nom.Text + "', [Apellido] = '" + txt_Apellido.Text + "', [Foto] = @foto WHERE Id = " + FormGrupo.IDAmigo + "";
+            string sql = "UPDATE AMIGOS set [Nombre] = '" + txt_Nom.Text + "', [Apellido] = '" + txt_Apellido.Text + "', [Foto] = @foto, [FechadeNacimiento] = '"+this.dateTimePicker1.Text+"' WHERE Id = " + FormGrupo.IDAmigo + "";
 
             MemoryStream ms = new MemoryStream();
             btn_agregarfoto.Image.Save(ms, ImageFormat.Jpeg);

@@ -22,7 +22,6 @@ namespace Pantalla_Contraseña
         public static bool Edit = false;
         bool Linea = false;
         bool cerrado = false;
-        int y = 50;
         string Nombre;
         private bool btnDown;
         private int offsetX;

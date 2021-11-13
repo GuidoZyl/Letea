@@ -76,7 +76,7 @@ namespace Pantalla_Contraseña
             pic_GrupoAmigo.Image = bm;
 
             //Guardar información de los amigos de la base de datos
-            string consulta1 = "SELECT [Nombre],[Apellido],[Fecha de Nacimiento],[Foto], [Id] FROM Amigos WHERE IdGruposDeAmigos = " + FormGruposAmigos.IDGrupo + "";
+            string consulta1 = "SELECT [Nombre],[Apellido],[FechadeNacimiento],[Foto], [Id] FROM Amigos WHERE IdGruposDeAmigos = " + FormGruposAmigos.IDGrupo + "";
             OleDbCommand comando1 = new OleDbCommand(consulta1, conexion);
             OleDbDataAdapter data1 = new OleDbDataAdapter(comando1);
             data1.Fill(ds, "Amigo");

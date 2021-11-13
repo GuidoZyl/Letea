@@ -72,8 +72,8 @@ namespace Pantalla_Contraseña
             {
                 btn_agregarfoto.Image = pic_FotoPerfil.BackgroundImage;
             }
-
-            string sql = "INSERT INTO Familia ([Nombre], [Apellido], [Foto], [IDUsuario]) VALUES ('" + txt_Nom.Text + "', '" + txt_Apellido.Text + "', @foto, " + FormPacientes2.IDPaciente + ")";
+            string relacion = txt_Parentesco.Text.ToLower();
+            string sql = "INSERT INTO Familia ([Nombre], [Apellido], [Foto], [IDUsuario], [FechadeNacimiento], [RelaciondeParentesco]) VALUES ('" + txt_Nom.Text + "', '" + txt_Apellido.Text + "', @foto, " + FormPacientes2.IDPaciente + ", '"+this.dateTimePicker1.Text+"', '"+relacion+"')";
 
             MemoryStream ms = new MemoryStream();
             btn_agregarfoto.Image.Save(ms, ImageFormat.Jpeg);
@@ -142,6 +142,20 @@ namespace Pantalla_Contraseña
                 FormPrincipal form = new FormPrincipal();
                 form.Show();
                 this.Hide();
+            }
+        }
+
+        private void txt_Parentesco_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_Parentesco_Click(object sender, EventArgs e)
+        {
+            if (txt_Apellido.Text == "Introduzca el parentesco")
+            {
+                txt_Apellido.Text = "";
+                txt_Apellido.ForeColor = SystemColors.WindowText;
             }
         }
     }

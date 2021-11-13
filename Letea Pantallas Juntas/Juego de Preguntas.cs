@@ -20,6 +20,7 @@ namespace Pantalla_Contraseña
 
         string NombreCorrecto;
         string GrupoCorrecto;
+        string RelacionCorrecta;
         int Pregunta;
 
         public FormPreguntas()
@@ -59,9 +60,114 @@ namespace Pantalla_Contraseña
 
             lbl_Pregunta.Text = preguntas[0];
 
-            if (preguntas[0] == "¿Qué parentesco tiene esta persona con usted?")
+            if (preguntas[0] == "¿Cuál es la relación de parentesco con esta persona?")
             {
-                
+                string check = "SELECT * FROM Familia WHERE IDUsuario = " + FormPacientes2.IDPaciente + "";
+                OleDbCommand comando = new OleDbCommand(check, conexion);
+                OleDbDataAdapter data = new OleDbDataAdapter(comando);
+                data.Fill(ds, "Checkeo");
+
+                if (ds.Tables["Checkeo"].Rows.Count > 3)
+                {
+                    ds.Tables["Checkeo"].Clear();
+                    Pregunta = 1;
+
+                    string sql2 = "SELECT Id FROM Familia WHERE IDUsuario = " + FormPacientes2.IDPaciente + "";
+                    OleDbCommand cmd2 = new OleDbCommand(sql2, conexion);
+                    OleDbDataAdapter da2 = new OleDbDataAdapter(cmd2);
+                    da2.Fill(ds, "IdRelacionCorrecta");
+
+                    int[] IdGrupoCorrecta = new int[ds.Tables["IdRelacionCorrecta"].Rows.Count];
+                    for (int i = 0; i < ds.Tables["IdRelacionCorrecta"].Rows.Count; i++)
+                    {
+                        IdGrupoCorrecta[i] = Convert.ToInt32(ds.Tables["IdRelacionCorrecta"].Rows[i]["Id"]);
+                    }
+
+                    //  Random(IdGrupoCorrecta);
+                    Random rnd = new Random();
+                    int PosicionCorrecta = rnd.Next(0, ds.Tables["IdRelacionCorrecta"].Rows.Count);
+
+                    string query = "SELECT * FROM Familia WHERE Id = " + IdGrupoCorrecta[PosicionCorrecta] + " AND IDUsuario = " + FormPacientes2.IDPaciente + "";
+                    OleDbCommand comando2 = new OleDbCommand(query, conexion);
+                    OleDbDataAdapter data2 = new OleDbDataAdapter(comando2);
+                    data2.Fill(ds, "RelacionCorrecto");
+
+                    RelacionCorrecta = Convert.ToString(ds.Tables["RelacionCorrecto"].Rows[0]["RelaciondeParentesco"]);
+
+                    string sql3 = "SELECT * FROM Familia WHERE Id = " + IdGrupoCorrecta[PosicionCorrecta] + " AND IDUsuario = " + FormPacientes2.IDPaciente + "";
+                    OleDbCommand cmd3 = new OleDbCommand(sql3, conexion);
+                    OleDbDataAdapter da3 = new OleDbDataAdapter(cmd3);
+                    da3.Fill(ds, "IdCorrecta");
+
+                    int[] IdCorrecta = new int[ds.Tables["IdCorrecta"].Rows.Count];
+                    for (int i = 0; i < ds.Tables["IdCorrecta"].Rows.Count; i++)
+                    {
+                        IdCorrecta[i] = Convert.ToInt32(ds.Tables["IdCorrecta"].Rows[i]["Id"]);
+                    }
+
+                    Random(IdCorrecta);
+                    int PosicionCorrecta2 = rnd.Next(0, ds.Tables["IdCorrecta"].Rows.Count);
+
+                    MemoryStream ms = new MemoryStream((byte[])ds.Tables["IdCorrecta"].Rows[PosicionCorrecta2]["Foto"]);
+                    Bitmap bm = new Bitmap(ms);
+
+                    pic_Persona.Image = bm;
+                    lbl_Nom.Visible = true;
+                    lbl_Nom.Text = Convert.ToString(ds.Tables["IdCorrecta"].Rows[PosicionCorrecta2]["RelaciondeParentesco"]);
+
+                    string sql4 = "SELECT * FROM Familia WHERE NOT Id = " + IdGrupoCorrecta[PosicionCorrecta] + " AND IDUsuario = " + FormPacientes2.IDPaciente + "";
+                    OleDbCommand cmd4 = new OleDbCommand(sql4, conexion);
+                    OleDbDataAdapter da4 = new OleDbDataAdapter(cmd4);
+                    da4.Fill(ds, "IdIncorrecta");
+
+                    int[] IdIncorrectaTemp = new int[ds.Tables["IdIncorrecta"].Rows.Count];
+                    for (int i = 0; i < ds.Tables["IdIncorrecta"].Rows.Count; i++)
+                    {
+                        IdIncorrectaTemp[i] = Convert.ToInt32(ds.Tables["IdIncorrecta"].Rows[i]["Id"]);
+                    }
+
+                    Random(IdIncorrectaTemp);
+
+                    int[] PosicionesRandom = { 0, 1, 2 };
+                    Random(PosicionesRandom);
+
+                    int[] IdIncorrecta = new int[3];
+                    for (int i = 0; i < 3; i++)
+                    {
+                        IdIncorrecta[i] = IdIncorrectaTemp[PosicionesRandom[i]];
+                    }
+
+                    string sql5 = "SELECT * FROM Familia WHERE (Id = " + IdIncorrecta[0] + " OR Id = " + IdIncorrecta[1] + " OR Id = " + IdIncorrecta[2] + ") AND IDUsuario = " + FormPacientes2.IDPaciente + "";
+                    OleDbCommand cmd5 = new OleDbCommand(sql5, conexion);
+                    OleDbDataAdapter da5 = new OleDbDataAdapter(cmd5);
+                    da5.Fill(ds, "InfoIncorrecta");
+
+                    string[] Opciones = new string[4];
+                    for (int i = 0; i < 3; i++)
+                    {
+                        Opciones[i] = Convert.ToString(ds.Tables["InfoIncorrecta"].Rows[i]["RelaciondeParentesco"]);
+                    }
+                    Opciones[3] = RelacionCorrecta;
+
+                    Random(Opciones);
+
+                    lbl_Res1.Text = Opciones[0];
+                    lbl_Res2.Text = Opciones[1];
+                    lbl_Res3.Text = Opciones[2];
+                    lbl_Res4.Text = Opciones[3];
+
+                    ds.Tables["IdRelacionCorrecta"].Clear();
+                    ds.Tables["IdCorrecta"].Clear();
+                    ds.Tables["IdIncorrecta"].Clear();
+                    ds.Tables["InfoIncorrecta"].Clear();
+                    ds.Tables["RelacionCorrecto"].Clear();
+                }
+
+                else
+                {
+                    ds.Tables["Checkeo"].Clear();
+                    NuevaPregunta();
+                }
             }
 
             else if (preguntas[0] == "¿De dónde conoce usted a esta persona?")
@@ -293,6 +399,18 @@ namespace Pantalla_Contraseña
             else if (Pregunta == 2)
             {
                 if (LabelClicked.Text == GrupoCorrecto)
+                {
+                    MessageBox.Show("Correcto");
+                    NuevaPregunta();
+                }
+                else
+                {
+                    MessageBox.Show("Inténtelo de nuevo");
+                }
+            }
+            else if (Pregunta == 1)
+            {
+                if (LabelClicked.Text == RelacionCorrecta)
                 {
                     MessageBox.Show("Correcto");
                     NuevaPregunta();
