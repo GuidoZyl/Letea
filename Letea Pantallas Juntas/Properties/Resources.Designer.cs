@@ -453,6 +453,16 @@ namespace Pantalla_Contraseña.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap culogris {
+            get {
+                object obj = ResourceManager.GetObject("culogris", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Dave2 {
             get {
                 object obj = ResourceManager.GetObject("Dave2", resourceCulture);
@@ -606,6 +616,36 @@ namespace Pantalla_Contraseña.Properties {
         internal static System.Drawing.Bitmap Frame_14__1_ {
             get {
                 object obj = ResourceManager.GetObject("Frame 14 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Frame_14__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Frame 14 (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Frame_14__3_ {
+            get {
+                object obj = ResourceManager.GetObject("Frame 14 (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Frame_14__4_ {
+            get {
+                object obj = ResourceManager.GetObject("Frame 14 (4)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

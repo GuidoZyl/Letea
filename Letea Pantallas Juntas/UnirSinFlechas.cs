@@ -164,6 +164,13 @@ namespace Pantalla_Contraseña
             lbl_Res4.Tag = NombresTag[PosicionesRandom[3]];
             lbl_Res5.Tag = NombresTag[PosicionesRandom[4]];
             lbl_Res6.Tag = NombresTag[PosicionesRandom[5]];
+            ds.Tables["FotoPersona6"].Clear();
+            ds.Tables["FotoPersona5"].Clear();
+            ds.Tables["FotoPersona4"].Clear();
+            ds.Tables["FotoPersona3"].Clear();
+            ds.Tables["FotoPersona2"].Clear();
+            ds.Tables["FotoPersona1"].Clear();
+            ds.Tables["Familia"].Clear();
         }
         void JuegoAmigo()
         {
@@ -288,6 +295,13 @@ namespace Pantalla_Contraseña
             lbl_Res4.Tag = NombresTag[PosicionesRandom[3]];
             lbl_Res5.Tag = NombresTag[PosicionesRandom[4]];
             lbl_Res6.Tag = NombresTag[PosicionesRandom[5]];
+            ds.Tables["FotoPersona6"].Clear();
+            ds.Tables["FotoPersona5"].Clear();
+            ds.Tables["FotoPersona4"].Clear();
+            ds.Tables["FotoPersona3"].Clear();
+            ds.Tables["FotoPersona2"].Clear();
+            ds.Tables["FotoPersona1"].Clear();
+            ds.Tables["Amigo"].Clear();
         }
 
         bool VerificarCorrecta()
@@ -384,6 +398,7 @@ namespace Pantalla_Contraseña
                 btn_Foto3.Visible == false && btn_Foto4.Visible == false && btn_Foto5.Visible == false && btn_Foto6.Visible == false)
             {
                 MessageBox.Show("GANASTE MOSTROOOOOOOOOOOOOOOOOO");
+                btn_VolveraJugar.Visible = true;
             }
         }
 
@@ -496,11 +511,15 @@ namespace Pantalla_Contraseña
             {
                 if (VerificarCorrecta())
                 {
-                    MessageBox.Show("NASHEEE");
+                    pic_BienHecho.Visible = true;
+                    Task.Delay(1000).Wait();
+                    pic_BienHecho.Visible = false;
                 }
                 else
                 {
-                    MessageBox.Show("sos nefasto");
+                    pic_IntentelodeNuevo.Visible = true;
+                    Task.Delay(1000).Wait();
+                    pic_IntentelodeNuevo.Visible = false;
                 }
                 SiguientePosicion();
                 TagBotonClickeado = 0;
@@ -611,11 +630,15 @@ namespace Pantalla_Contraseña
             {
                 if (VerificarCorrecta())
                 {
-                    MessageBox.Show("NASHEEE");
+                    pic_BienHecho.Visible = true;
+                    Task.Delay(1000).Wait();
+                    pic_BienHecho.Visible = false;
                 }
                 else
                 {
-                    MessageBox.Show("sos nefasto");
+                    pic_IntentelodeNuevo.Visible = true;
+                    Task.Delay(1000).Wait();
+                    pic_IntentelodeNuevo.Visible = false;
                 }
                 SiguientePosicion();
                 TagBotonClickeado = 0;
@@ -708,6 +731,82 @@ namespace Pantalla_Contraseña
             gp.AddArc(r.X + r.Width - d, r.Y + r.Height - d, d, d, 0, 90);
             gp.AddArc(r.X, r.Y + r.Height - d, d, d, 90, 90);
             btn_Foto6.Region = new Region(gp);
+        }
+
+        private void btn_VolveraJugar_Click(object sender, EventArgs e)
+        {
+            if (FormPrincipal.JuegoFamilia)
+            {
+                btn_VolveraJugar.Visible = false;
+                lbl_Res1.Visible = true;
+                lbl_Res2.Visible = true;
+                lbl_Res3.Visible = true;
+                lbl_Res4.Visible = true;
+                lbl_Res5.Visible = true;
+                lbl_Res6.Visible = true;
+                btn_Respuesta1.Visible = true;
+                btn_Respuesta2.Visible = true;
+                btn_Respuesta3.Visible = true;
+                btn_Respuesta4.Visible = true;
+                btn_Respuesta5.Visible = true;
+                btn_Respuesta6.Visible = true;
+                btn_Foto1.Visible = true;
+                btn_Foto2.Visible = true;
+                btn_Foto3.Visible = true;
+                btn_Foto4.Visible = true;
+                btn_Foto5.Visible = true;
+                btn_Foto6.Visible = true;
+                pictureBox1.Visible = true;
+                pictureBox2.Visible = true;
+                pictureBox3.Visible = true;
+                pictureBox4.Visible = true;
+                pictureBox5.Visible = true;
+                pictureBox6.Visible = true;
+                
+                TagBotonClickeado = 0;
+                TagFotoClickeada = 0;
+
+                for (int i = 0; i < 6; i++)
+                {
+                    Nombres[i] = "";
+                    NombresTag[i] = 0;
+                    Numero[i] = 0;
+                }
+                for (int j=0; j<12;j++)
+                {
+                    BotonesClickeados[j] = false;
+                }
+                JuegoFamilia();
+            }
+            else
+            {
+                btn_VolveraJugar.Visible = false;
+                lbl_Res1.Visible = true;
+                lbl_Res2.Visible = true;
+                lbl_Res3.Visible = true;
+                lbl_Res4.Visible = true;
+                lbl_Res5.Visible = true;
+                lbl_Res6.Visible = true;
+                btn_Respuesta1.Visible = true;
+                btn_Respuesta2.Visible = true;
+                btn_Respuesta3.Visible = true;
+                btn_Respuesta4.Visible = true;
+                btn_Respuesta5.Visible = true;
+                btn_Respuesta6.Visible = true;
+                btn_Foto1.Visible = true;
+                btn_Foto2.Visible = true;
+                btn_Foto3.Visible = true;
+                btn_Foto4.Visible = true;
+                btn_Foto5.Visible = true;
+                btn_Foto6.Visible = true;
+                pictureBox1.Visible = true;
+                pictureBox2.Visible = true;
+                pictureBox3.Visible = true;
+                pictureBox4.Visible = true;
+                pictureBox5.Visible = true;
+                pictureBox6.Visible = true;
+                JuegoAmigo();
+            }
         }
     }
 }

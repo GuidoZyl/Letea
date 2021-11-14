@@ -172,3 +172,4 @@ E:\Guido\Documentos\Programación\Letea-Pantallas-Juntas\Letea Pantallas Juntas\
 E:\Guido\Documentos\Programación\Letea-Pantallas-Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.prueba2.resources
 C:\Users\Uriel\Downloads\Letea Pantallas Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.Form1.resources
 C:\Users\Uriel\Downloads\Letea Pantallas Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.prueba2.resources
+C:\Users\Uriel\Downloads\Letea Pantallas Juntas\Letea Pantallas Juntas\obj\Debug\Pantalla_Contraseña.JuegoArbol.resources

@@ -178,6 +178,7 @@ namespace Pantalla_Contraseña
             this.pic_Persona.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_Persona.TabIndex = 31;
             this.pic_Persona.TabStop = false;
+            this.pic_Persona.Click += new System.EventHandler(this.pic_Persona_Click);
             this.pic_Persona.Paint += new System.Windows.Forms.PaintEventHandler(this.pic_Persona_Paint);
             // 
             // lbl_Nom

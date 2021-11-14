@@ -34,6 +34,7 @@ namespace Pantalla_Contraseña
             this.pic_Juegos = new System.Windows.Forms.PictureBox();
             this.btn_Preguntas = new System.Windows.Forms.PictureBox();
             this.btn_AsociandoNombres = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Volver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Config)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Juegos)).BeginInit();
@@ -101,6 +102,16 @@ namespace Pantalla_Contraseña
             this.btn_AsociandoNombres.TabStop = false;
             this.btn_AsociandoNombres.Click += new System.EventHandler(this.btn_AsociandoNombres_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(374, 213);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(108, 69);
+            this.button1.TabIndex = 26;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // JuegosAmigos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -108,6 +119,7 @@ namespace Pantalla_Contraseña
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Fondo;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_AsociandoNombres);
             this.Controls.Add(this.btn_Preguntas);
             this.Controls.Add(this.pic_Juegos);
@@ -132,5 +144,6 @@ namespace Pantalla_Contraseña
         private System.Windows.Forms.PictureBox pic_Juegos;
         private System.Windows.Forms.PictureBox btn_Preguntas;
         private System.Windows.Forms.PictureBox btn_AsociandoNombres;
+        private System.Windows.Forms.Button button1;
     }
 }

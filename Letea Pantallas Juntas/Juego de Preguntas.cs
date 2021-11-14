@@ -791,5 +791,10 @@ namespace Pantalla_Contraseña
             form.Show();
             this.Hide();
         }
+
+        private void pic_Persona_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

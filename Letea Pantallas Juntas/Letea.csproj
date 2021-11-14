@@ -156,6 +156,12 @@
     <Compile Include="Juego de Preguntas.Designer.cs">
       <DependentUpon>Juego de Preguntas.cs</DependentUpon>
     </Compile>
+    <Compile Include="JuegoArbol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JuegoArbol.Designer.cs">
+      <DependentUpon>JuegoArbol.cs</DependentUpon>
+    </Compile>
     <Compile Include="JuegosAmigos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -259,6 +265,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Juego de Preguntas.resx">
       <DependentUpon>Juego de Preguntas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JuegoArbol.resx">
+      <DependentUpon>JuegoArbol.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="JuegosAmigos.resx">
       <DependentUpon>JuegosAmigos.cs</DependentUpon>
@@ -546,6 +555,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Eliminar amigo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Frame 14 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Frame 14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Frame 14 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Frame 14 %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Frame 14 %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\culogris.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
