@@ -43,8 +43,8 @@ namespace Pantalla_Contraseña
             this.pic_FotoPerfil = new System.Windows.Forms.PictureBox();
             this.btn_Volver = new System.Windows.Forms.PictureBox();
             this.lbl_Parentesco = new System.Windows.Forms.Label();
-            this.txt_Parentesco = new System.Windows.Forms.TextBox();
             this.pic_Parentesco = new System.Windows.Forms.PictureBox();
+            this.cmb_Relacion = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.btn_agregarfoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -219,21 +219,6 @@ namespace Pantalla_Contraseña
             this.lbl_Parentesco.TabIndex = 31;
             this.lbl_Parentesco.Text = "Esta persona es tu:";
             // 
-            // txt_Parentesco
-            // 
-            this.txt_Parentesco.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_Parentesco.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_Parentesco.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Parentesco.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txt_Parentesco.Location = new System.Drawing.Point(1085, 802);
-            this.txt_Parentesco.Name = "txt_Parentesco";
-            this.txt_Parentesco.Size = new System.Drawing.Size(495, 38);
-            this.txt_Parentesco.TabIndex = 32;
-            this.txt_Parentesco.TabStop = false;
-            this.txt_Parentesco.Text = "Introduzca el parentesco";
-            this.txt_Parentesco.Click += new System.EventHandler(this.txt_Parentesco_Click);
-            this.txt_Parentesco.TextChanged += new System.EventHandler(this.txt_Parentesco_TextChanged);
-            // 
             // pic_Parentesco
             // 
             this.pic_Parentesco.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -244,6 +229,16 @@ namespace Pantalla_Contraseña
             this.pic_Parentesco.TabIndex = 33;
             this.pic_Parentesco.TabStop = false;
             // 
+            // cmb_Relacion
+            // 
+            this.cmb_Relacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
+            this.cmb_Relacion.FormattingEnabled = true;
+            this.cmb_Relacion.Location = new System.Drawing.Point(1085, 794);
+            this.cmb_Relacion.Name = "cmb_Relacion";
+            this.cmb_Relacion.Size = new System.Drawing.Size(492, 54);
+            this.cmb_Relacion.TabIndex = 34;
+            this.cmb_Relacion.Text = "Elija parentesco";
+            // 
             // FormCrearFamiliar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -251,7 +246,7 @@ namespace Pantalla_Contraseña
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Fondo;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
-            this.Controls.Add(this.txt_Parentesco);
+            this.Controls.Add(this.cmb_Relacion);
             this.Controls.Add(this.pic_Parentesco);
             this.Controls.Add(this.lbl_Parentesco);
             this.Controls.Add(this.btn_Volver);
@@ -300,7 +295,7 @@ namespace Pantalla_Contraseña
         private System.Windows.Forms.PictureBox pic_FotoPerfil;
         private System.Windows.Forms.PictureBox btn_Volver;
         private System.Windows.Forms.Label lbl_Parentesco;
-        private System.Windows.Forms.TextBox txt_Parentesco;
         private System.Windows.Forms.PictureBox pic_Parentesco;
+        private System.Windows.Forms.ComboBox cmb_Relacion;
     }
 }

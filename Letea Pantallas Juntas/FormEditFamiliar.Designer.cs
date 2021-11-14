@@ -31,7 +31,6 @@ namespace Pantalla_Contraseña
         {
             this.btn_Volver = new System.Windows.Forms.PictureBox();
             this.btn_agregarfoto = new System.Windows.Forms.PictureBox();
-            this.txt_Parentesco = new System.Windows.Forms.TextBox();
             this.pic_Parentesco = new System.Windows.Forms.PictureBox();
             this.lbl_Parentesco = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,10 +44,11 @@ namespace Pantalla_Contraseña
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lbl_Nombre = new System.Windows.Forms.Label();
             this.lbl_Apellido = new System.Windows.Forms.Label();
-            this.lbl_RelacionParentesco = new System.Windows.Forms.Label();
             this.btn_EditarAmigo = new System.Windows.Forms.PictureBox();
             this.btn_Guardar = new System.Windows.Forms.PictureBox();
             this.btn_Eliminar = new System.Windows.Forms.PictureBox();
+            this.lbl_RelacionParentesco = new System.Windows.Forms.Label();
+            this.cmb_Relacion = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Volver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_agregarfoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Parentesco)).BeginInit();
@@ -87,19 +87,6 @@ namespace Pantalla_Contraseña
             this.btn_agregarfoto.TabStop = false;
             this.btn_agregarfoto.Click += new System.EventHandler(this.btn_agregarfoto_Click);
             this.btn_agregarfoto.Paint += new System.Windows.Forms.PaintEventHandler(this.btn_agregarfoto_Paint);
-            // 
-            // txt_Parentesco
-            // 
-            this.txt_Parentesco.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_Parentesco.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_Parentesco.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Parentesco.ForeColor = System.Drawing.Color.Black;
-            this.txt_Parentesco.Location = new System.Drawing.Point(1000, 775);
-            this.txt_Parentesco.Name = "txt_Parentesco";
-            this.txt_Parentesco.Size = new System.Drawing.Size(495, 38);
-            this.txt_Parentesco.TabIndex = 44;
-            this.txt_Parentesco.TabStop = false;
-            this.txt_Parentesco.Text = "Introduzca el parentesco";
             // 
             // pic_Parentesco
             // 
@@ -244,17 +231,6 @@ namespace Pantalla_Contraseña
             this.lbl_Apellido.TabIndex = 46;
             this.lbl_Apellido.Text = "asdfgj";
             // 
-            // lbl_RelacionParentesco
-            // 
-            this.lbl_RelacionParentesco.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.lbl_RelacionParentesco.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.lbl_RelacionParentesco.ForeColor = System.Drawing.Color.Black;
-            this.lbl_RelacionParentesco.Location = new System.Drawing.Point(1000, 775);
-            this.lbl_RelacionParentesco.Name = "lbl_RelacionParentesco";
-            this.lbl_RelacionParentesco.Size = new System.Drawing.Size(481, 42);
-            this.lbl_RelacionParentesco.TabIndex = 48;
-            this.lbl_RelacionParentesco.Text = "asdfgj";
-            // 
             // btn_EditarAmigo
             // 
             this.btn_EditarAmigo.BackColor = System.Drawing.Color.Transparent;
@@ -300,6 +276,28 @@ namespace Pantalla_Contraseña
             this.btn_Eliminar.Visible = false;
             this.btn_Eliminar.Click += new System.EventHandler(this.btn_Eliminar_Click);
             // 
+            // lbl_RelacionParentesco
+            // 
+            this.lbl_RelacionParentesco.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.lbl_RelacionParentesco.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.lbl_RelacionParentesco.ForeColor = System.Drawing.Color.Black;
+            this.lbl_RelacionParentesco.Location = new System.Drawing.Point(999, 775);
+            this.lbl_RelacionParentesco.Name = "lbl_RelacionParentesco";
+            this.lbl_RelacionParentesco.Size = new System.Drawing.Size(481, 42);
+            this.lbl_RelacionParentesco.TabIndex = 48;
+            this.lbl_RelacionParentesco.Text = "asdfgj";
+            // 
+            // cmb_Relacion
+            // 
+            this.cmb_Relacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
+            this.cmb_Relacion.FormattingEnabled = true;
+            this.cmb_Relacion.Location = new System.Drawing.Point(997, 766);
+            this.cmb_Relacion.Name = "cmb_Relacion";
+            this.cmb_Relacion.Size = new System.Drawing.Size(492, 54);
+            this.cmb_Relacion.TabIndex = 52;
+            this.cmb_Relacion.Text = "Elija parentesco";
+            this.cmb_Relacion.Visible = false;
+            // 
             // FormEditFamiliar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -307,13 +305,13 @@ namespace Pantalla_Contraseña
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Fondo;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.cmb_Relacion);
             this.Controls.Add(this.btn_Eliminar);
             this.Controls.Add(this.btn_Guardar);
             this.Controls.Add(this.btn_EditarAmigo);
             this.Controls.Add(this.lbl_RelacionParentesco);
             this.Controls.Add(this.lbl_Nombre);
             this.Controls.Add(this.lbl_Apellido);
-            this.Controls.Add(this.txt_Parentesco);
             this.Controls.Add(this.pic_Parentesco);
             this.Controls.Add(this.lbl_Parentesco);
             this.Controls.Add(this.label2);
@@ -349,7 +347,6 @@ namespace Pantalla_Contraseña
 
         private System.Windows.Forms.PictureBox btn_Volver;
         private System.Windows.Forms.PictureBox btn_agregarfoto;
-        private System.Windows.Forms.TextBox txt_Parentesco;
         private System.Windows.Forms.PictureBox pic_Parentesco;
         private System.Windows.Forms.Label lbl_Parentesco;
         private System.Windows.Forms.Label label2;
@@ -363,9 +360,10 @@ namespace Pantalla_Contraseña
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label lbl_Nombre;
         private System.Windows.Forms.Label lbl_Apellido;
-        private System.Windows.Forms.Label lbl_RelacionParentesco;
         private System.Windows.Forms.PictureBox btn_EditarAmigo;
         private System.Windows.Forms.PictureBox btn_Guardar;
         private System.Windows.Forms.PictureBox btn_Eliminar;
+        private System.Windows.Forms.Label lbl_RelacionParentesco;
+        private System.Windows.Forms.ComboBox cmb_Relacion;
     }
 }

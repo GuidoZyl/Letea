@@ -26,7 +26,7 @@ namespace Pantalla_Contraseña
             InitializeComponent();
             txt_Nom.Visible = false;
             txt_Apellido.Visible = false;
-            txt_Parentesco.Visible = false;
+            cmb_Relacion.Visible = false;
         }
 
         private void btn_Volver_Click(object sender, EventArgs e)
@@ -66,6 +66,20 @@ namespace Pantalla_Contraseña
 
             conexion.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=.\Base de Datos 4.accdb;";
             conexion.Open();
+
+            string sql = "SELECT * FROM Relaciones";
+            OleDbCommand cmd = new OleDbCommand(sql, conexion);
+            OleDbDataAdapter da = new OleDbDataAdapter(cmd);
+            da.Fill(ds, "Relaciones");
+
+            string[] relaciones = new string[ds.Tables["Relaciones"].Rows.Count];
+
+            for (int i = 0; i < ds.Tables["Relaciones"].Rows.Count; i++)
+            {
+                relaciones[i] = ds.Tables["Relaciones"].Rows[i]["Relacion"].ToString();
+                cmb_Relacion.Items.Add(relaciones[i]);
+            }
+
             string consulta = "SELECT [Nombre], [Apellido], [Foto], [FechadeNacimiento], [RelaciondeParentesco] FROM Familia WHERE Id = " + ArbolGenealogico.IDFamiliar + "";
             OleDbCommand comando = new OleDbCommand(consulta, conexion);
             OleDbDataAdapter data = new OleDbDataAdapter(comando);
@@ -80,7 +94,7 @@ namespace Pantalla_Contraseña
             lbl_Apellido.Text = ds.Tables["InfoAmigo"].Rows[0][1].ToString();
             this.dateTimePicker1.Text = ds.Tables["InfoAmigo"].Rows[0][3].ToString();
             lbl_RelacionParentesco.Text = ds.Tables["InfoAmigo"].Rows[0][4].ToString();
-            txt_Parentesco.Text = ds.Tables["InfoAmigo"].Rows[0][4].ToString();
+            cmb_Relacion.Text = ds.Tables["InfoAmigo"].Rows[0][4].ToString();
         }
 
         private void btn_EditarAmigo_Click(object sender, EventArgs e)
@@ -97,8 +111,8 @@ namespace Pantalla_Contraseña
             dateTimePicker1.Enabled = true;
             btn_EditarAmigo.Visible = false;
             btn_agregarfoto.Cursor = Cursors.Hand;
-            txt_Parentesco.Visible = true;
-            txt_Parentesco.Enabled = true;
+            cmb_Relacion.Visible = true;
+            cmb_Relacion.Enabled = true;
             lbl_RelacionParentesco.Visible = false;
 
             ModoEdit = true;
@@ -106,7 +120,7 @@ namespace Pantalla_Contraseña
 
         private void btn_Guardar_Click(object sender, EventArgs e)
         {
-            string sql = "UPDATE Familia set [Nombre] = '" + txt_Nom.Text + "', [Apellido] = '" + txt_Apellido.Text + "', [Foto] = @foto, [FechadeNacimiento] = '" + this.dateTimePicker1.Text + "', [RelaciondeParentesco] = '"+txt_Parentesco.Text+"' WHERE Id = " + ArbolGenealogico.IDFamiliar + "";
+            string sql = "UPDATE Familia set [Nombre] = '" + txt_Nom.Text + "', [Apellido] = '" + txt_Apellido.Text + "', [Foto] = @foto, [FechadeNacimiento] = '" + this.dateTimePicker1.Text + "', [RelaciondeParentesco] = '"+cmb_Relacion.SelectedItem+"' WHERE Id = " + ArbolGenealogico.IDFamiliar + "";
 
             MemoryStream ms = new MemoryStream();
             btn_agregarfoto.Image.Save(ms, ImageFormat.Jpeg);
@@ -120,7 +134,7 @@ namespace Pantalla_Contraseña
             btn_EditarAmigo.Visible = true;
             lbl_Apellido.Text = txt_Apellido.Text;
             lbl_Nombre.Text = txt_Nom.Text;
-            lbl_RelacionParentesco.Text = txt_Parentesco.Text;
+            lbl_RelacionParentesco.Text = cmb_Relacion.SelectedItem.ToString();
 
             lbl_Apellido.Visible = true;
             lbl_Nombre.Visible = true;
@@ -129,8 +143,8 @@ namespace Pantalla_Contraseña
             dateTimePicker1.Enabled = false;
             btn_Guardar.Visible = false;
             btn_agregarfoto.Cursor = Cursors.Default;
-            txt_Parentesco.Visible = false;
-            txt_Parentesco.Enabled = false;
+            cmb_Relacion.Visible = false;
+            cmb_Relacion.Enabled = false;
             lbl_RelacionParentesco.Visible = true;
 
             ModoEdit = false;

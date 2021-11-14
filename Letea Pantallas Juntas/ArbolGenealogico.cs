@@ -88,6 +88,7 @@ namespace Pantalla_Contraseña
         {
             btn_Volver.Visible = false;
             btn_Editar.Visible = false;
+            btn_Jugar.Visible = false;
             Labels();
             button1.Visible = false;
             Task.Delay(1000).Wait();
@@ -114,6 +115,10 @@ namespace Pantalla_Contraseña
                 DocumentoParaImprimir.DefaultPageSettings.Landscape = true;
                 DocumentoParaImprimir.Print();
             }
+
+            FormPrincipal form = new FormPrincipal();
+            form.Show();
+            this.Hide();
         }
 
         private void ArbolGenealogico_Load(object sender, EventArgs e)
@@ -449,6 +454,7 @@ namespace Pantalla_Contraseña
             btn_Guardar.Visible = true;
             btn_Linea.Visible = true;
             btn_EliminarLineas.Visible = true;
+            btn_Jugar.Visible = false;
 
             foreach (Control item in this.Controls.OfType<Label>())
             {
@@ -464,6 +470,7 @@ namespace Pantalla_Contraseña
             btn_Linea.Visible = false;
             btn_Crear.Visible = false;
             btn_EliminarLineas.Visible = false;
+            btn_Jugar.Visible = true;
             //Labels();
 
         }
@@ -553,7 +560,9 @@ namespace Pantalla_Contraseña
 
         private void btn_Jugar_Click(object sender, EventArgs e)
         {
-
+            JuegosAmigos form = new JuegosAmigos();
+            form.Show();
+            this.Hide();
         }
     }
 }   

@@ -45,7 +45,20 @@ namespace Pantalla_Contraseña
         private void FormCrearFamiliar_Load(object sender, EventArgs e)
         {
             conexion.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=.\Base de Datos 4.accdb;";
-            conexion.Open();            
+            conexion.Open();
+
+            string sql = "SELECT * FROM Relaciones";
+            OleDbCommand cmd = new OleDbCommand(sql, conexion);
+            OleDbDataAdapter da = new OleDbDataAdapter(cmd);
+            da.Fill(ds, "Relaciones");
+
+            string[] relaciones = new string[ds.Tables["Relaciones"].Rows.Count];
+
+            for (int i = 0; i < ds.Tables["Relaciones"].Rows.Count; i++)
+            {
+                relaciones[i] = ds.Tables["Relaciones"].Rows[i]["Relacion"].ToString();
+                cmb_Relacion.Items.Add(relaciones[i]);
+            }
         }
 
         private void txt_Nom_Click(object sender, EventArgs e)
@@ -73,7 +86,7 @@ namespace Pantalla_Contraseña
                 btn_agregarfoto.Image = pic_FotoPerfil.BackgroundImage;
             }
 
-            string sql = "INSERT INTO Familia ([Nombre], [Apellido], [Foto], [IDUsuario], [FechadeNacimiento], [RelaciondeParentesco]) VALUES ('" + txt_Nom.Text + "', '" + txt_Apellido.Text + "', @foto, " + FormPacientes2.IDPaciente + ", '"+this.dateTimePicker1.Text+"', '"+txt_Parentesco.Text+"')";
+            string sql = "INSERT INTO Familia ([Nombre], [Apellido], [Foto], [IDUsuario], [FechadeNacimiento], [RelaciondeParentesco]) VALUES ('" + txt_Nom.Text + "', '" + txt_Apellido.Text + "', @foto, " + FormPacientes2.IDPaciente + ", '"+this.dateTimePicker1.Text+"', '"+cmb_Relacion.SelectedItem+"')";
 
             MemoryStream ms = new MemoryStream();
             btn_agregarfoto.Image.Save(ms, ImageFormat.Jpeg);
@@ -148,15 +161,6 @@ namespace Pantalla_Contraseña
         private void txt_Parentesco_TextChanged(object sender, EventArgs e)
         {
 
-        }
-
-        private void txt_Parentesco_Click(object sender, EventArgs e)
-        {
-            if (txt_Parentesco.Text == "Introduzca el parentesco")
-            {
-                txt_Parentesco.Text = "";
-                txt_Parentesco.ForeColor = Color.Black;
-            }
         }
     }
 }
