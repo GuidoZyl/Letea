@@ -5,6 +5,8 @@ using System.Data;
 using System.Data.OleDb;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Drawing.Imaging;
+using System.Drawing.Printing;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -37,9 +39,81 @@ namespace Pantalla_Contraseña
 
         Graphics g;
 
+        private PrintDocument DocumentoParaImprimir = new PrintDocument();
+        private PrintDialog Impresora = new PrintDialog();
+        private PrintPreviewDialog VistaPrevia = new PrintPreviewDialog();
+        private Bitmap bmp;
+
         public ArbolGenealogico()
         {
             InitializeComponent();
+
+            DocumentoParaImprimir.PrintPage +=
+                new PrintPageEventHandler(DocumentoParaImprimir_PrintPage);
+        }
+
+        void DocumentoParaImprimir_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            e.Graphics.DrawImage(bmp, 0, 0, bmp.Width - 864, bmp.Height - 458);
+        }
+
+        private void CapturaFormulario()
+        {
+            Graphics mygraphics = this.CreateGraphics();
+            Size sz = this.ClientRectangle.Size;
+            bmp = new Bitmap(sz.Width, sz.Height, mygraphics);
+            Graphics memoryGraphics = Graphics.FromImage(bmp);
+            IntPtr dc1 = mygraphics.GetHdc();
+            IntPtr dc2 = memoryGraphics.GetHdc();
+            BitBlt(dc2, 0, 0, this.ClientRectangle.Width,
+                   this.ClientRectangle.Height, dc1, 0, 0, 13369376);
+            mygraphics.ReleaseHdc(dc1);
+            memoryGraphics.ReleaseHdc(dc2);
+
+            bmp.Save("Captura.bmp", ImageFormat.Bmp);
+        }
+
+        [System.Runtime.InteropServices.DllImport("gdi32.dll")]
+        public static extern long BitBlt(IntPtr hdcDest,
+            int nXDest,
+            int nYDest,
+            int nWidth,
+            int nHeight,
+            IntPtr hdcSrc,
+            int nXSrc,
+            int nYSrc,
+            int dwRop);
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            btn_Volver.Visible = false;
+            btn_Editar.Visible = false;
+            Labels();
+            button1.Visible = false;
+            Task.Delay(500).Wait();
+            CapturaFormulario();
+
+            pic_Captura.ImageLocation = "Captura.bmp";
+            pic_Captura.Visible = true;
+            pic_Captura.BringToFront();
+            button2.Visible = true;
+            button2.BringToFront();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            button2.Visible = false;
+            Task.Delay(500).Wait();
+            CapturaFormulario();
+
+            Impresora.Document = DocumentoParaImprimir;
+            DialogResult Result = Impresora.ShowDialog();
+
+            if (Result == DialogResult.OK)
+            {
+                DocumentoParaImprimir.DefaultPageSettings.Landscape = true;
+                DocumentoParaImprimir.Print();
+            }
         }
 
         private void ArbolGenealogico_Load(object sender, EventArgs e)
@@ -125,8 +199,8 @@ namespace Pantalla_Contraseña
                 Controls.Add(temp);
                 temp.BringToFront();
             }
+            //Labels();
             Lineas();
-            Labels();
         }
         void Lineas()
         {
@@ -161,7 +235,6 @@ namespace Pantalla_Contraseña
         {
             for (int i = 0; i < ds.Tables["Familia"].Rows.Count; i++)
             {
-                Task.Delay(500).Wait();
                 Label tempNombre = new Label();
 
                 tempNombre.Width = 200;
@@ -260,6 +333,7 @@ namespace Pantalla_Contraseña
 
         private void btn_Crear_Click(object sender, EventArgs e)
         {
+            Edit = false;
             FormCrearFamiliar form = new FormCrearFamiliar();
             form.Show();
             this.Hide();
@@ -386,7 +460,7 @@ namespace Pantalla_Contraseña
             btn_Editar.Visible = true;
             btn_Linea.Visible = false;
             btn_Crear.Visible = false;
-            Labels();
+            //Labels();
             
         }
 
@@ -459,6 +533,8 @@ namespace Pantalla_Contraseña
                 }
             }
         }
+
+        
     }
 }   
 
