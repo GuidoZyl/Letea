@@ -38,6 +38,7 @@ namespace Pantalla_Contraseña
             this.pic_Captura = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.btn_EliminarLineas = new System.Windows.Forms.PictureBox();
+            this.btn_Jugar = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Volver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Crear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Editar)).BeginInit();
@@ -45,6 +46,7 @@ namespace Pantalla_Contraseña
             ((System.ComponentModel.ISupportInitialize)(this.btn_Linea)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Captura)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_EliminarLineas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Jugar)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Volver
@@ -162,6 +164,18 @@ namespace Pantalla_Contraseña
             this.btn_EliminarLineas.Visible = false;
             this.btn_EliminarLineas.Click += new System.EventHandler(this.btn_EliminarLineas_Click);
             // 
+            // btn_Jugar
+            // 
+            this.btn_Jugar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Jugar.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Boton_jugar;
+            this.btn_Jugar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Jugar.Location = new System.Drawing.Point(30, 884);
+            this.btn_Jugar.Name = "btn_Jugar";
+            this.btn_Jugar.Size = new System.Drawing.Size(307, 122);
+            this.btn_Jugar.TabIndex = 37;
+            this.btn_Jugar.TabStop = false;
+            this.btn_Jugar.Click += new System.EventHandler(this.btn_Jugar_Click);
+            // 
             // ArbolGenealogico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -169,6 +183,7 @@ namespace Pantalla_Contraseña
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Fondo;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.btn_Jugar);
             this.Controls.Add(this.btn_EliminarLineas);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -191,6 +206,7 @@ namespace Pantalla_Contraseña
             ((System.ComponentModel.ISupportInitialize)(this.btn_Linea)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Captura)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_EliminarLineas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Jugar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -206,5 +222,6 @@ namespace Pantalla_Contraseña
         private System.Windows.Forms.PictureBox pic_Captura;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox btn_EliminarLineas;
+        private System.Windows.Forms.PictureBox btn_Jugar;
     }
 }

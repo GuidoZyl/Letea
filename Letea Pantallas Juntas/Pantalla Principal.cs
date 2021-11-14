@@ -16,6 +16,7 @@ namespace Pantalla_Contraseña
         OleDbConnection conexion = new OleDbConnection();
         DataSet ds = new DataSet();
 
+        public static bool JuegoFamilia;
         public FormPrincipal()
         {
             InitializeComponent();
@@ -66,6 +67,8 @@ namespace Pantalla_Contraseña
             {
                 conexion.Close();
 
+                JuegoFamilia = false;
+
                 FormGruposAmigos form = new FormGruposAmigos();
                 form.Show();
                 this.Hide();
@@ -92,6 +95,8 @@ namespace Pantalla_Contraseña
             if (ultimo > 0)
             {
                 conexion.Close();
+
+                JuegoFamilia = true;
 
                 ArbolGenealogico form = new ArbolGenealogico();
                 form.Show();

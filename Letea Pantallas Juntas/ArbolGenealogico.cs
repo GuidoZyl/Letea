@@ -434,6 +434,8 @@ namespace Pantalla_Contraseña
 
         private void btn_Volver_Click(object sender, EventArgs e)
         {
+            FormPrincipal.JuegoFamilia = false;
+
             FormPrincipal form = new FormPrincipal();
             form.Show();
             this.Hide();
@@ -546,6 +548,11 @@ namespace Pantalla_Contraseña
             OleDbCommand cmd = new OleDbCommand(sql, conexion);
             cmd.ExecuteNonQuery();
             // falta agregar form de carga
+
+        }
+
+        private void btn_Jugar_Click(object sender, EventArgs e)
+        {
 
         }
     }

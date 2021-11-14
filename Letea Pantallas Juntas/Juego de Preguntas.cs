@@ -43,6 +43,7 @@ namespace Pantalla_Contraseña
 
         void NuevaPregunta()
         {
+            
             lbl_Nom.Visible = false;
             string sql = "SELECT * FROM JuegoPreguntas";
             OleDbCommand cmd = new OleDbCommand(sql, conexion);
