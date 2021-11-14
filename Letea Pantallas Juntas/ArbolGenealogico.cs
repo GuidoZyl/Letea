@@ -91,7 +91,11 @@ namespace Pantalla_Contraseña
             btn_Jugar.Visible = false;
             Labels();
             button1.Visible = false;
-            Task.Delay(1000).Wait();
+            Task.Delay(1500).Wait();
+            Task.Delay(1500).Wait();
+            Task.Delay(1500).Wait();
+            Task.Delay(1500).Wait();
+
             CapturaFormulario();
 
             pic_Captura.ImageLocation = "Captura.bmp";
@@ -132,6 +136,37 @@ namespace Pantalla_Contraseña
             }
 
             g = CreateGraphics();
+            string sql2 = "SELECT * FROM Usuario WHERE Id = "+FormPacientes2.IDPaciente+"";
+            OleDbCommand cmd2 = new OleDbCommand(sql2, conexion);
+            OleDbDataAdapter da2 = new OleDbDataAdapter(cmd2);
+            da2.Fill(ds, "Usuarios");
+
+            PictureBox usuario = new PictureBox();
+            usuario.Height = 150;
+            usuario.Width = 150;
+
+
+            MemoryStream ms1 = new MemoryStream((byte[])ds.Tables["Usuarios"].Rows[0]["Foto"]);
+            Bitmap bm1 = new Bitmap(ms1);
+            usuario.Image = bm1;
+
+            usuario.SizeMode = PictureBoxSizeMode.StretchImage;
+
+            if (!Convert.ToBoolean(ds.Tables["Usuarios"].Rows[0]["Editado"]))
+            {
+                usuario.Location = new Point(30, 200);
+            }
+            else
+            {
+                usuario.Location = new Point(Convert.ToInt32(ds.Tables["Usuarios"].Rows[0]["X"]), Convert.ToInt32(ds.Tables["Usuarios"].Rows[0]["Y"]));
+            }
+            usuario.Paint += new PaintEventHandler(handlerComun_Paint);
+            usuario.MouseDown += new MouseEventHandler(temp_MouseDown);
+            usuario.MouseUp += new MouseEventHandler(temp_MouseUsuarioUp);
+            usuario.MouseMove += new MouseEventHandler(temp_MouseMove);
+            usuario.MouseEnter += new EventHandler(temp_MouseEnter);
+            Controls.Add(usuario);
+            usuario.BringToFront();
 
 
             string sql = "SELECT * FROM Familia WHERE IDUsuario = " + FormPacientes2.IDPaciente + "";
@@ -255,18 +290,26 @@ namespace Pantalla_Contraseña
 
                 tempNombre.Click += new EventHandler(handlerLabel_Click);
                 tempNombre.Cursor = Cursors.Hand;
-                if (Convert.ToBoolean(ds.Tables["Familia"].Rows[i]["Editado"]) == false)
-                {
-
-                }
-
-                else
-                {
-                    tempNombre.Location = new Point(Convert.ToInt32(ds.Tables["Familia"].Rows[i]["X"]) - 25, Convert.ToInt32(ds.Tables["Familia"].Rows[i]["Y"]) + 150);
-                }
+                tempNombre.Location = new Point(Convert.ToInt32(ds.Tables["Familia"].Rows[i]["X"]) - 25, Convert.ToInt32(ds.Tables["Familia"].Rows[i]["Y"]) + 150);
+                
                 Controls.Add(tempNombre);
                 tempNombre.SendToBack();
             }
+            Label usuariomio = new Label();
+            usuariomio.Width = 200;
+            usuariomio.AutoSize = false;
+            usuariomio.Height = 50;
+            usuariomio.Font = new Font("Microsoft Sans Serif", 15F);
+            usuariomio.TextAlign = ContentAlignment.MiddleCenter;
+            usuariomio.Text = ds.Tables["Usuarios"].Rows[0]["NombreCompleto"].ToString();
+            usuariomio.BackColor = Color.Transparent;
+            usuariomio.Tag = Convert.ToInt32(ds.Tables["Usuarios"].Rows[0]["Id"]);
+
+            usuariomio.Name = "Nombre_";
+            usuariomio.Cursor = Cursors.Hand;
+            usuariomio.Location = new Point(Convert.ToInt32(ds.Tables["Usuarios"].Rows[0]["X"]) - 25, Convert.ToInt32(ds.Tables["Usuarios"].Rows[0]["Y"]) + 150);
+            Controls.Add(usuariomio);
+            usuariomio.SendToBack();
         }
         private void temp_MouseEnter(object sender, EventArgs e)
         {
@@ -298,10 +341,7 @@ namespace Pantalla_Contraseña
                 this.Hide();
             }
         }
-        private void Label_Visible(object sender, EventArgs e)
-        {
-
-        }
+      
         private void handlerComun_Paint(object sender, PaintEventArgs pe)
         {
             PictureBox PictureBoxPaint = sender as PictureBox;
@@ -432,6 +472,22 @@ namespace Pantalla_Contraseña
                     btnDown = false;
                 }
                 string sql2 = "UPDATE Familia set X = " + PictureBoxTemp.Location.X + ", Y = " + PictureBoxTemp.Location.Y + ",  Editado = " + true + " WHERE Id = " + PictureBoxTemp.Tag + "";
+                OleDbCommand consulta2 = new OleDbCommand(sql2, conexion);
+                consulta2.ExecuteNonQuery();
+            }
+        }
+        private void temp_MouseUsuarioUp(object sender, MouseEventArgs e)
+        {
+            if (FormPantallaLogIn.ModoAdmin && Edit)
+            {
+                PictureBox PictureBoxTemp = sender as PictureBox;
+
+                if (e.Button == MouseButtons.Left)
+                {
+                    PictureBoxTemp.Cursor = new Cursor("openhand.cur");
+                    btnDown = false;
+                }
+                string sql2 = "UPDATE Usuario set X = " + PictureBoxTemp.Location.X + ", Y = " + PictureBoxTemp.Location.Y + ",  Editado = " + true + " WHERE Id = " + FormPacientes2.IDPaciente + "";
                 OleDbCommand consulta2 = new OleDbCommand(sql2, conexion);
                 consulta2.ExecuteNonQuery();
             }
