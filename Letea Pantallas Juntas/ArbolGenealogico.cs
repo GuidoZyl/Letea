@@ -273,7 +273,12 @@ namespace Pantalla_Contraseña
 
         void Labels()
         {
-            for (int i = 0; i < ds.Tables["Familia"].Rows.Count; i++)
+            string sql = "SELECT * FROM Familia WHERE IDUsuario = " + FormPacientes2.IDPaciente + "";
+            OleDbCommand cmd = new OleDbCommand(sql, conexion);
+            OleDbDataAdapter da = new OleDbDataAdapter(cmd);
+            da.Fill(ds, "Labels");
+
+            for (int i = 0; i < ds.Tables["Labels"].Rows.Count; i++)
             {
                 Label tempNombre = new Label();
 
@@ -282,32 +287,38 @@ namespace Pantalla_Contraseña
                 tempNombre.Height = 50;
                 tempNombre.Font = new Font("Microsoft Sans Serif", 15F);
                 tempNombre.TextAlign = ContentAlignment.MiddleCenter;
-                tempNombre.Text = ds.Tables["Familia"].Rows[i]["Nombre"].ToString();
+                tempNombre.Text = ds.Tables["Labels"].Rows[i]["Nombre"].ToString();
                 tempNombre.BackColor = Color.Transparent;
-                tempNombre.Tag = Convert.ToInt32(ds.Tables["Familia"].Rows[i]["Id"]);
+                tempNombre.Tag = Convert.ToInt32(ds.Tables["Labels"].Rows[i]["Id"]);
 
                 tempNombre.Name = "Nombre_";
 
                 tempNombre.Click += new EventHandler(handlerLabel_Click);
                 tempNombre.Cursor = Cursors.Hand;
-                tempNombre.Location = new Point(Convert.ToInt32(ds.Tables["Familia"].Rows[i]["X"]) - 25, Convert.ToInt32(ds.Tables["Familia"].Rows[i]["Y"]) + 150);
+                tempNombre.Location = new Point(Convert.ToInt32(ds.Tables["Labels"].Rows[i]["X"]) - 25, Convert.ToInt32(ds.Tables["Labels"].Rows[i]["Y"]) + 150);
                 
                 Controls.Add(tempNombre);
                 tempNombre.SendToBack();
             }
+
+            string sql2 = "SELECT * FROM Usuario WHERE Id = " + FormPacientes2.IDPaciente + "";
+            OleDbCommand cmd2 = new OleDbCommand(sql2, conexion);
+            OleDbDataAdapter da2 = new OleDbDataAdapter(cmd2);
+            da2.Fill(ds, "User");
+
             Label usuariomio = new Label();
             usuariomio.Width = 200;
             usuariomio.AutoSize = false;
             usuariomio.Height = 50;
             usuariomio.Font = new Font("Microsoft Sans Serif", 15F);
             usuariomio.TextAlign = ContentAlignment.MiddleCenter;
-            usuariomio.Text = ds.Tables["Usuarios"].Rows[0]["NombreCompleto"].ToString();
+            usuariomio.Text = ds.Tables["User"].Rows[0]["NombreCompleto"].ToString();
             usuariomio.BackColor = Color.Transparent;
-            usuariomio.Tag = Convert.ToInt32(ds.Tables["Usuarios"].Rows[0]["Id"]);
+            usuariomio.Tag = Convert.ToInt32(ds.Tables["User"].Rows[0]["Id"]);
 
             usuariomio.Name = "Nombre_";
             usuariomio.Cursor = Cursors.Hand;
-            usuariomio.Location = new Point(Convert.ToInt32(ds.Tables["Usuarios"].Rows[0]["X"]) - 25, Convert.ToInt32(ds.Tables["Usuarios"].Rows[0]["Y"]) + 150);
+            usuariomio.Location = new Point(Convert.ToInt32(ds.Tables["User"].Rows[0]["X"]) - 25, Convert.ToInt32(ds.Tables["User"].Rows[0]["Y"]) + 150);
             Controls.Add(usuariomio);
             usuariomio.SendToBack();
         }

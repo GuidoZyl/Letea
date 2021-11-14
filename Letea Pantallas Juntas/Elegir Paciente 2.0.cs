@@ -58,7 +58,7 @@ namespace Pantalla_Contraseña
             conexion.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=.\Base de Datos 4.accdb;";
             conexion.Open();
 
-            string sql = "Select [NombreCompleto], [Foto] from Usuario";
+            string sql = "Select [NombreCompleto], [Foto] from Usuario WHERE NOT Id = 23";
             OleDbCommand comando = new OleDbCommand(sql, conexion);
             OleDbDataAdapter data = new OleDbDataAdapter(comando);
 

@@ -67,10 +67,10 @@ namespace Pantalla_Contraseña
             Bitmap bm = new Bitmap(ms);
 
             btn_Foto1.Image = bm;
-            btn_Foto1.Tag = RowAmigo[0];
+            btn_Foto1.Tag = RowAmigo[0] + 1;
 
             Nombres[0] = ds.Tables["FotoPersona1"].Rows[RowAmigo[0]]["Nombre"].ToString() + " " + ds.Tables["FotoPersona1"].Rows[RowAmigo[0]]["Apellido"].ToString();
-            NombresTag[0] = RowAmigo[0];
+            NombresTag[0] = RowAmigo[0] + 1;
 
             string sql3 = "SELECT [Foto],[Nombre] FROM Familia WHERE IDUsuario = " + FormPacientes2.IDPaciente + "";
             OleDbCommand cmd3 = new OleDbCommand(sql3, conexion);
@@ -82,10 +82,10 @@ namespace Pantalla_Contraseña
             Bitmap bm1 = new Bitmap(ms1);
 
             btn_Foto2.Image = bm1;
-            btn_Foto2.Tag = RowAmigo[1];
+            btn_Foto2.Tag = RowAmigo[1] + 1;
 
             Nombres[1] = ds.Tables["FotoPersona2"].Rows[RowAmigo[1]]["Nombre"].ToString() + " " + ds.Tables["FotoPersona1"].Rows[RowAmigo[1]]["Apellido"].ToString();
-            NombresTag[1] = RowAmigo[1];
+            NombresTag[1] = RowAmigo[1] + 1;
 
             string sql4 = "SELECT [Foto],[Nombre] FROM Familia WHERE IDUsuario = " + FormPacientes2.IDPaciente + "";
             OleDbCommand cmd4 = new OleDbCommand(sql4, conexion);
@@ -97,10 +97,10 @@ namespace Pantalla_Contraseña
             Bitmap bm2 = new Bitmap(ms2);
 
             btn_Foto3.Image = bm2;
-            btn_Foto3.Tag = RowAmigo[2];
+            btn_Foto3.Tag = RowAmigo[2] + 1;
 
             Nombres[2] = ds.Tables["FotoPersona3"].Rows[RowAmigo[2]]["Nombre"].ToString() + " " + ds.Tables["FotoPersona1"].Rows[RowAmigo[2]]["Apellido"].ToString();
-            NombresTag[2] = RowAmigo[2];
+            NombresTag[2] = RowAmigo[2] + 1;
 
             string sql5 = "SELECT [Foto],[Nombre] FROM Familia WHERE IDUsuario = " + FormPacientes2.IDPaciente + "";
             OleDbCommand cmd5 = new OleDbCommand(sql5, conexion);
@@ -112,10 +112,10 @@ namespace Pantalla_Contraseña
             Bitmap bm3 = new Bitmap(ms3);
 
             btn_Foto4.Image = bm3;
-            btn_Foto4.Tag = RowAmigo[3];
+            btn_Foto4.Tag = RowAmigo[3] + 1;
 
             Nombres[3] = ds.Tables["FotoPersona4"].Rows[RowAmigo[3]]["Nombre"].ToString() + " " + ds.Tables["FotoPersona1"].Rows[RowAmigo[3]]["Apellido"].ToString();
-            NombresTag[3] = RowAmigo[3];
+            NombresTag[3] = RowAmigo[3] + 1;
 
             string sql6 = "SELECT [Foto],[Nombre] FROM Familia WHERE IDUsuario = " + FormPacientes2.IDPaciente + "";
             OleDbCommand cmd6 = new OleDbCommand(sql6, conexion);
@@ -127,10 +127,10 @@ namespace Pantalla_Contraseña
             Bitmap bm4 = new Bitmap(ms4);
 
             btn_Foto5.Image = bm4;
-            btn_Foto5.Tag = RowAmigo[4];
+            btn_Foto5.Tag = RowAmigo[4] + 1;
 
             Nombres[4] = ds.Tables["FotoPersona5"].Rows[RowAmigo[4]]["Nombre"].ToString() + " " + ds.Tables["FotoPersona1"].Rows[RowAmigo[4]]["Apellido"].ToString();
-            NombresTag[4] = RowAmigo[4];
+            NombresTag[4] = RowAmigo[4] + 1;
 
             string sql7 = "SELECT [Foto],[Nombre] FROM Familia WHERE IDUsuario = " + FormPacientes2.IDPaciente + "";
             OleDbCommand cmd7 = new OleDbCommand(sql7, conexion);
@@ -142,10 +142,10 @@ namespace Pantalla_Contraseña
             Bitmap bm5 = new Bitmap(ms5);
 
             btn_Foto6.Image = bm5;
-            btn_Foto6.Tag = RowAmigo[5];
+            btn_Foto6.Tag = RowAmigo[5] + 1;
 
             Nombres[5] = ds.Tables["FotoPersona6"].Rows[RowAmigo[5]]["Nombre"].ToString() + " " + ds.Tables["FotoPersona1"].Rows[RowAmigo[5]]["Apellido"].ToString();
-            NombresTag[5] = RowAmigo[5];
+            NombresTag[5] = RowAmigo[5] + 1;
 
             int[] PosicionesRandom = { 0, 1, 2, 3, 4, 5 };
 
@@ -164,25 +164,6 @@ namespace Pantalla_Contraseña
             lbl_Res4.Tag = NombresTag[PosicionesRandom[3]];
             lbl_Res5.Tag = NombresTag[PosicionesRandom[4]];
             lbl_Res6.Tag = NombresTag[PosicionesRandom[5]];
-
-            /*Numero[0] = RowAmigo[0];
-            Numero[1] = RowAmigo[1];
-            Numero[2] = RowAmigo[2];
-            Numero[3] = RowAmigo[3];
-            Numero[4] = RowAmigo[4];
-            Numero[5] = RowAmigo[5];
-
-            Random(Numero);
-            btn_Respuesta1.Tag = Numero[0];
-            btn_Respuesta2.Tag = Numero[1];
-            btn_Respuesta3.Tag = Numero[2];
-            btn_Respuesta4.Tag = Numero[3];
-            btn_Respuesta5.Tag = Numero[4];
-            btn_Respuesta6.Tag = Numero[5];
-            if (btn_Foto1.Tag == btn_Respuesta1.Tag)
-            {
-
-            }*/
         }
         void JuegoAmigo()
         {
@@ -210,10 +191,10 @@ namespace Pantalla_Contraseña
             Bitmap bm = new Bitmap(ms);
 
             btn_Foto1.Image = bm;
-            btn_Foto1.Tag = RowAmigo[0];
+            btn_Foto1.Tag = RowAmigo[0] + 1;
 
             Nombres[0] = ds.Tables["FotoPersona1"].Rows[RowAmigo[0]]["Nombre"].ToString() + " " + ds.Tables["FotoPersona1"].Rows[RowAmigo[0]]["Apellido"].ToString();
-            NombresTag[0] = RowAmigo[0];
+            NombresTag[0] = RowAmigo[0] + 1;
 
             string sql3 = "SELECT [Foto],[Nombre] FROM Amigos WHERE IDUsuario = " + FormPacientes2.IDPaciente + "";
             OleDbCommand cmd3 = new OleDbCommand(sql3, conexion);
@@ -225,10 +206,10 @@ namespace Pantalla_Contraseña
             Bitmap bm1 = new Bitmap(ms1);
 
             btn_Foto2.Image = bm1;
-            btn_Foto2.Tag = RowAmigo[1];
+            btn_Foto2.Tag = RowAmigo[1] + 1;
 
             Nombres[1] = ds.Tables["FotoPersona2"].Rows[RowAmigo[1]]["Nombre"].ToString() + " " + ds.Tables["FotoPersona1"].Rows[RowAmigo[1]]["Apellido"].ToString();
-            NombresTag[1] = RowAmigo[1];
+            NombresTag[1] = RowAmigo[1] + 1;
 
             string sql4 = "SELECT [Foto],[Nombre] FROM Amigos WHERE IDUsuario = " + FormPacientes2.IDPaciente + "";
             OleDbCommand cmd4 = new OleDbCommand(sql4, conexion);
@@ -240,10 +221,10 @@ namespace Pantalla_Contraseña
             Bitmap bm2 = new Bitmap(ms2);
 
             btn_Foto3.Image = bm2;
-            btn_Foto3.Tag = RowAmigo[2];
+            btn_Foto3.Tag = RowAmigo[2] + 1;
 
             Nombres[2] = ds.Tables["FotoPersona3"].Rows[RowAmigo[2]]["Nombre"].ToString() + " " + ds.Tables["FotoPersona1"].Rows[RowAmigo[2]]["Apellido"].ToString();
-            NombresTag[2] = RowAmigo[2];
+            NombresTag[2] = RowAmigo[2] + 1;
 
             string sql5 = "SELECT [Foto],[Nombre] FROM Amigos WHERE IDUsuario = " + FormPacientes2.IDPaciente + "";
             OleDbCommand cmd5 = new OleDbCommand(sql5, conexion);
@@ -255,10 +236,10 @@ namespace Pantalla_Contraseña
             Bitmap bm3 = new Bitmap(ms3);
 
             btn_Foto4.Image = bm3;
-            btn_Foto4.Tag = RowAmigo[3];
+            btn_Foto4.Tag = RowAmigo[3] + 1;
 
             Nombres[3] = ds.Tables["FotoPersona4"].Rows[RowAmigo[3]]["Nombre"].ToString() + " " + ds.Tables["FotoPersona1"].Rows[RowAmigo[3]]["Apellido"].ToString();
-            NombresTag[3] = RowAmigo[3];
+            NombresTag[3] = RowAmigo[3] + 1;
 
             string sql6 = "SELECT [Foto],[Nombre] FROM Amigos WHERE IDUsuario = " + FormPacientes2.IDPaciente + "";
             OleDbCommand cmd6 = new OleDbCommand(sql6, conexion);
@@ -270,10 +251,10 @@ namespace Pantalla_Contraseña
             Bitmap bm4 = new Bitmap(ms4);
 
             btn_Foto5.Image = bm4;
-            btn_Foto5.Tag = RowAmigo[4];
+            btn_Foto5.Tag = RowAmigo[4] + 1;
 
             Nombres[4] = ds.Tables["FotoPersona5"].Rows[RowAmigo[4]]["Nombre"].ToString() + " " + ds.Tables["FotoPersona1"].Rows[RowAmigo[4]]["Apellido"].ToString();
-            NombresTag[4] = RowAmigo[4];
+            NombresTag[4] = RowAmigo[4] + 1;
 
             string sql7 = "SELECT [Foto],[Nombre] FROM Amigos WHERE IDUsuario = " + FormPacientes2.IDPaciente + "";
             OleDbCommand cmd7 = new OleDbCommand(sql7, conexion);
@@ -285,10 +266,10 @@ namespace Pantalla_Contraseña
             Bitmap bm5 = new Bitmap(ms5);
 
             btn_Foto6.Image = bm5;
-            btn_Foto6.Tag = RowAmigo[5];
+            btn_Foto6.Tag = RowAmigo[5] + 1;
 
             Nombres[5] = ds.Tables["FotoPersona6"].Rows[RowAmigo[5]]["Nombre"].ToString() + " " + ds.Tables["FotoPersona1"].Rows[RowAmigo[5]]["Apellido"].ToString();
-            NombresTag[5] = RowAmigo[5];
+            NombresTag[5] = RowAmigo[5] + 1;
 
             int[] PosicionesRandom = { 0, 1, 2, 3, 4, 5};
 
@@ -307,25 +288,6 @@ namespace Pantalla_Contraseña
             lbl_Res4.Tag = NombresTag[PosicionesRandom[3]];
             lbl_Res5.Tag = NombresTag[PosicionesRandom[4]];
             lbl_Res6.Tag = NombresTag[PosicionesRandom[5]];
-
-            /*Numero[0] = RowAmigo[0];
-            Numero[1] = RowAmigo[1];
-            Numero[2] = RowAmigo[2];
-            Numero[3] = RowAmigo[3];
-            Numero[4] = RowAmigo[4];
-            Numero[5] = RowAmigo[5];
-
-            Random(Numero);
-            btn_Respuesta1.Tag = Numero[0];
-            btn_Respuesta2.Tag = Numero[1];
-            btn_Respuesta3.Tag = Numero[2];
-            btn_Respuesta4.Tag = Numero[3];
-            btn_Respuesta5.Tag = Numero[4];
-            btn_Respuesta6.Tag = Numero[5];
-            if (btn_Foto1.Tag == btn_Respuesta1.Tag)
-            {
-
-            }*/
         }
 
         bool VerificarCorrecta()

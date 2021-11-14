@@ -19,9 +19,19 @@ namespace Pantalla_Contraseña
 
         private void btn_Volver_Click(object sender, EventArgs e)
         {
-            FormGruposAmigos form = new FormGruposAmigos();
-            form.Show();
-            this.Hide();
+            if (!FormPrincipal.JuegoFamilia)
+            {
+                FormGruposAmigos form = new FormGruposAmigos();
+                form.Show();
+                this.Hide();
+            }
+
+            else
+            {
+                ArbolGenealogico form = new ArbolGenealogico();
+                form.Show();
+                this.Hide();
+            }
         }
 
         private void btn_Config_Click(object sender, EventArgs e)

@@ -112,7 +112,7 @@ namespace Pantalla_Contraseña
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(245, 53);
             this.dateTimePicker1.TabIndex = 19;
-            this.dateTimePicker1.Value = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dateTimePicker1.Value = new System.DateTime(2050, 12, 31, 0, 0, 0, 0);
             // 
             // txt_Apellido
             // 

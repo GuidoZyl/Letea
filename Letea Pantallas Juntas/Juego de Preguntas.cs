@@ -21,6 +21,7 @@ namespace Pantalla_Contraseña
         string NombreCorrecto;
         string GrupoCorrecto;
         string RelacionCorrecta;
+        string FechaCorrecta;
         int Pregunta;
 
         public FormPreguntas()
@@ -60,7 +61,7 @@ namespace Pantalla_Contraseña
 
             Random rnd = new Random();
 
-            int x = rnd.Next(0, 2);
+            int x = rnd.Next(0, 3);
 
             lbl_Pregunta.Text = preguntas[x];
 
@@ -239,6 +240,108 @@ namespace Pantalla_Contraseña
                     Opciones[i] = Convert.ToString(ds.Tables["InfoIncorrecta"].Rows[i]["Nombre"]);
                 }
                 Opciones[3] = NombreCorrecto;
+
+                Random(Opciones);
+
+                lbl_Res1.Text = Opciones[0];
+                lbl_Res2.Text = Opciones[1];
+                lbl_Res3.Text = Opciones[2];
+                lbl_Res4.Text = Opciones[3];
+
+                ds.Tables["IdCorrecta"].Clear();
+                ds.Tables["InfoCorrecta"].Clear();
+                ds.Tables["IdIncorrecta"].Clear();
+                ds.Tables["InfoIncorrecta"].Clear();
+            }
+
+            else if (preguntas[x] == "¿Cuándo cumple años esta persona?")
+            {
+                Pregunta = 4;
+
+                string sql2 = "SELECT * FROM Familia WHERE NOT FechadeNacimiento = 31/12/2050 AND IDUsuario = " + FormPacientes2.IDPaciente + "";
+                OleDbCommand cmd2 = new OleDbCommand(sql2, conexion);
+                OleDbDataAdapter da2 = new OleDbDataAdapter(cmd2);
+                da2.Fill(ds, "IdCorrecta");
+
+                int[] IdCorrecta = new int[ds.Tables["IdCorrecta"].Rows.Count];
+                for (int i = 0; i < ds.Tables["IdCorrecta"].Rows.Count; i++)
+                {
+                    IdCorrecta[i] = Convert.ToInt32(ds.Tables["IdCorrecta"].Rows[i]["Id"]);
+                }
+
+                Random(IdCorrecta);
+
+                Random rnd3 = new Random();
+                int PosicionCorrecta = rnd3.Next(0, ds.Tables["IdCorrecta"].Rows.Count);
+
+                string sql3 = "SELECT * FROM Familia WHERE Id = " + IdCorrecta[PosicionCorrecta] + " AND IDUsuario = " + FormPacientes2.IDPaciente + "";
+                OleDbCommand cmd3 = new OleDbCommand(sql3, conexion);
+                OleDbDataAdapter da3 = new OleDbDataAdapter(cmd3);
+                da3.Fill(ds, "InfoCorrecta");
+
+                FechaCorrecta = Convert.ToString(ds.Tables["InfoCorrecta"].Rows[0]["FechadeNacimiento"]);
+
+                lbl_Nom.Visible = true;
+                lbl_Nom.Text = ds.Tables["InfoCorrecta"].Rows[0]["Nombre"].ToString();
+
+                string temp = "";
+
+                for (int i = 0; i < 3 || FechaCorrecta[i] != '/'; i++)
+                {
+                    temp += FechaCorrecta[i];
+                }
+
+                FechaCorrecta = temp;
+                temp = "";
+
+                MemoryStream ms = new MemoryStream((byte[])ds.Tables["InfoCorrecta"].Rows[0]["Foto"]);
+
+                Bitmap bm = new Bitmap(ms);
+
+                pic_Persona.Image = bm;
+
+                string sql4 = "SELECT Id FROM Familia WHERE NOT Id = " + IdCorrecta[PosicionCorrecta] + " AND IDUsuario = " + FormPacientes2.IDPaciente + " AND NOT FechadeNacimiento = 31/12/2050";
+                OleDbCommand cmd4 = new OleDbCommand(sql4, conexion);
+                OleDbDataAdapter da4 = new OleDbDataAdapter(cmd4);
+                da4.Fill(ds, "IdIncorrecta");
+
+                int[] IdIncorrectaTemp = new int[ds.Tables["IdIncorrecta"].Rows.Count];
+                for (int i = 0; i < ds.Tables["IdIncorrecta"].Rows.Count; i++)
+                {
+                    IdIncorrectaTemp[i] = Convert.ToInt32(ds.Tables["IdIncorrecta"].Rows[i]["Id"]);
+                }
+
+                Random(IdIncorrectaTemp);
+
+                int[] PosicionesRandom = { 0, 1, 2 };
+
+                Random(PosicionesRandom);
+
+                int[] IdIncorrecta = new int[3];
+                for (int i = 0; i < 3; i++)
+                {
+                    IdIncorrecta[i] = IdIncorrectaTemp[PosicionesRandom[i]];
+                }
+
+                string sql5 = "SELECT * FROM Familia WHERE (Id = " + IdIncorrecta[0] + " OR Id = " + IdIncorrecta[1] + " OR Id = " + IdIncorrecta[2] + ") AND IDUsuario = " + FormPacientes2.IDPaciente + "";
+                OleDbCommand cmd5 = new OleDbCommand(sql5, conexion);
+                OleDbDataAdapter da5 = new OleDbDataAdapter(cmd5);
+                da5.Fill(ds, "InfoIncorrecta");
+
+                string[] Opciones = new string[4];
+                for (int i = 0; i < 3; i++)
+                {
+                    Opciones[i] = Convert.ToString(ds.Tables["InfoIncorrecta"].Rows[i]["FechadeNacimiento"]);
+                    
+                    for (int k = 0; k < 3 || Opciones[i][k] != '/'; k++)
+                    {
+                        temp += Opciones[i][k];
+                    }
+
+                    Opciones[i] = temp;
+                    temp = "";
+                }
+                Opciones[3] = FechaCorrecta;
 
                 Random(Opciones);
 
@@ -462,6 +565,108 @@ namespace Pantalla_Contraseña
                 ds.Tables["IdIncorrecta"].Clear();
                 ds.Tables["InfoIncorrecta"].Clear();
             }
+
+            else if (preguntas[0] == "¿Cuándo cumple años esta persona?")
+            {
+                Pregunta = 4;
+
+                string sql2 = "SELECT * FROM Amigos WHERE NOT FechadeNacimiento = 31/12/2050 AND IDUsuario = " + FormPacientes2.IDPaciente + "";
+                OleDbCommand cmd2 = new OleDbCommand(sql2, conexion);
+                OleDbDataAdapter da2 = new OleDbDataAdapter(cmd2);
+                da2.Fill(ds, "IdCorrecta");
+
+                int[] IdCorrecta = new int[ds.Tables["IdCorrecta"].Rows.Count];
+                for (int i = 0; i < ds.Tables["IdCorrecta"].Rows.Count; i++)
+                {
+                    IdCorrecta[i] = Convert.ToInt32(ds.Tables["IdCorrecta"].Rows[i]["Id"]);
+                }
+
+                Random(IdCorrecta);
+
+                Random rnd3 = new Random();
+                int PosicionCorrecta = rnd3.Next(0, ds.Tables["IdCorrecta"].Rows.Count);
+
+                string sql3 = "SELECT * FROM Amigos WHERE Id = " + IdCorrecta[PosicionCorrecta] + " AND IDUsuario = " + FormPacientes2.IDPaciente + "";
+                OleDbCommand cmd3 = new OleDbCommand(sql3, conexion);
+                OleDbDataAdapter da3 = new OleDbDataAdapter(cmd3);
+                da3.Fill(ds, "InfoCorrecta");
+
+                FechaCorrecta = Convert.ToString(ds.Tables["InfoCorrecta"].Rows[0]["FechadeNacimiento"]);
+
+                lbl_Nom.Visible = true;
+                lbl_Nom.Text = ds.Tables["InfoCorrecta"].Rows[0]["Nombre"].ToString();
+
+                string temp = "";
+
+                for (int i = 0; i < 3 || FechaCorrecta[i] != '/'; i++)
+                {
+                    temp += FechaCorrecta[i];
+                }
+
+                FechaCorrecta = temp;
+                temp = "";
+
+                MemoryStream ms = new MemoryStream((byte[])ds.Tables["InfoCorrecta"].Rows[0]["Foto"]);
+
+                Bitmap bm = new Bitmap(ms);
+
+                pic_Persona.Image = bm;
+
+                string sql4 = "SELECT Id FROM Amigos WHERE NOT Id = " + IdCorrecta[PosicionCorrecta] + " AND IDUsuario = " + FormPacientes2.IDPaciente + " AND NOT FechadeNacimiento = 31/12/2050";
+                OleDbCommand cmd4 = new OleDbCommand(sql4, conexion);
+                OleDbDataAdapter da4 = new OleDbDataAdapter(cmd4);
+                da4.Fill(ds, "IdIncorrecta");
+
+                int[] IdIncorrectaTemp = new int[ds.Tables["IdIncorrecta"].Rows.Count];
+                for (int i = 0; i < ds.Tables["IdIncorrecta"].Rows.Count; i++)
+                {
+                    IdIncorrectaTemp[i] = Convert.ToInt32(ds.Tables["IdIncorrecta"].Rows[i]["Id"]);
+                }
+
+                Random(IdIncorrectaTemp);
+
+                int[] PosicionesRandom = { 0, 1, 2 };
+
+                Random(PosicionesRandom);
+
+                int[] IdIncorrecta = new int[3];
+                for (int i = 0; i < 3; i++)
+                {
+                    IdIncorrecta[i] = IdIncorrectaTemp[PosicionesRandom[i]];
+                }
+
+                string sql5 = "SELECT * FROM Amigos WHERE (Id = " + IdIncorrecta[0] + " OR Id = " + IdIncorrecta[1] + " OR Id = " + IdIncorrecta[2] + ") AND IDUsuario = " + FormPacientes2.IDPaciente + "";
+                OleDbCommand cmd5 = new OleDbCommand(sql5, conexion);
+                OleDbDataAdapter da5 = new OleDbDataAdapter(cmd5);
+                da5.Fill(ds, "InfoIncorrecta");
+
+                string[] Opciones = new string[4];
+                for (int i = 0; i < 3; i++)
+                {
+                    Opciones[i] = Convert.ToString(ds.Tables["InfoIncorrecta"].Rows[i]["FechadeNacimiento"]);
+
+                    for (int k = 0; k < 3 || Opciones[i][k] != '/'; k++)
+                    {
+                        temp += Opciones[i][k];
+                    }
+
+                    Opciones[i] = temp;
+                    temp = "";
+                }
+                Opciones[3] = FechaCorrecta;
+
+                Random(Opciones);
+
+                lbl_Res1.Text = Opciones[0];
+                lbl_Res2.Text = Opciones[1];
+                lbl_Res3.Text = Opciones[2];
+                lbl_Res4.Text = Opciones[3];
+
+                ds.Tables["IdCorrecta"].Clear();
+                ds.Tables["InfoCorrecta"].Clear();
+                ds.Tables["IdIncorrecta"].Clear();
+                ds.Tables["InfoIncorrecta"].Clear();
+            }
         }
 
         private void Juego_de_Preguntas_Load(object sender, EventArgs e)
@@ -522,6 +727,19 @@ namespace Pantalla_Contraseña
                         MessageBox.Show("Inténtelo de nuevo");
                     }
                 }
+
+                else if (Pregunta == 4)
+                {
+                    if (LabelClicked.Text == FechaCorrecta)
+                    {
+                        MessageBox.Show("Correcto");
+                        NuevaPreguntaAmigos();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Inténtelo de nuevo");
+                    }
+                }
             }
 
             else
@@ -542,6 +760,19 @@ namespace Pantalla_Contraseña
                 else if (Pregunta == 3)
                 {
                     if (LabelClicked.Text == NombreCorrecto)
+                    {
+                        MessageBox.Show("Correcto");
+                        NuevaPreguntaFamilia();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Inténtelo de nuevo");
+                    }
+                }
+
+                else if (Pregunta == 4)
+                {
+                    if (LabelClicked.Text == FechaCorrecta)
                     {
                         MessageBox.Show("Correcto");
                         NuevaPreguntaFamilia();
