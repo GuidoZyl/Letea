@@ -152,10 +152,10 @@ namespace Pantalla_Contraseña
 
         private void txt_Parentesco_Click(object sender, EventArgs e)
         {
-            if (txt_Apellido.Text == "Introduzca el parentesco")
+            if (txt_Parentesco.Text == "Introduzca el parentesco")
             {
-                txt_Apellido.Text = "";
-                txt_Apellido.ForeColor = SystemColors.WindowText;
+                txt_Parentesco.Text = "";
+                txt_Parentesco.ForeColor = Color.Black;
             }
         }
     }

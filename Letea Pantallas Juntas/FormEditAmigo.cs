@@ -111,7 +111,7 @@ namespace Pantalla_Contraseña
 
         private void btn_Guardar_Click(object sender, EventArgs e)
         {
-            string sql = "UPDATE AMIGOS set [Nombre] = '" + txt_Nom.Text + "', [Apellido] = '" + txt_Apellido.Text + "', [Foto] = @foto, [FechadeNacimiento] = '"+this.dateTimePicker1.Text+"' WHERE Id = " + FormGrupo.IDAmigo + "";
+            string sql = "UPDATE Amigos set [Nombre] = '" + txt_Nom.Text + "', [Apellido] = '" + txt_Apellido.Text + "', [Foto] = @foto, [FechadeNacimiento] = '"+this.dateTimePicker1.Text+"' WHERE Id = " + FormGrupo.IDAmigo + "";
 
             MemoryStream ms = new MemoryStream();
             btn_agregarfoto.Image.Save(ms, ImageFormat.Jpeg);

@@ -90,7 +90,7 @@ namespace Pantalla_Contraseña
             btn_Editar.Visible = false;
             Labels();
             button1.Visible = false;
-            Task.Delay(500).Wait();
+            Task.Delay(1000).Wait();
             CapturaFormulario();
 
             pic_Captura.ImageLocation = "Captura.bmp";
@@ -134,39 +134,39 @@ namespace Pantalla_Contraseña
             OleDbDataAdapter da = new OleDbDataAdapter(cmd);
             da.Fill(ds, "Familia");
 
-           /* for (int i = 0; i < ds.Tables["Familia"].Rows.Count; i++)
-            {
-                Label tempNombre = new Label();
+            /* for (int i = 0; i < ds.Tables["Familia"].Rows.Count; i++)
+             {
+                 Label tempNombre = new Label();
 
-                tempNombre.Width = 200;
-                tempNombre.AutoSize = false;
-                tempNombre.Height = 50;
-                tempNombre.Font = new Font("Microsoft Sans Serif", 15F);
-                tempNombre.TextAlign = ContentAlignment.MiddleCenter;
-                tempNombre.Text = ds.Tables["Familia"].Rows[i]["Nombre"].ToString();
-                tempNombre.BackColor = Color.Transparent;
-                if (Convert.ToBoolean(ds.Tables["Familia"].Rows[i]["Editado"]) == false)
-                {
+                 tempNombre.Width = 200;
+                 tempNombre.AutoSize = false;
+                 tempNombre.Height = 50;
+                 tempNombre.Font = new Font("Microsoft Sans Serif", 15F);
+                 tempNombre.TextAlign = ContentAlignment.MiddleCenter;
+                 tempNombre.Text = ds.Tables["Familia"].Rows[i]["Nombre"].ToString();
+                 tempNombre.BackColor = Color.Transparent;
+                 if (Convert.ToBoolean(ds.Tables["Familia"].Rows[i]["Editado"]) == false)
+                 {
 
-                }
+                 }
 
-                else
-                {
-                    tempNombre.Location = new Point(Convert.ToInt32(ds.Tables["Familia"].Rows[i]["X"]) - 25, Convert.ToInt32(ds.Tables["Familia"].Rows[i]["Y"]) + 150);
-                }
-                Controls.Add(tempNombre);
-                tempNombre.SendToBack();
-            }*/
+                 else
+                 {
+                     tempNombre.Location = new Point(Convert.ToInt32(ds.Tables["Familia"].Rows[i]["X"]) - 25, Convert.ToInt32(ds.Tables["Familia"].Rows[i]["Y"]) + 150);
+                 }
+                 Controls.Add(tempNombre);
+                 tempNombre.SendToBack();
+             }*/
 
-           
+
             for (int i = 0; i < ds.Tables["Familia"].Rows.Count; i++)
             {
                 PictureBox temp = new PictureBox();
-                
+
 
                 temp.Height = 150;
                 temp.Width = 150;
-                
+
 
                 MemoryStream ms = new MemoryStream((byte[])ds.Tables["Familia"].Rows[i]["Foto"]);
                 Bitmap bm = new Bitmap(ms);
@@ -295,7 +295,7 @@ namespace Pantalla_Contraseña
         }
         private void Label_Visible(object sender, EventArgs e)
         {
-            
+
         }
         private void handlerComun_Paint(object sender, PaintEventArgs pe)
         {
@@ -338,7 +338,7 @@ namespace Pantalla_Contraseña
             form.Show();
             this.Hide();
         }
-        
+
         private void btn_Volver_Move(object sender, EventArgs e)
         {
 
@@ -393,7 +393,7 @@ namespace Pantalla_Contraseña
 
                             Lista.Clear();
                             btn_Linea.Visible = true;
-                            z = 0;                           
+                            z = 0;
                         }
                     }
                 }
@@ -405,12 +405,12 @@ namespace Pantalla_Contraseña
         {
             if (FormPantallaLogIn.ModoAdmin && Edit)
             {
-                 PictureBox PictureBoxTemp = sender as PictureBox;
-                 if (btnDown)
-                 {
-                     PictureBoxTemp.Left += e.X - offsetX;
-                     PictureBoxTemp.Top += e.Y - offsetY;
-                 }
+                PictureBox PictureBoxTemp = sender as PictureBox;
+                if (btnDown)
+                {
+                    PictureBoxTemp.Left += e.X - offsetX;
+                    PictureBoxTemp.Top += e.Y - offsetY;
+                }
 
             }
         }
@@ -419,16 +419,16 @@ namespace Pantalla_Contraseña
         {
             if (FormPantallaLogIn.ModoAdmin && Edit)
             {
-                 PictureBox PictureBoxTemp = sender as PictureBox;
+                PictureBox PictureBoxTemp = sender as PictureBox;
 
-                 if (e.Button == MouseButtons.Left)
-                 {
+                if (e.Button == MouseButtons.Left)
+                {
                     PictureBoxTemp.Cursor = new Cursor("openhand.cur");
-                        btnDown = false;
-                 }
-                 string sql2 = "UPDATE Familia set X = " + PictureBoxTemp.Location.X + ", Y = " + PictureBoxTemp.Location.Y + ",  Editado = " + true + " WHERE Id = " + PictureBoxTemp.Tag + "";
-                 OleDbCommand consulta2 = new OleDbCommand(sql2, conexion);
-                 consulta2.ExecuteNonQuery();
+                    btnDown = false;
+                }
+                string sql2 = "UPDATE Familia set X = " + PictureBoxTemp.Location.X + ", Y = " + PictureBoxTemp.Location.Y + ",  Editado = " + true + " WHERE Id = " + PictureBoxTemp.Tag + "";
+                OleDbCommand consulta2 = new OleDbCommand(sql2, conexion);
+                consulta2.ExecuteNonQuery();
             }
         }
 
@@ -446,13 +446,14 @@ namespace Pantalla_Contraseña
             btn_Crear.Visible = true;
             btn_Guardar.Visible = true;
             btn_Linea.Visible = true;
+            btn_EliminarLineas.Visible = true;
 
             foreach (Control item in this.Controls.OfType<Label>())
             {
                 this.Controls.Remove(item);
             }
         }
-       
+
         private void btn_Guardar_Click(object sender, EventArgs e)
         {
             Edit = false;
@@ -460,8 +461,9 @@ namespace Pantalla_Contraseña
             btn_Editar.Visible = true;
             btn_Linea.Visible = false;
             btn_Crear.Visible = false;
+            btn_EliminarLineas.Visible = false;
             //Labels();
-            
+
         }
 
         private void btn_Linea_Click(object sender, EventArgs e)
@@ -534,7 +536,18 @@ namespace Pantalla_Contraseña
             }
         }
 
-        
+        private void pic_Captura_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void btn_EliminarLineas_Click(object sender, EventArgs e)
+        {
+            string sql = "DELETE * FROM Lineas WHERE IDUsuario = " + FormPacientes2.IDPaciente + "";
+            OleDbCommand cmd = new OleDbCommand(sql, conexion);
+            cmd.ExecuteNonQuery();
+            // falta agregar form de carga
+
+        }
     }
 }   
 

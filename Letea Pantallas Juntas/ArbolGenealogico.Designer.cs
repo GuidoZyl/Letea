@@ -37,12 +37,14 @@ namespace Pantalla_Contraseña
             this.button1 = new System.Windows.Forms.Button();
             this.pic_Captura = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.btn_EliminarLineas = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Volver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Crear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Editar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Guardar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Linea)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Captura)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_EliminarLineas)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Volver
@@ -133,6 +135,7 @@ namespace Pantalla_Contraseña
             this.pic_Captura.TabIndex = 28;
             this.pic_Captura.TabStop = false;
             this.pic_Captura.Visible = false;
+            this.pic_Captura.Click += new System.EventHandler(this.pic_Captura_Click);
             // 
             // button2
             // 
@@ -145,6 +148,20 @@ namespace Pantalla_Contraseña
             this.button2.Visible = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // btn_EliminarLineas
+            // 
+            this.btn_EliminarLineas.BackColor = System.Drawing.Color.Transparent;
+            this.btn_EliminarLineas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_EliminarLineas.Image = global::Pantalla_Contraseña.Properties.Resources.Agregar_línea;
+            this.btn_EliminarLineas.Location = new System.Drawing.Point(779, 907);
+            this.btn_EliminarLineas.Name = "btn_EliminarLineas";
+            this.btn_EliminarLineas.Size = new System.Drawing.Size(376, 99);
+            this.btn_EliminarLineas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_EliminarLineas.TabIndex = 30;
+            this.btn_EliminarLineas.TabStop = false;
+            this.btn_EliminarLineas.Visible = false;
+            this.btn_EliminarLineas.Click += new System.EventHandler(this.btn_EliminarLineas_Click);
+            // 
             // ArbolGenealogico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -152,14 +169,15 @@ namespace Pantalla_Contraseña
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Fondo;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.btn_EliminarLineas);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.pic_Captura);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_Linea);
             this.Controls.Add(this.btn_Guardar);
             this.Controls.Add(this.btn_Editar);
             this.Controls.Add(this.btn_Crear);
             this.Controls.Add(this.btn_Volver);
+            this.Controls.Add(this.pic_Captura);
             this.Name = "ArbolGenealogico";
             this.Text = "ArbolGenealogico";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -172,6 +190,7 @@ namespace Pantalla_Contraseña
             ((System.ComponentModel.ISupportInitialize)(this.btn_Guardar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Linea)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Captura)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_EliminarLineas)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -186,5 +205,6 @@ namespace Pantalla_Contraseña
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pic_Captura;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.PictureBox btn_EliminarLineas;
     }
 }
