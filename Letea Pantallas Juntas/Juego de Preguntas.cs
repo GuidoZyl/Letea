@@ -120,7 +120,7 @@ namespace Pantalla_Contraseña
                     lbl_Nom.Visible = true;
                     lbl_Nom.Text = Convert.ToString(ds.Tables["IdCorrecta"].Rows[PosicionCorrecta2]["Nombre"]);
 
-                    string sql4 = "SELECT * FROM Familia WHERE NOT Id = " + IdGrupoCorrecta[PosicionCorrecta] + " AND IDUsuario = " + FormPacientes2.IDPaciente + "";
+                    string sql4 = "SELECT * FROM Relaciones WHERE NOT Relacion = '" + RelacionCorrecta +"'";
                     OleDbCommand cmd4 = new OleDbCommand(sql4, conexion);
                     OleDbDataAdapter da4 = new OleDbDataAdapter(cmd4);
                     da4.Fill(ds, "IdIncorrecta");
@@ -142,7 +142,7 @@ namespace Pantalla_Contraseña
                         IdIncorrecta[i] = IdIncorrectaTemp[PosicionesRandom[i]];
                     }
 
-                    string sql5 = "SELECT * FROM Familia WHERE (Id = " + IdIncorrecta[0] + " OR Id = " + IdIncorrecta[1] + " OR Id = " + IdIncorrecta[2] + ") AND IDUsuario = " + FormPacientes2.IDPaciente + "";
+                    string sql5 = "SELECT * FROM Relaciones WHERE (Id = " + IdIncorrecta[0] + " OR Id = " + IdIncorrecta[1] + " OR Id = " + IdIncorrecta[2] + ")";
                     OleDbCommand cmd5 = new OleDbCommand(sql5, conexion);
                     OleDbDataAdapter da5 = new OleDbDataAdapter(cmd5);
                     da5.Fill(ds, "InfoIncorrecta");
@@ -150,7 +150,7 @@ namespace Pantalla_Contraseña
                     string[] Opciones = new string[4];
                     for (int i = 0; i < 3; i++)
                     {
-                        Opciones[i] = Convert.ToString(ds.Tables["InfoIncorrecta"].Rows[i]["RelaciondeParentesco"]);
+                        Opciones[i] = Convert.ToString(ds.Tables["InfoIncorrecta"].Rows[i]["Relacion"]);
                     }
                     Opciones[3] = RelacionCorrecta;
 

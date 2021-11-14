@@ -157,11 +157,11 @@
   <data name="Agregar foto1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Agregar foto1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Eliminar amigo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Eliminar amigo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Rectangle 51" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Rectangle 51.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Creditos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Creditos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="AGREGAR GRUPO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AGREGAR GRUPO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,8 +187,14 @@
   <data name="Editar amigo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Editar amigo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Frame 14 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Frame 14 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Perfil Vacío" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Perfil Vacío.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Eliminar amigo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Eliminar amigo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Agregar familiar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Agregar familiar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -295,8 +301,8 @@
   <data name="Crear" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Crear.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Creditos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Creditos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Eliminar amigo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Eliminar amigo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Ajustes" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Ajustes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -349,7 +355,7 @@
   <data name="Agregar línea" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Agregar línea.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Eliminar amigo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Eliminar amigo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Frame 14" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Frame 14.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
