@@ -112,6 +112,7 @@ namespace Pantalla_Contraseña
             uno.Location = new Point(Convert.ToInt32(ds.Tables["Familia"].Rows[CantPersonas[0]]["X"]), Convert.ToInt32(ds.Tables["Familia"].Rows[CantPersonas[0]]["Y"]));
             uno.Tag = 1;
             uno.Paint += new PaintEventHandler(handlerComun_Paint);
+            uno.Click += new EventHandler(handlerArbolClicked);
             Controls.Add(uno);
             uno.BringToFront();
            
@@ -124,6 +125,7 @@ namespace Pantalla_Contraseña
             fotouno.Location = new Point(400, 820);
             fotouno.Tag = 1;
             fotouno.Paint += new PaintEventHandler(handlerComun_Paint);
+            fotouno.Click += new EventHandler(handlerPicClicked);
             Controls.Add(fotouno);
 
             
@@ -134,6 +136,7 @@ namespace Pantalla_Contraseña
             dos.Location = new Point(Convert.ToInt32(ds.Tables["Familia"].Rows[CantPersonas[1]]["X"]), Convert.ToInt32(ds.Tables["Familia"].Rows[CantPersonas[1]]["Y"]));
             dos.Tag = 2;
             dos.Paint += new PaintEventHandler(handlerComun_Paint);
+            dos.Click += new EventHandler(handlerArbolClicked);
             Controls.Add(dos);
             dos.BringToFront();
           
@@ -146,6 +149,7 @@ namespace Pantalla_Contraseña
             fotodos.Location = new Point(870, 820);
             fotodos.Tag = 2;
             fotodos.Paint += new PaintEventHandler(handlerComun_Paint);
+            fotodos.Click += new EventHandler(handlerPicClicked);
             Controls.Add(fotodos);
 
            
@@ -154,8 +158,9 @@ namespace Pantalla_Contraseña
             tres.Image = pic_CuloGris.Image;
             tres.SizeMode = PictureBoxSizeMode.StretchImage;
             tres.Location = new Point(Convert.ToInt32(ds.Tables["Familia"].Rows[CantPersonas[2]]["X"]), Convert.ToInt32(ds.Tables["Familia"].Rows[CantPersonas[2]]["Y"]));
-            tres.Tag = 2;
+            tres.Tag = 3;
             tres.Paint += new PaintEventHandler(handlerComun_Paint);
+            tres.Click += new EventHandler(handlerArbolClicked);
             Controls.Add(tres);
             tres.BringToFront();
             
@@ -167,8 +172,9 @@ namespace Pantalla_Contraseña
             fototres.Height = 175;
             fototres.Width = 175;
             fototres.Location = new Point(1345, 820);
-            fototres.Tag = 2;
+            fototres.Tag = 3;
             fototres.Paint += new PaintEventHandler(handlerComun_Paint);
+            fototres.Click += new EventHandler(handlerPicClicked);
             Controls.Add(fototres);
 
         }
@@ -191,35 +197,6 @@ namespace Pantalla_Contraseña
         {
             PictureBox ClickedPic = sender as PictureBox;
             TagFotoClickeada = Convert.ToInt32(ClickedPic.Tag);
-            if (ClickedPic.Tag == uno.Tag)
-            {
-                dos.Visible = false;
-                tres.Visible = false;
-            }
-            else if (ClickedPic.Tag == dos.Tag)
-            {
-                uno.Visible = false;
-                tres.Visible = false;
-            }
-            else if (ClickedPic.Tag == tres.Tag)
-            {
-                dos.Visible = false;
-                uno.Visible = false;
-            }
-            if (TagFotoClickeada!= 0 && TagFotoClickeada2!= 0)
-            {
-                VerificarCorrecta();
-            }
-
-        }
-        void VerificarCorrecta()
-        {
-
-        }
-        private void handlerArbolClicked (object sender, EventArgs e)
-        {
-            PictureBox ClickedPic = sender as PictureBox;
-            TagFotoClickeada2 = Convert.ToInt32(ClickedPic.Tag);
             if (ClickedPic.Tag == fotouno.Tag)
             {
                 fotodos.Visible = false;
@@ -235,10 +212,82 @@ namespace Pantalla_Contraseña
                 fotodos.Visible = false;
                 fotouno.Visible = false;
             }
+            if (TagFotoClickeada!= 0 && TagFotoClickeada2!= 0)
+            {
+                VerificarCorrecta();
+                TagFotoClickeada = 0;
+                TagFotoClickeada2 = 0;
+            }
+          
+        }
+        void VerificarCorrecta()
+        {
+            if (TagFotoClickeada == TagFotoClickeada2)
+            {
+                if (TagFotoClickeada == Convert.ToInt32(fotouno.Tag))
+                {
+                    fotouno.Tag = 1000;
+                    uno.Tag = 1000;
+                }
+                else if (TagFotoClickeada == Convert.ToInt32(fotodos.Tag))
+                {
+                    fotodos.Tag = 1000;
+                    dos.Tag = 1000;
+                }
+                else if (TagFotoClickeada == Convert.ToInt32(fototres.Tag))
+                {
+                    fototres.Tag = 1000;
+                    tres.Tag = 1000;
+                }
+                MessageBox.Show("anashe");
+                SiguientePosicion();
+                TagFotoClickeada = 0;
+                TagFotoClickeada2 = 0;
+            }
+            else 
+            { 
+                MessageBox.Show("sos nefasto");
+                SiguientePosicion();
+            }
+        }
+        
+        void SiguientePosicion()
+        {
+            if (Convert.ToInt32(fotouno.Tag) == 1000)
+            {
+                fotouno.Visible = false;
+                uno.Image = fotouno.Image;
+            }
+            else { fotouno.Visible = true; }
+            if (Convert.ToInt32(fotodos.Tag) == 1000)
+            {
+                fotodos.Visible = false;
+                dos.Image = fotodos.Image;
+            }
+            else { fotodos.Visible = true; }
+            if (Convert.ToInt32(fototres.Tag) == 1000)
+            {
+                fototres.Visible = false;
+                tres.Image = fototres.Image;
+            }
+            else { fototres.Visible = true; }
+            if (fotouno.Visible == false && fotodos.Visible == false && fototres.Visible == false)
+            {
+                MessageBox.Show("Hola");
+            }
+        }
+        private void handlerArbolClicked (object sender, EventArgs e)
+        {
+            PictureBox ClickedPic = sender as PictureBox;
+            TagFotoClickeada2 = Convert.ToInt32(ClickedPic.Tag);
+            
             if (TagFotoClickeada != 0 && TagFotoClickeada2 != 0)
             {
                 VerificarCorrecta();
+                TagFotoClickeada = 0;
+                TagFotoClickeada2 = 0;
             }
+            
         }
         private void handlerComun_Paint(object sender, PaintEventArgs pe)
         {
