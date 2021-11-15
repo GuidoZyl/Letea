@@ -136,8 +136,8 @@ namespace Pantalla_Contraseña
             // 
             this.btn_EliminarLineas.BackColor = System.Drawing.Color.Transparent;
             this.btn_EliminarLineas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_EliminarLineas.Image = global::Pantalla_Contraseña.Properties.Resources.Agregar_línea;
-            this.btn_EliminarLineas.Location = new System.Drawing.Point(779, 907);
+            this.btn_EliminarLineas.Image = global::Pantalla_Contraseña.Properties.Resources.Eliminar_lineas;
+            this.btn_EliminarLineas.Location = new System.Drawing.Point(776, 911);
             this.btn_EliminarLineas.Name = "btn_EliminarLineas";
             this.btn_EliminarLineas.Size = new System.Drawing.Size(376, 99);
             this.btn_EliminarLineas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

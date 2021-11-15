@@ -583,5 +583,8 @@
   <ItemGroup>
     <None Include="Resources\Boton confirmar.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Eliminar lineas.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
