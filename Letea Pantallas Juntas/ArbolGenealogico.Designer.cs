@@ -123,6 +123,7 @@ namespace Pantalla_Contraseña
             // 
             // pic_Captura
             // 
+            this.pic_Captura.InitialImage = global::Pantalla_Contraseña.Properties.Resources.Fondo;
             this.pic_Captura.Location = new System.Drawing.Point(0, 0);
             this.pic_Captura.Name = "pic_Captura";
             this.pic_Captura.Size = new System.Drawing.Size(1920, 1080);

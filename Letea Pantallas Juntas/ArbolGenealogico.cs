@@ -71,6 +71,7 @@ namespace Pantalla_Contraseña
             memoryGraphics.ReleaseHdc(dc2);
 
             bmp.Save("Captura.bmp", ImageFormat.Bmp);
+            
         }
 
         [System.Runtime.InteropServices.DllImport("gdi32.dll")]
@@ -89,18 +90,17 @@ namespace Pantalla_Contraseña
             btn_Volver.Visible = false;
             btn_Editar.Visible = false;
             btn_Jugar.Visible = false;
-            Labels();
+            
             btn_Imprimir.Visible = false;
-            Task.Delay(1500).Wait();
-            Task.Delay(1500).Wait();
-            Task.Delay(1500).Wait();
-            Task.Delay(1500).Wait();
-
+            
             CapturaFormulario();
-
             pic_Captura.ImageLocation = "Captura.bmp";
             pic_Captura.Visible = true;
             pic_Captura.BringToFront();
+            Labels();
+            Task.Delay(1500).Wait();
+            Task.Delay(1500).Wait();
+
             btn_Confirmar.Visible = true;
             btn_Confirmar.BringToFront();
         }
@@ -276,7 +276,7 @@ namespace Pantalla_Contraseña
                 25, Convert.ToInt32(ds.Tables["Labels"].Rows[i]["Y"]) + 150);
                 
                 Controls.Add(tempNombre);
-                tempNombre.SendToBack();
+                tempNombre.BringToFront();
             }
 
             string sql2 = "SELECT * FROM Usuario WHERE Id = " + FormPacientes2.IDPaciente + "";
@@ -298,7 +298,7 @@ namespace Pantalla_Contraseña
             usuariomio.Cursor = Cursors.Hand;
             usuariomio.Location = new Point(Convert.ToInt32(ds.Tables["User"].Rows[0]["X"]) - 25, Convert.ToInt32(ds.Tables["User"].Rows[0]["Y"]) + 150);
             Controls.Add(usuariomio);
-            usuariomio.SendToBack();
+            usuariomio.BringToFront();
         }
         private void temp_MouseEnter(object sender, EventArgs e)
         {
