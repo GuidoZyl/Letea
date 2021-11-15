@@ -23,7 +23,14 @@ namespace Pantalla_Contraseña
         OleDbConnection conexion = new OleDbConnection();
         DataSet ds = new DataSet();
         int[] CantPersonas;
-        int TagFotoClickeada;
+        int TagFotoClickeada = 0;
+        int TagFotoClickeada2 = 0;
+        PictureBox uno = new PictureBox();
+        PictureBox dos = new PictureBox();
+        PictureBox tres = new PictureBox();
+        PictureBox fotouno = new PictureBox();
+        PictureBox fotodos = new PictureBox();
+        PictureBox fototres = new PictureBox();
         public JuegoArbol()
         {
             InitializeComponent();
@@ -96,7 +103,7 @@ namespace Pantalla_Contraseña
                 CantPersonas[i] = i;
             }
             Random(CantPersonas);
-            PictureBox uno = new PictureBox();
+           
 
             uno.Height = 150;
             uno.Width = 150;
@@ -107,7 +114,7 @@ namespace Pantalla_Contraseña
             uno.Paint += new PaintEventHandler(handlerComun_Paint);
             Controls.Add(uno);
             uno.BringToFront();
-            PictureBox fotouno = new PictureBox();
+           
             MemoryStream ms2 = new MemoryStream((byte[])ds.Tables["Familia"].Rows[CantPersonas[0]]["Foto"]);
             Bitmap bm2= new Bitmap(ms2);
             fotouno.Image = bm2;
@@ -119,7 +126,7 @@ namespace Pantalla_Contraseña
             fotouno.Paint += new PaintEventHandler(handlerComun_Paint);
             Controls.Add(fotouno);
 
-            PictureBox dos = new PictureBox();
+            
             dos.Height = 150;
             dos.Width = 150;
             dos.Image = pic_CuloGris.Image;
@@ -129,7 +136,7 @@ namespace Pantalla_Contraseña
             dos.Paint += new PaintEventHandler(handlerComun_Paint);
             Controls.Add(dos);
             dos.BringToFront();
-            PictureBox fotodos = new PictureBox();
+          
             MemoryStream ms3 = new MemoryStream((byte[])ds.Tables["Familia"].Rows[CantPersonas[1]]["Foto"]);
             Bitmap bm3 = new Bitmap(ms3);
             fotodos.Image = bm3;
@@ -141,7 +148,7 @@ namespace Pantalla_Contraseña
             fotodos.Paint += new PaintEventHandler(handlerComun_Paint);
             Controls.Add(fotodos);
 
-            PictureBox tres = new PictureBox();
+           
             tres.Height = 150;
             tres.Width = 150;
             tres.Image = pic_CuloGris.Image;
@@ -152,7 +159,7 @@ namespace Pantalla_Contraseña
             Controls.Add(tres);
             tres.BringToFront();
             
-            PictureBox fototres = new PictureBox();
+            
             MemoryStream ms4 = new MemoryStream((byte[])ds.Tables["Familia"].Rows[CantPersonas[2]]["Foto"]);
             Bitmap bm4 = new Bitmap(ms4);
             fototres.Image = bm4;
@@ -180,11 +187,58 @@ namespace Pantalla_Contraseña
                 Lista.Clear();
             }
         }
-        private void handlerClicked(object sender, EventArgs e)
+        private void handlerPicClicked(object sender, EventArgs e)
         {
             PictureBox ClickedPic = sender as PictureBox;
             TagFotoClickeada = Convert.ToInt32(ClickedPic.Tag);
+            if (ClickedPic.Tag == uno.Tag)
+            {
+                dos.Visible = false;
+                tres.Visible = false;
+            }
+            else if (ClickedPic.Tag == dos.Tag)
+            {
+                uno.Visible = false;
+                tres.Visible = false;
+            }
+            else if (ClickedPic.Tag == tres.Tag)
+            {
+                dos.Visible = false;
+                uno.Visible = false;
+            }
+            if (TagFotoClickeada!= 0 && TagFotoClickeada2!= 0)
+            {
+                VerificarCorrecta();
+            }
 
+        }
+        void VerificarCorrecta()
+        {
+
+        }
+        private void handlerArbolClicked (object sender, EventArgs e)
+        {
+            PictureBox ClickedPic = sender as PictureBox;
+            TagFotoClickeada2 = Convert.ToInt32(ClickedPic.Tag);
+            if (ClickedPic.Tag == fotouno.Tag)
+            {
+                fotodos.Visible = false;
+                fototres.Visible = false;
+            }
+            else if (ClickedPic.Tag == fotodos.Tag)
+            {
+                fotouno.Visible = false;
+                fototres.Visible = false;
+            }
+            else if (ClickedPic.Tag == fototres.Tag)
+            {
+                fotodos.Visible = false;
+                fotouno.Visible = false;
+            }
+            if (TagFotoClickeada != 0 && TagFotoClickeada2 != 0)
+            {
+                VerificarCorrecta();
+            }
         }
         private void handlerComun_Paint(object sender, PaintEventArgs pe)
         {
