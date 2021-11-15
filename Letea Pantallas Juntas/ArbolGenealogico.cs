@@ -90,7 +90,7 @@ namespace Pantalla_Contraseña
             btn_Editar.Visible = false;
             btn_Jugar.Visible = false;
             Labels();
-            button1.Visible = false;
+            btn_Imprimir.Visible = false;
             Task.Delay(1500).Wait();
             Task.Delay(1500).Wait();
             Task.Delay(1500).Wait();
@@ -101,13 +101,13 @@ namespace Pantalla_Contraseña
             pic_Captura.ImageLocation = "Captura.bmp";
             pic_Captura.Visible = true;
             pic_Captura.BringToFront();
-            button2.Visible = true;
-            button2.BringToFront();
+            btn_Confirmar.Visible = true;
+            btn_Confirmar.BringToFront();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            button2.Visible = false;
+            btn_Confirmar.Visible = false;
             Task.Delay(500).Wait();
             CapturaFormulario();
 
@@ -129,6 +129,8 @@ namespace Pantalla_Contraseña
         {
             conexion.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=.\Base de Datos 4.accdb;";
             conexion.Open();
+
+            btn_Imprimir.Visible = true;
 
             if (FormPantallaLogIn.ModoAdmin)
             {
@@ -498,6 +500,7 @@ namespace Pantalla_Contraseña
             btn_Linea.Visible = true;
             btn_EliminarLineas.Visible = true;
             btn_Jugar.Visible = false;
+            btn_Imprimir.Visible = false;
 
             foreach (Control item in this.Controls.OfType<Label>())
             {
@@ -514,6 +517,7 @@ namespace Pantalla_Contraseña
             btn_Crear.Visible = false;
             btn_EliminarLineas.Visible = false;
             btn_Jugar.Visible = true;
+            btn_Imprimir.Visible = true;
             //Labels();
 
         }

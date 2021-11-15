@@ -223,6 +223,16 @@ namespace Pantalla_Contraseña.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Boton_confirmar {
+            get {
+                object obj = ResourceManager.GetObject("Boton confirmar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Boton_familia__1_ {
             get {
                 object obj = ResourceManager.GetObject("Boton familia (1)", resourceCulture);
@@ -246,6 +256,16 @@ namespace Pantalla_Contraseña.Properties {
         internal static System.Drawing.Bitmap Boton_Guardar {
             get {
                 object obj = ResourceManager.GetObject("Boton Guardar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Boton_imprimir {
+            get {
+                object obj = ResourceManager.GetObject("Boton imprimir", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -646,6 +666,16 @@ namespace Pantalla_Contraseña.Properties {
         internal static System.Drawing.Bitmap Frame_14__4_ {
             get {
                 object obj = ResourceManager.GetObject("Frame 14 (4)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Group_8 {
+            get {
+                object obj = ResourceManager.GetObject("Group 8", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

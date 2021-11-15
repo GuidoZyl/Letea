@@ -34,11 +34,11 @@ namespace Pantalla_Contraseña
             this.btn_Editar = new System.Windows.Forms.PictureBox();
             this.btn_Guardar = new System.Windows.Forms.PictureBox();
             this.btn_Linea = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.pic_Captura = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.btn_EliminarLineas = new System.Windows.Forms.PictureBox();
             this.btn_Jugar = new System.Windows.Forms.PictureBox();
+            this.btn_Imprimir = new System.Windows.Forms.PictureBox();
+            this.btn_Confirmar = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Volver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Crear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Editar)).BeginInit();
@@ -47,6 +47,8 @@ namespace Pantalla_Contraseña
             ((System.ComponentModel.ISupportInitialize)(this.pic_Captura)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_EliminarLineas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Jugar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Imprimir)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Confirmar)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Volver
@@ -119,16 +121,6 @@ namespace Pantalla_Contraseña
             this.btn_Linea.Visible = false;
             this.btn_Linea.Click += new System.EventHandler(this.btn_Linea_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(1671, 672);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(133, 96);
-            this.button1.TabIndex = 27;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // pic_Captura
             // 
             this.pic_Captura.Location = new System.Drawing.Point(0, 0);
@@ -138,17 +130,6 @@ namespace Pantalla_Contraseña
             this.pic_Captura.TabStop = false;
             this.pic_Captura.Visible = false;
             this.pic_Captura.Click += new System.EventHandler(this.pic_Captura_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(1136, 500);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(222, 126);
-            this.button2.TabIndex = 29;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Visible = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btn_EliminarLineas
             // 
@@ -176,6 +157,32 @@ namespace Pantalla_Contraseña
             this.btn_Jugar.TabStop = false;
             this.btn_Jugar.Click += new System.EventHandler(this.btn_Jugar_Click);
             // 
+            // btn_Imprimir
+            // 
+            this.btn_Imprimir.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Imprimir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Imprimir.Image = global::Pantalla_Contraseña.Properties.Resources.Boton_imprimir;
+            this.btn_Imprimir.Location = new System.Drawing.Point(1575, 21);
+            this.btn_Imprimir.Name = "btn_Imprimir";
+            this.btn_Imprimir.Size = new System.Drawing.Size(328, 106);
+            this.btn_Imprimir.TabIndex = 38;
+            this.btn_Imprimir.TabStop = false;
+            this.btn_Imprimir.Visible = false;
+            this.btn_Imprimir.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btn_Confirmar
+            // 
+            this.btn_Confirmar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Confirmar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Confirmar.Image = global::Pantalla_Contraseña.Properties.Resources.Boton_confirmar;
+            this.btn_Confirmar.Location = new System.Drawing.Point(1575, 21);
+            this.btn_Confirmar.Name = "btn_Confirmar";
+            this.btn_Confirmar.Size = new System.Drawing.Size(328, 106);
+            this.btn_Confirmar.TabIndex = 39;
+            this.btn_Confirmar.TabStop = false;
+            this.btn_Confirmar.Visible = false;
+            this.btn_Confirmar.Click += new System.EventHandler(this.button2_Click);
+            // 
             // ArbolGenealogico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -183,10 +190,10 @@ namespace Pantalla_Contraseña
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Fondo;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.btn_Confirmar);
+            this.Controls.Add(this.btn_Imprimir);
             this.Controls.Add(this.btn_Jugar);
             this.Controls.Add(this.btn_EliminarLineas);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_Linea);
             this.Controls.Add(this.btn_Guardar);
             this.Controls.Add(this.btn_Editar);
@@ -207,6 +214,8 @@ namespace Pantalla_Contraseña
             ((System.ComponentModel.ISupportInitialize)(this.pic_Captura)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_EliminarLineas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Jugar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Imprimir)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Confirmar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -218,10 +227,10 @@ namespace Pantalla_Contraseña
         private System.Windows.Forms.PictureBox btn_Editar;
         private System.Windows.Forms.PictureBox btn_Guardar;
         private System.Windows.Forms.PictureBox btn_Linea;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pic_Captura;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox btn_EliminarLineas;
         private System.Windows.Forms.PictureBox btn_Jugar;
+        private System.Windows.Forms.PictureBox btn_Imprimir;
+        private System.Windows.Forms.PictureBox btn_Confirmar;
     }
 }

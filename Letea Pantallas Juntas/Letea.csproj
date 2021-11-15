@@ -574,5 +574,14 @@
   <ItemGroup>
     <None Include="Resources\culogris.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boton imprimir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boton confirmar.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
