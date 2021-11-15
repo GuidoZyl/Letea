@@ -33,7 +33,7 @@ namespace Pantalla_Contraseña
             this.label2 = new System.Windows.Forms.Label();
             this.lbl_ApellidoNoEdit = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtp_Fecha = new System.Windows.Forms.DateTimePicker();
             this.txt_Apellido = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.txt_Nom = new System.Windows.Forms.TextBox();
@@ -101,18 +101,18 @@ namespace Pantalla_Contraseña
             this.label1.TabIndex = 25;
             this.label1.Text = "Fecha de nacimiento:";
             // 
-            // dateTimePicker1
+            // dtp_Fecha
             // 
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.Transparent;
-            this.dateTimePicker1.CustomFormat = "dd/MM/yyyy";
-            this.dateTimePicker1.Enabled = false;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(1085, 628);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(245, 53);
-            this.dateTimePicker1.TabIndex = 19;
-            this.dateTimePicker1.Value = new System.DateTime(2050, 12, 31, 0, 0, 0, 0);
+            this.dtp_Fecha.CalendarMonthBackground = System.Drawing.Color.Transparent;
+            this.dtp_Fecha.CustomFormat = "dd/MM/yyyy";
+            this.dtp_Fecha.Enabled = false;
+            this.dtp_Fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
+            this.dtp_Fecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_Fecha.Location = new System.Drawing.Point(1085, 628);
+            this.dtp_Fecha.Name = "dtp_Fecha";
+            this.dtp_Fecha.Size = new System.Drawing.Size(245, 53);
+            this.dtp_Fecha.TabIndex = 19;
+            this.dtp_Fecha.Value = new System.DateTime(2050, 12, 31, 0, 0, 0, 0);
             // 
             // txt_Apellido
             // 
@@ -255,7 +255,7 @@ namespace Pantalla_Contraseña
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lbl_ApellidoNoEdit);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtp_Fecha);
             this.Controls.Add(this.txt_Apellido);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.txt_Nom);
@@ -285,7 +285,7 @@ namespace Pantalla_Contraseña
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbl_ApellidoNoEdit;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtp_Fecha;
         private System.Windows.Forms.TextBox txt_Apellido;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox txt_Nom;

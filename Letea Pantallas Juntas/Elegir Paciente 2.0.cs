@@ -58,11 +58,11 @@ namespace Pantalla_Contraseña
             conexion.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=.\Base de Datos 4.accdb;";
             conexion.Open();
 
-            string sql = "Select [NombreCompleto], [Foto] from Usuario WHERE NOT Id = 23";
+            string sql = "Select [NombreCompleto], [Foto] from Usuario";
             OleDbCommand comando = new OleDbCommand(sql, conexion);
             OleDbDataAdapter data = new OleDbDataAdapter(comando);
-
             data.Fill(ds, "Usuario");
+
             ultimo = Convert.ToInt32(ds.Tables["Usuario"].Rows.Count) - 1;
 
             nombrecompleto = new string[ultimo + 1, 1];
@@ -442,7 +442,121 @@ namespace Pantalla_Contraseña
             FormPantallaLogIn form = new FormPantallaLogIn();
             form.Show();
             this.Hide();
+        }       
+
+        private void pic_Nom1_Click(object sender, EventArgs e)
+        {
+            string sql = "SELECT Id FROM Usuario WHERE NombreCompleto = '" + lbl_Nom1.Text + "'";
+            OleDbCommand cmd = new OleDbCommand(sql, conexion);
+            OleDbDataAdapter da = new OleDbDataAdapter(cmd);
+            da.Fill(ds, "IDPaciente");
+
+            IDPaciente = Convert.ToInt32(ds.Tables["IDPaciente"].Rows[0]["Id"]);
+
+            FormPrincipal form = new FormPrincipal();
+            form.Show();
+            this.Hide();
         }
+
+        private void pic_Nom2_Click(object sender, EventArgs e)
+        {
+            string sql = "SELECT Id FROM Usuario WHERE NombreCompleto = '" + lbl_Nom2.Text + "'";
+            OleDbCommand cmd = new OleDbCommand(sql, conexion);
+            OleDbDataAdapter da = new OleDbDataAdapter(cmd);
+            da.Fill(ds, "IDPaciente");
+
+            IDPaciente = Convert.ToInt32(ds.Tables["IDPaciente"].Rows[0]["Id"]);
+
+            FormPrincipal form = new FormPrincipal();
+            form.Show();
+            this.Hide();
+        }
+
+        private void pic_Nom3_Click(object sender, EventArgs e)
+        {
+            string sql = "SELECT Id FROM Usuario WHERE NombreCompleto = '" + lbl_Nom3.Text + "'";
+            OleDbCommand cmd = new OleDbCommand(sql, conexion);
+            OleDbDataAdapter da = new OleDbDataAdapter(cmd);
+            da.Fill(ds, "IDPaciente");
+
+            IDPaciente = Convert.ToInt32(ds.Tables["IDPaciente"].Rows[0]["Id"]);
+
+            FormPrincipal form = new FormPrincipal();
+            form.Show();
+            this.Hide();
+        }
+
+        private void pic_Nom4_Click(object sender, EventArgs e)
+        {
+            string sql = "SELECT Id FROM Usuario WHERE NombreCompleto = '" + lbl_Nom4.Text + "'";
+            OleDbCommand cmd = new OleDbCommand(sql, conexion);
+            OleDbDataAdapter da = new OleDbDataAdapter(cmd);
+            da.Fill(ds, "IDPaciente");
+
+            IDPaciente = Convert.ToInt32(ds.Tables["IDPaciente"].Rows[0]["Id"]);
+
+            FormPrincipal form = new FormPrincipal();
+            form.Show();
+            this.Hide();
+        }
+
+        private void pic_Nom5_Click(object sender, EventArgs e)
+        {
+            string sql = "SELECT Id FROM Usuario WHERE NombreCompleto = '" + lbl_Nom5.Text + "'";
+            OleDbCommand cmd = new OleDbCommand(sql, conexion);
+            OleDbDataAdapter da = new OleDbDataAdapter(cmd);
+            da.Fill(ds, "IDPaciente");
+
+            IDPaciente = Convert.ToInt32(ds.Tables["IDPaciente"].Rows[0]["Id"]);
+
+            FormPrincipal form = new FormPrincipal();
+            form.Show();
+            this.Hide();
+        }
+
+        private void pic_Nom6_Click(object sender, EventArgs e)
+        {
+            string sql = "SELECT Id FROM Usuario WHERE NombreCompleto = '" + lbl_Nom6.Text + "'";
+            OleDbCommand cmd = new OleDbCommand(sql, conexion);
+            OleDbDataAdapter da = new OleDbDataAdapter(cmd);
+            da.Fill(ds, "IDPaciente");
+
+            IDPaciente = Convert.ToInt32(ds.Tables["IDPaciente"].Rows[0]["Id"]);
+
+            FormPrincipal form = new FormPrincipal();
+            form.Show();
+            this.Hide();
+        }
+
+        private void pic_Nom7_Click(object sender, EventArgs e)
+        {
+            string sql = "SELECT Id FROM Usuario WHERE NombreCompleto = '" + lbl_Nom7.Text + "'";
+            OleDbCommand cmd = new OleDbCommand(sql, conexion);
+            OleDbDataAdapter da = new OleDbDataAdapter(cmd);
+            da.Fill(ds, "IDPaciente");
+
+            IDPaciente = Convert.ToInt32(ds.Tables["IDPaciente"].Rows[0]["Id"]);
+
+            FormPrincipal form = new FormPrincipal();
+            form.Show();
+            this.Hide();
+        }
+
+        private void pic_Nom8_Click(object sender, EventArgs e)
+        {
+            string sql = "SELECT Id FROM Usuario WHERE NombreCompleto = '" + lbl_Nom8.Text + "'";
+            OleDbCommand cmd = new OleDbCommand(sql, conexion);
+            OleDbDataAdapter da = new OleDbDataAdapter(cmd);
+            da.Fill(ds, "IDPaciente");
+
+            IDPaciente = Convert.ToInt32(ds.Tables["IDPaciente"].Rows[0]["Id"]);
+
+            FormPrincipal form = new FormPrincipal();
+            form.Show();
+            this.Hide();
+        }
+
+
 
         private void pic_Nom1_Paint(object sender, PaintEventArgs pe)
         {
@@ -698,118 +812,6 @@ namespace Pantalla_Contraseña
                 if (borderSize > 0)
                     graph.DrawEllipse(penBorder, rectBorder);
             }
-        }
-
-        private void pic_Nom1_Click(object sender, EventArgs e)
-        {
-            string sql = "SELECT Id FROM Usuario WHERE NombreCompleto = '" + lbl_Nom1.Text + "'";
-            OleDbCommand cmd = new OleDbCommand(sql, conexion);
-            OleDbDataAdapter da = new OleDbDataAdapter(cmd);
-            da.Fill(ds, "IDPaciente");
-
-            IDPaciente = Convert.ToInt32(ds.Tables["IDPaciente"].Rows[0]["Id"]);
-
-            FormPrincipal form = new FormPrincipal();
-            form.Show();
-            this.Hide();
-        }
-
-        private void pic_Nom2_Click(object sender, EventArgs e)
-        {
-            string sql = "SELECT Id FROM Usuario WHERE NombreCompleto = '" + lbl_Nom2.Text + "'";
-            OleDbCommand cmd = new OleDbCommand(sql, conexion);
-            OleDbDataAdapter da = new OleDbDataAdapter(cmd);
-            da.Fill(ds, "IDPaciente");
-
-            IDPaciente = Convert.ToInt32(ds.Tables["IDPaciente"].Rows[0]["Id"]);
-
-            FormPrincipal form = new FormPrincipal();
-            form.Show();
-            this.Hide();
-        }
-
-        private void pic_Nom3_Click(object sender, EventArgs e)
-        {
-            string sql = "SELECT Id FROM Usuario WHERE NombreCompleto = '" + lbl_Nom3.Text + "'";
-            OleDbCommand cmd = new OleDbCommand(sql, conexion);
-            OleDbDataAdapter da = new OleDbDataAdapter(cmd);
-            da.Fill(ds, "IDPaciente");
-
-            IDPaciente = Convert.ToInt32(ds.Tables["IDPaciente"].Rows[0]["Id"]);
-
-            FormPrincipal form = new FormPrincipal();
-            form.Show();
-            this.Hide();
-        }
-
-        private void pic_Nom4_Click(object sender, EventArgs e)
-        {
-            string sql = "SELECT Id FROM Usuario WHERE NombreCompleto = '" + lbl_Nom4.Text + "'";
-            OleDbCommand cmd = new OleDbCommand(sql, conexion);
-            OleDbDataAdapter da = new OleDbDataAdapter(cmd);
-            da.Fill(ds, "IDPaciente");
-
-            IDPaciente = Convert.ToInt32(ds.Tables["IDPaciente"].Rows[0]["Id"]);
-
-            FormPrincipal form = new FormPrincipal();
-            form.Show();
-            this.Hide();
-        }
-
-        private void pic_Nom5_Click(object sender, EventArgs e)
-        {
-            string sql = "SELECT Id FROM Usuario WHERE NombreCompleto = '" + lbl_Nom5.Text + "'";
-            OleDbCommand cmd = new OleDbCommand(sql, conexion);
-            OleDbDataAdapter da = new OleDbDataAdapter(cmd);
-            da.Fill(ds, "IDPaciente");
-
-            IDPaciente = Convert.ToInt32(ds.Tables["IDPaciente"].Rows[0]["Id"]);
-
-            FormPrincipal form = new FormPrincipal();
-            form.Show();
-            this.Hide();
-        }
-
-        private void pic_Nom6_Click(object sender, EventArgs e)
-        {
-            string sql = "SELECT Id FROM Usuario WHERE NombreCompleto = '" + lbl_Nom6.Text + "'";
-            OleDbCommand cmd = new OleDbCommand(sql, conexion);
-            OleDbDataAdapter da = new OleDbDataAdapter(cmd);
-            da.Fill(ds, "IDPaciente");
-
-            IDPaciente = Convert.ToInt32(ds.Tables["IDPaciente"].Rows[0]["Id"]);
-
-            FormPrincipal form = new FormPrincipal();
-            form.Show();
-            this.Hide();
-        }
-
-        private void pic_Nom7_Click(object sender, EventArgs e)
-        {
-            string sql = "SELECT Id FROM Usuario WHERE NombreCompleto = '" + lbl_Nom7.Text + "'";
-            OleDbCommand cmd = new OleDbCommand(sql, conexion);
-            OleDbDataAdapter da = new OleDbDataAdapter(cmd);
-            da.Fill(ds, "IDPaciente");
-
-            IDPaciente = Convert.ToInt32(ds.Tables["IDPaciente"].Rows[0]["Id"]);
-
-            FormPrincipal form = new FormPrincipal();
-            form.Show();
-            this.Hide();
-        }
-
-        private void pic_Nom8_Click(object sender, EventArgs e)
-        {
-            string sql = "SELECT Id FROM Usuario WHERE NombreCompleto = '" + lbl_Nom8.Text + "'";
-            OleDbCommand cmd = new OleDbCommand(sql, conexion);
-            OleDbDataAdapter da = new OleDbDataAdapter(cmd);
-            da.Fill(ds, "IDPaciente");
-
-            IDPaciente = Convert.ToInt32(ds.Tables["IDPaciente"].Rows[0]["Id"]);
-
-            FormPrincipal form = new FormPrincipal();
-            form.Show();
-            this.Hide();
         }
     }
 }
