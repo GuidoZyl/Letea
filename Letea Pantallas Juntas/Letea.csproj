@@ -81,6 +81,12 @@
     <Compile Include="ArbolGenealogico.Designer.cs">
       <DependentUpon>ArbolGenealogico.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cargando.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cargando.Designer.cs">
+      <DependentUpon>Cargando.cs</DependentUpon>
+    </Compile>
     <Compile Include="Crear Grupos de Amigos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,18 +209,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="prueba.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="prueba.Designer.cs">
-      <DependentUpon>prueba.cs</DependentUpon>
-    </Compile>
-    <Compile Include="prueba2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="prueba2.Designer.cs">
-      <DependentUpon>prueba2.cs</DependentUpon>
-    </Compile>
     <Compile Include="UnirSinFlechas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -229,6 +223,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ArbolGenealogico.resx">
       <DependentUpon>ArbolGenealogico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cargando.resx">
+      <DependentUpon>Cargando.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Crear Grupos de Amigos.resx">
       <DependentUpon>Crear Grupos de Amigos.cs</DependentUpon>
@@ -297,12 +294,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="prueba.resx">
-      <DependentUpon>prueba.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="prueba2.resx">
-      <DependentUpon>prueba2.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UnirSinFlechas.resx">
       <DependentUpon>UnirSinFlechas.cs</DependentUpon>
     </EmbeddedResource>
@@ -588,6 +579,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Boton ASOCIANDO NOMBRES %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Frame 15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ganaste.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Frame 15 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boton vovlerajugar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boton vovlerajugar %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boton Menú.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

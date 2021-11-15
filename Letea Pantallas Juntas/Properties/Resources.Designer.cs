@@ -293,6 +293,16 @@ namespace Pantalla_Contraseña.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Boton_Menú {
+            get {
+                object obj = ResourceManager.GetObject("Boton Menú", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Boton_PREGUNTAS {
             get {
                 object obj = ResourceManager.GetObject("Boton PREGUNTAS", resourceCulture);
@@ -326,6 +336,26 @@ namespace Pantalla_Contraseña.Properties {
         internal static System.Drawing.Bitmap Boton_Volver {
             get {
                 object obj = ResourceManager.GetObject("Boton Volver", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Boton_vovlerajugar {
+            get {
+                object obj = ResourceManager.GetObject("Boton vovlerajugar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Boton_vovlerajugar__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Boton vovlerajugar (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -686,6 +716,36 @@ namespace Pantalla_Contraseña.Properties {
         internal static System.Drawing.Bitmap Frame_14__4_ {
             get {
                 object obj = ResourceManager.GetObject("Frame 14 (4)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Frame_15 {
+            get {
+                object obj = ResourceManager.GetObject("Frame 15", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Frame_15__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Frame 15 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ganaste {
+            get {
+                object obj = ResourceManager.GetObject("ganaste", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

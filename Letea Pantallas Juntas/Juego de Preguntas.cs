@@ -706,12 +706,21 @@ namespace Pantalla_Contraseña
                 {
                     if (LabelClicked.Text == NombreCorrecto)
                     {
-                        MessageBox.Show("Correcto");
+                        pic_BienHecho.Visible = true;
+                        lbl_Pregunta.Visible = false;
+                        Task.Delay(1000).Wait();
+                        pic_BienHecho.Visible = false;
+                        lbl_Pregunta.Visible = true;
+
                         NuevaPreguntaAmigos();
                     }
                     else
                     {
-                        MessageBox.Show("Inténtelo de nuevo");
+                        pic_IntentelodeNuevo.Visible = true;
+                        lbl_Pregunta.Visible = false;
+                        Task.Delay(1000).Wait();
+                        pic_IntentelodeNuevo.Visible = false;
+                        lbl_Pregunta.Visible = true;
                     }
                 }
 
@@ -719,12 +728,21 @@ namespace Pantalla_Contraseña
                 {
                     if (LabelClicked.Text == GrupoCorrecto)
                     {
-                        MessageBox.Show("Correcto");
+                        pic_BienHecho.Visible = true;
+                        lbl_Pregunta.Visible = false;
+                        Task.Delay(1000).Wait();
+                        pic_BienHecho.Visible = false;
+                        lbl_Pregunta.Visible = true;
+
                         NuevaPreguntaAmigos();
                     }
                     else
                     {
-                        MessageBox.Show("Inténtelo de nuevo");
+                        pic_IntentelodeNuevo.Visible = true;
+                        lbl_Pregunta.Visible = false;
+                        Task.Delay(1000).Wait();
+                        pic_IntentelodeNuevo.Visible = false;
+                        lbl_Pregunta.Visible = true;
                     }
                 }
 
@@ -732,12 +750,21 @@ namespace Pantalla_Contraseña
                 {
                     if (LabelClicked.Text == FechaCorrecta)
                     {
-                        MessageBox.Show("Correcto");
+                        pic_BienHecho.Visible = true;
+                        lbl_Pregunta.Visible = false;
+                        Task.Delay(1000).Wait();
+                        pic_BienHecho.Visible = false;
+                        lbl_Pregunta.Visible = true;
+
                         NuevaPreguntaAmigos();
                     }
                     else
                     {
-                        MessageBox.Show("Inténtelo de nuevo");
+                        pic_IntentelodeNuevo.Visible = true;
+                        lbl_Pregunta.Visible = false;
+                        Task.Delay(1000).Wait();
+                        pic_IntentelodeNuevo.Visible = false;
+                        lbl_Pregunta.Visible = true;
                     }
                 }
             }
@@ -748,12 +775,21 @@ namespace Pantalla_Contraseña
                 {
                     if (LabelClicked.Text == RelacionCorrecta)
                     {
-                        MessageBox.Show("Correcto");
+                        pic_BienHecho.Visible = true;
+                        lbl_Pregunta.Visible = false;
+                        Task.Delay(1000).Wait();
+                        pic_BienHecho.Visible = false;
+                        lbl_Pregunta.Visible = true;
+
                         NuevaPreguntaFamilia();
                     }
                     else
                     {
-                        MessageBox.Show("Inténtelo de nuevo");
+                        pic_IntentelodeNuevo.Visible = true;
+                        lbl_Pregunta.Visible = false;
+                        Task.Delay(1000).Wait();
+                        pic_IntentelodeNuevo.Visible = false;
+                        lbl_Pregunta.Visible = true;
                     }
                 }
 
@@ -761,12 +797,21 @@ namespace Pantalla_Contraseña
                 {
                     if (LabelClicked.Text == NombreCorrecto)
                     {
-                        MessageBox.Show("Correcto");
+                        pic_BienHecho.Visible = true;
+                        lbl_Pregunta.Visible = false;
+                        Task.Delay(1000).Wait();
+                        pic_BienHecho.Visible = false;
+                        lbl_Pregunta.Visible = true;
+
                         NuevaPreguntaFamilia();
                     }
                     else
                     {
-                        MessageBox.Show("Inténtelo de nuevo");
+                        pic_IntentelodeNuevo.Visible = true;
+                        lbl_Pregunta.Visible = false;
+                        Task.Delay(1000).Wait();
+                        pic_IntentelodeNuevo.Visible = false;
+                        lbl_Pregunta.Visible = true;
                     }
                 }
 
@@ -774,12 +819,21 @@ namespace Pantalla_Contraseña
                 {
                     if (LabelClicked.Text == FechaCorrecta)
                     {
-                        MessageBox.Show("Correcto");
+                        pic_BienHecho.Visible = true;
+                        lbl_Pregunta.Visible = false;
+                        Task.Delay(1000).Wait();
+                        pic_BienHecho.Visible = false;
+                        lbl_Pregunta.Visible = true;
+
                         NuevaPreguntaFamilia();
                     }
                     else
                     {
-                        MessageBox.Show("Inténtelo de nuevo");
+                        pic_IntentelodeNuevo.Visible = true;
+                        lbl_Pregunta.Visible = false;
+                        Task.Delay(1000).Wait();
+                        pic_IntentelodeNuevo.Visible = false;
+                        lbl_Pregunta.Visible = true;
                     }
                 }
             }

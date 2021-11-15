@@ -54,13 +54,6 @@ namespace Pantalla_Contraseña
             this.Hide();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            JuegoArbol form = new JuegoArbol();
-            form.Show();
-            this.Hide();
-        }
-
         private void btn_PreguntasFamilia_Click(object sender, EventArgs e)
         {
             FormPreguntas form = new FormPreguntas();

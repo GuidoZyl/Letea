@@ -297,7 +297,9 @@ namespace Pantalla_Contraseña
             else { fototres.Visible = true; }
             if (fotouno.Visible == false && fotodos.Visible == false && fototres.Visible == false)
             {
-                MessageBox.Show("Hola");
+                pic_Ganaste.Visible = true;
+                btn_Volver2.Visible = true;
+                btn_VolveraJugar.Visible = true;
             }
 
             if (Convert.ToInt32(fotouno.Tag) != 1000)
@@ -365,6 +367,11 @@ namespace Pantalla_Contraseña
             JuegosAmigos form = new JuegosAmigos();
             form.Show();
             this.Hide();
+        }
+
+        private void btn_VolveraJugar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

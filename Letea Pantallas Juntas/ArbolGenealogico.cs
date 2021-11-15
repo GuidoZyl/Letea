@@ -601,8 +601,11 @@ namespace Pantalla_Contraseña
             string sql = "DELETE * FROM Lineas WHERE IDUsuario = " + FormPacientes2.IDPaciente + "";
             OleDbCommand cmd = new OleDbCommand(sql, conexion);
             cmd.ExecuteNonQuery();
-            // falta agregar form de carga
 
+            /*Cargando form = new Cargando();
+            form.Show();
+            this.Hide();
+            */
         }
 
         private void btn_Jugar_Click(object sender, EventArgs e)
