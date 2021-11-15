@@ -31,8 +31,12 @@ namespace Pantalla_Contraseña
         {
             this.btn_Volver = new System.Windows.Forms.PictureBox();
             this.pic_CuloGris = new System.Windows.Forms.PictureBox();
+            this.pic_IntentelodeNuevo = new System.Windows.Forms.PictureBox();
+            this.pic_BienHecho = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Volver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_CuloGris)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_IntentelodeNuevo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_BienHecho)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Volver
@@ -57,6 +61,28 @@ namespace Pantalla_Contraseña
             this.pic_CuloGris.TabIndex = 24;
             this.pic_CuloGris.TabStop = false;
             // 
+            // pic_IntentelodeNuevo
+            // 
+            this.pic_IntentelodeNuevo.BackColor = System.Drawing.Color.Transparent;
+            this.pic_IntentelodeNuevo.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Frame_14__2_;
+            this.pic_IntentelodeNuevo.Location = new System.Drawing.Point(422, 886);
+            this.pic_IntentelodeNuevo.Name = "pic_IntentelodeNuevo";
+            this.pic_IntentelodeNuevo.Size = new System.Drawing.Size(1022, 128);
+            this.pic_IntentelodeNuevo.TabIndex = 66;
+            this.pic_IntentelodeNuevo.TabStop = false;
+            this.pic_IntentelodeNuevo.Visible = false;
+            // 
+            // pic_BienHecho
+            // 
+            this.pic_BienHecho.BackColor = System.Drawing.Color.Transparent;
+            this.pic_BienHecho.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Frame_14__4_;
+            this.pic_BienHecho.Location = new System.Drawing.Point(601, 886);
+            this.pic_BienHecho.Name = "pic_BienHecho";
+            this.pic_BienHecho.Size = new System.Drawing.Size(667, 128);
+            this.pic_BienHecho.TabIndex = 67;
+            this.pic_BienHecho.TabStop = false;
+            this.pic_BienHecho.Visible = false;
+            // 
             // JuegoArbol
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -64,6 +90,8 @@ namespace Pantalla_Contraseña
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Fondo;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.pic_BienHecho);
+            this.Controls.Add(this.pic_IntentelodeNuevo);
             this.Controls.Add(this.pic_CuloGris);
             this.Controls.Add(this.btn_Volver);
             this.Name = "JuegoArbol";
@@ -72,6 +100,8 @@ namespace Pantalla_Contraseña
             this.Load += new System.EventHandler(this.JuegoArbol_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btn_Volver)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_CuloGris)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_IntentelodeNuevo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_BienHecho)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -80,5 +110,7 @@ namespace Pantalla_Contraseña
 
         private System.Windows.Forms.PictureBox btn_Volver;
         private System.Windows.Forms.PictureBox pic_CuloGris;
+        private System.Windows.Forms.PictureBox pic_IntentelodeNuevo;
+        private System.Windows.Forms.PictureBox pic_BienHecho;
     }
 }

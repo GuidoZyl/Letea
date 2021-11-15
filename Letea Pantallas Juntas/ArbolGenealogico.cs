@@ -136,6 +136,7 @@ namespace Pantalla_Contraseña
             }
 
             g = CreateGraphics();
+
             string sql2 = "SELECT * FROM Usuario WHERE Id = "+FormPacientes2.IDPaciente+"";
             OleDbCommand cmd2 = new OleDbCommand(sql2, conexion);
             OleDbDataAdapter da2 = new OleDbDataAdapter(cmd2);
@@ -174,31 +175,6 @@ namespace Pantalla_Contraseña
             OleDbDataAdapter da = new OleDbDataAdapter(cmd);
             da.Fill(ds, "Familia");
 
-            /* for (int i = 0; i < ds.Tables["Familia"].Rows.Count; i++)
-             {
-                 Label tempNombre = new Label();
-
-                 tempNombre.Width = 200;
-                 tempNombre.AutoSize = false;
-                 tempNombre.Height = 50;
-                 tempNombre.Font = new Font("Microsoft Sans Serif", 15F);
-                 tempNombre.TextAlign = ContentAlignment.MiddleCenter;
-                 tempNombre.Text = ds.Tables["Familia"].Rows[i]["Nombre"].ToString();
-                 tempNombre.BackColor = Color.Transparent;
-                 if (Convert.ToBoolean(ds.Tables["Familia"].Rows[i]["Editado"]) == false)
-                 {
-
-                 }
-
-                 else
-                 {
-                     tempNombre.Location = new Point(Convert.ToInt32(ds.Tables["Familia"].Rows[i]["X"]) - 25, Convert.ToInt32(ds.Tables["Familia"].Rows[i]["Y"]) + 150);
-                 }
-                 Controls.Add(tempNombre);
-                 tempNombre.SendToBack();
-             }*/
-
-
             for (int i = 0; i < ds.Tables["Familia"].Rows.Count; i++)
             {
                 PictureBox temp = new PictureBox();
@@ -206,7 +182,13 @@ namespace Pantalla_Contraseña
 
                 temp.Height = 150;
                 temp.Width = 150;
-
+                temp.Tag = Convert.ToInt32(ds.Tables["Familia"].Rows[i]["Id"]);
+                temp.Paint += new PaintEventHandler(handlerComun_Paint);
+                temp.MouseDown += new MouseEventHandler(temp_MouseDown);
+                temp.MouseUp += new MouseEventHandler(temp_MouseUp);
+                temp.MouseMove += new MouseEventHandler(temp_MouseMove);
+                temp.MouseEnter += new EventHandler(temp_MouseEnter);
+                temp.Click += new EventHandler(handler_Click);
 
                 MemoryStream ms = new MemoryStream((byte[])ds.Tables["Familia"].Rows[i]["Foto"]);
                 Bitmap bm = new Bitmap(ms);
@@ -227,19 +209,12 @@ namespace Pantalla_Contraseña
 
                 temp.Name = "pic_Familiar";
                 Nombre = temp.Name;
-                temp.Tag = Convert.ToInt32(ds.Tables["Familia"].Rows[i]["Id"]);
 
-                temp.Paint += new PaintEventHandler(handlerComun_Paint);
-                temp.MouseDown += new MouseEventHandler(temp_MouseDown);
-                temp.MouseUp += new MouseEventHandler(temp_MouseUp);
-                temp.MouseMove += new MouseEventHandler(temp_MouseMove);
-                temp.MouseEnter += new EventHandler(temp_MouseEnter);
-                temp.Click += new EventHandler(handler_Click);
+                
 
                 Controls.Add(temp);
                 temp.BringToFront();
             }
-            //Labels();
             Lineas();
         }
         void Lineas()
@@ -295,7 +270,8 @@ namespace Pantalla_Contraseña
 
                 tempNombre.Click += new EventHandler(handlerLabel_Click);
                 tempNombre.Cursor = Cursors.Hand;
-                tempNombre.Location = new Point(Convert.ToInt32(ds.Tables["Labels"].Rows[i]["X"]) - 25, Convert.ToInt32(ds.Tables["Labels"].Rows[i]["Y"]) + 150);
+                tempNombre.Location = new Point(Convert.ToInt32(ds.Tables["Labels"].Rows[i]["X"]) -
+                25, Convert.ToInt32(ds.Tables["Labels"].Rows[i]["Y"]) + 150);
                 
                 Controls.Add(tempNombre);
                 tempNombre.SendToBack();

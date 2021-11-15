@@ -113,6 +113,7 @@ namespace Pantalla_Contraseña
             uno.Tag = 1;
             uno.Paint += new PaintEventHandler(handlerComun_Paint);
             uno.Click += new EventHandler(handlerArbolClicked);
+            uno.Cursor = Cursors.Hand;
             Controls.Add(uno);
             uno.BringToFront();
            
@@ -126,6 +127,7 @@ namespace Pantalla_Contraseña
             fotouno.Tag = 1;
             fotouno.Paint += new PaintEventHandler(handlerComun_Paint);
             fotouno.Click += new EventHandler(handlerPicClicked);
+            fotouno.Cursor = Cursors.Hand;
             Controls.Add(fotouno);
 
             
@@ -137,6 +139,7 @@ namespace Pantalla_Contraseña
             dos.Tag = 2;
             dos.Paint += new PaintEventHandler(handlerComun_Paint);
             dos.Click += new EventHandler(handlerArbolClicked);
+            dos.Cursor = Cursors.Hand;
             Controls.Add(dos);
             dos.BringToFront();
           
@@ -150,6 +153,7 @@ namespace Pantalla_Contraseña
             fotodos.Tag = 2;
             fotodos.Paint += new PaintEventHandler(handlerComun_Paint);
             fotodos.Click += new EventHandler(handlerPicClicked);
+            fotodos.Cursor = Cursors.Hand;
             Controls.Add(fotodos);
 
            
@@ -161,6 +165,7 @@ namespace Pantalla_Contraseña
             tres.Tag = 3;
             tres.Paint += new PaintEventHandler(handlerComun_Paint);
             tres.Click += new EventHandler(handlerArbolClicked);
+            tres.Cursor = Cursors.Hand;
             Controls.Add(tres);
             tres.BringToFront();
             
@@ -175,6 +180,7 @@ namespace Pantalla_Contraseña
             fototres.Tag = 3;
             fototres.Paint += new PaintEventHandler(handlerComun_Paint);
             fototres.Click += new EventHandler(handlerPicClicked);
+            fototres.Cursor = Cursors.Hand;
             Controls.Add(fototres);
 
         }
@@ -239,14 +245,29 @@ namespace Pantalla_Contraseña
                     fototres.Tag = 1000;
                     tres.Tag = 1000;
                 }
-                MessageBox.Show("anashe");
+
+                fotouno.Visible = false;
+                fotodos.Visible = false;
+                fototres.Visible = false;
+
+                pic_BienHecho.Visible = true;
+                Task.Delay(1000).Wait();
+                pic_BienHecho.Visible = false;
+
                 SiguientePosicion();
                 TagFotoClickeada = 0;
                 TagFotoClickeada2 = 0;
             }
             else 
-            { 
-                MessageBox.Show("sos nefasto");
+            {
+                fotouno.Visible = false;
+                fotodos.Visible = false;
+                fototres.Visible = false;
+
+                pic_IntentelodeNuevo.Visible = true;
+                Task.Delay(1000).Wait();
+                pic_IntentelodeNuevo.Visible = false;
+
                 SiguientePosicion();
             }
         }
@@ -257,23 +278,39 @@ namespace Pantalla_Contraseña
             {
                 fotouno.Visible = false;
                 uno.Image = fotouno.Image;
+                uno.Cursor = Cursors.Default;
             }
             else { fotouno.Visible = true; }
             if (Convert.ToInt32(fotodos.Tag) == 1000)
             {
                 fotodos.Visible = false;
                 dos.Image = fotodos.Image;
+                dos.Cursor = Cursors.Default;
             }
             else { fotodos.Visible = true; }
             if (Convert.ToInt32(fototres.Tag) == 1000)
             {
                 fototres.Visible = false;
                 tres.Image = fototres.Image;
+                tres.Cursor = Cursors.Default;
             }
             else { fototres.Visible = true; }
             if (fotouno.Visible == false && fotodos.Visible == false && fototres.Visible == false)
             {
                 MessageBox.Show("Hola");
+            }
+
+            if (Convert.ToInt32(fotouno.Tag) != 1000)
+            {
+                fotouno.Visible = true;
+            }
+            if (Convert.ToInt32(fotodos.Tag) != 1000)
+            {
+                fotodos.Visible = true;
+            }
+            if (Convert.ToInt32(fototres.Tag) != 1000)
+            {
+                fototres.Visible = true;
             }
         }
         private void handlerArbolClicked (object sender, EventArgs e)
