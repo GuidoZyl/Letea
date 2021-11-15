@@ -52,7 +52,11 @@ namespace Pantalla_Contraseña
         {
             conexion.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=.\Base de Datos 4.accdb;";
             conexion.Open();
-
+            Juego();
+            
+        }
+        void Juego()
+        {
             g = CreateGraphics();
             string sql2 = "SELECT * FROM Usuario WHERE Id = " + FormPacientes2.IDPaciente + "";
             OleDbCommand cmd2 = new OleDbCommand(sql2, conexion);
@@ -103,7 +107,7 @@ namespace Pantalla_Contraseña
                 CantPersonas[i] = i;
             }
             Random(CantPersonas);
-           
+
 
             uno.Height = 150;
             uno.Width = 150;
@@ -116,9 +120,9 @@ namespace Pantalla_Contraseña
             uno.Cursor = Cursors.Hand;
             Controls.Add(uno);
             uno.BringToFront();
-           
+
             MemoryStream ms2 = new MemoryStream((byte[])ds.Tables["Familia"].Rows[CantPersonas[0]]["Foto"]);
-            Bitmap bm2= new Bitmap(ms2);
+            Bitmap bm2 = new Bitmap(ms2);
             fotouno.Image = bm2;
             fotouno.SizeMode = PictureBoxSizeMode.StretchImage;
             fotouno.Height = 175;
@@ -130,7 +134,7 @@ namespace Pantalla_Contraseña
             fotouno.Cursor = Cursors.Hand;
             Controls.Add(fotouno);
 
-            
+
             dos.Height = 150;
             dos.Width = 150;
             dos.Image = pic_CuloGris.Image;
@@ -142,7 +146,7 @@ namespace Pantalla_Contraseña
             dos.Cursor = Cursors.Hand;
             Controls.Add(dos);
             dos.BringToFront();
-          
+
             MemoryStream ms3 = new MemoryStream((byte[])ds.Tables["Familia"].Rows[CantPersonas[1]]["Foto"]);
             Bitmap bm3 = new Bitmap(ms3);
             fotodos.Image = bm3;
@@ -156,7 +160,7 @@ namespace Pantalla_Contraseña
             fotodos.Cursor = Cursors.Hand;
             Controls.Add(fotodos);
 
-           
+
             tres.Height = 150;
             tres.Width = 150;
             tres.Image = pic_CuloGris.Image;
@@ -168,8 +172,8 @@ namespace Pantalla_Contraseña
             tres.Cursor = Cursors.Hand;
             Controls.Add(tres);
             tres.BringToFront();
-            
-            
+
+
             MemoryStream ms4 = new MemoryStream((byte[])ds.Tables["Familia"].Rows[CantPersonas[2]]["Foto"]);
             Bitmap bm4 = new Bitmap(ms4);
             fototres.Image = bm4;
@@ -371,7 +375,10 @@ namespace Pantalla_Contraseña
 
         private void btn_VolveraJugar_Click(object sender, EventArgs e)
         {
-
+            pic_Ganaste.Visible = false;
+            btn_Volver2.Visible = false;
+            btn_VolveraJugar.Visible = false;
+            Juego();
         }
     }
 }

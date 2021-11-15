@@ -397,7 +397,8 @@ namespace Pantalla_Contraseña
                 lbl_Res5.Visible == false && lbl_Res6.Visible == false && btn_Foto1.Visible == false && btn_Foto2.Visible == false &&
                 btn_Foto3.Visible == false && btn_Foto4.Visible == false && btn_Foto5.Visible == false && btn_Foto6.Visible == false)
             {
-                MessageBox.Show("GANASTE MOSTROOOOOOOOOOOOOOOOOO");
+                pic_Ganaste.Visible = true;
+                btn_Volver2.Visible = true;
                 btn_VolveraJugar.Visible = true;
             }
         }
@@ -776,6 +777,9 @@ namespace Pantalla_Contraseña
                 {
                     BotonesClickeados[j] = false;
                 }
+                pic_Ganaste.Visible = false;
+                btn_VolveraJugar.Visible = false;
+                btn_Volver2.Visible = false;
                 JuegoFamilia();
             }
             else
@@ -805,8 +809,31 @@ namespace Pantalla_Contraseña
                 pictureBox4.Visible = true;
                 pictureBox5.Visible = true;
                 pictureBox6.Visible = true;
+                TagBotonClickeado = 0;
+                TagFotoClickeada = 0;
+
+                for (int i = 0; i < 6; i++)
+                {
+                    Nombres[i] = "";
+                    NombresTag[i] = 0;
+                    Numero[i] = 0;
+                }
+                for (int j = 0; j < 12; j++)
+                {
+                    BotonesClickeados[j] = false;
+                }
+                pic_Ganaste.Visible = false;
+                btn_VolveraJugar.Visible = false;
+                btn_Volver2.Visible = false;
                 JuegoAmigo();
             }
+        }
+
+        private void btn_Volver2_Click(object sender, EventArgs e)
+        {
+            JuegosAmigos form = new JuegosAmigos();
+            form.Show();
+            this.Hide();
         }
     }
 }
