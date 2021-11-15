@@ -31,13 +31,11 @@ namespace Pantalla_Contraseña
         {
             this.btn_Familia = new System.Windows.Forms.PictureBox();
             this.btn_Amigos = new System.Windows.Forms.PictureBox();
-            this.btn_CrearPaciente = new System.Windows.Forms.PictureBox();
             this.btn_Config = new System.Windows.Forms.PictureBox();
             this.btn_Volver = new System.Windows.Forms.PictureBox();
             this.btn_Salir = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Familia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Amigos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_CrearPaciente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Config)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Volver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Salir)).BeginInit();
@@ -68,17 +66,6 @@ namespace Pantalla_Contraseña
             this.btn_Amigos.TabIndex = 1;
             this.btn_Amigos.TabStop = false;
             this.btn_Amigos.Click += new System.EventHandler(this.btn_Amigos_Click);
-            // 
-            // btn_CrearPaciente
-            // 
-            this.btn_CrearPaciente.BackColor = System.Drawing.Color.Transparent;
-            this.btn_CrearPaciente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_CrearPaciente.Image = global::Pantalla_Contraseña.Properties.Resources.Crear_paciente;
-            this.btn_CrearPaciente.Location = new System.Drawing.Point(725, 867);
-            this.btn_CrearPaciente.Name = "btn_CrearPaciente";
-            this.btn_CrearPaciente.Size = new System.Drawing.Size(485, 120);
-            this.btn_CrearPaciente.TabIndex = 2;
-            this.btn_CrearPaciente.TabStop = false;
             // 
             // btn_Config
             // 
@@ -128,7 +115,6 @@ namespace Pantalla_Contraseña
             this.Controls.Add(this.btn_Salir);
             this.Controls.Add(this.btn_Volver);
             this.Controls.Add(this.btn_Config);
-            this.Controls.Add(this.btn_CrearPaciente);
             this.Controls.Add(this.btn_Amigos);
             this.Controls.Add(this.btn_Familia);
             this.DoubleBuffered = true;
@@ -138,7 +124,6 @@ namespace Pantalla_Contraseña
             this.Load += new System.EventHandler(this.FormPrincipal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btn_Familia)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Amigos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_CrearPaciente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Config)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Volver)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Salir)).EndInit();
@@ -150,7 +135,6 @@ namespace Pantalla_Contraseña
 
         private System.Windows.Forms.PictureBox btn_Familia;
         private System.Windows.Forms.PictureBox btn_Amigos;
-        private System.Windows.Forms.PictureBox btn_CrearPaciente;
         private System.Windows.Forms.PictureBox btn_Config;
         private System.Windows.Forms.PictureBox btn_Volver;
         private System.Windows.Forms.PictureBox btn_Salir;

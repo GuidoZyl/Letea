@@ -47,8 +47,6 @@ namespace Pantalla_Contraseña
 
                 conexion.Close();
 
-                MessageBox.Show("Listo");
-
                 FormFotoAdmin FotoAdmin = new FormFotoAdmin();
                 FotoAdmin.Show();
                 this.Hide();

@@ -125,9 +125,9 @@ namespace Pantalla_Contraseña
             Bitmap bm2 = new Bitmap(ms2);
             fotouno.Image = bm2;
             fotouno.SizeMode = PictureBoxSizeMode.StretchImage;
-            fotouno.Height = 175;
-            fotouno.Width = 175;
-            fotouno.Location = new Point(400, 820);
+            fotouno.Height = 150;
+            fotouno.Width = 150;
+            fotouno.Location = new Point(400, 845);
             fotouno.Tag = 1;
             fotouno.Paint += new PaintEventHandler(handlerComun_Paint);
             fotouno.Click += new EventHandler(handlerPicClicked);
@@ -151,9 +151,9 @@ namespace Pantalla_Contraseña
             Bitmap bm3 = new Bitmap(ms3);
             fotodos.Image = bm3;
             fotodos.SizeMode = PictureBoxSizeMode.StretchImage;
-            fotodos.Height = 175;
-            fotodos.Width = 175;
-            fotodos.Location = new Point(870, 820);
+            fotodos.Height = 150;
+            fotodos.Width = 150;
+            fotodos.Location = new Point(870, 845);
             fotodos.Tag = 2;
             fotodos.Paint += new PaintEventHandler(handlerComun_Paint);
             fotodos.Click += new EventHandler(handlerPicClicked);
@@ -178,9 +178,9 @@ namespace Pantalla_Contraseña
             Bitmap bm4 = new Bitmap(ms4);
             fototres.Image = bm4;
             fototres.SizeMode = PictureBoxSizeMode.StretchImage;
-            fototres.Height = 175;
-            fototres.Width = 175;
-            fototres.Location = new Point(1345, 820);
+            fototres.Height = 150;
+            fototres.Width = 150;
+            fototres.Location = new Point(1345, 845);
             fototres.Tag = 3;
             fototres.Paint += new PaintEventHandler(handlerComun_Paint);
             fototres.Click += new EventHandler(handlerPicClicked);
@@ -303,7 +303,18 @@ namespace Pantalla_Contraseña
             {
                 pic_Ganaste.Visible = true;
                 btn_Volver2.Visible = true;
-                btn_VolveraJugar.Visible = true;
+                pictureBox1.Visible = true;
+
+                fotouno.Visible = false;
+                fotodos.Visible = false;
+                fototres.Visible = false;
+                uno.Visible = false;
+                dos.Visible = false;
+                tres.Visible = false;
+
+                pic_Ganaste.BringToFront();
+                btn_Volver.BringToFront();
+                btn_Volver2.BringToFront();
             }
 
             if (Convert.ToInt32(fotouno.Tag) != 1000)
@@ -373,12 +384,9 @@ namespace Pantalla_Contraseña
             this.Hide();
         }
 
-        private void btn_VolveraJugar_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
-            pic_Ganaste.Visible = false;
-            btn_Volver2.Visible = false;
-            btn_VolveraJugar.Visible = false;
-            Juego();
+
         }
     }
 }

@@ -105,7 +105,6 @@ namespace Pantalla_Contraseña
             // 
             this.dtp_Fecha.CalendarMonthBackground = System.Drawing.Color.Transparent;
             this.dtp_Fecha.CustomFormat = "dd/MM/yyyy";
-            this.dtp_Fecha.Enabled = false;
             this.dtp_Fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
             this.dtp_Fecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtp_Fecha.Location = new System.Drawing.Point(1085, 628);

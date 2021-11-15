@@ -35,12 +35,14 @@ namespace Pantalla_Contraseña
             this.pic_BienHecho = new System.Windows.Forms.PictureBox();
             this.pic_Ganaste = new System.Windows.Forms.PictureBox();
             this.btn_Volver2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Volver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_CuloGris)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_IntentelodeNuevo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_BienHecho)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Ganaste)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Volver2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Volver
@@ -91,9 +93,10 @@ namespace Pantalla_Contraseña
             // 
             this.pic_Ganaste.BackColor = System.Drawing.Color.Transparent;
             this.pic_Ganaste.Image = global::Pantalla_Contraseña.Properties.Resources.Frame_15__1_;
-            this.pic_Ganaste.Location = new System.Drawing.Point(588, 298);
+            this.pic_Ganaste.Location = new System.Drawing.Point(146, 57);
             this.pic_Ganaste.Name = "pic_Ganaste";
-            this.pic_Ganaste.Size = new System.Drawing.Size(781, 201);
+            this.pic_Ganaste.Size = new System.Drawing.Size(1602, 626);
+            this.pic_Ganaste.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pic_Ganaste.TabIndex = 68;
             this.pic_Ganaste.TabStop = false;
             this.pic_Ganaste.Visible = false;
@@ -103,13 +106,24 @@ namespace Pantalla_Contraseña
             this.btn_Volver2.BackColor = System.Drawing.Color.Transparent;
             this.btn_Volver2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Volver2.Image = global::Pantalla_Contraseña.Properties.Resources.Boton_Menú;
-            this.btn_Volver2.Location = new System.Drawing.Point(823, 696);
+            this.btn_Volver2.Location = new System.Drawing.Point(741, 689);
             this.btn_Volver2.Name = "btn_Volver2";
             this.btn_Volver2.Size = new System.Drawing.Size(417, 127);
             this.btn_Volver2.TabIndex = 70;
             this.btn_Volver2.TabStop = false;
             this.btn_Volver2.Visible = false;
             this.btn_Volver2.Click += new System.EventHandler(this.btn_Volver_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Fondo;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1920, 1080);
+            this.pictureBox1.TabIndex = 71;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // JuegoArbol
             // 
@@ -124,6 +138,7 @@ namespace Pantalla_Contraseña
             this.Controls.Add(this.pic_IntentelodeNuevo);
             this.Controls.Add(this.pic_CuloGris);
             this.Controls.Add(this.btn_Volver);
+            this.Controls.Add(this.pictureBox1);
             this.Name = "JuegoArbol";
             this.Text = "JuegoArbol";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -134,6 +149,7 @@ namespace Pantalla_Contraseña
             ((System.ComponentModel.ISupportInitialize)(this.pic_BienHecho)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Ganaste)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Volver2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -146,5 +162,6 @@ namespace Pantalla_Contraseña
         private System.Windows.Forms.PictureBox pic_BienHecho;
         private System.Windows.Forms.PictureBox pic_Ganaste;
         private System.Windows.Forms.PictureBox btn_Volver2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
