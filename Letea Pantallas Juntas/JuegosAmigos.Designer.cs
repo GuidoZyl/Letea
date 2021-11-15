@@ -32,14 +32,19 @@ namespace Pantalla_Contraseña
             this.btn_Volver = new System.Windows.Forms.PictureBox();
             this.btn_Config = new System.Windows.Forms.PictureBox();
             this.pic_Juegos = new System.Windows.Forms.PictureBox();
-            this.btn_Preguntas = new System.Windows.Forms.PictureBox();
-            this.btn_AsociandoNombres = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_PreguntasAmigo = new System.Windows.Forms.PictureBox();
+            this.btn_AsociandoNombresAmigo = new System.Windows.Forms.PictureBox();
+            this.btn_PreguntasFamilia = new System.Windows.Forms.PictureBox();
+            this.btn_AsociandonombresFamilia = new System.Windows.Forms.PictureBox();
+            this.btn_JuegodelArbol = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Volver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Config)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Juegos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_Preguntas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_AsociandoNombres)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_PreguntasAmigo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_AsociandoNombresAmigo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_PreguntasFamilia)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_AsociandonombresFamilia)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_JuegodelArbol)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Volver
@@ -78,39 +83,70 @@ namespace Pantalla_Contraseña
             this.pic_Juegos.TabIndex = 23;
             this.pic_Juegos.TabStop = false;
             // 
-            // btn_Preguntas
+            // btn_PreguntasAmigo
             // 
-            this.btn_Preguntas.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Preguntas.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Boton_PREGUNTAS;
-            this.btn_Preguntas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Preguntas.Location = new System.Drawing.Point(231, 365);
-            this.btn_Preguntas.Name = "btn_Preguntas";
-            this.btn_Preguntas.Size = new System.Drawing.Size(544, 387);
-            this.btn_Preguntas.TabIndex = 24;
-            this.btn_Preguntas.TabStop = false;
-            this.btn_Preguntas.Click += new System.EventHandler(this.btn_Preguntas_Click);
+            this.btn_PreguntasAmigo.BackColor = System.Drawing.Color.Transparent;
+            this.btn_PreguntasAmigo.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Boton_PREGUNTAS;
+            this.btn_PreguntasAmigo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_PreguntasAmigo.Location = new System.Drawing.Point(231, 365);
+            this.btn_PreguntasAmigo.Name = "btn_PreguntasAmigo";
+            this.btn_PreguntasAmigo.Size = new System.Drawing.Size(544, 387);
+            this.btn_PreguntasAmigo.TabIndex = 24;
+            this.btn_PreguntasAmigo.TabStop = false;
+            this.btn_PreguntasAmigo.Visible = false;
+            this.btn_PreguntasAmigo.Click += new System.EventHandler(this.btn_Preguntas_Click);
             // 
-            // btn_AsociandoNombres
+            // btn_AsociandoNombresAmigo
             // 
-            this.btn_AsociandoNombres.BackColor = System.Drawing.Color.Transparent;
-            this.btn_AsociandoNombres.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Boton_ASOCIANDO_NOMBRES;
-            this.btn_AsociandoNombres.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_AsociandoNombres.Location = new System.Drawing.Point(1156, 365);
-            this.btn_AsociandoNombres.Name = "btn_AsociandoNombres";
-            this.btn_AsociandoNombres.Size = new System.Drawing.Size(544, 387);
-            this.btn_AsociandoNombres.TabIndex = 25;
-            this.btn_AsociandoNombres.TabStop = false;
-            this.btn_AsociandoNombres.Click += new System.EventHandler(this.btn_AsociandoNombres_Click);
+            this.btn_AsociandoNombresAmigo.BackColor = System.Drawing.Color.Transparent;
+            this.btn_AsociandoNombresAmigo.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Boton_ASOCIANDO_NOMBRES;
+            this.btn_AsociandoNombresAmigo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_AsociandoNombresAmigo.Location = new System.Drawing.Point(1156, 365);
+            this.btn_AsociandoNombresAmigo.Name = "btn_AsociandoNombresAmigo";
+            this.btn_AsociandoNombresAmigo.Size = new System.Drawing.Size(544, 387);
+            this.btn_AsociandoNombresAmigo.TabIndex = 25;
+            this.btn_AsociandoNombresAmigo.TabStop = false;
+            this.btn_AsociandoNombresAmigo.Visible = false;
+            this.btn_AsociandoNombresAmigo.Click += new System.EventHandler(this.btn_AsociandoNombres_Click);
             // 
-            // button1
+            // btn_PreguntasFamilia
             // 
-            this.button1.Location = new System.Drawing.Point(374, 213);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 69);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_PreguntasFamilia.BackColor = System.Drawing.Color.Transparent;
+            this.btn_PreguntasFamilia.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Boton_PREGUNTAS;
+            this.btn_PreguntasFamilia.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_PreguntasFamilia.Location = new System.Drawing.Point(48, 365);
+            this.btn_PreguntasFamilia.Name = "btn_PreguntasFamilia";
+            this.btn_PreguntasFamilia.Size = new System.Drawing.Size(544, 387);
+            this.btn_PreguntasFamilia.TabIndex = 27;
+            this.btn_PreguntasFamilia.TabStop = false;
+            this.btn_PreguntasFamilia.Visible = false;
+            this.btn_PreguntasFamilia.Click += new System.EventHandler(this.btn_PreguntasFamilia_Click);
+            // 
+            // btn_AsociandonombresFamilia
+            // 
+            this.btn_AsociandonombresFamilia.BackColor = System.Drawing.Color.Transparent;
+            this.btn_AsociandonombresFamilia.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Boton_ASOCIANDO_NOMBRES;
+            this.btn_AsociandonombresFamilia.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_AsociandonombresFamilia.Location = new System.Drawing.Point(696, 365);
+            this.btn_AsociandonombresFamilia.Name = "btn_AsociandonombresFamilia";
+            this.btn_AsociandonombresFamilia.Size = new System.Drawing.Size(544, 387);
+            this.btn_AsociandonombresFamilia.TabIndex = 28;
+            this.btn_AsociandonombresFamilia.TabStop = false;
+            this.btn_AsociandonombresFamilia.Visible = false;
+            this.btn_AsociandonombresFamilia.Click += new System.EventHandler(this.btn_AsociandonombresFamilia_Click);
+            // 
+            // btn_JuegodelArbol
+            // 
+            this.btn_JuegodelArbol.BackColor = System.Drawing.Color.Transparent;
+            this.btn_JuegodelArbol.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Boton_ASOCIANDO_NOMBRES__1_;
+            this.btn_JuegodelArbol.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_JuegodelArbol.Location = new System.Drawing.Point(1353, 365);
+            this.btn_JuegodelArbol.Name = "btn_JuegodelArbol";
+            this.btn_JuegodelArbol.Size = new System.Drawing.Size(544, 387);
+            this.btn_JuegodelArbol.TabIndex = 29;
+            this.btn_JuegodelArbol.TabStop = false;
+            this.btn_JuegodelArbol.Visible = false;
+            this.btn_JuegodelArbol.Click += new System.EventHandler(this.btn_JuegodelArbol_Click);
             // 
             // JuegosAmigos
             // 
@@ -119,20 +155,26 @@ namespace Pantalla_Contraseña
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Fondo;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btn_AsociandoNombres);
-            this.Controls.Add(this.btn_Preguntas);
+            this.Controls.Add(this.btn_JuegodelArbol);
+            this.Controls.Add(this.btn_AsociandonombresFamilia);
+            this.Controls.Add(this.btn_PreguntasFamilia);
+            this.Controls.Add(this.btn_AsociandoNombresAmigo);
+            this.Controls.Add(this.btn_PreguntasAmigo);
             this.Controls.Add(this.pic_Juegos);
             this.Controls.Add(this.btn_Config);
             this.Controls.Add(this.btn_Volver);
             this.Name = "JuegosAmigos";
             this.Text = "JuegosAmigos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.JuegosAmigos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btn_Volver)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Config)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Juegos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_Preguntas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_AsociandoNombres)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_PreguntasAmigo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_AsociandoNombresAmigo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_PreguntasFamilia)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_AsociandonombresFamilia)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_JuegodelArbol)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -142,8 +184,10 @@ namespace Pantalla_Contraseña
         private System.Windows.Forms.PictureBox btn_Volver;
         private System.Windows.Forms.PictureBox btn_Config;
         private System.Windows.Forms.PictureBox pic_Juegos;
-        private System.Windows.Forms.PictureBox btn_Preguntas;
-        private System.Windows.Forms.PictureBox btn_AsociandoNombres;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox btn_PreguntasAmigo;
+        private System.Windows.Forms.PictureBox btn_AsociandoNombresAmigo;
+        private System.Windows.Forms.PictureBox btn_PreguntasFamilia;
+        private System.Windows.Forms.PictureBox btn_AsociandonombresFamilia;
+        private System.Windows.Forms.PictureBox btn_JuegodelArbol;
     }
 }

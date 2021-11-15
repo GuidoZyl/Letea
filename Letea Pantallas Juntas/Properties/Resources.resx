@@ -136,11 +136,8 @@
   <data name="Boton amigos (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Boton amigos (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="TextoAcercaDeNosotros" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\TextoAcercaDeNosotros.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Agregar línea" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Agregar línea.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Frame 14 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Frame 14 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Contraseña" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Contraseña.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -159,9 +156,6 @@
   </data>
   <data name="Agregar foto1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Agregar foto1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Eliminar amigo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Eliminar amigo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Rectangle 51" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Rectangle 51.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -199,6 +193,9 @@
   <data name="Perfil Vacío" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Perfil Vacío.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Juegos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Juegos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Eliminar amigo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Eliminar amigo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -213,6 +210,9 @@
   </data>
   <data name="Introducción de datos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Introducción de datos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Eliminar lineas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Eliminar lineas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="FLECHA IZQUIERDA" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FLECHA IZQUIERDA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -234,6 +234,9 @@
   </data>
   <data name="FLECHA DERECHA" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FLECHA DERECHA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Circulo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Circulo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Group 8" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Group 8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -274,8 +277,8 @@
   <data name="Vector (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Vector (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="AGREGAR GRUPO (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AGREGAR GRUPO (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Eliminar amigo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Eliminar amigo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ingresar como páciente" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ingresar como páciente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -292,14 +295,14 @@
   <data name="Creditos nashe" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Creditos nashe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Nueva contraseña" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Nueva contraseña.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Administrador" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Administrador.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Fondo Coniguración" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fondo Coniguración.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Acerca de Nosotros" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Acerca de Nosotros.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Boton Respuesta" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Boton Respuesta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -312,6 +315,9 @@
   </data>
   <data name="Ajustes" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Ajustes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Parte Superior Crear GurupoAmigos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Parte Superior Crear GurupoAmigos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Creditos1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Creditos1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -331,11 +337,8 @@
   <data name="Confirmar contraseña" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Confirmar contraseña.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Nueva contraseña" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Nueva contraseña.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Frame 14 (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Frame 14 (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Agregar línea" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Agregar línea.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Frame 14 (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Frame 14 (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -343,11 +346,11 @@
   <data name="Frame 14 (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Frame 14 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Frame 14 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Frame 14 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="AGREGAR GRUPO (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AGREGAR GRUPO (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Juegos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Juegos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Frame 14 (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Frame 14 (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Parte Superior" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Parte Superior.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -364,8 +367,8 @@
   <data name="Grupos sin foto" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Grupos sin foto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Parte Superior Crear GurupoAmigos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Parte Superior Crear GurupoAmigos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Acerca de Nosotros" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Acerca de Nosotros.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="AGREGAR AMIGO (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AGREGAR AMIGO (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -373,13 +376,13 @@
   <data name="Boton confirmar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Boton confirmar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Circulo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Circulo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="TextoAcercaDeNosotros" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TextoAcercaDeNosotros.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Boton imprimir" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Boton imprimir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Eliminar lineas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Eliminar lineas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Boton ASOCIANDO NOMBRES (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Boton ASOCIANDO NOMBRES (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

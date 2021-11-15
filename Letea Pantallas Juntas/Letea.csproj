@@ -586,5 +586,8 @@
   <ItemGroup>
     <None Include="Resources\Eliminar lineas.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boton ASOCIANDO NOMBRES %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

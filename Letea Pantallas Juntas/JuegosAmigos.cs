@@ -60,5 +60,41 @@ namespace Pantalla_Contraseña
             form.Show();
             this.Hide();
         }
+
+        private void btn_PreguntasFamilia_Click(object sender, EventArgs e)
+        {
+            FormPreguntas form = new FormPreguntas();
+            form.Show();
+            this.Hide();
+        }
+
+        private void btn_AsociandonombresFamilia_Click(object sender, EventArgs e)
+        {
+            UnirSinFlechas form = new UnirSinFlechas();
+            form.Show();
+            this.Hide();
+        }
+
+        private void btn_JuegodelArbol_Click(object sender, EventArgs e)
+        {
+            JuegoArbol form = new JuegoArbol();
+            form.Show();
+            this.Hide();
+        }
+
+        private void JuegosAmigos_Load(object sender, EventArgs e)
+        {
+            if (FormPrincipal.JuegoFamilia)
+            {
+                btn_AsociandonombresFamilia.Visible = true;
+                btn_PreguntasFamilia.Visible = true;
+                btn_JuegodelArbol.Visible = true;
+            }
+            else
+            {
+                btn_PreguntasAmigo.Visible = true;
+                btn_AsociandoNombresAmigo.Visible = true;
+            }
+        }
     }
 }
