@@ -111,7 +111,7 @@ namespace Pantalla_Contraseña
 
             uno.Height = 150;
             uno.Width = 150;
-            uno.Image = pic_CuloGris.Image;
+            uno.Image = pic_incognita.Image;
             uno.SizeMode = PictureBoxSizeMode.StretchImage;
             uno.Location = new Point(Convert.ToInt32(ds.Tables["Familia"].Rows[CantPersonas[0]]["X"]), Convert.ToInt32(ds.Tables["Familia"].Rows[CantPersonas[0]]["Y"]));
             uno.Tag = 1;
@@ -137,7 +137,7 @@ namespace Pantalla_Contraseña
 
             dos.Height = 150;
             dos.Width = 150;
-            dos.Image = pic_CuloGris.Image;
+            dos.Image = pic_incognita.Image;
             dos.SizeMode = PictureBoxSizeMode.StretchImage;
             dos.Location = new Point(Convert.ToInt32(ds.Tables["Familia"].Rows[CantPersonas[1]]["X"]), Convert.ToInt32(ds.Tables["Familia"].Rows[CantPersonas[1]]["Y"]));
             dos.Tag = 2;
@@ -163,7 +163,7 @@ namespace Pantalla_Contraseña
 
             tres.Height = 150;
             tres.Width = 150;
-            tres.Image = pic_CuloGris.Image;
+            tres.Image = pic_incognita.Image;
             tres.SizeMode = PictureBoxSizeMode.StretchImage;
             tres.Location = new Point(Convert.ToInt32(ds.Tables["Familia"].Rows[CantPersonas[2]]["X"]), Convert.ToInt32(ds.Tables["Familia"].Rows[CantPersonas[2]]["Y"]));
             tres.Tag = 3;

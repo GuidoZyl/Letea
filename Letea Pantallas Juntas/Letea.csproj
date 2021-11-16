@@ -598,5 +598,11 @@
   <ItemGroup>
     <None Include="Resources\Boton Menú.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Incognita.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Component 14.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

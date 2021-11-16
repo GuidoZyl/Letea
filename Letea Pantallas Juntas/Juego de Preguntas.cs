@@ -490,6 +490,7 @@ namespace Pantalla_Contraseña
             else if (preguntas[0] == "¿Cuál es el nombre de esta persona?")
             {
                 Pregunta = 3;
+
                 string sql2 = "SELECT Id FROM Amigos WHERE IDUsuario = " + FormPacientes2.IDPaciente + "";
                 OleDbCommand cmd2 = new OleDbCommand(sql2, conexion);
                 OleDbDataAdapter da2 = new OleDbDataAdapter(cmd2);

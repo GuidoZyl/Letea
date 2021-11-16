@@ -30,7 +30,6 @@ namespace Pantalla_Contraseña
 
             if (!FormPantallaLogIn.ModoAdmin) {
                 btn_Config.Visible = false;
-                btn_CrearPaciente.Visible = false;
                 btn_Salir.Visible = true;
             }
         }

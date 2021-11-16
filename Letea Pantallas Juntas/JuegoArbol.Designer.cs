@@ -30,14 +30,14 @@ namespace Pantalla_Contraseña
         private void InitializeComponent()
         {
             this.btn_Volver = new System.Windows.Forms.PictureBox();
-            this.pic_CuloGris = new System.Windows.Forms.PictureBox();
+            this.pic_incognita = new System.Windows.Forms.PictureBox();
             this.pic_IntentelodeNuevo = new System.Windows.Forms.PictureBox();
             this.pic_BienHecho = new System.Windows.Forms.PictureBox();
             this.pic_Ganaste = new System.Windows.Forms.PictureBox();
             this.btn_Volver2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Volver)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_CuloGris)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_incognita)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_IntentelodeNuevo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_BienHecho)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Ganaste)).BeginInit();
@@ -58,14 +58,14 @@ namespace Pantalla_Contraseña
             this.btn_Volver.TabStop = false;
             this.btn_Volver.Click += new System.EventHandler(this.btn_Volver_Click);
             // 
-            // pic_CuloGris
+            // pic_incognita
             // 
-            this.pic_CuloGris.Image = global::Pantalla_Contraseña.Properties.Resources.culogris;
-            this.pic_CuloGris.Location = new System.Drawing.Point(26, 202);
-            this.pic_CuloGris.Name = "pic_CuloGris";
-            this.pic_CuloGris.Size = new System.Drawing.Size(13, 25);
-            this.pic_CuloGris.TabIndex = 24;
-            this.pic_CuloGris.TabStop = false;
+            this.pic_incognita.Image = global::Pantalla_Contraseña.Properties.Resources.Component_14;
+            this.pic_incognita.Location = new System.Drawing.Point(26, 202);
+            this.pic_incognita.Name = "pic_incognita";
+            this.pic_incognita.Size = new System.Drawing.Size(13, 25);
+            this.pic_incognita.TabIndex = 24;
+            this.pic_incognita.TabStop = false;
             // 
             // pic_IntentelodeNuevo
             // 
@@ -136,7 +136,7 @@ namespace Pantalla_Contraseña
             this.Controls.Add(this.pic_Ganaste);
             this.Controls.Add(this.pic_BienHecho);
             this.Controls.Add(this.pic_IntentelodeNuevo);
-            this.Controls.Add(this.pic_CuloGris);
+            this.Controls.Add(this.pic_incognita);
             this.Controls.Add(this.btn_Volver);
             this.Controls.Add(this.pictureBox1);
             this.Name = "JuegoArbol";
@@ -144,7 +144,7 @@ namespace Pantalla_Contraseña
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.JuegoArbol_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btn_Volver)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_CuloGris)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_incognita)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_IntentelodeNuevo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_BienHecho)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Ganaste)).EndInit();
@@ -157,7 +157,7 @@ namespace Pantalla_Contraseña
         #endregion
 
         private System.Windows.Forms.PictureBox btn_Volver;
-        private System.Windows.Forms.PictureBox pic_CuloGris;
+        private System.Windows.Forms.PictureBox pic_incognita;
         private System.Windows.Forms.PictureBox pic_IntentelodeNuevo;
         private System.Windows.Forms.PictureBox pic_BienHecho;
         private System.Windows.Forms.PictureBox pic_Ganaste;
