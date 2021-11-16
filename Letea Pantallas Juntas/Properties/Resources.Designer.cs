@@ -923,6 +923,16 @@ namespace Pantalla_Contraseña.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Presentación__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Presentación (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap que_lindo_boton {
             get {
                 object obj = ResourceManager.GetObject("que lindo boton", resourceCulture);

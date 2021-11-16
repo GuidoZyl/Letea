@@ -81,6 +81,12 @@
     <Compile Include="ArbolGenealogico.Designer.cs">
       <DependentUpon>ArbolGenealogico.cs</DependentUpon>
     </Compile>
+    <Compile Include="Bienvenido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bienvenido.Designer.cs">
+      <DependentUpon>Bienvenido.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cargando.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -229,6 +235,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ArbolGenealogico.resx">
       <DependentUpon>ArbolGenealogico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bienvenido.resx">
+      <DependentUpon>Bienvenido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cargando.resx">
       <DependentUpon>Cargando.cs</DependentUpon>
@@ -639,6 +648,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Agregarfoto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Presentación %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

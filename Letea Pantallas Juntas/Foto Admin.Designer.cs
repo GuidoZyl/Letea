@@ -53,7 +53,6 @@ namespace Pantalla_Contraseña
             // pic_text_agregarfotodeperfil
             // 
             this.pic_text_agregarfotodeperfil.BackColor = System.Drawing.Color.Transparent;
-            this.pic_text_agregarfotodeperfil.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Agregar_foto1;
             this.pic_text_agregarfotodeperfil.Location = new System.Drawing.Point(625, 296);
             this.pic_text_agregarfotodeperfil.Name = "pic_text_agregarfotodeperfil";
             this.pic_text_agregarfotodeperfil.Size = new System.Drawing.Size(654, 104);
