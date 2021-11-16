@@ -628,5 +628,17 @@
   <ItemGroup>
     <None Include="Resources\Logo_5_2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Editar_familiarr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Agregar_foto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Agregar_foto1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Agregarfoto.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

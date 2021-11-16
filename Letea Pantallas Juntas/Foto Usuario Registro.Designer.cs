@@ -53,7 +53,7 @@
             // pic_text_fotodeperfil
             // 
             this.pic_text_fotodeperfil.BackColor = System.Drawing.Color.Transparent;
-            this.pic_text_fotodeperfil.BackgroundImage = global::Pantalla_Contraseña.Properties.Resources.Agregar_foto;
+            this.pic_text_fotodeperfil.Image = global::Pantalla_Contraseña.Properties.Resources.Agregarfoto;
             this.pic_text_fotodeperfil.Location = new System.Drawing.Point(625, 296);
             this.pic_text_fotodeperfil.Name = "pic_text_fotodeperfil";
             this.pic_text_fotodeperfil.Size = new System.Drawing.Size(654, 104);

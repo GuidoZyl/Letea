@@ -236,7 +236,7 @@ namespace Pantalla_Contraseña
             this.btn_EditarAmigo.BackColor = System.Drawing.Color.Transparent;
             this.btn_EditarAmigo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_EditarAmigo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_EditarAmigo.Image = global::Pantalla_Contraseña.Properties.Resources.Editar_amigo__2_;
+            this.btn_EditarAmigo.Image = global::Pantalla_Contraseña.Properties.Resources.Editar_familiarr;
             this.btn_EditarAmigo.Location = new System.Drawing.Point(1477, 899);
             this.btn_EditarAmigo.Name = "btn_EditarAmigo";
             this.btn_EditarAmigo.Size = new System.Drawing.Size(376, 96);

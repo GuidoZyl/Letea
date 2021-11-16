@@ -57,8 +57,6 @@ namespace Pantalla_Contraseña
 
                 conexion.Close();
 
-                MessageBox.Show("Listo");
-
                 FormFotoUsuarioRegistro form = new FormFotoUsuarioRegistro();
                 form.Show();
                 this.Hide();

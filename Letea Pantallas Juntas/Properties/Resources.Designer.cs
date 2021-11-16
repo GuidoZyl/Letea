@@ -113,16 +113,6 @@ namespace Pantalla_Contraseña.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Agregar_foto {
-            get {
-                object obj = ResourceManager.GetObject("Agregar foto", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Agregar_Foto_Ancha {
             get {
                 object obj = ResourceManager.GetObject("Agregar Foto Ancha", resourceCulture);
@@ -136,16 +126,6 @@ namespace Pantalla_Contraseña.Properties {
         internal static System.Drawing.Bitmap Agregar_Foto_Ancha__1_ {
             get {
                 object obj = ResourceManager.GetObject("Agregar Foto Ancha (1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Agregar_foto1 {
-            get {
-                object obj = ResourceManager.GetObject("Agregar foto1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -186,6 +166,16 @@ namespace Pantalla_Contraseña.Properties {
         internal static System.Drawing.Bitmap Agregar_línea {
             get {
                 object obj = ResourceManager.GetObject("Agregar línea", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Agregarfoto {
+            get {
+                object obj = ResourceManager.GetObject("Agregarfoto", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -596,6 +586,16 @@ namespace Pantalla_Contraseña.Properties {
         internal static System.Drawing.Bitmap Editar_árbol__1_ {
             get {
                 object obj = ResourceManager.GetObject("Editar árbol (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Editar_familiarr {
+            get {
+                object obj = ResourceManager.GetObject("Editar_familiarr", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
