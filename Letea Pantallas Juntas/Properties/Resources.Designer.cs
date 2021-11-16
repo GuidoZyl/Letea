@@ -233,6 +233,16 @@ namespace Pantalla_Contraseña.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Boton_cerrar {
+            get {
+                object obj = ResourceManager.GetObject("Boton cerrar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Boton_confirmar {
             get {
                 object obj = ResourceManager.GetObject("Boton confirmar", resourceCulture);
@@ -923,6 +933,16 @@ namespace Pantalla_Contraseña.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Rectangle_55 {
+            get {
+                object obj = ResourceManager.GetObject("Rectangle 55", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Salir {
             get {
                 object obj = ResourceManager.GetObject("Salir", resourceCulture);
@@ -996,6 +1016,26 @@ namespace Pantalla_Contraseña.Properties {
         internal static System.Drawing.Bitmap TextoAcercaDeNosotros {
             get {
                 object obj = ResourceManager.GetObject("TextoAcercaDeNosotros", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tutorial {
+            get {
+                object obj = ResourceManager.GetObject("Tutorial", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tutorial1 {
+            get {
+                object obj = ResourceManager.GetObject("Tutorial1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

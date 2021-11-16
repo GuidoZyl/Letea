@@ -21,6 +21,7 @@ namespace Pantalla_Contraseña
         public static FormPantallaLogIn form = new FormPantallaLogIn();
 
         public static bool PrimerPaciente = false;
+        
         public FormFotoUsuarioRegistro()
         {
             InitializeComponent();
@@ -81,6 +82,7 @@ namespace Pantalla_Contraseña
                 form.Show();
                 this.Hide();
             }
+           
         }
 
         private void btn_agregarfoto_Paint(object sender, PaintEventArgs pe)

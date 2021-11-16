@@ -23,7 +23,6 @@ namespace Pantalla_Contraseña
 
         int ultimo;
         string[,] nombrecompleto;
-
         public FormPacientes2()
         {
             InitializeComponent();

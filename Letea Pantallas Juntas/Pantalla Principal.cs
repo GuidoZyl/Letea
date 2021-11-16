@@ -27,6 +27,7 @@ namespace Pantalla_Contraseña
         {
             conexion.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=.\Base de Datos 4.accdb;";
             conexion.Open();
+           
 
             if (!FormPantallaLogIn.ModoAdmin) {
                 btn_Config.Visible = false;
