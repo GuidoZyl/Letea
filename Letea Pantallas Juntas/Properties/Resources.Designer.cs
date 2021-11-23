@@ -193,6 +193,16 @@ namespace Pantalla_Contraseña.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Bienvenido {
+            get {
+                object obj = ResourceManager.GetObject("Bienvenido", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Boton_amigos__1_ {
             get {
                 object obj = ResourceManager.GetObject("Boton amigos (1)", resourceCulture);
@@ -846,6 +856,16 @@ namespace Pantalla_Contraseña.Properties {
         internal static System.Drawing.Bitmap Juegos {
             get {
                 object obj = ResourceManager.GetObject("Juegos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logo__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Logo (2)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

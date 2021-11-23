@@ -384,7 +384,7 @@ namespace Pantalla_Contraseña
 
                         pic_Nom3.Image = bm3;
                         lbl_Nom4.Text = nombrecompleto[i - 1, 0];
-                        MemoryStream pic4 = new MemoryStream((byte[])ds.Tables["NombreGrupo"].Rows[i + 1]["Foto"]);
+                        MemoryStream pic4 = new MemoryStream((byte[])ds.Tables["NombreGrupo"].Rows[i - 1]["Foto"]);
 
                         Bitmap bm4 = new Bitmap(pic4);
 
